@@ -1,5 +1,4 @@
-# jsArtikel
-Artikel für JavaSpektrum über WebComponents
+# Artikel für JavaSpektrum über client-seitige Integration mit WebComponents
 
 Einfügen eines Image:
 * Image in das images-Verzeichnis kopieren (\<filename of image>)
