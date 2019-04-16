@@ -1,2 +1,4 @@
 # jsArtikel
-Artikel für JavaSpektrum
+Artikel für JavaSpektrum über WebComponents
+
+Beispiel für ein Image:
