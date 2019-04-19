@@ -30,7 +30,7 @@ lorem ipsum
 
 lorem ipsum
 
-## attribute
+## Attribute
 
 lorem ipsum
 
@@ -43,6 +43,10 @@ lorem ipsum
 lorem ipsum
 
 ## Polymer
+
+lorem ipsum
+
+## LitElement
 
 lorem ipsum
 
