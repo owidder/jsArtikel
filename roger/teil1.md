@@ -1,3 +1,58 @@
-# Teil 1
-# Teil 1
-# Teil 1
+# Was sind Komponenten ?
+
+# Was sind Web components
+
+lorem ipsum
+
+# Die APIs
+
+## Custom elements
+
+lorem ipsum
+
+## Shadow Dom
+
+lorem ipsum
+
+## ES Modules
+
+lorem ipsum
+
+## HTML Templates
+
+lorem ipsum
+
+# Aus dem Leben einer Komponente
+
+lorem ipsum
+
+## Lifecycle
+
+lorem ipsum
+
+## attribute
+
+lorem ipsum
+
+## Verwendung
+
+lorem ipsum
+
+# Web components in der freien Wildbahn
+
+lorem ipsum
+
+## Polymer
+
+lorem ipsum
+
+## stencil.js
+
+lorem ipsum
+
+## Angular components
+
+lorem ipsum
+
+
+
