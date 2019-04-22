@@ -1,2 +1,5 @@
 https://custom-elements-everywhere.com
 https://www.youtube.com/watch?v=plt-iH_47GE
+https://www.youtube.com/watch?v=vZSHRu5ugr8
+https://www.webcomponents.org/collection/vaadin/vaadin-core
+https://vaadin.com/tutorials/using-web-components-in-react
