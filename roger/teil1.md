@@ -12,6 +12,18 @@ Das ist umso erstaunlicher, da HTML seit langem zeigt, wie Kommponenten definier
 
 Aus diesem Grund wurde 2012 der erste Draft der Web-components Spezifikation veröffentlicht, mit dem Ziel, die Verwendung von eigenen und wiederverwendbaren Tags zu standardisieren.
 
+# Browseer Support
+
+lorem ipsum
+
+## Native
+
+lorem ipsum
+
+## Polyfill
+
+lorem ipsum
+
 # Was sind Web components
 
 lorem ipsum
