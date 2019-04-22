@@ -82,6 +82,10 @@ lorem ipsum
 
 lorem ipsum
 
+## vaadin-core
+
+lorem ipsum
+
 ## React
 
 lorem ipsum
