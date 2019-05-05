@@ -20,7 +20,7 @@ Bevor es aber an die Details der Spezifikation geht, lohn sich ein kurzer Abstec
 
 Benutzer von Firefox, Chrome und Safari  können sich freuen, da alle wichtigen Aspekte wie "Custom Elements", "Shadow Dom" und  "HTML templates" unterstützt werden. Bei der Verwendung von Safari muß man lediglich mit einer kleiner Einschränkung leben, da nur  "Autonomous custom elements" aber keine "Customized built-in elements" verwendet werden können. Das bedeutet, daß in Safari zwar eigene Komponenten erstellt und verwendet werden können, die aber keine Möglichkeit bieten,   Eigenschaften von bestehenden HTML-Elementen (wie z.B. von einem Button) wiederzuverwenden (https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-customized-builtin-example).
 
-lorem ipsum
+IE und Edge, die Browser von Microsoft, bieten zum derzeitigen Zeitpunk keine Unterstützung für Web-Components. Für die Zukunft ist aber auch hier Besserung zu erwarten. Die zukünftige Version von Edge wird auf Chromium, der Open-Source Variante von Chrome, aufbauen und damit dann ebenfalls die Web-Components Spezifikation vollständig unterstützen.
 
 ## Polyfill
 
