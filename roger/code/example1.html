@@ -1,17 +1,19 @@
 <html>
 <head>
-  <script>
-  class SayHello extends HTMLElement {
-    constructor() {
-      super();
-      let shadowRoot = this.attachShadow({mode: 'open'});
-      shadowRoot.innerHTML = `<p>hello again</p>`;
+    <script>
+    class SayHello extends HTMLElement {
+        constructor() {
+            super();
+            let shadowRoot = this.attachShadow({mode: 'open'});
+            shadowRoot.innerHTML = `<style> p {background: red}</style>
+                                     <p>hello again</p>`;
+        }
     }
-  }
-  customElements.define('say-hello', SayHello);
-  </script>
+    customElements.define('say-hello', SayHello);
+    </script>
 </head>
 <body>
-  <say-hello></say-hello>
+    <say-hello></say-hello>
+    <p>I'm not red</p>
 </body>
 </html>

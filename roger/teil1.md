@@ -27,7 +27,7 @@ IE und Edge, die Browser von Microsoft, bieten zum derzeitigen Zeitpunk keine Un
 
 ## Polyfill
 
-Für neuere Browser, ausser Microsoft Edge, sieht die Web-Components Unterstützung  ganz gut aus, für alle anderen gibt es ein Polyfill. Nähere Informationen zu Verwendung und Installation finden Sie unter https://www.webcomponents.org/polyfills. Dieses Poylfill rüstet sowohl die "Custom Elements" API als auch die "Shadow DOM" API für ältere Browser nach. Bei der Verwendung der "Shadow DOM" API ist allerdings Vorsicht geboten, das es negative Auswirkungen auf die Render-Performanz einer Seite haben kann. 
+Für neuere Browser, ausser Microsoft Edge, sieht die Web-Components Unterstützung  gut aus, für alle anderen gibt es ein Polyfill. Nähere Informationen zu Verwendung und Installation finden Sie unter https://www.webcomponents.org/polyfills. Dieses Poylfill rüstet sowohl die "Custom Elements" API als auch die "Shadow DOM" API für ältere Browser nach. Bei der Verwendung der "Shadow DOM" API ist allerdings Vorsicht geboten, das es negative Auswirkungen auf die Render-Performanz einer Seite haben kann. 
 
 # Was sind Web components
 
@@ -47,9 +47,10 @@ Wenn ein Browser die APIs gemäß dieser Spezifikationen implementiert, können 
     <script>
     class SayHello extends HTMLElement {
         constructor() {
-        super();
-        let shadowRoot = this.attachShadow({mode: 'open'});
-        shadowRoot.innerHTML = `<p>hello again</p>`;
+            super();
+            let shadowRoot = this.attachShadow({mode: 'open'});
+            shadowRoot.innerHTML = `<style> p {background: red}</style>
+                                    <p>hello again</p>`;
         }
     }
     customElements.define('say-hello', SayHello);
@@ -57,6 +58,7 @@ Wenn ein Browser die APIs gemäß dieser Spezifikationen implementiert, können 
 </head>
 <body>
     <say-hello></say-hello>
+     <p>I'm not red</p>
 </body>
 </html>
 
@@ -72,15 +74,22 @@ Laden Sie diese Seite in einem Browser der die nötigen APIs unterstützt, wird 
 
 ![](../images/say-hello-dom.png "Title")
 
-Jeder Web-Entwickler der eins der bekannten Frameworks wie Angular oder React verwendet hat weiß, daß die sinnvolle Aufteilung einer Applikationen in Komponenten die Entwicklung und Weiterentwicklung erheblich vereinfacht. Leider geht diese Struktur verloren, sobald die Inhalte einer Angular oder React Komponente in den Dom-Tree des Browsers eingefügt werden. Aus den sorgsam aufgebauten Komponenten bleibt dann nur noch eine Sammlung von HTMl-Tags übrig, die, ohne den Einsatz spezieller Werkzeuge, insbesondere die Fehlersuche erschweren. Diese Komponenten-Struktur, auch im Dom-Tree des Browsers sichbar zu machen, ist Aufgabe der "Custom elements" Spezifikation. In *Bild 1* sehen Sie wie die in *Beispiel 1* deklarierte Komponente als Tag *say-hello* im Inspector des Safari-Browsers angezeigt wird. Um dieses Verhalten zu erreichen sind zwei Dinge nötig:
-* unsere Klasse muß von der Klasse *HTMLElement erben
-* und über den Aufruf von `customElements.define` wird unserer Klasse ein HTML-tag zugeordnet.
+Jeder Web-Entwickler der eins der bekannten Frameworks wie Angular oder React verwendet hat weiß, daß die sinnvolle Aufteilung einer Applikationen in Komponenten die Entwicklung und Weiterentwicklung erheblich vereinfacht. Leider geht diese Struktur verloren, sobald die Inhalte einer Angular oder React Komponente in den Dom-Tree des Browsers eingefügt werden. Aus den sorgsam aufgebauten Komponenten bleibt dann nur noch eine Sammlung von HTML-Tags übrig, die, ohne den Einsatz spezieller Werkzeuge, insbesondere die Fehlersuche erschweren. Diese Komponenten-Struktur, auch im Dom-Tree des Browsers sichbar zu machen, ist Aufgabe der "Custom elements" Spezifikation. In *Bild 1* sehen Sie wie die in *Beispiel 1* deklarierte Komponente als Tag *say-hello* im Inspector des Safari-Browsers angezeigt wird. Um dieses Verhalten zu erreichen sind zwei Dinge nötig:
+* unsere Klasse muß von der Klasse *HTMLElement* erben
+* und über den Aufruf von `customElements.define` wird unserer Klasse ein HTML-Tag zugeordnet.
 
-Das der Name unseres Tags einen Bindestricht enthält ist dabei kein Zufall, sonder eine durch die Spezifikation vorgegeben Namenskonvention. Dadurch wird eine Namenskollision mit vorhandenen oder zukünftigen HTML-Tags vermieden. 
+Das der Name unseres Tags einen Bindestricht enthält ist dabei kein Zufall, sonderneine durch die Spezifikation vorgegeben Namenskonvention. Dadurch wird eine Namenskollision mit vorhandenen oder zukünftigen HTML-Tags vermieden. 
 
 ## Shadow Dom
 
-lorem ipsum
+Die Kapselung von HTML Code in einer Komponente löst aber nur ein Teil des Problems. neben HTML gibt es ja auch noch CSS. Ursprünglich arbeiten CSS Selektoren über alle Elemente einer Seite. Das würde also bedeuten, das wir mit den Styling-Regeln unsere Komponente das umgebende Layout zerstören könnten. Das wiederspricht ganz klar dem Konzept einer Komponente unabhängig und wiederverwendbar zu sein. Aus diesem Grund wurde die "Shadow Dom" Spezifikation ins Leben gerufen. Diese Spezifikation erfüllt 2 Aufgaben:
+
+* Style Informationen bleiben innerhalb der Komponente
+* die interne Implementierung der Komponente ist nicht sichtbar
+
+Die Verwendung des "Shadow Dom" sehen Sie in Beispiel 1 bei der Verwendung des `this.attachShadow({mode: 'open'})` Aufrufs. Dieser Aufruf erzeugt für unsere Komponente einen eigenen lokalen "Dom-Tree" und beschränkt dadurch den Geltungsbereich der CSS-Regel. Das `p` Tag nach unserem ` <say-hello>` ist daher nicht von der Änderung der Hintergrund Farbe betroffen. 
+
+Der Parameter `{mode: 'open'}` sagt der API übrigens, daß wir auf das Verstecken der Implementierungsdetails verzichten.
 
 ## ES Modules
 
@@ -97,8 +106,8 @@ Die Seite können Sie dann über die URL `http://localhost:8000/example4.html` l
 ```JavaScript
 export class SayHello extends HTMLelement {
     constructor() {
-    super();
-    let shadowRoot = this.attachShadow({mode: 'open'});
+        super();
+        let shadowRoot = this.attachShadow({mode: 'open'});
         shadowRoot.innerHTML = `<p>hello again</p>`;
     }
 }
