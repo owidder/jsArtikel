@@ -28,7 +28,39 @@ Für neuere Browser, ausser Microsoft Edge, sieht die Web-Components Unterstütz
 
 # Was sind Web components
 
-lorem ipsum
+Web-Components ist ersteinmal nur eine Meta-Spezifikation für folgende Spezifikationen:
+
+* Custom elements
+* Shadow Dom
+* ES Modules
+* HTML Templates
+
+Fall ein Browser die APIs gemäß dieser Spezifikationen implementiert, können Sie eigene Elemente definieren und dieser als neue Tags in einer HTML-Seite verwenden. Ein einfaches "Hello World" Beispiel sehen Sie in Listing 1.
+
+*Listing 1 - hello.html*
+<code>
+
+    <html>
+    <head>
+    <script>
+    class SayHello extends HTMLElement {
+        constructor() {
+        super();
+        let shadowRoot = this.attachShadow({mode: 'open'});
+        shadowRoot.innerHTML = `<p>hello again</p>`;
+        }
+    }
+    customElements.define('say-hello', SayHello);
+    </script>
+    </head>
+    <body>
+    <say-hello></say-hello>
+    </body>
+    </html>
+
+</code>
+
+Laden Sie diese Seite in einem Browser der die nötigen APIs unterstützt, wird eine Seite mit dem Text "hello again" angezeigt. Die Erklärungen zu diesem dieses Beispiel finden Sie in den folgenden Abschnitten über die einzelnen Bestandteile der Web-Components Spezifikation 
 
 # Die APIs
 
