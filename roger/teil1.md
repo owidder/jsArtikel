@@ -24,7 +24,7 @@ IE und Edge, die Browser von Microsoft, bieten zum derzeitigen Zeitpunk keine Un
 
 ## Polyfill
 
-lorem ipsum
+Für neuere Browser, ausser Microsoft Edge, sieht die Web-Components Unterstützung  ganz gut aus, für alle anderen gibt es ein Polyfill. Nähere Informationen zu Verwendung und Installation finden Sie unter https://www.webcomponents.org/polyfills. Dieses Poylfill rüstet sowohl die "Custom Elements" API als auch die "Shadow DOM" API für ältere Browser nach. Bei der Verwendung der "Shadow DOM" API ist allerdings Vorsicht geboten, das es negative Auswirkungen auf die Render-Performanz einer Seite haben kann. 
 
 # Was sind Web components
 
