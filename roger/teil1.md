@@ -80,7 +80,7 @@ Die "ES Module" Spezifikation definiert ein API die es erlaubt JavaScript Dokume
 python -m SimpleHTTPServer 8000
 ```
 
-Die Seite können Sie dann über die URL http://localhost:8000/example4.html laden und der Text "hello again" erscheint dann wie erwartet im Browser Fenster.
+Die Seite können Sie dann über die URL `http://localhost:8000/example4.html` laden und der Text "hello again" erscheint dann wie erwartet im Browser Fenster.
 
 
 *Beispiel 4 - say-hello.js*
@@ -112,6 +112,58 @@ customElements.define('say-hello', SayHello);
 
 ## HTML Templates
 
+Die Spezifikation für "HTML Templates" beschäftigt sich mit der Fragstellung wie HTML-Code Fragmente von HTML definiert und wiederverwendet werden können. "HTML Templates" sind daher auch ohne Web-Components verwendbar und Web-Components können auch ohne "HTMl Templates" entwickelt werden. Die Verwendung von Templates erleichtert aber die Entwicklung von Web-Components und erlaubt die klare Trennung von Code und Markup.
+
+In Beispiel 5 sehen Sie wie "HTMl Templates" verwendet werden. Das Beispiel zeigt darüberhinaus die Verwendung von "slots". Sie erlauben HTML-Fragmente anzugeben, die den entsprechend benannten Part im Template ersetzen. Bei der Ausführung von Beispiel 5 wird daher 
+```HTML
+<slot name="and-more"></slot>
+``` 
+durch 
+
+```HTML
+<div slot="and-more">
+    ... and more
+</div>
+```
+
+ersetzt.
+
+*Beispiel 5 - import.html*
+```HTML
+<html>
+<head>
+
+ <template id="my-text">
+        <p>hello again</p>
+        <p style="color: red"><slot name="and-more"></slot></p>
+ </template>
+
+  <script>
+
+  class SayHello extends HTMLElement {
+    constructor() {
+      super();
+      const template = document.getElementById('my-text');
+      const templateContent = template.content;
+      this.attachShadow({mode: 'open'})
+        .appendChild(templateContent.cloneNode(true)) 
+    }
+  }
+  customElements.define('say-hello', SayHello);
+  </script>
+
+</head>
+
+<body>
+  <say-hello>
+      <div slot="and-more">
+          ... and more
+      </div>
+  </say-hello>
+</body>
+
+</html>
+```
 
 # Aus dem Leben einer Komponente
 

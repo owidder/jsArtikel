@@ -1,0 +1,33 @@
+<html>
+<head>
+
+ <template id="my-text">
+        <p>hello again</p>
+        <p style="color: red"><slot name="and-more"></slot></p>
+ </template>
+
+  <script>
+
+  class SayHello extends HTMLElement {
+    constructor() {
+      super();
+      const template = document.getElementById('my-text');
+      const templateContent = template.content;
+      this.attachShadow({mode: 'open'})
+        .appendChild(templateContent.cloneNode(true)) 
+    }
+  }
+  customElements.define('say-hello', SayHello);
+  </script>
+
+</head>
+
+<body>
+  <say-hello>
+      <div slot="and-more">
+          ... and more
+      </div>
+  </say-hello>
+</body>
+
+</html>
