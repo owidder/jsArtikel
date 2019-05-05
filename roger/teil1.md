@@ -69,8 +69,11 @@ Laden Sie diese Seite in einem Browser der die nötigen APIs unterstützt, wird 
 
 ![](../images/say-hello-dom.png "Title")
 
-Jeder Web-Entwickler der eins der bekannten Frameworks wie Angular oder React verwendet hat weiß, daß die sinnvolle Aufteilung einer Applikationen in Komponenten die Entwicklung und Weiterentwicklung erheblich vereinfacht. Leider geht diese Struktur aber verloren, sobald die Inhalte einer Angular oder React Komponente in den Dom-Tree des Browsers eingefügt werden. Aus den sorgsam aufgebauten Komponenten bleibt dann nur noch eine Sammlung von HTMl-Tags übrig, die, ohne den Einsatz spezieller Werkzeuge, insbesondere die Fehlersuche erschweren. Diese Komponenten-Struktur, auch im Dom-Tree des Browsers sichbar zu machen, ist Aufgabe der "Custom elements" Spezifikation. In *Bild 1* sehen Sie wie die in *Beispiel 1* deklarierte Komponente als Tag *say-hello* im Inspector des Safari-Browsers angezeigt wird. 
+Jeder Web-Entwickler der eins der bekannten Frameworks wie Angular oder React verwendet hat weiß, daß die sinnvolle Aufteilung einer Applikationen in Komponenten die Entwicklung und Weiterentwicklung erheblich vereinfacht. Leider geht diese Struktur aber verloren, sobald die Inhalte einer Angular oder React Komponente in den Dom-Tree des Browsers eingefügt werden. Aus den sorgsam aufgebauten Komponenten bleibt dann nur noch eine Sammlung von HTMl-Tags übrig, die, ohne den Einsatz spezieller Werkzeuge, insbesondere die Fehlersuche erschweren. Diese Komponenten-Struktur, auch im Dom-Tree des Browsers sichbar zu machen, ist Aufgabe der "Custom elements" Spezifikation. In *Bild 1* sehen Sie wie die in *Beispiel 1* deklarierte Komponente als Tag *say-hello* im Inspector des Safari-Browsers angezeigt wird. Um dieses Verhalten zu erreichen sind zwei Dinge nötig:
+* unsere Klasse muß von der Klasse *HTMLElement erben
+* und über den Aufruf von `customElements.define` wird unserer Klasse ein HTML-tag zugeordnet.
 
+Das der Name unseres Tags einen Bindestricht enthält ist dabei kein Zufall, sonder eine durch die Spezifikation vorgegeben Namenskonvention. Dadurch wird eine Namenskollision mit vorhandenen oder zukünftigen HTML-Tags vermieden. 
 
 ## Shadow Dom
 
