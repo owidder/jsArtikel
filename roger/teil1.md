@@ -78,11 +78,11 @@ lorem ipsum
 
 lorem ipsum
 
-## Angular components
+## vaadin-core
 
 lorem ipsum
 
-## vaadin-core
+## Angular components
 
 lorem ipsum
 
