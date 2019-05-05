@@ -35,13 +35,12 @@ Web-Components ist ersteinmal nur eine Meta-Spezifikation für folgende Spezifik
 * ES Modules
 * HTML Templates
 
-Fall ein Browser die APIs gemäß dieser Spezifikationen implementiert, können Sie eigene Elemente definieren und dieser als neue Tags in einer HTML-Seite verwenden. Ein einfaches "Hello World" Beispiel sehen Sie in Listing 1.
+Wenn ein Browser die APIs gemäß dieser Spezifikationen implementiert, können Sie eigene Elemente definieren und dieser als neue Tags in einer HTML-Seite verwenden. Eine einfache Deklaration einer "Web-Component" sehen Sie in Beispiel 1.
 
-*Listing 1 - hello.html*
-<code>
-
-    <html>
-    <head>
+*Beispiel 1 - hello.html*
+```HTML
+<html>
+<head>
     <script>
     class SayHello extends HTMLElement {
         constructor() {
@@ -52,17 +51,18 @@ Fall ein Browser die APIs gemäß dieser Spezifikationen implementiert, können 
     }
     customElements.define('say-hello', SayHello);
     </script>
-    </head>
-    <body>
+</head>
+<body>
     <say-hello></say-hello>
-    </body>
-    </html>
+</body>
+</html>
 
-</code>
+```
 
 Laden Sie diese Seite in einem Browser der die nötigen APIs unterstützt, wird eine Seite mit dem Text "hello again" angezeigt. Die Erklärungen zu diesem dieses Beispiel finden Sie in den folgenden Abschnitten über die einzelnen Bestandteile der Web-Components Spezifikation 
 
 # Die APIs
+
 
 ## Custom elements
 
@@ -74,11 +74,44 @@ lorem ipsum
 
 ## ES Modules
 
-lorem ipsum
+Die "ES Module" Spezifikation definiert ein API die es erlaubt JavaScript Dokumente in andere Java-Skript Dokumente einzubinden. Ursprünglich wurde über die "HTML Import" Spezifikation versucht diese Verhalten zu spezifizieren. Diese Spezifikation wurde aber von den Entwicklungen im JavaScript Umfeld überholt. Statt eigene Konzepte zu definieren  wie es die "HTML Import" Spezifikation versuchte bedient sich die "ES Module" Spezifikation den aus der JavaScript Entwicklung vertrauten Konzepten. Im Beispiel 4 sehen Sie ein Beispiel für die Verwendung der "ES Modules" API. Für das Ausführen diese Beispiels genügt es nicht mehr, die Datei import.html direkt in einem Browser zu öffnen. Am einfachsten ist es einen lokalen Webserver mit dem SimpleHTTPServer Package von Python zu starten:
+
+```
+python -m SimpleHTTPServer 8000
+```
+
+Die Seite können Sie dann über die URL http://localhost:8000/example4.html laden und der Text "hello again" erscheint dann wie erwartet im Browser Fenster.
+
+
+*Beispiel 4 - say-hello.js*
+```JavaScript
+export class SayHello extends HTMLelement {
+    constructor() {
+    super();
+    let shadowRoot = this.attachShadow({mode: 'open'});
+        shadowRoot.innerHTML = `<p>hello again</p>`;
+    }
+}
+
+customElements.define('say-hello', SayHello);
+```
+*Beispiel 4 - import.html*
+```HTML
+<html>
+    <head>
+        <script type="module">
+            import {SayHello} from '/say-hello.js';
+        </script>
+    </head>
+    <body>
+        <say-hello></say-hello>
+    </body>
+</html>
+
+```
 
 ## HTML Templates
 
-lorem ipsum
 
 # Aus dem Leben einer Komponente
 
