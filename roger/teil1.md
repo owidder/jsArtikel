@@ -91,6 +91,16 @@ Die Verwendung des "Shadow Dom" sehen Sie in Beispiel 1 bei der Verwendung des `
 
 Der Parameter `{mode: 'open'}` sagt der API übrigens, daß wir auf das Verstecken der Implementierungsdetails verzichten.
 
+Die "Shadow DOM" Spezifikation it neben der "Custom elements" Spezifikation der wichtigste Bestandteil der "Web components" Spezifikation. Leider mußten wir im laufe unseres Projekte feststellen, das sie für unser Projekt mehr Problem verursacht als löst. Das hat folgende Gründe:
+
+* React Events und "Shadow dom" vertragen sich nicht, da Reacts Event System keine Events von "Custom elements" empfangen kann. Am Anfang haben wir das durch eine von uns gepatchte React Version umgangen, was es aber schwierig machte auf neue React Versionen zu migrieren.
+* Um ein einheitliches Look-And-Feel über alle Micro-Frontends zu gewährleisten hatten wir uns sowieso für ein zentrales Stylesheet entschieden.
+
+Aus diesen Gründen verzichten wir aktuell aud die Verwendung des "Shadow Dom".
+
+
+React ist übrigens nicht das einzige Framework, das Probleme im Umgang mit Web-Components hat. Eine aktuelle übersicht zum Stand der Kompatibilität von verschiedenen Frameworks und Web-Components finden Sie unter `https://custom-elements-everywhere.com`.
+
 ## ES Modules
 
 Die "ES Module" Spezifikation definiert ein API die es erlaubt JavaScript Dokumente in andere Java-Skript Dokumente einzubinden. Ursprünglich wurde über die "HTML Import" Spezifikation versucht diese Verhalten zu spezifizieren. Diese Spezifikation wurde aber von den Entwicklungen im JavaScript Umfeld überholt. Statt eigene Konzepte zu definieren  wie es die "HTML Import" Spezifikation versuchte bedient sich die "ES Module" Spezifikation den aus der JavaScript Entwicklung vertrauten Konzepten. Im Beispiel 4 sehen Sie ein Beispiel für die Verwendung der "ES Modules" API. Für das Ausführen diese Beispiels genügt es nicht mehr, die Datei import.html direkt in einem Browser zu öffnen. Am einfachsten ist es einen lokalen Webserver mit dem SimpleHTTPServer Package von Python zu starten:
