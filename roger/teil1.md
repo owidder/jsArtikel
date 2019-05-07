@@ -4,8 +4,8 @@
 Microservices haben sich im Backend Bereich in vielen Projekten als erfolgreiches Architektur-Pattern etabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, aus einer Vielzahl einzelner Frontends (Micro-Frontends) trotzdem eine homogenes System mit einem einheitlichen Look-And-Feel und einer konsitenten User-Experience herzustellen.  Aus diesem Grund gibt es auch verschiedene Ansätze mit diesen Herrausforderung umzugehen:
 
 * Integration im Backend über vorhandene Mechanismen wie Server-Side-Includes
-* Integration im Backend aber mit zusätzlicher Tool Unterstützung (`https://www.mosaic9.org`)
-* Mono-Repo Ansatz(`https://nx.dev`)
+* Integration im Backend aber mit zusätzlicher Tool Unterstützung (https://www.mosaic9.org)
+* Mono-Repo Ansatz (https://nx.dev)
 * Integration im Frontend über Verlinkung (funktioniert am besten wenn jedes Micro-Frontend eine abgeschlossene Funktionlität aufweisen kann)
 * Integration im Frontend über Web-Components
 
@@ -94,7 +94,7 @@ Jeder Web-Entwickler der eins der bekannten Frameworks wie Angular oder React ve
 * unsere Klasse muß von der Klasse *HTMLElement* erben
 * und über den Aufruf von `customElements.define` wird unserer Klasse ein HTML-Tag zugeordnet.
 
-Das der Name unseres Tags einen Bindestricht enthält ist dabei kein Zufall, sonderneine durch die Spezifikation vorgegeben Namenskonvention. Dadurch wird eine Namenskollision mit vorhandenen oder zukünftigen HTML-Tags vermieden. 
+Das der Name unseres Tags einen Bindestricht enthält ist dabei kein Zufall, sondern eine durch die Spezifikation vorgegeben Namenskonvention. Dadurch wird eine Namenskollision mit vorhandenen oder zukünftigen HTML-Tags vermieden. 
 
 ## Shadow Dom
 
@@ -103,7 +103,7 @@ Die Kapselung von HTML Code in einer Komponente löst aber nur ein Teil des Prob
 * Style Informationen bleiben innerhalb der Komponente
 * die interne Implementierung der Komponente ist nicht sichtbar
 
-Die Verwendung des "Shadow Dom" sehen Sie in Beispiel 1 bei der Verwendung des `this.attachShadow({mode: 'open'})` Aufrufs. Dieser Aufruf erzeugt für unsere Komponente einen eigenen lokalen "Dom-Tree" und beschränkt dadurch den Geltungsbereich der CSS-Regel. Das `p` Tag nach unserem ` <say-hello>` ist daher nicht von der Änderung der Hintergrund Farbe betroffen. 
+Die Verwendung des "Shadow Dom" sehen Sie in Beispiel 1 bei der Verwendung des `this.attachShadow({mode: 'open'})` Aufrufs. Dieser Aufruf erzeugt für unsere Komponente einen eigenen lokalen "Dom-Tree" und beschränkt dadurch den Geltungsbereich der CSS-Regel. Das `p` Tag nach unserem `<say-hello>` ist daher nicht von der Änderung der Hintergrund Farbe betroffen. 
 
 Der Parameter `{mode: 'open'}` sagt der API übrigens, daß wir auf das Verstecken der Implementierungsdetails verzichten.
 
@@ -115,7 +115,7 @@ Die "Shadow DOM" Spezifikation it neben der "Custom elements" Spezifikation der 
 Aus diesen Gründen verzichten wir aktuell aud die Verwendung des "Shadow Dom".
 
 
-React ist übrigens nicht das einzige Framework, das Probleme im Umgang mit Web-Components hat. Eine aktuelle übersicht zum Stand der Kompatibilität von verschiedenen Frameworks und Web-Components finden Sie unter `https://custom-elements-everywhere.com`.
+React ist übrigens nicht das einzige Framework, das Probleme im Umgang mit Web-Components hat. Eine aktuelle übersicht zum Stand der Kompatibilität von verschiedenen Frameworks und Web-Components finden Sie unter https://custom-elements-everywhere.com.
 
 ## ES Modules
 
@@ -125,7 +125,7 @@ Die "ES Module" Spezifikation definiert ein API die es erlaubt JavaScript Dokume
 python -m SimpleHTTPServer 8000
 ```
 
-Die Seite können Sie dann über die URL `http://localhost:8000/example4.html` laden und der Text "hello again" erscheint dann wie erwartet im Browser Fenster.
+Die Seite können Sie dann über die URL http://localhost:8000/example4.html laden und der Text "hello again" erscheint dann wie erwartet im Browser Fenster.
 
 
 *Beispiel 4 - say-hello.js*
