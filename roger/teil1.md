@@ -1,7 +1,7 @@
 
 # UI und Microservices
 
-Microservices haben sich im Backend Bereich in vielen Projekten als erfolgreiches Architektur-Pattern etabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, aus einer Vielzahl einzelner Frontends (Micro-Frontends) trotzdem eine homogenes System mit einem einheitlichen Look-And-Feel und einer konsitenten User-Experience herzustellen.  Aus diesem Grund gibt es auch verschiedene Ansätze mit diesen Herrausforderung umzugehen:
+Microservices haben sich im Backend Bereich in vielen Projekten als erfolgreiches Architektur-Pattern etabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, aus einer Vielzahl einzelner Frontends (Micro-Frontends) trotzdem eine homogenes System mit einem einheitlichen Look-And-Feel und einer konsistenten User-Experience herzustellen.  Aus diesem Grund gibt es auch verschiedene Ansätze mit diesen Herrausforderung umzugehen:
 
 * Integration im Backend über vorhandene Mechanismen wie Server-Side-Includes
 * Integration im Backend aber mit zusätzlicher Tool Unterstützung (https://www.mosaic9.org)
@@ -212,7 +212,53 @@ ersetzt.
 
 # Aus dem Leben einer Komponente
 
-lorem ipsum
+
+*Beispiel 6 - listener.html*
+```HTML
+<html>
+<head>
+    <script>
+    class SayHello extends HTMLElement {
+
+        static get observedAttributes() {
+            return ['text'];
+        }
+
+        get value() {
+         return this.getAttribute('text');
+        }
+
+        set value(newValue) {
+            this.setAttribute('text', newValue);
+        }
+
+        attributeChangedCallback(name, oldValue, newValue) {
+           this.text.innerText = this.value;
+        }
+     
+        connectedCallback() {
+            this.button.addEventListener('click', () => this.value = 'changed');
+        }
+
+        constructor() {
+            super();
+            let shadowRoot = this.attachShadow({mode: 'open'});
+            shadowRoot.innerHTML = `<p><span id="text"/>${this.value}</p>
+                                    <button>click</button>`;
+            this.button = this.shadowRoot.querySelector('button');
+            this.text = this.shadowRoot.querySelector('span#text');
+        }
+    }
+    customElements.define('say-hello', SayHello);
+    </script>
+</head>
+<body>
+    <say-hello text="another hello"></say-hello>
+</body>
+</html>
+```
+
+
 
 ## Lifecycle
 

@@ -1,0 +1,41 @@
+<html>
+<head>
+    <script>
+    class SayHello extends HTMLElement {
+
+        static get observedAttributes() {
+            return ['text'];
+        }
+
+        get value() {
+         return this.getAttribute('text');
+        }
+
+        set value(newValue) {
+            this.setAttribute('text', newValue);
+        }
+
+        attributeChangedCallback(name, oldValue, newValue) {
+           this.text.innerText = this.value;
+        }
+     
+        connectedCallback() {
+            this.button.addEventListener('click', () => this.value = 'changed');
+        }
+
+        constructor() {
+            super();
+            let shadowRoot = this.attachShadow({mode: 'open'});
+            shadowRoot.innerHTML = `<p><span id="text"/>${this.value}</p>
+                                    <button>click</button>`;
+            this.button = this.shadowRoot.querySelector('button');
+            this.text = this.shadowRoot.querySelector('span#text');
+        }
+    }
+    customElements.define('say-hello', SayHello);
+    </script>
+</head>
+<body>
+    <say-hello text="another hello"></say-hello>
+</body>
+</html>
