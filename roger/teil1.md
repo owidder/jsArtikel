@@ -1,6 +1,22 @@
 
 # UI und Microservices
 
+Microservices haben sich im backend Bereich in vielen Projekten als erfolgreiches Architektur-Pattern etabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, daß aus einer Vielzahl einzelner Frontends (Micro-Frontends) ßtrotzdem eine homogenes System mit einem einheitlichen Look-And-Feel und einer konsitenten User-Experience entstehen soll.  Aus diesem Grund gibt es auch verschiedene Ansätze mit diesen Herrausforderung umzugehen:
+
+* Integration im Backend über vorhandene Mechanismen wie Server-Side-Includes
+* Integration im Backend aber mit zusäticher Tool Unterstützung (`https://www.mosaic9.org`)
+* Mono-Repo Ansatz(`https://nx.dev`)
+* Integration über Verlinkung (funktioniert am besten wenn jedes Micro-Frontend eine abgeschlossene Funktionlität aufweisen kann)
+* Integration im Frontend über Web-Components
+
+Wir haben uns für Web-Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir deie Web-Compnents API um bestehende React-Kompoenten zu "wrappen". Die anderen Micro-Frontends benutzen dann die Web-Componente unD iwssen gar nicht das im Hintergrund React seine Dienste versieht. Dieser Anasatz hat folgende Vorteile:
+* eimfache Integration im Frontend
+* schlanke API
+* Web-Standard
+* Abhängkeit zum verwendeten Framework (hier React) bleibt auf das einzelne Micro-Frontend beschränkt.
+
+Wo Licht ist ist natürlich auch Schatten. Auf die vorhandenen Nachteile werden wir noch genauer eingehen, wenn es um die Details der Micro-Frontend Integration in unserem Projekt geht.
+
 # Was sind Komponenten ?
 
 1992 wurde Visual-Basic 2.0 von Microsoft der Öffentlichkeit präsentiert. Neben neuen Sprachfeatures für Objekt orientierte Programmierung, bot Visual-Basic  mit der VBX (Visual-Basic-Extension) Schnittstelle die Möglichkeit beliebige (UI)-Komponenten anderer Hersteller in eigenen Programme zu verwenden. 1995 zog dann Borland mit Delphi 1.0 und der Visual-Component Library nach. Java unternahm dann 1997 mit Swing und JavaBeans ebenfall den Versuch an diese Erfolge anzuknüpfen. Mit allerdings eher mäßigem Erfolg, da sich im Gegensatz zu den Kompomenten-Modellen von Microsoft oder Borland eine eher begrenzte 3rd Party Unterstützung entwickelte. 
