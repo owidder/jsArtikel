@@ -15,7 +15,7 @@ Wir haben uns für Web-Components als Werkzeug zur Integration unserer Micro-Fro
 * Web-Standard
 * Abhängkeit zum verwendeten Framework (hier React) bleibt auf das einzelne Micro-Frontend beschränkt.
 
-Wo Licht ist ist natürlich auch Schatten. Auf die vorhandenen Nachteile werden wir noch genauer eingehen, wenn es um die Details der Micro-Frontend Integration in unserem Projekt geht.
+Wo Licht ist ist natürlich auch Schatten. Auf die vorhandenen Nachteile werden wir genauer eingehen, wenn es um die Details der Micro-Frontend Integration in unserem Projekt geht.
 
 # Was sind Komponenten ?
 
