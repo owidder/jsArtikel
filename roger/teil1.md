@@ -1,12 +1,12 @@
 
 # UI und Microservices
 
-Microservices haben sich im backend Bereich in vielen Projekten als erfolgreiches Architektur-Pattern etabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, daß aus einer Vielzahl einzelner Frontends (Micro-Frontends) ßtrotzdem eine homogenes System mit einem einheitlichen Look-And-Feel und einer konsitenten User-Experience entstehen soll.  Aus diesem Grund gibt es auch verschiedene Ansätze mit diesen Herrausforderung umzugehen:
+Microservices haben sich im Backend Bereich in vielen Projekten als erfolgreiches Architektur-Pattern etabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, aus einer Vielzahl einzelner Frontends (Micro-Frontends) trotzdem eine homogenes System mit einem einheitlichen Look-And-Feel und einer konsitenten User-Experience herzustellen.  Aus diesem Grund gibt es auch verschiedene Ansätze mit diesen Herrausforderung umzugehen:
 
 * Integration im Backend über vorhandene Mechanismen wie Server-Side-Includes
-* Integration im Backend aber mit zusäticher Tool Unterstützung (`https://www.mosaic9.org`)
+* Integration im Backend aber mit zusätzlicher Tool Unterstützung (`https://www.mosaic9.org`)
 * Mono-Repo Ansatz(`https://nx.dev`)
-* Integration über Verlinkung (funktioniert am besten wenn jedes Micro-Frontend eine abgeschlossene Funktionlität aufweisen kann)
+* Integration im Frontend über Verlinkung (funktioniert am besten wenn jedes Micro-Frontend eine abgeschlossene Funktionlität aufweisen kann)
 * Integration im Frontend über Web-Components
 
 Wir haben uns für Web-Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir deie Web-Compnents API um bestehende React-Kompoenten zu "wrappen". Die anderen Micro-Frontends benutzen dann die Web-Componente unD iwssen gar nicht das im Hintergrund React seine Dienste versieht. Dieser Anasatz hat folgende Vorteile:
