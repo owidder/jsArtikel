@@ -9,7 +9,7 @@ Microservices haben sich im Backend Bereich in vielen Projekten als erfolgreiche
 * Integration im Frontend über Verlinkung (funktioniert am besten wenn jedes Micro-Frontend eine abgeschlossene Funktionlität aufweisen kann)
 * Integration im Frontend über Web-Components
 
-Wir haben uns für Web-Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir deie Web-Compnents API um bestehende React-Kompoenten zu "wrappen". Die anderen Micro-Frontends benutzen dann die Web-Componente unD iwssen gar nicht das im Hintergrund React seine Dienste versieht. Dieser Anasatz hat folgende Vorteile:
+Wir haben uns für Web-Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir die Web-Compnents API, um bestehende React-Kompoenten zu "wrappen". Die anderen Micro-Frontends benutzen dann die Web-Componente und wissen gar nicht, daß im Hintergrund React seine Dienste versieht. Dieser Ansatz hat folgende Vorteile:
 * eimfache Integration im Frontend
 * schlanke API
 * Web-Standard
@@ -212,6 +212,13 @@ ersetzt.
 
 # Aus dem Leben einer Komponente
 
+Wie man eine Komponente definiert und verwendet haben Sie in den vorherigen Beispielen gesehen. In Beispiel 6, sehen Sie was man darüberhinaus mit Web-Components noch so alles anstellen kann. Dazu gehört:
+* die Verwendung von Attributen, um Daten an die Komponnte zu übertragen
+* die Verwendung eines Listeners, um auf Ereignisse zu reagieren
+* das Überschreiben von Methoden `observedAttributes` und `connectedCallback`, um die Komponente an die eigenen Bedürfnisse anzupassen.
+
+Beim näheren Betrachten des Beispiel wird deutlich das die "Custom elements" API alles nötige zur Verfügung stellt um eine wiederverwendbare Komponente zu erstellen. Allerdings ist dafür recht viel Code nötig und so elegant wie man es von React oder Angular gewohnt ist, sieht der Code auch nicht aus. 
+
 
 *Beispiel 6 - listener.html*
 ```HTML
@@ -258,9 +265,9 @@ ersetzt.
 </html>
 ```
 
+## Web-Components aber einfach
 
-
-## Lifecycle
+Die direkte Benutzung der Web-Components API ist für kleinre Aufgaben ausreichend, für umfangreichre PRojekte jedoch zu rudimentär. Au diesem Grund existieren mitterweile einige Frameworks und Libraries um genau an diesem Punkt Abhilfe zu schaffen. Zu nennen ist vor allem stencil.js, von den Ionic Machern. Dieses Tool stellt einen Compiler zur Verfügung der den stencil.js Code direkt in die passenden Web-Components API Aufrufe übersetzt. Eine andere  Alternative ist LitElement (https://lit-element.polymer-project.org) von Google oder SkateJS (https://skatejs.netlify.com).
 
 lorem ipsum
 
