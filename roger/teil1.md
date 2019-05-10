@@ -6,7 +6,7 @@ Microservices haben sich im Backend Bereich in vielen Projekten als erfolgreiche
 * Integration im Backend über vorhandene Mechanismen wie Server-Side-Includes
 * Integration im Backend aber mit zusätzlicher Tool Unterstützung (https://www.mosaic9.org)
 * Mono-Repo Ansatz (https://nx.dev)
-* Integration im Frontend über Verlinkung (funktioniert am besten wenn jedes Micro-Frontend eine abgeschlossene Funktionlität aufweisen kann)
+* Integration im Frontend über Verlinkung (funktioniert am besten wenn jedes Micro-Frontend eine abgeschlossene Funktionalität aufweisen kann)
 * Integration im Frontend über Web-Components
 
 Wir haben uns für Web-Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir die Web-Compnents API, um bestehende React-Kompoenten zu "wrappen". Die anderen Micro-Frontends benutzen dann die Web-Componente und wissen gar nicht, daß im Hintergrund React seine Dienste versieht. Dieser Ansatz hat folgende Vorteile:
