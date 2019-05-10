@@ -1,7 +1,7 @@
 
 # UI und Microservices
 
-Microservices haben sich im Backend Bereich in vielen Projekten als erfolgreiches Architektur-Pattern etabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, aus einer Vielzahl einzelner Frontends (Micro-Frontends) trotzdem eine homogenes System mit einem einheitlichen Look-And-Feel und einer konsistenten User-Experience herzustellen.  Aus diesem Grund gibt es auch verschiedene Ansätze mit diesen Herrausforderung umzugehen:
+Microservices haben sich im Backend Bereich in vielen Projekten als erfolgreiches Architektur-Pattern etabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, das es schwierig ist aus einer Vielzahl einzelner Frontends (Micro-Frontends) eine Lösung mit einem einheitlichen Look-And-Feel und einer konsistenten User-Experience herzustellen.  Aus diesem Grund gibt es auch verschiedene Ansätze mit dieser Herrausforderung umzugehen:
 
 * Integration im Backend über vorhandene Mechanismen wie Server-Side-Includes
 * Integration im Backend aber mit zusätzlicher Tool Unterstützung (https://www.mosaic9.org)
