@@ -1,6 +1,6 @@
 # Integration von zwei Micro-Frontends über Custom Elements am konkreten Beispiel
-Im Folgenden wollen wir die Integration von der Mic
+Im Folgenden wollen wir beispielhaft die Integration der Micro-Frontends von zwei Self-Contained-Systems am 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDE4MjI3OThdfQ==
+eyJoaXN0b3J5IjpbLTE1NDEyMzM5NTddfQ==
 -->
