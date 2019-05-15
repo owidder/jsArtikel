@@ -5,11 +5,11 @@ Die integrierte Anwendung sieht folgendermaßen aus:
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190515-01/oliver/correlationApp.png"/>
 
-Über die beiden Eingabefelder kann man jeweils eine Firma eingeben. Im Graph darunter wird
+Über die beiden Eingabefelder kann man jeweils eine Firma eingeben (aus dem Dow Jones). Im Graph darunter werden dann die Börsenkurse beider Firmen der Jahre 2014 - 2018 als Scatter-Plot angezeigt. Die 
 * Element `<select-company></select-company>`: 
 ## Die Self-Contained-Systems
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjk5Nzc4NTEsMTkzNDQ1Nzg1NywyMD
-UwMDM2MDY0LC0xMjgzNTM3MTAsLTg5MjIxMDkxXX0=
+eyJoaXN0b3J5IjpbMTAxNDc1ODI0NCwxOTM0NDU3ODU3LDIwNT
+AwMzYwNjQsLTEyODM1MzcxMCwtODkyMjEwOTFdfQ==
 -->
