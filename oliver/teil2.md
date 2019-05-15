@@ -2,12 +2,12 @@
 Im Folgenden wollen wir mit Code-Beispielen die Integration der Micro-Frontends von zwei Self-Contained-Systems über Custom Elements zeigen.
 ## Das Endprodukt
 Die integrierte Anwendung sieht folgendermaßen aus:
-![enter image description here](./correlationApp.png)
+<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@v20190416-01/images/i-hate-webcomponents.png"/>
 
 * Element `<select-company></select-company>`: 
 ## Die Self-Contained-Systems
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDc3MDY4NzUsMTkzNDQ1Nzg1NywyMD
+eyJoaXN0b3J5IjpbLTEzMDM2MTk4MzAsMTkzNDQ1Nzg1NywyMD
 UwMDM2MDY0LC0xMjgzNTM3MTAsLTg5MjIxMDkxXX0=
 -->
