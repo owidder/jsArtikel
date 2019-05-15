@@ -5,11 +5,11 @@ Die integrierte Anwendung sieht folgendermaßen aus:
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190515-01/oliver/correlationApp.png"/>
 
-Über diue 
+Über die beiden Eingabefelder kann man jeweils eine Firma eingeben. Im Graph darunter wird
 * Element `<select-company></select-company>`: 
 ## Die Self-Contained-Systems
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjgzOTA0MzksMTkzNDQ1Nzg1NywyMD
+eyJoaXN0b3J5IjpbLTIwMjk5Nzc4NTEsMTkzNDQ1Nzg1NywyMD
 UwMDM2MDY0LC0xMjgzNTM3MTAsLTg5MjIxMDkxXX0=
 -->
