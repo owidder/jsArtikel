@@ -4,13 +4,16 @@ Im Folgenden wollen wir mit Code-Beispielen die Integration der Micro-Frontends 
 Mit der aus den verschiedenen Micro-Frontends integrierten Anwendung kann man sich Charts erzeugen lassen, die die Aktienkurse von zwei Firmen in den Jahren 2014 - 2018 als Scatterplot inklusive Korrelationskoeffizienten darstellen.  
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190515-01/oliver/correlationApp.png"/>
-Dazu kann man in den beiden Eingabefeldern (mit Autocomplete) am oberen Rand jeweils eine Firma (aus dem Dow Jones) eingeben. Darunter wird dann der Chart angezeigt.
+Dazu kann man in den beiden Eingabefeldern (mit Autocomplete) am oberen Rand jeweils eine Firma (aus dem Dow Jones) eingeben. Darunter wird dann der Chart angezeigt. 
+Live kann man die Anwendung hier sehen: http://bit.ly/stockprice-app
+
 
 Über die beiden Eingabefelder am oberen Rand kann man jeweils eine Firma eingeben (aus dem Dow Jones). Im Graph darunter werden dann die Börsenkurse beider Firmen der Jahre 2014 - 2018 als Scatter-Plot angezeigt. 
 * Element `<select-company></select-company>`: 
 ## Die Self-Contained-Systems
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxODU4MDQyNiwxOTM0NDU3ODU3LDIwNT
-AwMzYwNjQsLTEyODM1MzcxMCwtODkyMjEwOTFdfQ==
+eyJoaXN0b3J5IjpbMTA3MjkzNTMyLDE0MTg1ODA0MjYsMTkzND
+Q1Nzg1NywyMDUwMDM2MDY0LC0xMjgzNTM3MTAsLTg5MjIxMDkx
+XX0=
 -->
