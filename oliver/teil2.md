@@ -12,16 +12,20 @@ Die Anwendung "Stockprice" besteht aus 2 Self-Contained-Systems (SCS) "Company" 
 1. SCS "Company": Stellt einen Service zur Verfügung, über den Namen und Abkürzungen aller Dow-Jones-Companies abgeholt werden können. Das Micro-Frontend ist eine Eingabefeld mit Autocompletion, das über das Custom Element `<select-company/>` eingebunden werden kann.
 2. SCS "History": Stellt einen Service zur Verfügung, über den die historischen Aktienkurse in den Jahren 2014 bis 2018 abgefragt werden können. Das Micro-Frontend ist der Scatterplot-Chart. Er kann über das Custom Element 
 
-## "Company"
+## Das SCS "Company"
 Das SCS "Company" stellt den Service "companies" zur Verfügung. Er liefert Namen und Abkürzungen aller Firmen im Dow Jones.
 ```
-[{"short":"MMM","full":"3M Company"},{"short":"AOS","full":"A.O. Smith Corp"},
+[
+   {"short":"MMM","full":"3M Company"},
+   {"short":"AOS","full":"A.O. Smith Corp"},
+   ...
+]
 ```
 
 ## Die Self-Contained-Systems
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjgwNTE1NTg4LDc2MzgwODQwOSw0NjA1Mj
-gyNTgsMTA3MjkzNTMyLDE0MTg1ODA0MjYsMTkzNDQ1Nzg1Nywy
-MDUwMDM2MDY0LC0xMjgzNTM3MTAsLTg5MjIxMDkxXX0=
+eyJoaXN0b3J5IjpbLTEwNzc2NjQyOTAsNzYzODA4NDA5LDQ2MD
+UyODI1OCwxMDcyOTM1MzIsMTQxODU4MDQyNiwxOTM0NDU3ODU3
+LDIwNTAwMzYwNjQsLTEyODM1MzcxMCwtODkyMjEwOTFdfQ==
 -->
