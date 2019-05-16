@@ -4,8 +4,9 @@ Im Folgenden wollen wir mit Code-Beispielen die Integration der Micro-Frontends 
 Mit der aus den verschiedenen Micro-Frontends integrierten Anwendung "Stockprice" kann man sich Charts erzeugen lassen, die die Aktienkurse (Jahre 2014 bis 2018) von zwei Firmen als Scatterplot inklusive Korrelationskoeffizienten darstellen.  
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190515-01/oliver/correlationApp.png"/>
+
 Dazu kann man in den beiden Eingabefeldern (mit Autocomplete) am oberen Rand jeweils eine Firma (aus dem Dow Jones) eingeben. Darunter wird dann der Chart angezeigt. 
-Live kann man die Anwendung hier sehen: http://bit.ly/stockprice-app
+Live kann man die Anwendung hier sehen: [http://bit.ly/stockprice-app](http://bit.ly/stockprice-app)
 
 ## Die Self-Contained-Systems "Company" und "History"
 Die Anwendung "Stockprice" besteht aus 2 Self-Contained-Systems (SCS) "Company" und "History", deren Micro-Frontends auf einer Seite mit Hilfe von Custom Elements integriert werden:
@@ -30,12 +31,13 @@ Neben dem Service "companies" liefert das SCS "Company" auch ein Micro-Frontend 
 `<select-company/>` rendert sich als Eingabefeld mit Autocompletion-Funktionalität, über das eine Firma aus dem Dow Jones eingegeben werden kann.
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190516-02/oliver/selectCompany.png"/>
+
 Live kann man sich das Element hier ansehen: [http://bit.ly/stockprice-company](http://bit.ly/stockprice-company)
 
 Um die integrierende Anwendung (hier "Stockprice") zu informieren, welche
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ0MTM4NzQwLC0yNzMxNTgxMTIsLTk4OT
-U4NzQzNCwtMTA3NzY2NDI5MCw3NjM4MDg0MDksNDYwNTI4MjU4
-LDEwNzI5MzUzMiwxNDE4NTgwNDI2LDE5MzQ0NTc4NTcsMjA1MD
-AzNjA2NCwtMTI4MzUzNzEwLC04OTIyMTA5MV19
+eyJoaXN0b3J5IjpbMTEwNzUxNjUwMSwtMjczMTU4MTEyLC05OD
+k1ODc0MzQsLTEwNzc2NjQyOTAsNzYzODA4NDA5LDQ2MDUyODI1
+OCwxMDcyOTM1MzIsMTQxODU4MDQyNiwxOTM0NDU3ODU3LDIwNT
+AwMzYwNjQsLTEyODM1MzcxMCwtODkyMjEwOTFdfQ==
 -->
