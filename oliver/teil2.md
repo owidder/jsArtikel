@@ -8,17 +8,16 @@ Dazu kann man in den beiden Eingabefeldern (mit Autocomplete) am oberen Rand jew
 Live kann man die Anwendung hier sehen: http://bit.ly/stockprice-app
 
 ## Die Self-Contained-Systems
-Die Anwendung "Stockprice" besteht aus 2 Self-Contained-Systems (SCS), deren Micro-Frontends auf einer Seite mit Hilfe von Custom Elements integriert werden:
+Die Anwendung "Stockprice" besteht aus 2 Self-Contained-Systems (SCS) "Company" und "History", deren Micro-Frontends auf einer Seite mit Hilfe von Custom Elements integriert werden:
 1. SCS "Company": Stellt einen Service zur Verfügung, über den Namen und Abkürzungen aller Dow-Jones-Companies abgeholt werden können. Das Micro-Frontend ist eine Eingabefeld mit Autocompletion, das über das Custom Element `<select-company/>` eingebunden werden kann.
 2. SCS "History": Stellt einen Service zur Verfügung, über den die historischen Aktienkurse in den Jahren 2014 bis 2018 abgefragt werden können. Das Micro-Frontend ist der Scatterplot-Chart. Er kann über das Custom Element 
 
 
-Über die beiden Eingabefelder am oberen Rand kann man jeweils eine Firma eingeben (aus dem Dow Jones). Im Graph darunter werden dann die Börsenkurse beider Firmen der Jahre 2014 - 2018 als Scatter-Plot angezeigt. 
-* Element `<select-company></select-company>`: 
+
 ## Die Self-Contained-Systems
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg1MDk5NTM3LDQ2MDUyODI1OCwxMDcyOT
-M1MzIsMTQxODU4MDQyNiwxOTM0NDU3ODU3LDIwNTAwMzYwNjQs
-LTEyODM1MzcxMCwtODkyMjEwOTFdfQ==
+eyJoaXN0b3J5IjpbLTU1MTU1NTQxOSw0NjA1MjgyNTgsMTA3Mj
+kzNTMyLDE0MTg1ODA0MjYsMTkzNDQ1Nzg1NywyMDUwMDM2MDY0
+LC0xMjgzNTM3MTAsLTg5MjIxMDkxXX0=
 -->
