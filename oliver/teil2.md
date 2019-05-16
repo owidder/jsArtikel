@@ -22,10 +22,13 @@ Das SCS "Company" stellt den Service "companies" zur Verfügung. Er liefert Name
 ]
 ```
 
+## Micro-Frontend von "Company"
+
 ## Die Self-Contained-Systems
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzc2NjQyOTAsNzYzODA4NDA5LDQ2MD
-UyODI1OCwxMDcyOTM1MzIsMTQxODU4MDQyNiwxOTM0NDU3ODU3
-LDIwNTAwMzYwNjQsLTEyODM1MzcxMCwtODkyMjEwOTFdfQ==
+eyJoaXN0b3J5IjpbMTI5OTAwMDE3LC0xMDc3NjY0MjkwLDc2Mz
+gwODQwOSw0NjA1MjgyNTgsMTA3MjkzNTMyLDE0MTg1ODA0MjYs
+MTkzNDQ1Nzg1NywyMDUwMDM2MDY0LC0xMjgzNTM3MTAsLTg5Mj
+IxMDkxXX0=
 -->
