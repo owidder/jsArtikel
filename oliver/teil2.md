@@ -13,13 +13,13 @@ Die Anwendung "Stockprice" besteht aus 2 Self-Contained-Systems (SCS) "Company" 
 2. SCS "History": Stellt einen Service zur Verfügung, über den die historischen Aktienkurse in den Jahren 2014 bis 2018 abgefragt werden können. Das Micro-Frontend ist der Scatterplot-Chart. Er kann über das Custom Element 
 
 ## "Company"
-
+Das SCS "Company" stellt den 
 
 
 ## Die Self-Contained-Systems
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzMTgyOTQ1MCw0NjA1MjgyNTgsMTA3Mj
-kzNTMyLDE0MTg1ODA0MjYsMTkzNDQ1Nzg1NywyMDUwMDM2MDY0
-LC0xMjgzNTM3MTAsLTg5MjIxMDkxXX0=
+eyJoaXN0b3J5IjpbNzYzODA4NDA5LDQ2MDUyODI1OCwxMDcyOT
+M1MzIsMTQxODU4MDQyNiwxOTM0NDU3ODU3LDIwNTAwMzYwNjQs
+LTEyODM1MzcxMCwtODkyMjEwOTFdfQ==
 -->
