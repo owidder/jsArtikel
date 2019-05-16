@@ -23,13 +23,17 @@ Das SCS "Company" stellt den Service "companies" zur Verfügung. Er liefert Name
 ```
 
 ## Micro-Frontend von "Company"
-Neben dem Service "companies" liefert das SCS "Company" auch ein Micro-Frontend aus. Dieses Micro-Frontend (ein JavaScript-File) enthält ein Custom Element, das wiederum den Service "companies" aufruft. 
+Neben dem Service "companies" liefert das SCS "Company" auch ein Micro-Frontend aus. Dieses Micro-Frontend (ein JavaScript-File) enthält ein Custom Element mit Namen `<select-company/>`, das wiederum den Service "companies" aufruft. 
 
-## Die Self-Contained-Systems
+<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190516-01/oliver/company.png"/>
 
+`<select-company/>` rendert sich als Eingabefeld mit Autocompletion-Funktionalität, über das eine Firma aus dem Dow Jones eingegeben werden kann.
+
+
+Um die integrierende Anwendung (hier "Stockprice") zu informieren, welche
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4OTU4NzQzNCwtMTA3NzY2NDI5MCw3Nj
-M4MDg0MDksNDYwNTI4MjU4LDEwNzI5MzUzMiwxNDE4NTgwNDI2
-LDE5MzQ0NTc4NTcsMjA1MDAzNjA2NCwtMTI4MzUzNzEwLC04OT
-IyMTA5MV19
+eyJoaXN0b3J5IjpbLTI3MzE1ODExMiwtOTg5NTg3NDM0LC0xMD
+c3NjY0MjkwLDc2MzgwODQwOSw0NjA1MjgyNTgsMTA3MjkzNTMy
+LDE0MTg1ODA0MjYsMTkzNDQ1Nzg1NywyMDUwMDM2MDY0LC0xMj
+gzNTM3MTAsLTg5MjIxMDkxXX0=
 -->
