@@ -32,12 +32,35 @@ Neben dem Service "companies" liefert das SCS "Company" auch ein Micro-Frontend 
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190516-02/oliver/selectCompany.png"/>
 
+Verwenden kann man das Element z.B. so:
+```
+<select-company initial-short="AAPL"></select-company>
+<div id="symbol"></div>
+<script>
+(function () {
+
+var element = document.querySelector("select-company");
+
+element.onChangeCompany = function (symbol) {
+
+var symbolDiv = document.querySelector("div#symbol");
+
+symbolDiv.innerHTML = "Symbol = " + symbol;
+
+}
+
+})()
+
+</script>
+```
+
+
 Live kann man sich das Element hier ansehen: [http://bit.ly/stockprice-company](http://bit.ly/stockprice-company)
 
 Um die integrierende Anwendung (hier "Stockprice") zu informieren, welche
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNzUxNjUwMSwtMjczMTU4MTEyLC05OD
-k1ODc0MzQsLTEwNzc2NjQyOTAsNzYzODA4NDA5LDQ2MDUyODI1
-OCwxMDcyOTM1MzIsMTQxODU4MDQyNiwxOTM0NDU3ODU3LDIwNT
-AwMzYwNjQsLTEyODM1MzcxMCwtODkyMjEwOTFdfQ==
+eyJoaXN0b3J5IjpbOTAyOTYzOTY0LC0yNzMxNTgxMTIsLTk4OT
+U4NzQzNCwtMTA3NzY2NDI5MCw3NjM4MDg0MDksNDYwNTI4MjU4
+LDEwNzI5MzUzMiwxNDE4NTgwNDI2LDE5MzQ0NTc4NTcsMjA1MD
+AzNjA2NCwtMTI4MzUzNzEwLC04OTIyMTA5MV19
 -->
