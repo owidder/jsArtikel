@@ -38,19 +38,12 @@ Verwenden kann man das Element z.B. so:
 <div id="symbol"></div>
 <script>
 (function () {
-
-var element = document.querySelector("select-company");
-
-element.onChangeCompany = function (symbol) {
-
-var symbolDiv = document.querySelector("div#symbol");
-
-symbolDiv.innerHTML = "Symbol = " + symbol;
-
-}
-
+	var element = document.querySelector("select-company");
+	element.onChangeCompany = function (symbol) {
+		var symbolDiv = document.querySelector("div#symbol");
+		symbolDiv.innerHTML = "Symbol = " + symbol;
+	}
 })()
-
 </script>
 ```
 
@@ -59,8 +52,8 @@ Live kann man sich das Element hier ansehen: [http://bit.ly/stockprice-company](
 
 Um die integrierende Anwendung (hier "Stockprice") zu informieren, welche
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTAyOTYzOTY0LC0yNzMxNTgxMTIsLTk4OT
-U4NzQzNCwtMTA3NzY2NDI5MCw3NjM4MDg0MDksNDYwNTI4MjU4
-LDEwNzI5MzUzMiwxNDE4NTgwNDI2LDE5MzQ0NTc4NTcsMjA1MD
-AzNjA2NCwtMTI4MzUzNzEwLC04OTIyMTA5MV19
+eyJoaXN0b3J5IjpbLTEyOTMxMjg2NjYsLTI3MzE1ODExMiwtOT
+g5NTg3NDM0LC0xMDc3NjY0MjkwLDc2MzgwODQwOSw0NjA1Mjgy
+NTgsMTA3MjkzNTMyLDE0MTg1ODA0MjYsMTkzNDQ1Nzg1NywyMD
+UwMDM2MDY0LC0xMjgzNTM3MTAsLTg5MjIxMDkxXX0=
 -->
