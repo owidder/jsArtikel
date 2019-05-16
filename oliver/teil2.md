@@ -29,11 +29,12 @@ Neben dem Service "companies" liefert das SCS "Company" auch ein Micro-Frontend 
 
 `<select-company/>` rendert sich als Eingabefeld mit Autocompletion-Funktionalität, über das eine Firma aus dem Dow Jones eingegeben werden kann.
 
+<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190516-02/oliver/selectCompany.png"/>
 
 Um die integrierende Anwendung (hier "Stockprice") zu informieren, welche
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3MzE1ODExMiwtOTg5NTg3NDM0LC0xMD
-c3NjY0MjkwLDc2MzgwODQwOSw0NjA1MjgyNTgsMTA3MjkzNTMy
-LDE0MTg1ODA0MjYsMTkzNDQ1Nzg1NywyMDUwMDM2MDY0LC0xMj
-gzNTM3MTAsLTg5MjIxMDkxXX0=
+eyJoaXN0b3J5IjpbLTE1NDk5NDM3OTYsLTI3MzE1ODExMiwtOT
+g5NTg3NDM0LC0xMDc3NjY0MjkwLDc2MzgwODQwOSw0NjA1Mjgy
+NTgsMTA3MjkzNTMyLDE0MTg1ODA0MjYsMTkzNDQ1Nzg1NywyMD
+UwMDM2MDY0LC0xMjgzNTM3MTAsLTg5MjIxMDkxXX0=
 -->
