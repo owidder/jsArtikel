@@ -23,14 +23,16 @@ Das SCS "Company" stellt den Service "companies" zur Verfügung. Er liefert Name
 ```
 
 ## Micro-Frontend von "Company"
-Neben dem Service "companies" liefert das SCS "Company" auch ein Micro-Frontend aus. Dieses Micro-Frontend (ein JavaScript-File) enthält ein Custom Element, das wiederum den Service "companies" aufruft. 
+Neben dem Service "companies" liefert das SCS "Company" auch ein Micro-Frontend aus. Dieses Micro-Frontend (ein JavaScript-File) enthält ein Custom Element mit Namen `<select-company/>`, das wiederum den Service "companies" aufruft. 
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190516-01/oliver/company.png"/>
 
+`<select-company/>` stellt sich als Eingabefeld 
 
+Um die integrierende Anwendung (hier "Stockprice") zu informieren, welche
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjcxMzAzNjAsLTk4OTU4NzQzNCwtMT
-A3NzY2NDI5MCw3NjM4MDg0MDksNDYwNTI4MjU4LDEwNzI5MzUz
-MiwxNDE4NTgwNDI2LDE5MzQ0NTc4NTcsMjA1MDAzNjA2NCwtMT
-I4MzUzNzEwLC04OTIyMTA5MV19
+eyJoaXN0b3J5IjpbMTYxNDUwNzk2NywtOTg5NTg3NDM0LC0xMD
+c3NjY0MjkwLDc2MzgwODQwOSw0NjA1MjgyNTgsMTA3MjkzNTMy
+LDE0MTg1ODA0MjYsMTkzNDQ1Nzg1NywyMDUwMDM2MDY0LC0xMj
+gzNTM3MTAsLTg5MjIxMDkxXX0=
 -->
