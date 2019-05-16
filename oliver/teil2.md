@@ -23,13 +23,13 @@ Das SCS "Company" stellt den Service "companies" zur Verfügung. Er liefert Name
 ```
 
 ## Micro-Frontend von "Company"
-Neben dem Service "companies" liefert d 
+Neben dem Service "companies" liefert das SCS "Company" auch ein Micro-Frontend aus. Dieses Micro-Frontend (ein JavaScript-File) enthält ein Custom Element, das wiederum den Service "companies" aufruft. 
 
 ## Die Self-Contained-Systems
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjA4MjQyODgsLTEwNzc2NjQyOTAsNz
-YzODA4NDA5LDQ2MDUyODI1OCwxMDcyOTM1MzIsMTQxODU4MDQy
-NiwxOTM0NDU3ODU3LDIwNTAwMzYwNjQsLTEyODM1MzcxMCwtOD
-kyMjEwOTFdfQ==
+eyJoaXN0b3J5IjpbLTk4OTU4NzQzNCwtMTA3NzY2NDI5MCw3Nj
+M4MDg0MDksNDYwNTI4MjU4LDEwNzI5MzUzMiwxNDE4NTgwNDI2
+LDE5MzQ0NTc4NTcsMjA1MDAzNjA2NCwtMTI4MzUzNzEwLC04OT
+IyMTA5MV19
 -->
