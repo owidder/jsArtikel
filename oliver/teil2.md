@@ -46,14 +46,14 @@ Verwenden kann man das Element z.B. so:
 })()
 </script>
 ```
-
+Dem Element kann als Property `onChangeCompany` eine Function übergeben werden. Diese wird 
 
 Live kann man sich das Element hier ansehen: [http://bit.ly/stockprice-company](http://bit.ly/stockprice-company)
 
-Um die integrierende Anwendung (hier "Stockprice") zu informieren, welche
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTMxMjg2NjYsLTI3MzE1ODExMiwtOT
-g5NTg3NDM0LC0xMDc3NjY0MjkwLDc2MzgwODQwOSw0NjA1Mjgy
-NTgsMTA3MjkzNTMyLDE0MTg1ODA0MjYsMTkzNDQ1Nzg1NywyMD
-UwMDM2MDY0LC0xMjgzNTM3MTAsLTg5MjIxMDkxXX0=
+eyJoaXN0b3J5IjpbMTAzOTgzNzc1NiwtMjczMTU4MTEyLC05OD
+k1ODc0MzQsLTEwNzc2NjQyOTAsNzYzODA4NDA5LDQ2MDUyODI1
+OCwxMDcyOTM1MzIsMTQxODU4MDQyNiwxOTM0NDU3ODU3LDIwNT
+AwMzYwNjQsLTEyODM1MzcxMCwtODkyMjEwOTFdfQ==
 -->
