@@ -51,11 +51,13 @@ Dem Custom Element kann als Property `onChangeCompany` eine Function übergeben 
 
 Live kann man sich das Element hier ansehen: [http://bit.ly/stockprice-company](http://bit.ly/stockprice-company)
 
+## Das Custom Element "select-company"
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODY1MzYxNjYsODQ4NzYyNjk1LDEwMz
-k4Mzc3NTYsLTI3MzE1ODExMiwtOTg5NTg3NDM0LC0xMDc3NjY0
-MjkwLDc2MzgwODQwOSw0NjA1MjgyNTgsMTA3MjkzNTMyLDE0MT
-g1ODA0MjYsMTkzNDQ1Nzg1NywyMDUwMDM2MDY0LC0xMjgzNTM3
-MTAsLTg5MjIxMDkxXX0=
+eyJoaXN0b3J5IjpbMTI4OTE3MjY5LDg0ODc2MjY5NSwxMDM5OD
+M3NzU2LC0yNzMxNTgxMTIsLTk4OTU4NzQzNCwtMTA3NzY2NDI5
+MCw3NjM4MDg0MDksNDYwNTI4MjU4LDEwNzI5MzUzMiwxNDE4NT
+gwNDI2LDE5MzQ0NTc4NTcsMjA1MDAzNjA2NCwtMTI4MzUzNzEw
+LC04OTIyMTA5MV19
 -->
