@@ -1,5 +1,6 @@
 # Integration von zwei Micro-Frontends über Custom Elements am konkreten Beispiel
 Im Folgenden wollen wir mit Code-Beispielen die Integration der Micro-Frontends von zwei Self-Contained-Systems über Custom Elements zeigen.
+
 ## Die integrierte Anwendung "Stockprice": Korrelation von Aktienkursen
 Mit der aus den verschiedenen Micro-Frontends integrierten Anwendung "Stockprice" kann man sich Charts erzeugen lassen, die die Aktienkurse (Jahre 2014 bis 2018) von zwei Firmen als Scatterplot inklusive Korrelationskoeffizienten darstellen.  
 
@@ -52,8 +53,9 @@ Live kann man sich das Element hier ansehen: [http://bit.ly/stockprice-company](
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzOTgzNzc1NiwtMjczMTU4MTEyLC05OD
-k1ODc0MzQsLTEwNzc2NjQyOTAsNzYzODA4NDA5LDQ2MDUyODI1
-OCwxMDcyOTM1MzIsMTQxODU4MDQyNiwxOTM0NDU3ODU3LDIwNT
-AwMzYwNjQsLTEyODM1MzcxMCwtODkyMjEwOTFdfQ==
+eyJoaXN0b3J5IjpbNTM5MjM2NTU4LDEwMzk4Mzc3NTYsLTI3Mz
+E1ODExMiwtOTg5NTg3NDM0LC0xMDc3NjY0MjkwLDc2MzgwODQw
+OSw0NjA1MjgyNTgsMTA3MjkzNTMyLDE0MTg1ODA0MjYsMTkzND
+Q1Nzg1NywyMDUwMDM2MDY0LC0xMjgzNTM3MTAsLTg5MjIxMDkx
+XX0=
 -->
