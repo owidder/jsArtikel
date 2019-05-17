@@ -6,13 +6,13 @@ Mit der aus den verschiedenen Micro-Frontends integrierten Anwendung "Stockprice
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190515-01/oliver/correlationApp.png"/>
 
-Dazu kann man in den beiden Eingabefeldern (mit Autocomplete) am oberen Rand jeweils eine Firma (aus dem Dow Jones) eingeben. Darunter wird dann der Chart angezeigt. 
+Dazu kann man in den beiden Automplete-Eingabefeldern am oberen Rand jeweils eine Firma (aus dem Dow Jones) eingeben. Darunter wird dann der Chart angezeigt. 
 Live kann man die Anwendung hier sehen: [http://bit.ly/stockprice-app](http://bit.ly/stockprice-app)
 
-## Die Self-Contained-Systems "Company" und "History"
-Die Anwendung "Stockprice" besteht aus 2 Self-Contained-Systems (SCS) "Company" und "History", deren Micro-Frontends auf einer Seite mit Hilfe von Custom Elements integriert werden:
-1. SCS "Company": Stellt einen Service zur Verfügung, über den Namen und Abkürzungen aller Dow-Jones-Companies abgeholt werden können. Das Micro-Frontend ist eine Eingabefeld mit Autocompletion, das über ein Custom Element mir Namen `<select-company/>` eingebunden werden kann.
-2. SCS "History": Stellt einen Service zur Verfügung, über den die historischen Aktienkurse in den Jahren 2014 bis 2018 abgefragt werden können. Das Micro-Frontend ist der Scatterplot-Chart und kann über ein Custom Element mit Namen `<company-correlation/>` eingebunden werden.
+## Die Self-Contained-Systems "Company" und "StockHistory"
+Die Anwendung "Stockprice" besteht aus 2 Self-Contained-Systems (SCS) "Company" und "StockHistory", deren Micro-Frontends auf einer Seite mit Hilfe von Custom Elements integriert werden:
+1. SCS "Company": Stellt einen Service zur Verfügung, über den Namen und Abkürzungen aller Dow-Jones-Companies abgeholt werden können. Das Micro-Frontend ist ein Eingabefeld mit Autocompletion, das über ein Custom Element mit Namen `<select-company/>` eingebunden werden kann.
+2. SCS "StockHistory": Stellt einen Service zur Verfügung, über den die historischen Aktienkurse abgefragt werden können. Das Micro-Frontend ist der Scatterplot-Chart und kann über ein Custom Element mit Namen `<company-correlation/>` eingebunden werden.
 
 ## Das SCS "Company"
 Das SCS "Company" stellt den Service "companies" zur Verfügung. Er liefert Namen und Abkürzungen aller Firmen im Dow Jones inklusive Abkürzungen.
@@ -53,7 +53,7 @@ Live kann man sich das Element hier ansehen: [http://bit.ly/stockprice-company](
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM5MjM2NTU4LDEwMzk4Mzc3NTYsLTI3Mz
+eyJoaXN0b3J5IjpbODU2MTA4MTk5LDEwMzk4Mzc3NTYsLTI3Mz
 E1ODExMiwtOTg5NTg3NDM0LC0xMDc3NjY0MjkwLDc2MzgwODQw
 OSw0NjA1MjgyNTgsMTA3MjkzNTMyLDE0MTg1ODA0MjYsMTkzND
 Q1Nzg1NywyMDUwMDM2MDY0LC0xMjgzNTM3MTAsLTg5MjIxMDkx
