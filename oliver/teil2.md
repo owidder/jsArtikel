@@ -47,13 +47,13 @@ Verwenden kann man das Element z.B. so:
 })()
 </script>
 ```
-Dem Custom Element kann als Property `onChangeCompany` eine Function übergeben werden. Diese wird nach Eingabe eines Name
+Dem Custom Element kann als Property `onChangeCompany` eine Function übergeben werden. Diese wird nach der Eingabe durch den Anwender mit dem entsprechenden Company-Object (z.B.: `{short: "AAPL", full: "Apple Inc."}`) aufgerufen.
 
 Live kann man sich das Element hier ansehen: [http://bit.ly/stockprice-company](http://bit.ly/stockprice-company)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDkxNTk0NjQsODQ4NzYyNjk1LDEwMz
+eyJoaXN0b3J5IjpbLTEyODY1MzYxNjYsODQ4NzYyNjk1LDEwMz
 k4Mzc3NTYsLTI3MzE1ODExMiwtOTg5NTg3NDM0LC0xMDc3NjY0
 MjkwLDc2MzgwODQwOSw0NjA1MjgyNTgsMTA3MjkzNTMyLDE0MT
 g1ODA0MjYsMTkzNDQ1Nzg1NywyMDUwMDM2MDY0LC0xMjgzNTM3
