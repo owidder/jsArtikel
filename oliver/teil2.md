@@ -41,20 +41,21 @@ Verwenden kann man das Element z.B. so:
 	var element = document.querySelector("select-company");
 	element.onChangeCompany = function (company) {
 		var companyDiv = document.querySelector("div#company");
-		symbolDiv.innerHTML = "Symbol = " + symbol;
+		companyDiv.innerHTML = "Company = " + company.full + 
+			" [" + company.short + "]";
 	}
 })()
 </script>
 ```
-Dem Element kann als Property `onChangeCompany` eine Function übergeben werden. Diese wird 
+Dem Custom Element kann als Property `onChangeCompany` eine Function übergeben werden. Diese wird nach Eingabe eines Name
 
 Live kann man sich das Element hier ansehen: [http://bit.ly/stockprice-company](http://bit.ly/stockprice-company)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ4NzYyNjk1LDEwMzk4Mzc3NTYsLTI3Mz
-E1ODExMiwtOTg5NTg3NDM0LC0xMDc3NjY0MjkwLDc2MzgwODQw
-OSw0NjA1MjgyNTgsMTA3MjkzNTMyLDE0MTg1ODA0MjYsMTkzND
-Q1Nzg1NywyMDUwMDM2MDY0LC0xMjgzNTM3MTAsLTg5MjIxMDkx
-XX0=
+eyJoaXN0b3J5IjpbLTEyMDkxNTk0NjQsODQ4NzYyNjk1LDEwMz
+k4Mzc3NTYsLTI3MzE1ODExMiwtOTg5NTg3NDM0LC0xMDc3NjY0
+MjkwLDc2MzgwODQwOSw0NjA1MjgyNTgsMTA3MjkzNTMyLDE0MT
+g1ODA0MjYsMTkzNDQ1Nzg1NywyMDUwMDM2MDY0LC0xMjgzNTM3
+MTAsLTg5MjIxMDkxXX0=
 -->
