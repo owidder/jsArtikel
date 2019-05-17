@@ -14,7 +14,7 @@ Die Anwendung "Stockprice" besteht aus 2 Self-Contained-Systems (SCS) "Company" 
 1. SCS "Company": Stellt einen Service zur Verfügung, über den Namen und Abkürzungen aller Dow-Jones-Companies abgeholt werden können. Das Micro-Frontend ist ein Eingabefeld mit Autocompletion, das über ein Custom Element mit Namen `<select-company/>` eingebunden werden kann.
 2. SCS "StockHistory": Stellt einen Service zur Verfügung, über den die historischen Aktienkurse abgefragt werden können. Das Micro-Frontend ist der Scatterplot-Chart und kann über ein Custom Element mit Namen `<company-correlation/>` eingebunden werden.
 
-## Das SCS "Company"
+## Das Micro-Frontend von "Company"
 Das SCS "Company" stellt den Service "companies" zur Verfügung. Er liefert Namen und Abkürzungen aller Firmen im Dow Jones inklusive Abkürzungen.
 ```
 [
@@ -24,7 +24,6 @@ Das SCS "Company" stellt den Service "companies" zur Verfügung. Er liefert Name
 ]
 ```
 
-## Micro-Frontend von "Company"
 Neben dem Service "companies" liefert das SCS "Company" auch ein Micro-Frontend aus. Dieses Micro-Frontend (ein JavaScript-File) enthält ein Custom Element mit Namen `<select-company/>`, das wiederum den Service "companies" aufruft. 
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190516-01/oliver/company.png"/>
@@ -36,12 +35,12 @@ Neben dem Service "companies" liefert das SCS "Company" auch ein Micro-Frontend 
 Verwenden kann man das Element z.B. so:
 ```
 <select-company initial-short="AAPL"></select-company>
-<div id="symbol"></div>
+<div id="company"></div>
 <script>
 (function () {
 	var element = document.querySelector("select-company");
-	element.onChangeCompany = function (symbol) {
-		var symbolDiv = document.querySelector("div#symbol");
+	element.onChangeCompany = function (company) {
+		var companyDiv = document.querySelector("div#company");
 		symbolDiv.innerHTML = "Symbol = " + symbol;
 	}
 })()
@@ -53,7 +52,7 @@ Live kann man sich das Element hier ansehen: [http://bit.ly/stockprice-company](
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODU2MTA4MTk5LDEwMzk4Mzc3NTYsLTI3Mz
+eyJoaXN0b3J5IjpbODQ4NzYyNjk1LDEwMzk4Mzc3NTYsLTI3Mz
 E1ODExMiwtOTg5NTg3NDM0LC0xMDc3NjY0MjkwLDc2MzgwODQw
 OSw0NjA1MjgyNTgsMTA3MjkzNTMyLDE0MTg1ODA0MjYsMTkzND
 Q1Nzg1NywyMDUwMDM2MDY0LC0xMjgzNTM3MTAsLTg5MjIxMDkx
