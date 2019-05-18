@@ -16,7 +16,7 @@ Die Anwendung "Stockprice" besteht aus 2 Self-Contained-Systems (SCS) "Company" 
 2. SCS "StockHistory": Stellt einen Service zur Verfügung, über den die historischen Aktienkurse abgefragt werden können. Das Micro-Frontend ist der Scatterplot-Chart und kann über ein Custom Element mit Namen `<company-correlation/>` eingebunden werden.
 
 ## Das Micro-Frontend von "Company"
-Das SCS "Company" stellt den Service "companies" zur Verfügung. Er liefert Namen und Abkürzungen aller Firmen im Dow Jones inklusive Abkürzungen.
+Das SCS "Company" stellt den Service "companies" zur Verfügung. Er liefert Namen und Abkürzungen aller Firmen aus dem Dow Jones:
 ```
 [
    {"short":"MMM","full":"3M Company"},
@@ -56,7 +56,7 @@ Live kann man sich das Element hier ansehen: [http://bit.ly/stockprice-company](
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2ODQ5OTA1MSwxMjg5MTcyNjksODQ4Nz
+eyJoaXN0b3J5IjpbLTQwMzA3MzM4MywxMjg5MTcyNjksODQ4Nz
 YyNjk1LDEwMzk4Mzc3NTYsLTI3MzE1ODExMiwtOTg5NTg3NDM0
 LC0xMDc3NjY0MjkwLDc2MzgwODQwOSw0NjA1MjgyNTgsMTA3Mj
 kzNTMyLDE0MTg1ODA0MjYsMTkzNDQ1Nzg1NywyMDUwMDM2MDY0
