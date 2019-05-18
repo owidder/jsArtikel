@@ -121,13 +121,13 @@ export interface Company {
 
 ## Die React-Component "SelectCompany"
 
-Obwohl sich in der React-Component `SelectCompany` sich die eigentliche Funktionalität des Micro-Frontends befindet, wollen wir hier nur auf wenige Aspekte eingehen.
+Obwohl sich in der React-Component `SelectCompany` sich die eigentliche Funktionalität des Micro-Frontends befindet, wollen wir hier nur auf wenige Aspekte eingehen. Den Code kann man 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc3NzEyMjI0LC02Mzc2MjY3OTYsLTE2OT
-k0NjY4MzcsMTI2NTkzNDU0OSwxOTk3MzU3OTk3LDEwNzE1ODcw
-NjUsLTM3ODUzNTc2MiwxNzE5NDM4NDI1LDIxMzEzMzY1NjMsOD
-I4NzgzNzE5LDEwNDk2NTAwOTIsLTUzODQyNTc3MiwxODcxMjEz
-NDUxLC00MDkxMjY2OTEsLTQwOTEyNjY5MSwxNzIwNzI3MTYwLC
-0xOTM5NzEzMzg0LDEyMDE1NTMwNzgsODMwNTY0NDM4LDE1Nzk1
-MTY0M119
+eyJoaXN0b3J5IjpbMTQwNTQ0Mzc4MCwzNzc3MTIyMjQsLTYzNz
+YyNjc5NiwtMTY5OTQ2NjgzNywxMjY1OTM0NTQ5LDE5OTczNTc5
+OTcsMTA3MTU4NzA2NSwtMzc4NTM1NzYyLDE3MTk0Mzg0MjUsMj
+EzMTMzNjU2Myw4Mjg3ODM3MTksMTA0OTY1MDA5MiwtNTM4NDI1
+NzcyLDE4NzEyMTM0NTEsLTQwOTEyNjY5MSwtNDA5MTI2NjkxLD
+E3MjA3MjcxNjAsLTE5Mzk3MTMzODQsMTIwMTU1MzA3OCw4MzA1
+NjQ0MzhdfQ==
 -->
