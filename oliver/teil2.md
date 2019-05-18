@@ -57,11 +57,14 @@ Bei der Implementierung der Custom Elements haben wir die folgenden Prinzipien u
 	* Unverträglich des von uns eingesetzten UI-Frameworks *React* mit dem Shadow-DOM: Der Einsatz von React-Componenten innerhalb des Shadow-DOM führte zu Problemen bei der Event-Verarbeitung (siehe [http://bit.ly/react-shadow-dom](http://bit.ly/react-shadow-dom)).
 * Custom Elements sind nur schmale Wrapper: Die gesamte client-seitige Funktionalität eines Micro-Frontends befindet sich innerhalb einer React-Component (mit Unter-Compenents). Ein Custom Elements ist immer nur ein schmaler Wrapper um diese React-Component.
 
+Mit diesen Prinzipien sieht die Implementierung des Custom Elements `<select-company/>` folgendermaßen aus:
+```
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5OTg0Mjg3NCw4MzA1NjQ0MzgsMTU3OT
-UxNjQzLC0xNjk0OTY0NTcsMTI4OTE3MjY5LDg0ODc2MjY5NSwx
-MDM5ODM3NzU2LC0yNzMxNTgxMTIsLTk4OTU4NzQzNCwtMTA3Nz
-Y2NDI5MCw3NjM4MDg0MDksNDYwNTI4MjU4LDEwNzI5MzUzMiwx
-NDE4NTgwNDI2LDE5MzQ0NTc4NTcsMjA1MDAzNjA2NCwtMTI4Mz
-UzNzEwLC04OTIyMTA5MV19
+eyJoaXN0b3J5IjpbLTEyMzU5NjE0ODIsODMwNTY0NDM4LDE1Nz
+k1MTY0MywtMTY5NDk2NDU3LDEyODkxNzI2OSw4NDg3NjI2OTUs
+MTAzOTgzNzc1NiwtMjczMTU4MTEyLC05ODk1ODc0MzQsLTEwNz
+c2NjQyOTAsNzYzODA4NDA5LDQ2MDUyODI1OCwxMDcyOTM1MzIs
+MTQxODU4MDQyNiwxOTM0NDU3ODU3LDIwNTAwMzYwNjQsLTEyOD
+M1MzcxMCwtODkyMjEwOTFdfQ==
 -->
