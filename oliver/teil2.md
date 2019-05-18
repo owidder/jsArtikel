@@ -2,8 +2,8 @@
 Im Folgenden wollen wir zeigen, wie wir Custom Elements in einem großen Projekt in der Finanzindustrie mit über 40 Self-Contained-Systems eingesetzt haben. 
 Dazu zeigen wir exemplarisch an einer kleinen Beispiel-Anwendung, die aus zwei Self-Contained-Systems besteht, die Integration der Micro-Frontends über Custom Elements.
 
-## Die Beispiel-Anwendung "Stockprice": Korrelation von Aktienkursen
-Mit der aus den Micro-Frontends integrierten Beispiel-Anwendung "Stockprice" kann man sich Charts erzeugen lassen, die die Aktienkurse (Jahre 2014 bis 2018) von zwei Firmen als Scatterplot inklusive Korrelationskoeffizienten darstellen.  
+## Die Beispiel-Anwendung "StockPrice": Korrelation von Aktienkursen
+Mit der aus den Micro-Frontends integrierten Beispiel-Anwendung "StockPrice" kann man sich Charts erzeugen lassen, die die Aktienkurse (Jahre 2014 bis 2018) von zwei Firmen als Scatterplot inklusive Korrelationskoeffizienten darstellen.  
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190515-01/oliver/correlationApp.png"/>
 
@@ -11,7 +11,7 @@ Dazu kann man in den beiden Automplete-Eingabefeldern am oberen Rand jeweils ein
 Live kann man die Anwendung hier sehen: [http://bit.ly/stockprice-app](http://bit.ly/stockprice-app)
 
 ## Die Self-Contained-Systems "Company" und "StockHistory"
-Die Anwendung "Stockprice" besteht aus 2 Self-Contained-Systems (SCS) "Company" und "StockHistory", deren Micro-Frontends auf einer Seite mit Hilfe von Custom Elements integriert werden:
+Die Anwendung "StockPrice" besteht aus 2 Self-Contained-Systems (SCS) "Company" und "StockHistory", deren Micro-Frontends auf einer Seite mit Hilfe von Custom Elements integriert werden:
 1. SCS "Company": Stellt einen Service zur Verfügung, über den Namen und Abkürzungen aller Dow-Jones-Companies abgeholt werden können. Das Micro-Frontend ist ein Eingabefeld mit Autocompletion, das über ein Custom Element mit Namen `<select-company/>` eingebunden werden kann.
 2. SCS "StockHistory": Stellt einen Service zur Verfügung, über den die historischen Aktienkurse abgefragt werden können. Das Micro-Frontend ist der Scatterplot-Chart und kann über ein Custom Element mit Namen `<company-correlation/>` eingebunden werden.
 
@@ -97,10 +97,11 @@ export interface Company {
 ```
 * Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Service-Aufruf innerhalb der React-Component statt. Dafür muss diese allerdings wissen, wo sie diesen Service findet. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Mzk3MTMzODQsMTIwMTU1MzA3OCw4Mz
-A1NjQ0MzgsMTU3OTUxNjQzLC0xNjk0OTY0NTcsMTI4OTE3MjY5
-LDg0ODc2MjY5NSwxMDM5ODM3NzU2LC0yNzMxNTgxMTIsLTk4OT
-U4NzQzNCwtMTA3NzY2NDI5MCw3NjM4MDg0MDksNDYwNTI4MjU4
-LDEwNzI5MzUzMiwxNDE4NTgwNDI2LDE5MzQ0NTc4NTcsMjA1MD
-AzNjA2NCwtMTI4MzUzNzEwLC04OTIyMTA5MV19
+eyJoaXN0b3J5IjpbMTcyMDcyNzE2MCwtMTkzOTcxMzM4NCwxMj
+AxNTUzMDc4LDgzMDU2NDQzOCwxNTc5NTE2NDMsLTE2OTQ5NjQ1
+NywxMjg5MTcyNjksODQ4NzYyNjk1LDEwMzk4Mzc3NTYsLTI3Mz
+E1ODExMiwtOTg5NTg3NDM0LC0xMDc3NjY0MjkwLDc2MzgwODQw
+OSw0NjA1MjgyNTgsMTA3MjkzNTMyLDE0MTg1ODA0MjYsMTkzND
+Q1Nzg1NywyMDUwMDM2MDY0LC0xMjgzNTM3MTAsLTg5MjIxMDkx
+XX0=
 -->
