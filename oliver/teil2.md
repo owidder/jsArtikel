@@ -16,7 +16,7 @@ Die Anwendung "StockPrice" besteht aus 2 Self-Contained-Systems (SCS) "Company" 
 2. SCS "StockHistory": Stellt einen Service zur Verfügung, über den die historischen Aktienkurse abgefragt werden können. Das Micro-Frontend ist der Scatterplot-Chart und kann über ein Custom Element mit Namen `<company-correlation/>` eingebunden werden.
 
 Die Custom Elements werden von dem jeweiligen Self-Contained-System ausgeliefert. So hostet z.B. das System "Company" das JavaScript-File `selectComponentElement.js`, das den Code für das Custom Element `<select-company/>` enthält.
-Jedes Custom Element greift wiederum nur auf Services des Self-Contained-Systems zu, von 
+Jedes Custom Element greift wiederum nur auf Services des Self-Contained-Systems zu, von dem es ausgeliefert wurde.
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190518-02/oliver/StockPrice.png"/>
 
@@ -103,11 +103,11 @@ export interface Company {
 ```
 * Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Service-Aufruf innerhalb der React-Component statt. Dafür muss diese allerdings wissen, wo sie diesen Service findet. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDM1MTE4MjgsMTcyMDcyNzE2MCwtMT
-kzOTcxMzM4NCwxMjAxNTUzMDc4LDgzMDU2NDQzOCwxNTc5NTE2
-NDMsLTE2OTQ5NjQ1NywxMjg5MTcyNjksODQ4NzYyNjk1LDEwMz
-k4Mzc3NTYsLTI3MzE1ODExMiwtOTg5NTg3NDM0LC0xMDc3NjY0
-MjkwLDc2MzgwODQwOSw0NjA1MjgyNTgsMTA3MjkzNTMyLDE0MT
-g1ODA0MjYsMTkzNDQ1Nzg1NywyMDUwMDM2MDY0LC0xMjgzNTM3
-MTBdfQ==
+eyJoaXN0b3J5IjpbLTQwOTEyNjY5MSwxNzIwNzI3MTYwLC0xOT
+M5NzEzMzg0LDEyMDE1NTMwNzgsODMwNTY0NDM4LDE1Nzk1MTY0
+MywtMTY5NDk2NDU3LDEyODkxNzI2OSw4NDg3NjI2OTUsMTAzOT
+gzNzc1NiwtMjczMTU4MTEyLC05ODk1ODc0MzQsLTEwNzc2NjQy
+OTAsNzYzODA4NDA5LDQ2MDUyODI1OCwxMDcyOTM1MzIsMTQxOD
+U4MDQyNiwxOTM0NDU3ODU3LDIwNTAwMzYwNjQsLTEyODM1Mzcx
+MF19
 -->
