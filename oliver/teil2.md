@@ -121,9 +121,9 @@ export interface Company {
 
 ## Die React-Component "SelectCompany"
 
-Obwohl sich in der React-Component `SelectCompany` sich die eigentliche Funktionalität des Micro-Frontends befindet, wollen wir hier nur auf 
+Obwohl sich in der React-Component `SelectCompany` sich die eigentliche Funktionalität des Micro-Frontends befindet, wollen wir hier nur auf wenige Aspekte eingehen.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM5ODM3NDQxLC02Mzc2MjY3OTYsLTE2OT
+eyJoaXN0b3J5IjpbMzc3NzEyMjI0LC02Mzc2MjY3OTYsLTE2OT
 k0NjY4MzcsMTI2NTkzNDU0OSwxOTk3MzU3OTk3LDEwNzE1ODcw
 NjUsLTM3ODUzNTc2MiwxNzE5NDM4NDI1LDIxMzEzMzY1NjMsOD
 I4NzgzNzE5LDEwNDk2NTAwOTIsLTUzODQyNTc3MiwxODcxMjEz
