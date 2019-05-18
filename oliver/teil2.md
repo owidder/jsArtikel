@@ -62,7 +62,7 @@ Bei der Implementierung der Custom Elements haben wir die folgenden Prinzipien u
 	* Man darf der integrierten Anwendung nicht ansehen, dass sie aus vielen Micro-Frontends zusammengesetzt ist. Dies erfordert, dass für alle Custom Elements die selben CSS-Regeln gelten. Darum haben wir die kapselnde Eigenschaft des Shadow-DOM nicht benötigt.
 	* Unverträglich des von uns eingesetzten UI-Frameworks *React* mit dem Shadow-DOM: Der Einsatz von React-Componenten innerhalb des Shadow-DOM führte zu Problemen bei der Event-Verarbeitung (siehe [http://bit.ly/react-shadow-dom](http://bit.ly/react-shadow-dom)).
 * Custom Elements sind nur schmale Wrapper: Die gesamte client-seitige Funktionalität eines Micro-Frontends befindet sich innerhalb einer React-Component (mit Unter-Compenents). Ein Custom Elements ist immer nur ein schmaler Wrapper um diese React-Component. Dieses Prinzip hat es uns erlaubt, die Funktionalität der React-Component auch noch an anderen Stellen zu verwenden.
-* Jeder Service, der von einem Custom Element aufgerufen wird, 
+* Ein Custom Element ruft nur Services von der Adresse auf, von der er ausgeliefert wurde. 
 
 Mit diesen Prinzipien sieht die Implementierung des Custom Elements `<select-company/>` folgendermaßen aus (in TypeScript):
 ```
@@ -104,11 +104,11 @@ export interface Company {
 ```
 * Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Service-Aufruf innerhalb der React-Component statt. Dafür muss diese allerdings wissen, wo sie diesen Service findet. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTUyNjI2ODEsLTQwOTEyNjY5MSwtND
-A5MTI2NjkxLDE3MjA3MjcxNjAsLTE5Mzk3MTMzODQsMTIwMTU1
-MzA3OCw4MzA1NjQ0MzgsMTU3OTUxNjQzLC0xNjk0OTY0NTcsMT
-I4OTE3MjY5LDg0ODc2MjY5NSwxMDM5ODM3NzU2LC0yNzMxNTgx
-MTIsLTk4OTU4NzQzNCwtMTA3NzY2NDI5MCw3NjM4MDg0MDksND
-YwNTI4MjU4LDEwNzI5MzUzMiwxNDE4NTgwNDI2LDE5MzQ0NTc4
-NTddfQ==
+eyJoaXN0b3J5IjpbMTg3MTIxMzQ1MSwtNDA5MTI2NjkxLC00MD
+kxMjY2OTEsMTcyMDcyNzE2MCwtMTkzOTcxMzM4NCwxMjAxNTUz
+MDc4LDgzMDU2NDQzOCwxNTc5NTE2NDMsLTE2OTQ5NjQ1NywxMj
+g5MTcyNjksODQ4NzYyNjk1LDEwMzk4Mzc3NTYsLTI3MzE1ODEx
+MiwtOTg5NTg3NDM0LC0xMDc3NjY0MjkwLDc2MzgwODQwOSw0Nj
+A1MjgyNTgsMTA3MjkzNTMyLDE0MTg1ODA0MjYsMTkzNDQ1Nzg1
+N119
 -->
