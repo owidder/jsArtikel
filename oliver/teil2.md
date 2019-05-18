@@ -107,13 +107,13 @@ export interface Company {
 	const parts = scriptPath.split("/");  
 	const basedir = parts.slice(0, parts.length-1).join("/");
 	```
-* Wie oben beschrieben verwenden wir keinen Shadow-DOM, sondern rendern dir
+* Wie oben beschrieben verwenden wir keinen Shadow-DOM, sondern rendern die DOM-Elemente des Custom Elements in den den Main-DOM. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTA0MDgyODIzLDgyODc4MzcxOSwxMDQ5Nj
-UwMDkyLC01Mzg0MjU3NzIsMTg3MTIxMzQ1MSwtNDA5MTI2Njkx
-LC00MDkxMjY2OTEsMTcyMDcyNzE2MCwtMTkzOTcxMzM4NCwxMj
-AxNTUzMDc4LDgzMDU2NDQzOCwxNTc5NTE2NDMsLTE2OTQ5NjQ1
-NywxMjg5MTcyNjksODQ4NzYyNjk1LDEwMzk4Mzc3NTYsLTI3Mz
-E1ODExMiwtOTg5NTg3NDM0LC0xMDc3NjY0MjkwLDc2MzgwODQw
-OV19
+eyJoaXN0b3J5IjpbMjEzMTMzNjU2Myw4Mjg3ODM3MTksMTA0OT
+Y1MDA5MiwtNTM4NDI1NzcyLDE4NzEyMTM0NTEsLTQwOTEyNjY5
+MSwtNDA5MTI2NjkxLDE3MjA3MjcxNjAsLTE5Mzk3MTMzODQsMT
+IwMTU1MzA3OCw4MzA1NjQ0MzgsMTU3OTUxNjQzLC0xNjk0OTY0
+NTcsMTI4OTE3MjY5LDg0ODc2MjY5NSwxMDM5ODM3NzU2LC0yNz
+MxNTgxMTIsLTk4OTU4NzQzNCwtMTA3NzY2NDI5MCw3NjM4MDg0
+MDldfQ==
 -->
