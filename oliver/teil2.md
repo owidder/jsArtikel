@@ -1,9 +1,9 @@
 # Integration von zwei Micro-Frontends über Custom Elements am konkreten Beispiel
 Im Folgenden wollen wir zeigen, wie wir Custom Elements in einem großen Projekt in der Finanzindustrie mit über 40 Self-Contained-Systems eingesetzt haben. 
-Dazu zeigen wir mit Code-Beispielen die Integration der Micro-Frontends von zwei Self-Contained-Systems über Custom Elements zeigen.
+Dazu zeigen wir exemplarisch an einer kleinen Beispiel-Anwendun die Integration der Micro-Frontends von zwei Self-Contained-Systems über Custom Elements.
 
-## Die integrierte Anwendung Stockprice": Korrelation von Aktienkursen
-Mit der aus den verschiedenen Micro-Frontends integrierten Anwendung "Stockprice" kann man sich Charts erzeugen lassen, die die Aktienkurse (Jahre 2014 bis 2018) von zwei Firmen als Scatterplot inklusive Korrelationskoeffizienten darstellen.  
+## Die Beispiel-Anwendung "Stockprice": Korrelation von Aktienkursen
+Mit der aus den Micro-Frontends integrierten Beispiel-Anwendung "Stockprice" kann man sich Charts erzeugen lassen, die die Aktienkurse (Jahre 2014 bis 2018) von zwei Firmen als Scatterplot inklusive Korrelationskoeffizienten darstellen.  
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190515-01/oliver/correlationApp.png"/>
 
@@ -56,7 +56,7 @@ Live kann man sich das Element hier ansehen: [http://bit.ly/stockprice-company](
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4NDgyNjc5NywxMjg5MTcyNjksODQ4Nz
+eyJoaXN0b3J5IjpbMTE5NzM0MzExMywxMjg5MTcyNjksODQ4Nz
 YyNjk1LDEwMzk4Mzc3NTYsLTI3MzE1ODExMiwtOTg5NTg3NDM0
 LC0xMDc3NjY0MjkwLDc2MzgwODQwOSw0NjA1MjgyNTgsMTA3Mj
 kzNTMyLDE0MTg1ODA0MjYsMTkzNDQ1Nzg1NywyMDUwMDM2MDY0
