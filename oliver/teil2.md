@@ -121,13 +121,80 @@ export interface Company {
 
 ## Die React-Component "SelectCompany"
 
-Die React-Component `SelectCompany` enthält die eigentliche Funktionalität der 
+Die React-Component `SelectCompany` enthält die eigentliche Funktionalität des Micro-Frontends:
+
+```
+import * as React from "react";  
+import * as _ from "lodash";  
+import {AutoComplete} from "antd";  
+  
+export interface Company {  
+    short: string;  
+    full: string;  
+}  
+  
+interface SelectCompanyProps {  
+    initialShort?: string;  
+    onChange: (company: Company)  => void;  
+    basedir: string;  
+}  
+  
+interface SelectCompanyState {  
+    companies: Company[];  
+    data: string[];  
+    value?: string;  
+}  
+  
+export class SelectCompany extends React.Component<SelectCompanyProps, SelectCompanyState> {  
+  
+    readonly state: SelectCompanyState = {data: [], companies: []};  
+  
+    handleSearch(value: string) {  
+        const data = _.uniq(this.state.companies.map(
+        company => company.full).filter(full => full.toLowerCase().indexOf(value.toLowerCase()) > -1));  
+        this.setState({data, value})  
+    }  
+  
+    handleSelect(full: string) {  
+        const selectedCompany = this.state.companies.find(s => (s.full == full));  
+        this.props.onChange(selectedCompany);  
+        this.setState({value: full})  
+    }  
+  
+    async getCompanies(): Promise<Company[]> {  
+        return await fetch(`${this.props.basedir}/../../service/companies`).then(resp => resp.json());  
+    }  
+  
+    async componentDidMount() {  
+        const companies = await this.getCompanies();  
+        this.setState({companies});  
+        if(this.props.initialShort) {  
+            const company = this.state.companies.find(s => (s.short == this.props.initialShort));  
+            if(company) {  
+                this.setState({value: company.full});  
+                this.props.onChange(company);  
+            }  
+        }  
+    }  
+  
+    render() {  
+        return <div className="input-field">  
+            <AutoComplete  
+  dataSource={this.state.data}  
+  onSearch={(text) => this.handleSearch(text)}  
+  onSelect={this.handleSelect.bind(this)}  
+  value={this.state.value}  
+  placeholder="Enter company"/>  
+        </div>  
+    }  
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjIzMTg0NjcsLTE0Njk2MzMxMDcsLTE2OD
-U2MjU2OTksLTEyMzI5NzY3NjcsMTQwNTQ0Mzc4MCwzNzc3MTIy
-MjQsLTYzNzYyNjc5NiwtMTY5OTQ2NjgzNywxMjY1OTM0NTQ5LD
-E5OTczNTc5OTcsMTA3MTU4NzA2NSwtMzc4NTM1NzYyLDE3MTk0
-Mzg0MjUsMjEzMTMzNjU2Myw4Mjg3ODM3MTksMTA0OTY1MDA5Mi
-wtNTM4NDI1NzcyLDE4NzEyMTM0NTEsLTQwOTEyNjY5MSwtNDA5
-MTI2NjkxXX0=
+eyJoaXN0b3J5IjpbLTExMDQ0MTQ0NjEsLTE0Njk2MzMxMDcsLT
+E2ODU2MjU2OTksLTEyMzI5NzY3NjcsMTQwNTQ0Mzc4MCwzNzc3
+MTIyMjQsLTYzNzYyNjc5NiwtMTY5OTQ2NjgzNywxMjY1OTM0NT
+Q5LDE5OTczNTc5OTcsMTA3MTU4NzA2NSwtMzc4NTM1NzYyLDE3
+MTk0Mzg0MjUsMjEzMTMzNjU2Myw4Mjg3ODM3MTksMTA0OTY1MD
+A5MiwtNTM4NDI1NzcyLDE4NzEyMTM0NTEsLTQwOTEyNjY5MSwt
+NDA5MTI2NjkxXX0=
 -->
