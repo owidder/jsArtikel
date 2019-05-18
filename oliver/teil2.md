@@ -51,12 +51,14 @@ Dem Custom Element `<select-company/>` kann als Property `onChangeCompany` eine 
 Live kann man sich das Element hier ansehen: [http://bit.ly/stockprice-company](http://bit.ly/stockprice-company)
 
 ## Das Custom Element "select-company"
-
+Bei der Implementierung der Custom Elements haben wir die folgenden Prinzipien umgesetzt:
+* Kein Shadow-DOM: Wir haben bewusst auf den Shadow-DOM verziecht
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3OTUxNjQzLC0xNjk0OTY0NTcsMTI4OT
-E3MjY5LDg0ODc2MjY5NSwxMDM5ODM3NzU2LC0yNzMxNTgxMTIs
-LTk4OTU4NzQzNCwtMTA3NzY2NDI5MCw3NjM4MDg0MDksNDYwNT
-I4MjU4LDEwNzI5MzUzMiwxNDE4NTgwNDI2LDE5MzQ0NTc4NTcs
-MjA1MDAzNjA2NCwtMTI4MzUzNzEwLC04OTIyMTA5MV19
+eyJoaXN0b3J5IjpbNjcwMjUwNzA1LDE1Nzk1MTY0MywtMTY5ND
+k2NDU3LDEyODkxNzI2OSw4NDg3NjI2OTUsMTAzOTgzNzc1Niwt
+MjczMTU4MTEyLC05ODk1ODc0MzQsLTEwNzc2NjQyOTAsNzYzOD
+A4NDA5LDQ2MDUyODI1OCwxMDcyOTM1MzIsMTQxODU4MDQyNiwx
+OTM0NDU3ODU3LDIwNTAwMzYwNjQsLTEyODM1MzcxMCwtODkyMj
+EwOTFdfQ==
 -->
