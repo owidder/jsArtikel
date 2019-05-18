@@ -102,13 +102,13 @@ export interface Company {
     full: string;  
 }
 ```
-* Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Aufruf des Service "companies" innerhalb der React-Component statt. Darum geben wir der React-Component über die Property `basedir` die Adresse mit, von der aus der Code des Cus 
+* Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Aufruf des Service "companies" innerhalb der React-Component statt. Darum geben wir der React-Component über die Property `basedir` die Adresse mit, von der aus der Code des Custom Elements ausgeliefert wurde. Denn dort kann die React-Component auch den Service finden: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ2MDcwNTIxLC01Mzg0MjU3NzIsMTg3MT
-IxMzQ1MSwtNDA5MTI2NjkxLC00MDkxMjY2OTEsMTcyMDcyNzE2
-MCwtMTkzOTcxMzM4NCwxMjAxNTUzMDc4LDgzMDU2NDQzOCwxNT
-c5NTE2NDMsLTE2OTQ5NjQ1NywxMjg5MTcyNjksODQ4NzYyNjk1
-LDEwMzk4Mzc3NTYsLTI3MzE1ODExMiwtOTg5NTg3NDM0LC0xMD
-c3NjY0MjkwLDc2MzgwODQwOSw0NjA1MjgyNTgsMTA3MjkzNTMy
-XX0=
+eyJoaXN0b3J5IjpbLTEwNTQyMzM0OTksLTUzODQyNTc3MiwxOD
+cxMjEzNDUxLC00MDkxMjY2OTEsLTQwOTEyNjY5MSwxNzIwNzI3
+MTYwLC0xOTM5NzEzMzg0LDEyMDE1NTMwNzgsODMwNTY0NDM4LD
+E1Nzk1MTY0MywtMTY5NDk2NDU3LDEyODkxNzI2OSw4NDg3NjI2
+OTUsMTAzOTgzNzc1NiwtMjczMTU4MTEyLC05ODk1ODc0MzQsLT
+EwNzc2NjQyOTAsNzYzODA4NDA5LDQ2MDUyODI1OCwxMDcyOTM1
+MzJdfQ==
 -->
