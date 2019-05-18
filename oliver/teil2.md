@@ -165,20 +165,13 @@ export class SelectCompany extends React.Component<SelectCompanyProps, SelectCom
   
     async getCompanies(): Promise<Company[]> {  
         return await fetch(
-	        `${this.props.basedir}/../../service/companies`)
-	        .then(resp => resp.json());  
+		        `${this.props.basedir}/../../service/companies`
+	        ).then(resp => resp.json());  
     }  
   
     async componentDidMount() {  
         const companies = await this.getCompanies();  
         this.setState({companies});  
-        if(this.props.initialShort) {  
-            const company = this.state.companies.find(s => (s.short == this.props.initialShort));  
-            if(company) {  
-                this.setState({value: company.full});  
-                this.props.onChange(company);  
-            }  
-        }  
     }  
   
     render() {  
@@ -194,7 +187,7 @@ export class SelectCompany extends React.Component<SelectCompanyProps, SelectCom
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxODk4ODEzOSwtMTQ2OTYzMzEwNywtMT
+eyJoaXN0b3J5IjpbMTI0NTY1MDI2MCwtMTQ2OTYzMzEwNywtMT
 Y4NTYyNTY5OSwtMTIzMjk3Njc2NywxNDA1NDQzNzgwLDM3Nzcx
 MjIyNCwtNjM3NjI2Nzk2LC0xNjk5NDY2ODM3LDEyNjU5MzQ1ND
 ksMTk5NzM1Nzk5NywxMDcxNTg3MDY1LC0zNzg1MzU3NjIsMTcx
