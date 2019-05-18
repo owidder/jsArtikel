@@ -113,10 +113,10 @@ export interface Company {
 	        onChange={(company: Company) => 
 		        {this.onChangeCompany(company)}}/>, this);  
 	```
-	* Als `onChange`-Property übergeben wir eine Lambda-F
+	* Als `onChange`-Property übergeben wir eine Lambda-Function, die wiederum die Callback-Function aufruft, die dem Custom Element über die `onChangeCompany`-Property übergeben wurde
 	* `this` ist innerhalb der ``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMjI3MjAzNywtMTY5OTQ2NjgzNywxMj
+eyJoaXN0b3J5IjpbLTI4NzE5OTQ4OSwtMTY5OTQ2NjgzNywxMj
 Y1OTM0NTQ5LDE5OTczNTc5OTcsMTA3MTU4NzA2NSwtMzc4NTM1
 NzYyLDE3MTk0Mzg0MjUsMjEzMTMzNjU2Myw4Mjg3ODM3MTksMT
 A0OTY1MDA5MiwtNTM4NDI1NzcyLDE4NzEyMTM0NTEsLTQwOTEy
