@@ -54,13 +54,13 @@ Live kann man sich das Element hier ansehen: [http://bit.ly/stockprice-company](
 Bei der Implementierung der Custom Elements haben wir die folgenden Prinzipien umgesetzt:
 * Kein Shadow-DOM: Wir haben bewusst auf den Shadow-DOM verzichtet. Dies hatte zwei Gründe:
 	* Man darf der integrierten Anwendung nicht ansehen, dass sie aus vielen Micro-Frontends zusammengesetzt ist. Dies erfordert, dass für alle Custom Elements die selben CSS-Regeln gelten. Darum haben wir die kapselnde Eigenschaft des Shadow-DOM nicht benötigt.
-	* 
+	* Unverträglich des von uns eingesetzten UI-Frameworks *React* mit dem Shadow-DOM: 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0NjYwOTI1MywxNTc5NTE2NDMsLTE2OT
-Q5NjQ1NywxMjg5MTcyNjksODQ4NzYyNjk1LDEwMzk4Mzc3NTYs
-LTI3MzE1ODExMiwtOTg5NTg3NDM0LC0xMDc3NjY0MjkwLDc2Mz
-gwODQwOSw0NjA1MjgyNTgsMTA3MjkzNTMyLDE0MTg1ODA0MjYs
-MTkzNDQ1Nzg1NywyMDUwMDM2MDY0LC0xMjgzNTM3MTAsLTg5Mj
-IxMDkxXX0=
+eyJoaXN0b3J5IjpbLTE2MDEzNDg0OTYsMTU3OTUxNjQzLC0xNj
+k0OTY0NTcsMTI4OTE3MjY5LDg0ODc2MjY5NSwxMDM5ODM3NzU2
+LC0yNzMxNTgxMTIsLTk4OTU4NzQzNCwtMTA3NzY2NDI5MCw3Nj
+M4MDg0MDksNDYwNTI4MjU4LDEwNzI5MzUzMiwxNDE4NTgwNDI2
+LDE5MzQ0NTc4NTcsMjA1MDAzNjA2NCwtMTI4MzUzNzEwLC04OT
+IyMTA5MV19
 -->
