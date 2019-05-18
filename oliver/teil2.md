@@ -55,13 +55,13 @@ Bei der Implementierung der Custom Elements haben wir die folgenden Prinzipien u
 * Kein Shadow-DOM: Wir haben bewusst auf den Shadow-DOM verzichtet. Dies hatte zwei Gründe:
 	* Man darf der integrierten Anwendung nicht ansehen, dass sie aus vielen Micro-Frontends zusammengesetzt ist. Dies erfordert, dass für alle Custom Elements die selben CSS-Regeln gelten. Darum haben wir die kapselnde Eigenschaft des Shadow-DOM nicht benötigt.
 	* Unverträglich des von uns eingesetzten UI-Frameworks *React* mit dem Shadow-DOM: Der Einsatz von React-Componenten innerhalb des Shadow-DOM führte zu Problemen bei der Event-Verarbeitung (siehe [http://bit.ly/react-shadow-dom](http://bit.ly/react-shadow-dom)).
-* Custom Elements sind nur schmale Wrapper: Die gesamte client-seitige Funktionalität befindet sich innerhalb von React-Componenten. 
+* Custom Elements sind nur schmale Wrapper: Die gesamte client-seitige Funktionalität eines Micro-Frontends befindet sich innerhalb einer React-Component (mit Unter-Compenents). Custom Elements sind nur schmale Wrapper um eine React
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjIyMjAyODcxLDgzMDU2NDQzOCwxNTc5NT
-E2NDMsLTE2OTQ5NjQ1NywxMjg5MTcyNjksODQ4NzYyNjk1LDEw
-Mzk4Mzc3NTYsLTI3MzE1ODExMiwtOTg5NTg3NDM0LC0xMDc3Nj
-Y0MjkwLDc2MzgwODQwOSw0NjA1MjgyNTgsMTA3MjkzNTMyLDE0
-MTg1ODA0MjYsMTkzNDQ1Nzg1NywyMDUwMDM2MDY0LC0xMjgzNT
-M3MTAsLTg5MjIxMDkxXX0=
+eyJoaXN0b3J5IjpbLTIwNDQyNDg5OTMsODMwNTY0NDM4LDE1Nz
+k1MTY0MywtMTY5NDk2NDU3LDEyODkxNzI2OSw4NDg3NjI2OTUs
+MTAzOTgzNzc1NiwtMjczMTU4MTEyLC05ODk1ODc0MzQsLTEwNz
+c2NjQyOTAsNzYzODA4NDA5LDQ2MDUyODI1OCwxMDcyOTM1MzIs
+MTQxODU4MDQyNiwxOTM0NDU3ODU3LDIwNTAwMzYwNjQsLTEyOD
+M1MzcxMCwtODkyMjEwOTFdfQ==
 -->
