@@ -62,6 +62,7 @@ Bei der Implementierung der Custom Elements haben wir die folgenden Prinzipien u
 	* Man darf der integrierten Anwendung nicht ansehen, dass sie aus vielen Micro-Frontends zusammengesetzt ist. Dies erfordert, dass für alle Custom Elements die selben CSS-Regeln gelten. Darum haben wir die kapselnde Eigenschaft des Shadow-DOM nicht benötigt.
 	* Unverträglich des von uns eingesetzten UI-Frameworks *React* mit dem Shadow-DOM: Der Einsatz von React-Componenten innerhalb des Shadow-DOM führte zu Problemen bei der Event-Verarbeitung (siehe [http://bit.ly/react-shadow-dom](http://bit.ly/react-shadow-dom)).
 * Custom Elements sind nur schmale Wrapper: Die gesamte client-seitige Funktionalität eines Micro-Frontends befindet sich innerhalb einer React-Component (mit Unter-Compenents). Ein Custom Elements ist immer nur ein schmaler Wrapper um diese React-Component. Dieses Prinzip hat es uns erlaubt, die Funktionalität der React-Component auch noch an anderen Stellen zu verwenden.
+* Jedes Custom Element ruft nur Services 
 
 Mit diesen Prinzipien sieht die Implementierung des Custom Elements `<select-company/>` folgendermaßen aus (in TypeScript):
 ```
@@ -103,11 +104,11 @@ export interface Company {
 ```
 * Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Service-Aufruf innerhalb der React-Component statt. Dafür muss diese allerdings wissen, wo sie diesen Service findet. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwOTEyNjY5MSwtNDA5MTI2NjkxLDE3Mj
-A3MjcxNjAsLTE5Mzk3MTMzODQsMTIwMTU1MzA3OCw4MzA1NjQ0
-MzgsMTU3OTUxNjQzLC0xNjk0OTY0NTcsMTI4OTE3MjY5LDg0OD
-c2MjY5NSwxMDM5ODM3NzU2LC0yNzMxNTgxMTIsLTk4OTU4NzQz
-NCwtMTA3NzY2NDI5MCw3NjM4MDg0MDksNDYwNTI4MjU4LDEwNz
-I5MzUzMiwxNDE4NTgwNDI2LDE5MzQ0NTc4NTcsMjA1MDAzNjA2
-NF19
+eyJoaXN0b3J5IjpbLTIwMDIzNTM0ODksLTQwOTEyNjY5MSwtND
+A5MTI2NjkxLDE3MjA3MjcxNjAsLTE5Mzk3MTMzODQsMTIwMTU1
+MzA3OCw4MzA1NjQ0MzgsMTU3OTUxNjQzLC0xNjk0OTY0NTcsMT
+I4OTE3MjY5LDg0ODc2MjY5NSwxMDM5ODM3NzU2LC0yNzMxNTgx
+MTIsLTk4OTU4NzQzNCwtMTA3NzY2NDI5MCw3NjM4MDg0MDksND
+YwNTI4MjU4LDEwNzI5MzUzMiwxNDE4NTgwNDI2LDE5MzQ0NTc4
+NTddfQ==
 -->
