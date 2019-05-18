@@ -38,14 +38,12 @@ Verwenden kann man das Element z.B. so:
 <select-company initial-short="AAPL"></select-company>
 <div id="company"></div>
 <script>
-(function () {
-	var element = document.querySelector("select-company");
-	element.onChangeCompany = function (company) {
-		var companyDiv = document.querySelector("div#company");
-		companyDiv.innerHTML = "Company = " + company.full + 
-			" [" + company.short + "]";
-	}
-})()
+var element = document.querySelector("select-company");
+element.onChangeCompany = function (company) {
+	var companyDiv = document.querySelector("div#company");
+	companyDiv.innerHTML = "Company = " + company.full + 
+		" [" + company.short + "]";
+}
 </script>
 ```
 Dem Custom Element kann als Property `onChangeCompany` eine Function übergeben werden. Diese wird nach der Eingabe durch den Anwender mit dem entsprechenden Company-Object (z.B.: `{short: "AAPL", full: "Apple Inc."}`) aufgerufen.
@@ -56,7 +54,7 @@ Live kann man sich das Element hier ansehen: [http://bit.ly/stockprice-company](
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwMzA3MzM4MywxMjg5MTcyNjksODQ4Nz
+eyJoaXN0b3J5IjpbLTY1MDMzNDM5MCwxMjg5MTcyNjksODQ4Nz
 YyNjk1LDEwMzk4Mzc3NTYsLTI3MzE1ODExMiwtOTg5NTg3NDM0
 LC0xMDc3NjY0MjkwLDc2MzgwODQwOSw0NjA1MjgyNTgsMTA3Mj
 kzNTMyLDE0MTg1ODA0MjYsMTkzNDQ1Nzg1NywyMDUwMDM2MDY0
