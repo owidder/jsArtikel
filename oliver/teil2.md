@@ -104,9 +104,9 @@ export interface Company {
     full: string;  
 }
 ```
-* Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Aufruf des Service "companies" innerhalb der React-Component statt. Darum geben wir der React-Component über die Property `basedir` die Adresse mit, von der aus der Code des Custom Elements ausgeliefert wurde. Denn dort kann die React-Component auch den Service finden. Die 
+* Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Aufruf des Service "companies" innerhalb der React-Component statt. Darum geben wir der React-Component über die Property `basedir` die Adresse mit, von der aus der Code des Custom Elements ausgeliefert wurde. Denn dort kann die React-Component auch den Service finden. Diese Adresse holen wir uns über 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwMjk2NTUzMSw4Mjg3ODM3MTksMTA0OT
+eyJoaXN0b3J5IjpbLTM0ODE1NDEwOSw4Mjg3ODM3MTksMTA0OT
 Y1MDA5MiwtNTM4NDI1NzcyLDE4NzEyMTM0NTEsLTQwOTEyNjY5
 MSwtNDA5MTI2NjkxLDE3MjA3MjcxNjAsLTE5Mzk3MTMzODQsMT
 IwMTU1MzA3OCw4MzA1NjQ0MzgsMTU3OTUxNjQzLC0xNjk0OTY0
