@@ -113,11 +113,11 @@ export interface Company {
 	        onChange={(company: Company) => 
 		        {this.onChangeCompany(company)}}/>, this);  
 	```
-	Als Container-DOM-Element (zweiter Parameter der `ReactDOM.render()`-Methode) übergeben wir einfach `this`. Es 
-	* Als `onChange`-Property übergeben wir eine Lambda-Function, die wiederum die Callback-Function aufruft, die dem Custom Element über die `onChangeCompany`-Property übergeben wurde
-	* Innerhalb der  `connectedCallback`-Methode  `this` ist innerhalb der ``
+	Als Container-DOM-Element (zweiter Parameter der `ReactDOM.render()`-Methode) übergeben wir einfach `this`. Innerhalb der `connectedCallback`-Methode repräsentiert es das Root-Element des Custom Elements.
+	* Als `onChange`-Property übergeben wir eine Lambda-Function, die wiederum die Callback-Function aufruft, die dem Custom Element über die `onChangeCompany`-Property übergeben wurde.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzMDgyMTY2OSwtMTY5OTQ2NjgzNywxMj
+eyJoaXN0b3J5IjpbMTk0MjAxNTc4OSwtMTY5OTQ2NjgzNywxMj
 Y1OTM0NTQ5LDE5OTczNTc5OTcsMTA3MTU4NzA2NSwtMzc4NTM1
 NzYyLDE3MTk0Mzg0MjUsMjEzMTMzNjU2Myw4Mjg3ODM3MTksMT
 A0OTY1MDA5MiwtNTM4NDI1NzcyLDE4NzEyMTM0NTEsLTQwOTEy
