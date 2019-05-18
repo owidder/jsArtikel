@@ -85,9 +85,8 @@ class SelectCompanyElement extends HTMLElement {
   
     drawReactComponent() {  
         ReactDOM.render(<SelectCompany basedir={this.basedir} 
-	        onChange={(company: Company) => {  
-                                      this.onChangeCompany(company)  
-                                       }}/>, this);  
+	        onChange={(company) => {this.onChangeCompany(company)}  
+           }/>, this);  
     }  
   
     connectedCallback() {  
@@ -104,10 +103,10 @@ class SelectCompanyElement extends HTMLElement {
 customElements.define("select-company", SelectCompanyElement);
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjcyMjc4MzgsODMwNTY0NDM4LDE1Nz
-k1MTY0MywtMTY5NDk2NDU3LDEyODkxNzI2OSw4NDg3NjI2OTUs
-MTAzOTgzNzc1NiwtMjczMTU4MTEyLC05ODk1ODc0MzQsLTEwNz
-c2NjQyOTAsNzYzODA4NDA5LDQ2MDUyODI1OCwxMDcyOTM1MzIs
-MTQxODU4MDQyNiwxOTM0NDU3ODU3LDIwNTAwMzYwNjQsLTEyOD
-M1MzcxMCwtODkyMjEwOTFdfQ==
+eyJoaXN0b3J5IjpbMzI5OTMyODEzLDgzMDU2NDQzOCwxNTc5NT
+E2NDMsLTE2OTQ5NjQ1NywxMjg5MTcyNjksODQ4NzYyNjk1LDEw
+Mzk4Mzc3NTYsLTI3MzE1ODExMiwtOTg5NTg3NDM0LC0xMDc3Nj
+Y0MjkwLDc2MzgwODQwOSw0NjA1MjgyNTgsMTA3MjkzNTMyLDE0
+MTg1ODA0MjYsMTkzNDQ1Nzg1NywyMDUwMDM2MDY0LC0xMjgzNT
+M3MTAsLTg5MjIxMDkxXX0=
 -->
