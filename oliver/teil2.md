@@ -15,6 +15,9 @@ Die Anwendung "StockPrice" besteht aus 2 Self-Contained-Systems (SCS) "Company" 
 1. SCS "Company": Stellt einen Service zur Verfügung, über den Namen und Abkürzungen aller Dow-Jones-Companies abgeholt werden können. Das Micro-Frontend ist ein Eingabefeld mit Autocompletion, das über ein Custom Element mit Namen `<select-company/>` eingebunden werden kann.
 2. SCS "StockHistory": Stellt einen Service zur Verfügung, über den die historischen Aktienkurse abgefragt werden können. Das Micro-Frontend ist der Scatterplot-Chart und kann über ein Custom Element mit Namen `<company-correlation/>` eingebunden werden.
 
+<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190518-01/oliver/StockPrice.png"/>
+
+
 ## Das Micro-Frontend von "Company"
 Das SCS "Company" stellt den Service "companies" zur Verfügung. Er liefert Namen und Abkürzungen aller Firmen aus dem Dow Jones:
 ```
@@ -97,11 +100,11 @@ export interface Company {
 ```
 * Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Service-Aufruf innerhalb der React-Component statt. Dafür muss diese allerdings wissen, wo sie diesen Service findet. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMDcyNzE2MCwtMTkzOTcxMzM4NCwxMj
-AxNTUzMDc4LDgzMDU2NDQzOCwxNTc5NTE2NDMsLTE2OTQ5NjQ1
-NywxMjg5MTcyNjksODQ4NzYyNjk1LDEwMzk4Mzc3NTYsLTI3Mz
-E1ODExMiwtOTg5NTg3NDM0LC0xMDc3NjY0MjkwLDc2MzgwODQw
-OSw0NjA1MjgyNTgsMTA3MjkzNTMyLDE0MTg1ODA0MjYsMTkzND
-Q1Nzg1NywyMDUwMDM2MDY0LC0xMjgzNTM3MTAsLTg5MjIxMDkx
+eyJoaXN0b3J5IjpbMTI5NzQ3NjQxLDE3MjA3MjcxNjAsLTE5Mz
+k3MTMzODQsMTIwMTU1MzA3OCw4MzA1NjQ0MzgsMTU3OTUxNjQz
+LC0xNjk0OTY0NTcsMTI4OTE3MjY5LDg0ODc2MjY5NSwxMDM5OD
+M3NzU2LC0yNzMxNTgxMTIsLTk4OTU4NzQzNCwtMTA3NzY2NDI5
+MCw3NjM4MDg0MDksNDYwNTI4MjU4LDEwNzI5MzUzMiwxNDE4NT
+gwNDI2LDE5MzQ0NTc4NTcsMjA1MDAzNjA2NCwtMTI4MzUzNzEw
 XX0=
 -->
