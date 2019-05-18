@@ -55,7 +55,7 @@ Bei der Implementierung der Custom Elements haben wir die folgenden Prinzipien u
 * Kein Shadow-DOM: Wir haben bewusst auf den Shadow-DOM verzichtet. Dies hatte zwei Gründe:
 	* Man darf der integrierten Anwendung nicht ansehen, dass sie aus vielen Micro-Frontends zusammengesetzt ist. Dies erfordert, dass für alle Custom Elements die selben CSS-Regeln gelten. Darum haben wir die kapselnde Eigenschaft des Shadow-DOM nicht benötigt.
 	* Unverträglich des von uns eingesetzten UI-Frameworks *React* mit dem Shadow-DOM: Der Einsatz von React-Componenten innerhalb des Shadow-DOM führte zu Problemen bei der Event-Verarbeitung (siehe [http://bit.ly/react-shadow-dom](http://bit.ly/react-shadow-dom)).
-* Custom Elements sind nur schmale Wrapper: Die gesamte client-seitige Funktionalität eines Micro-Frontends befindet sich innerhalb einer React-Component (mit Unter-Compenents). Ein Custom Elements ist immer nur ein schmaler Wrapper um diese React-Component.
+* Custom Elements sind nur schmale Wrapper: Die gesamte client-seitige Funktionalität eines Micro-Frontends befindet sich innerhalb einer React-Component (mit Unter-Compenents). Ein Custom Elements ist immer nur ein schmaler Wrapper um diese React-Component. Dieses Prinzip hat es uns erlaubt, die 
 * TypeScript: Custom Elements und React-Components sind in TypeScript implementiert.
 
 Mit diesen Prinzipien sieht die Implementierung des Custom Elements `<select-company/>` folgendermaßen aus:
@@ -100,13 +100,17 @@ customElements.define("select-company", SelectCompanyElement);
 * `SelectCompany` ist die React-Component, in der sich die eigentliche Funktionalität des Micro-Frontends befindet
 * `Company` ist ein einfaches Interface, das die Daten beschreibt, wie sie vom Service "companies" kommen:
 ```
+export interface Company {  
+    short: string;  
+    full: string;  
+}
 ```
-
+* Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMDcyMjg5Niw4MzA1NjQ0MzgsMTU3OT
-UxNjQzLC0xNjk0OTY0NTcsMTI4OTE3MjY5LDg0ODc2MjY5NSwx
-MDM5ODM3NzU2LC0yNzMxNTgxMTIsLTk4OTU4NzQzNCwtMTA3Nz
-Y2NDI5MCw3NjM4MDg0MDksNDYwNTI4MjU4LDEwNzI5MzUzMiwx
-NDE4NTgwNDI2LDE5MzQ0NTc4NTcsMjA1MDAzNjA2NCwtMTI4Mz
-UzNzEwLC04OTIyMTA5MV19
+eyJoaXN0b3J5IjpbLTE4OTc3MjExNTAsODMwNTY0NDM4LDE1Nz
+k1MTY0MywtMTY5NDk2NDU3LDEyODkxNzI2OSw4NDg3NjI2OTUs
+MTAzOTgzNzc1NiwtMjczMTU4MTEyLC05ODk1ODc0MzQsLTEwNz
+c2NjQyOTAsNzYzODA4NDA5LDQ2MDUyODI1OCwxMDcyOTM1MzIs
+MTQxODU4MDQyNiwxOTM0NDU3ODU3LDIwNTAwMzYwNjQsLTEyOD
+M1MzcxMCwtODkyMjEwOTFdfQ==
 -->
