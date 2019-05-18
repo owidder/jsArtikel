@@ -79,12 +79,6 @@ class SelectCompanyElement extends HTMLElement {
   
     public onChangeCompany: (Company) => void;    
   
-    constructor() {  
-        super();  
-        const parts = scriptPath.split("/");  
-        this.basedir = parts.slice(0, parts.length-1).join("/");  
-    }  
-  
     connectedCallback() {  
         ReactDOM.render(<SelectCompany 
 	        basedir={basedir} 
@@ -104,7 +98,7 @@ export interface Company {
     full: string;  
 }
 ```
-* Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Aufruf des Service "companies" innerhalb der React-Component statt. Darum geben wir der React-Component über die Property `basedir` die Adresse mit, von der aus der Code des Custom Elements ausgeliefert wurde. Denn dort kann die React-Component auch den Service finden. Diese Adresse holen wir uns über 
+* Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Aufruf des Service "companies" innerhalb der React-Component statt. Darum geben wir der React-Component über die Property `basedir` die Adresse mit, von der aus der Code des Custom Elements ausgeliefert wurde. Denn dort kann die React-Component auch den Service finden. Diese Adresse holen wir uns über: 
 	```
 	const scriptPath = document.currentScript.getAttribute("src")
 	```
@@ -113,9 +107,9 @@ export interface Company {
 	const parts = scriptPath.split("/");  
 	const basedir = parts.slice(0, parts.length-1).join("/");
 	```
-* 
+* Wie oben beschrieben verwenden wir keinen Shadow-DOM, sondern rendern dir
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ5MTYzNTU5LDgyODc4MzcxOSwxMDQ5Nj
+eyJoaXN0b3J5IjpbNTA0MDgyODIzLDgyODc4MzcxOSwxMDQ5Nj
 UwMDkyLC01Mzg0MjU3NzIsMTg3MTIxMzQ1MSwtNDA5MTI2Njkx
 LC00MDkxMjY2OTEsMTcyMDcyNzE2MCwtMTkzOTcxMzM4NCwxMj
 AxNTUzMDc4LDgzMDU2NDQzOCwxNTc5NTE2NDMsLTE2OTQ5NjQ1
