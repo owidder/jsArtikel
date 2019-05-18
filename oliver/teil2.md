@@ -17,6 +17,7 @@ Die Anwendung "StockPrice" besteht aus 2 Self-Contained-Systems (SCS) "Company" 
 
 Die Custom Elements werden von dem jeweiligen Self-Contained-System ausgeliefert. So hostet z.B. das System "Company" das JavaScript-File `selectComponentElement.js`, das den Code für das Custom Element `<select-company/>` enthält.
 Jedes Custom Element greift wiederum nur auf Services des Self-Contained-Systems zu, von dem es ausgeliefert wurde.
+Die 
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190518-02/oliver/StockPrice.png"/>
 
@@ -103,11 +104,11 @@ export interface Company {
 ```
 * Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Service-Aufruf innerhalb der React-Component statt. Dafür muss diese allerdings wissen, wo sie diesen Service findet. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwOTEyNjY5MSwxNzIwNzI3MTYwLC0xOT
-M5NzEzMzg0LDEyMDE1NTMwNzgsODMwNTY0NDM4LDE1Nzk1MTY0
-MywtMTY5NDk2NDU3LDEyODkxNzI2OSw4NDg3NjI2OTUsMTAzOT
-gzNzc1NiwtMjczMTU4MTEyLC05ODk1ODc0MzQsLTEwNzc2NjQy
-OTAsNzYzODA4NDA5LDQ2MDUyODI1OCwxMDcyOTM1MzIsMTQxOD
-U4MDQyNiwxOTM0NDU3ODU3LDIwNTAwMzYwNjQsLTEyODM1Mzcx
-MF19
+eyJoaXN0b3J5IjpbNDAyNDkyOTEsLTQwOTEyNjY5MSwxNzIwNz
+I3MTYwLC0xOTM5NzEzMzg0LDEyMDE1NTMwNzgsODMwNTY0NDM4
+LDE1Nzk1MTY0MywtMTY5NDk2NDU3LDEyODkxNzI2OSw4NDg3Nj
+I2OTUsMTAzOTgzNzc1NiwtMjczMTU4MTEyLC05ODk1ODc0MzQs
+LTEwNzc2NjQyOTAsNzYzODA4NDA5LDQ2MDUyODI1OCwxMDcyOT
+M1MzIsMTQxODU4MDQyNiwxOTM0NDU3ODU3LDIwNTAwMzYwNjRd
+fQ==
 -->
