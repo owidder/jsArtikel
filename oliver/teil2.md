@@ -87,7 +87,7 @@ class SelectCompanyElement extends HTMLElement {
   
     connectedCallback() {  
         ReactDOM.render(<SelectCompany 
-	        basedir={this.basedir} 
+	        basedir={basedir} 
 	        onChange={(company: Company) => 
 		        {this.onChangeCompany(company)}}/>,
 	        this);  
@@ -106,11 +106,11 @@ export interface Company {
 ```
 * Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Aufruf des Service "companies" innerhalb der React-Component statt. Darum geben wir der React-Component über die Property `basedir` die Adresse mit, von der aus der Code des Custom Elements ausgeliefert wurde. Denn dort kann die React-Component auch den Service finden: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTk3MTg4ODUsMTA0OTY1MDA5MiwtNT
-M4NDI1NzcyLDE4NzEyMTM0NTEsLTQwOTEyNjY5MSwtNDA5MTI2
-NjkxLDE3MjA3MjcxNjAsLTE5Mzk3MTMzODQsMTIwMTU1MzA3OC
-w4MzA1NjQ0MzgsMTU3OTUxNjQzLC0xNjk0OTY0NTcsMTI4OTE3
-MjY5LDg0ODc2MjY5NSwxMDM5ODM3NzU2LC0yNzMxNTgxMTIsLT
-k4OTU4NzQzNCwtMTA3NzY2NDI5MCw3NjM4MDg0MDksNDYwNTI4
-MjU4XX0=
+eyJoaXN0b3J5IjpbODI4NzgzNzE5LDEwNDk2NTAwOTIsLTUzOD
+QyNTc3MiwxODcxMjEzNDUxLC00MDkxMjY2OTEsLTQwOTEyNjY5
+MSwxNzIwNzI3MTYwLC0xOTM5NzEzMzg0LDEyMDE1NTMwNzgsOD
+MwNTY0NDM4LDE1Nzk1MTY0MywtMTY5NDk2NDU3LDEyODkxNzI2
+OSw4NDg3NjI2OTUsMTAzOTgzNzc1NiwtMjczMTU4MTEyLC05OD
+k1ODc0MzQsLTEwNzc2NjQyOTAsNzYzODA4NDA5LDQ2MDUyODI1
+OF19
 -->
