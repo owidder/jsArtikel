@@ -113,13 +113,14 @@ export interface Company {
 	        onChange={(company: Company) => 
 		        {this.onChangeCompany(company)}}/>, this);  
 	```
+	* Als `onChange`-Property übergeben wir eine Lambda-F
 	* `this` ist innerhalb der ``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTk0NjY4MzcsMTI2NTkzNDU0OSwxOT
-k3MzU3OTk3LDEwNzE1ODcwNjUsLTM3ODUzNTc2MiwxNzE5NDM4
-NDI1LDIxMzEzMzY1NjMsODI4NzgzNzE5LDEwNDk2NTAwOTIsLT
-UzODQyNTc3MiwxODcxMjEzNDUxLC00MDkxMjY2OTEsLTQwOTEy
-NjY5MSwxNzIwNzI3MTYwLC0xOTM5NzEzMzg0LDEyMDE1NTMwNz
-gsODMwNTY0NDM4LDE1Nzk1MTY0MywtMTY5NDk2NDU3LDEyODkx
-NzI2OV19
+eyJoaXN0b3J5IjpbMTMwMjI3MjAzNywtMTY5OTQ2NjgzNywxMj
+Y1OTM0NTQ5LDE5OTczNTc5OTcsMTA3MTU4NzA2NSwtMzc4NTM1
+NzYyLDE3MTk0Mzg0MjUsMjEzMTMzNjU2Myw4Mjg3ODM3MTksMT
+A0OTY1MDA5MiwtNTM4NDI1NzcyLDE4NzEyMTM0NTEsLTQwOTEy
+NjY5MSwtNDA5MTI2NjkxLDE3MjA3MjcxNjAsLTE5Mzk3MTMzOD
+QsMTIwMTU1MzA3OCw4MzA1NjQ0MzgsMTU3OTUxNjQzLC0xNjk0
+OTY0NTddfQ==
 -->
