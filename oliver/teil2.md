@@ -52,13 +52,14 @@ Live kann man sich das Element hier ansehen: [http://bit.ly/stockprice-company](
 
 ## Das Custom Element "select-company"
 Bei der Implementierung der Custom Elements haben wir die folgenden Prinzipien umgesetzt:
-* Kein Shadow-DOM: Wir haben bewusst auf den Shadow-DOM verziecht
+* Kein Shadow-DOM: Wir haben bewusst auf den Shadow-DOM verzichtet. Dies hatte zwei Gründe:
+	* Man darf der integrierten Anwendung nicht ansehen, dass sie aus vielen Micro-Frontends zusammengesetzt ist. Dies erfordert 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjcwMjUwNzA1LDE1Nzk1MTY0MywtMTY5ND
-k2NDU3LDEyODkxNzI2OSw4NDg3NjI2OTUsMTAzOTgzNzc1Niwt
-MjczMTU4MTEyLC05ODk1ODc0MzQsLTEwNzc2NjQyOTAsNzYzOD
-A4NDA5LDQ2MDUyODI1OCwxMDcyOTM1MzIsMTQxODU4MDQyNiwx
-OTM0NDU3ODU3LDIwNTAwMzYwNjQsLTEyODM1MzcxMCwtODkyMj
-EwOTFdfQ==
+eyJoaXN0b3J5IjpbLTE4MzQwMzYwNzQsMTU3OTUxNjQzLC0xNj
+k0OTY0NTcsMTI4OTE3MjY5LDg0ODc2MjY5NSwxMDM5ODM3NzU2
+LC0yNzMxNTgxMTIsLTk4OTU4NzQzNCwtMTA3NzY2NDI5MCw3Nj
+M4MDg0MDksNDYwNTI4MjU4LDEwNzI5MzUzMiwxNDE4NTgwNDI2
+LDE5MzQ0NTc4NTcsMjA1MDAzNjA2NCwtMTI4MzUzNzEwLC04OT
+IyMTA5MV19
 -->
