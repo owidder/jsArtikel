@@ -102,13 +102,13 @@ export interface Company {
     full: string;  
 }
 ```
-* Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Aufruf des Service "companies" innerhalb der React-Component statt. Gemäß dem o.g. Prinzip kann man den Service dort finden, wo auch 
+* Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Aufruf des Service "companies" innerhalb der React-Component statt. Darum geben wir der React-Component über die Property `basedir` die Adresse mit, von der aus der Code des Cus 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1MTQ0MDA4MCwtNTM4NDI1NzcyLDE4Nz
-EyMTM0NTEsLTQwOTEyNjY5MSwtNDA5MTI2NjkxLDE3MjA3Mjcx
-NjAsLTE5Mzk3MTMzODQsMTIwMTU1MzA3OCw4MzA1NjQ0MzgsMT
-U3OTUxNjQzLC0xNjk0OTY0NTcsMTI4OTE3MjY5LDg0ODc2MjY5
-NSwxMDM5ODM3NzU2LC0yNzMxNTgxMTIsLTk4OTU4NzQzNCwtMT
-A3NzY2NDI5MCw3NjM4MDg0MDksNDYwNTI4MjU4LDEwNzI5MzUz
-Ml19
+eyJoaXN0b3J5IjpbMjQ2MDcwNTIxLC01Mzg0MjU3NzIsMTg3MT
+IxMzQ1MSwtNDA5MTI2NjkxLC00MDkxMjY2OTEsMTcyMDcyNzE2
+MCwtMTkzOTcxMzM4NCwxMjAxNTUzMDc4LDgzMDU2NDQzOCwxNT
+c5NTE2NDMsLTE2OTQ5NjQ1NywxMjg5MTcyNjksODQ4NzYyNjk1
+LDEwMzk4Mzc3NTYsLTI3MzE1ODExMiwtOTg5NTg3NDM0LC0xMD
+c3NjY0MjkwLDc2MzgwODQwOSw0NjA1MjgyNTgsMTA3MjkzNTMy
+XX0=
 -->
