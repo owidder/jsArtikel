@@ -71,12 +71,13 @@ import * as ReactDOM from "react-dom";
   
 import {SelectCompany, Company} from "./SelectCompany";  
   
-const scriptPath = document.currentScript.getAttribute("src");  
+const scriptPath = document.currentScript.getAttribute("src");
+const parts = scriptPath.split("/");  
+const basedir = parts.slice(0, parts.length-1).join("/");
   
 class SelectCompanyElement extends HTMLElement {  
   
     public onChangeCompany: (Company) => void;    
-    readonly basedir: string;  
   
     constructor() {  
         super();  
@@ -105,11 +106,11 @@ export interface Company {
 ```
 * Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Aufruf des Service "companies" innerhalb der React-Component statt. Darum geben wir der React-Component über die Property `basedir` die Adresse mit, von der aus der Code des Custom Elements ausgeliefert wurde. Denn dort kann die React-Component auch den Service finden: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0OTY1MDA5MiwtNTM4NDI1NzcyLDE4Nz
-EyMTM0NTEsLTQwOTEyNjY5MSwtNDA5MTI2NjkxLDE3MjA3Mjcx
-NjAsLTE5Mzk3MTMzODQsMTIwMTU1MzA3OCw4MzA1NjQ0MzgsMT
-U3OTUxNjQzLC0xNjk0OTY0NTcsMTI4OTE3MjY5LDg0ODc2MjY5
-NSwxMDM5ODM3NzU2LC0yNzMxNTgxMTIsLTk4OTU4NzQzNCwtMT
-A3NzY2NDI5MCw3NjM4MDg0MDksNDYwNTI4MjU4LDEwNzI5MzUz
-Ml19
+eyJoaXN0b3J5IjpbLTE4MTk3MTg4ODUsMTA0OTY1MDA5MiwtNT
+M4NDI1NzcyLDE4NzEyMTM0NTEsLTQwOTEyNjY5MSwtNDA5MTI2
+NjkxLDE3MjA3MjcxNjAsLTE5Mzk3MTMzODQsMTIwMTU1MzA3OC
+w4MzA1NjQ0MzgsMTU3OTUxNjQzLC0xNjk0OTY0NTcsMTI4OTE3
+MjY5LDg0ODc2MjY5NSwxMDM5ODM3NzU2LC0yNzMxNTgxMTIsLT
+k4OTU4NzQzNCwtMTA3NzY2NDI5MCw3NjM4MDg0MDksNDYwNTI4
+MjU4XX0=
 -->
