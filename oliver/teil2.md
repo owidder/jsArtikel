@@ -102,13 +102,13 @@ export interface Company {
     full: string;  
 }
 ```
-* Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Service-Aufruf innerhalb der React-Component statt. Gemäß dem o.g. Prinzip  
+* Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Aufruf des Service "companies" innerhalb der React-Component statt. Gemäß dem o.g. Prinzip kann man den Service dort finden, wo auch 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzODQyNTc3MiwxODcxMjEzNDUxLC00MD
-kxMjY2OTEsLTQwOTEyNjY5MSwxNzIwNzI3MTYwLC0xOTM5NzEz
-Mzg0LDEyMDE1NTMwNzgsODMwNTY0NDM4LDE1Nzk1MTY0MywtMT
-Y5NDk2NDU3LDEyODkxNzI2OSw4NDg3NjI2OTUsMTAzOTgzNzc1
-NiwtMjczMTU4MTEyLC05ODk1ODc0MzQsLTEwNzc2NjQyOTAsNz
-YzODA4NDA5LDQ2MDUyODI1OCwxMDcyOTM1MzIsMTQxODU4MDQy
-Nl19
+eyJoaXN0b3J5IjpbMTY1MTQ0MDA4MCwtNTM4NDI1NzcyLDE4Nz
+EyMTM0NTEsLTQwOTEyNjY5MSwtNDA5MTI2NjkxLDE3MjA3Mjcx
+NjAsLTE5Mzk3MTMzODQsMTIwMTU1MzA3OCw4MzA1NjQ0MzgsMT
+U3OTUxNjQzLC0xNjk0OTY0NTcsMTI4OTE3MjY5LDg0ODc2MjY5
+NSwxMDM5ODM3NzU2LC0yNzMxNTgxMTIsLTk4OTU4NzQzNCwtMT
+A3NzY2NDI5MCw3NjM4MDg0MDksNDYwNTI4MjU4LDEwNzI5MzUz
+Ml19
 -->
