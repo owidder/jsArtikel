@@ -56,9 +56,8 @@ Bei der Implementierung der Custom Elements haben wir die folgenden Prinzipien u
 	* Man darf der integrierten Anwendung nicht ansehen, dass sie aus vielen Micro-Frontends zusammengesetzt ist. Dies erfordert, dass für alle Custom Elements die selben CSS-Regeln gelten. Darum haben wir die kapselnde Eigenschaft des Shadow-DOM nicht benötigt.
 	* Unverträglich des von uns eingesetzten UI-Frameworks *React* mit dem Shadow-DOM: Der Einsatz von React-Componenten innerhalb des Shadow-DOM führte zu Problemen bei der Event-Verarbeitung (siehe [http://bit.ly/react-shadow-dom](http://bit.ly/react-shadow-dom)).
 * Custom Elements sind nur schmale Wrapper: Die gesamte client-seitige Funktionalität eines Micro-Frontends befindet sich innerhalb einer React-Component (mit Unter-Compenents). Ein Custom Elements ist immer nur ein schmaler Wrapper um diese React-Component. Dieses Prinzip hat es uns erlaubt, die Funktionalität der React-Component auch noch an anderen Stellen zu verwenden.
-* TypeScript: Custom Elements und React-Components sind in TypeScript implementiert.
 
-Mit diesen Prinzipien sieht die Implementierung des Custom Elements `<select-company/>` folgendermaßen aus:
+Mit diesen Prinzipien sieht die Implementierung des Custom Elements `<select-company/>` folgendermaßen aus (in TypeScript):
 ```
 import * as React from "react";  
 import * as ReactDOM from "react-dom";  
@@ -78,21 +77,12 @@ class SelectCompanyElement extends HTMLElement {
         this.basedir = parts.slice(0, parts.length-1).join("/");  
     }  
   
-    drawReactComponent() {  
-        ReactDOM.render(<SelectCompany basedir={this.basedir} 
+    connectedCallback() {  
+        ReactDOM.render(<SelectCompany 
+	        basedir={this.basedir} 
 	        onChange={(company) => {this.onChangeCompany(company)}}/>,
 	        this);  
-    }  
-  
-    connectedCallback() {  
-        this.drawReactComponent();  
-    }  
-  
-    attributeChangedCallback(name: string, oldValue: string, newValue: string) {  
-        if(newValue && oldValue != newValue) {  
-            this.drawReactComponent();  
-        }  
-    }  
+    }    
 }  
   
 customElements.define("select-company", SelectCompanyElement);
@@ -107,10 +97,10 @@ export interface Company {
 ```
 * Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Service-Aufruf innerhalb der React-Component statt. Dafür muss diese allerdings wissen, wo sie diesen Service findet. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMTU1MzA3OCw4MzA1NjQ0MzgsMTU3OT
-UxNjQzLC0xNjk0OTY0NTcsMTI4OTE3MjY5LDg0ODc2MjY5NSwx
-MDM5ODM3NzU2LC0yNzMxNTgxMTIsLTk4OTU4NzQzNCwtMTA3Nz
-Y2NDI5MCw3NjM4MDg0MDksNDYwNTI4MjU4LDEwNzI5MzUzMiwx
-NDE4NTgwNDI2LDE5MzQ0NTc4NTcsMjA1MDAzNjA2NCwtMTI4Mz
-UzNzEwLC04OTIyMTA5MV19
+eyJoaXN0b3J5IjpbLTE5Mzk3MTMzODQsMTIwMTU1MzA3OCw4Mz
+A1NjQ0MzgsMTU3OTUxNjQzLC0xNjk0OTY0NTcsMTI4OTE3MjY5
+LDg0ODc2MjY5NSwxMDM5ODM3NzU2LC0yNzMxNTgxMTIsLTk4OT
+U4NzQzNCwtMTA3NzY2NDI5MCw3NjM4MDg0MDksNDYwNTI4MjU4
+LDEwNzI5MzUzMiwxNDE4NTgwNDI2LDE5MzQ0NTc4NTcsMjA1MD
+AzNjA2NCwtMTI4MzUzNzEwLC04OTIyMTA5MV19
 -->
