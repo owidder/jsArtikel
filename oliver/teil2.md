@@ -35,7 +35,7 @@ Neben dem Service "companies" liefert das SCS "Company" auch ein Micro-Frontend 
 
 Verwenden kann man das Element z.B. so:
 ```
-<select-company initial-short="AAPL"></select-company>
+<select-company></select-company>
 <div id="company"></div>
 <script>
 var element = document.querySelector("select-company");
@@ -46,7 +46,7 @@ element.onChangeCompany = function (company) {
 }
 </script>
 ```
-Dem Custom Element kann als Property `onChangeCompany` eine Function übergeben werden. Diese wird nach der Eingabe durch den Anwender mit dem entsprechenden Company-Object (z.B.: `{short: "AAPL", full: "Apple Inc."}`) aufgerufen.
+Dem Custom Element `<select-company/>` kann als Property `onChangeCompany` eine Callback-Function übergeben werden. Diese wird nach der Eingabe durch den Anwender mit dem entsprechenden Company-Object (z.B.: `{short: "AAPL", full: "Apple Inc."}`) aufgerufen.
 
 Live kann man sich das Element hier ansehen: [http://bit.ly/stockprice-company](http://bit.ly/stockprice-company)
 
@@ -54,7 +54,7 @@ Live kann man sich das Element hier ansehen: [http://bit.ly/stockprice-company](
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1MDMzNDM5MCwxMjg5MTcyNjksODQ4Nz
+eyJoaXN0b3J5IjpbLTE2OTQ5NjQ1NywxMjg5MTcyNjksODQ4Nz
 YyNjk1LDEwMzk4Mzc3NTYsLTI3MzE1ODExMiwtOTg5NTg3NDM0
 LC0xMDc3NjY0MjkwLDc2MzgwODQwOSw0NjA1MjgyNTgsMTA3Mj
 kzNTMyLDE0MTg1ODA0MjYsMTkzNDQ1Nzg1NywyMDUwMDM2MDY0
