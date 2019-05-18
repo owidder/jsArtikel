@@ -120,12 +120,14 @@ export interface Company {
 	Als `onChange`-Property übergeben wir eine Lambda-Function, die wiederum die Callback-Function aufruft, die dem Custom Element über die `onChangeCompany`-Property übergeben wurde.
 
 ## Die React-Component "SelectCompany"
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzNzYyNjc5NiwtMTY5OTQ2NjgzNywxMj
-Y1OTM0NTQ5LDE5OTczNTc5OTcsMTA3MTU4NzA2NSwtMzc4NTM1
-NzYyLDE3MTk0Mzg0MjUsMjEzMTMzNjU2Myw4Mjg3ODM3MTksMT
-A0OTY1MDA5MiwtNTM4NDI1NzcyLDE4NzEyMTM0NTEsLTQwOTEy
-NjY5MSwtNDA5MTI2NjkxLDE3MjA3MjcxNjAsLTE5Mzk3MTMzOD
-QsMTIwMTU1MzA3OCw4MzA1NjQ0MzgsMTU3OTUxNjQzLC0xNjk0
-OTY0NTddfQ==
+eyJoaXN0b3J5IjpbMTg1NDE4MjcwNCwtNjM3NjI2Nzk2LC0xNj
+k5NDY2ODM3LDEyNjU5MzQ1NDksMTk5NzM1Nzk5NywxMDcxNTg3
+MDY1LC0zNzg1MzU3NjIsMTcxOTQzODQyNSwyMTMxMzM2NTYzLD
+gyODc4MzcxOSwxMDQ5NjUwMDkyLC01Mzg0MjU3NzIsMTg3MTIx
+MzQ1MSwtNDA5MTI2NjkxLC00MDkxMjY2OTEsMTcyMDcyNzE2MC
+wtMTkzOTcxMzM4NCwxMjAxNTUzMDc4LDgzMDU2NDQzOCwxNTc5
+NTE2NDNdfQ==
 -->
