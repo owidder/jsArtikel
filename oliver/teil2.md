@@ -115,16 +115,17 @@ export interface Company {
 		        {this.onChangeCompany(company)}}/>, this);  
     }    
 	```
-	Als Container-DOM-Element (zweiter Parameter der `ReactDOM.render()`-Methode) übergeben wir einfach `this`. Innerhalb der `connectedCallback`-Methode repräsentiert es das Root-Element des Custom Elements.
+	Als Container-DOM-Element (zweiter Parameter der `ReactDOM.render()`-Methode) übergeben wir einfach `this`. Innerhalb der `connectedCallback`-Methode repräsentiert `this` das Root-Element des Custom Elements.
 	
 	Als `onChange`-Property übergeben wir eine Lambda-Function, die wiederum die Callback-Function aufruft, die dem Custom Element über die `onChangeCompany`-Property übergeben wurde.
 
+## Die React-Component "SelectCompany"
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTQzMTcwNTQsLTE2OTk0NjY4MzcsMT
-I2NTkzNDU0OSwxOTk3MzU3OTk3LDEwNzE1ODcwNjUsLTM3ODUz
-NTc2MiwxNzE5NDM4NDI1LDIxMzEzMzY1NjMsODI4NzgzNzE5LD
-EwNDk2NTAwOTIsLTUzODQyNTc3MiwxODcxMjEzNDUxLC00MDkx
-MjY2OTEsLTQwOTEyNjY5MSwxNzIwNzI3MTYwLC0xOTM5NzEzMz
-g0LDEyMDE1NTMwNzgsODMwNTY0NDM4LDE1Nzk1MTY0MywtMTY5
-NDk2NDU3XX0=
+eyJoaXN0b3J5IjpbLTYzNzYyNjc5NiwtMTY5OTQ2NjgzNywxMj
+Y1OTM0NTQ5LDE5OTczNTc5OTcsMTA3MTU4NzA2NSwtMzc4NTM1
+NzYyLDE3MTk0Mzg0MjUsMjEzMTMzNjU2Myw4Mjg3ODM3MTksMT
+A0OTY1MDA5MiwtNTM4NDI1NzcyLDE4NzEyMTM0NTEsLTQwOTEy
+NjY5MSwtNDA5MTI2NjkxLDE3MjA3MjcxNjAsLTE5Mzk3MTMzOD
+QsMTIwMTU1MzA3OCw4MzA1NjQ0MzgsMTU3OTUxNjQzLC0xNjk0
+OTY0NTddfQ==
 -->
