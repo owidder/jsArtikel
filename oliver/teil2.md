@@ -105,17 +105,22 @@ export interface Company {
 	const parts = scriptPath.split("/");  
 	const basedir = parts.slice(0, parts.length-1).join("/");
 	```
-* Wie oben beschrieben verwenden wir keinen Shadow-DOM, sondern rendern die DOM-Elemente des Custom Elements direkt in den den Main-DOM. Das aber sollte man nicht im Constructor des Custom Elements tun sondern in der `connectedCallback`-Lifecycle-Methode:
+* Wie oben beschrieben verwenden wir keinen Shadow-DOM, sondern rendern die DOM-Elemente des Custom Elements direkt in den den Main-DOM. Das aber sollte man nicht im Constructor des Custom Elements tun sondern in der `connectedCallback`-Lifecycle-Methode. Dort rendern wir die React-Component:
 	```
-	``
+	        ReactDOM.render(<SelectCompany 
+	        basedir={basedir} 
+	        onChange={(company: Company) => 
+		        {this.onChangeCompany(company)}}/>, this);  
+
+	```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTEyNjA5NTE1LDE5OTczNTc5OTcsMTA3MT
-U4NzA2NSwtMzc4NTM1NzYyLDE3MTk0Mzg0MjUsMjEzMTMzNjU2
-Myw4Mjg3ODM3MTksMTA0OTY1MDA5MiwtNTM4NDI1NzcyLDE4Nz
-EyMTM0NTEsLTQwOTEyNjY5MSwtNDA5MTI2NjkxLDE3MjA3Mjcx
-NjAsLTE5Mzk3MTMzODQsMTIwMTU1MzA3OCw4MzA1NjQ0MzgsMT
-U3OTUxNjQzLC0xNjk0OTY0NTcsMTI4OTE3MjY5LDg0ODc2MjY5
-NV19
+eyJoaXN0b3J5IjpbLTI1NTUzMzUxOSwxOTk3MzU3OTk3LDEwNz
+E1ODcwNjUsLTM3ODUzNTc2MiwxNzE5NDM4NDI1LDIxMzEzMzY1
+NjMsODI4NzgzNzE5LDEwNDk2NTAwOTIsLTUzODQyNTc3MiwxOD
+cxMjEzNDUxLC00MDkxMjY2OTEsLTQwOTEyNjY5MSwxNzIwNzI3
+MTYwLC0xOTM5NzEzMzg0LDEyMDE1NTMwNzgsODMwNTY0NDM4LD
+E1Nzk1MTY0MywtMTY5NDk2NDU3LDEyODkxNzI2OSw4NDg3NjI2
+OTVdfQ==
 -->
