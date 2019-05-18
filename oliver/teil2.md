@@ -97,8 +97,9 @@ class SelectCompanyElement extends HTMLElement {
   
 customElements.define("select-company", SelectCompanyElement);
 ```
+* `SelectCompany` ist die React-Component, in der sich die eigent
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyMDM4Mzg0Nyw4MzA1NjQ0MzgsMTU3OT
+eyJoaXN0b3J5IjpbLTE1MTQ1NTU3OCw4MzA1NjQ0MzgsMTU3OT
 UxNjQzLC0xNjk0OTY0NTcsMTI4OTE3MjY5LDg0ODc2MjY5NSwx
 MDM5ODM3NzU2LC0yNzMxNTgxMTIsLTk4OTU4NzQzNCwtMTA3Nz
 Y2NDI5MCw3NjM4MDg0MDksNDYwNTI4MjU4LDEwNzI5MzUzMiwx
