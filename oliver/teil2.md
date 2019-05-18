@@ -113,14 +113,15 @@ export interface Company {
 	        onChange={(company: Company) => 
 		        {this.onChangeCompany(company)}}/>, this);  
 	```
+	Als zweiten Parameter der `ReactDOM.render`
 	* Als `onChange`-Property übergeben wir eine Lambda-Function, die wiederum die Callback-Function aufruft, die dem Custom Element über die `onChangeCompany`-Property übergeben wurde
-	* Innerhalb der  `connectedCallback` `this` ist innerhalb der ``
+	* Innerhalb der  `connectedCallback`-Methode  `this` ist innerhalb der ``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI1NTQ4NzY1LC0xNjk5NDY2ODM3LDEyNj
-U5MzQ1NDksMTk5NzM1Nzk5NywxMDcxNTg3MDY1LC0zNzg1MzU3
-NjIsMTcxOTQzODQyNSwyMTMxMzM2NTYzLDgyODc4MzcxOSwxMD
-Q5NjUwMDkyLC01Mzg0MjU3NzIsMTg3MTIxMzQ1MSwtNDA5MTI2
-NjkxLC00MDkxMjY2OTEsMTcyMDcyNzE2MCwtMTkzOTcxMzM4NC
-wxMjAxNTUzMDc4LDgzMDU2NDQzOCwxNTc5NTE2NDMsLTE2OTQ5
-NjQ1N119
+eyJoaXN0b3J5IjpbMTQ0OTI2MjQwNywtMTY5OTQ2NjgzNywxMj
+Y1OTM0NTQ5LDE5OTczNTc5OTcsMTA3MTU4NzA2NSwtMzc4NTM1
+NzYyLDE3MTk0Mzg0MjUsMjEzMTMzNjU2Myw4Mjg3ODM3MTksMT
+A0OTY1MDA5MiwtNTM4NDI1NzcyLDE4NzEyMTM0NTEsLTQwOTEy
+NjY5MSwtNDA5MTI2NjkxLDE3MjA3MjcxNjAsLTE5Mzk3MTMzOD
+QsMTIwMTU1MzA3OCw4MzA1NjQ0MzgsMTU3OTUxNjQzLC0xNjk0
+OTY0NTddfQ==
 -->
