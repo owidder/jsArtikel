@@ -151,18 +151,22 @@ export class SelectCompany extends React.Component<SelectCompanyProps, SelectCom
   
     handleSearch(value: string) {  
         const data = _.uniq(this.state.companies.map(
-        company => company.full).filter(full => full.toLowerCase().indexOf(value.toLowerCase()) > -1));  
+	        company => company.full).filter(full => 
+		        full.toLowerCase().indexOf(value.toLowerCase()) > -1));  
         this.setState({data, value})  
     }  
   
     handleSelect(full: string) {  
-        const selectedCompany = this.state.companies.find(s => (s.full == full));  
+        const selectedCompany = this.state.companies.find(
+	        s => (s.full == full));  
         this.props.onChange(selectedCompany);  
         this.setState({value: full})  
     }  
   
     async getCompanies(): Promise<Company[]> {  
-        return await fetch(`${this.props.basedir}/../../service/companies`).then(resp => resp.json());  
+        return await fetch(
+	        `${this.props.basedir}/../../service/companies`)
+	        .then(resp => resp.json());  
     }  
   
     async componentDidMount() {  
@@ -190,11 +194,11 @@ export class SelectCompany extends React.Component<SelectCompanyProps, SelectCom
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDQ0MTQ0NjEsLTE0Njk2MzMxMDcsLT
-E2ODU2MjU2OTksLTEyMzI5NzY3NjcsMTQwNTQ0Mzc4MCwzNzc3
-MTIyMjQsLTYzNzYyNjc5NiwtMTY5OTQ2NjgzNywxMjY1OTM0NT
-Q5LDE5OTczNTc5OTcsMTA3MTU4NzA2NSwtMzc4NTM1NzYyLDE3
-MTk0Mzg0MjUsMjEzMTMzNjU2Myw4Mjg3ODM3MTksMTA0OTY1MD
-A5MiwtNTM4NDI1NzcyLDE4NzEyMTM0NTEsLTQwOTEyNjY5MSwt
-NDA5MTI2NjkxXX0=
+eyJoaXN0b3J5IjpbMTMxODk4ODEzOSwtMTQ2OTYzMzEwNywtMT
+Y4NTYyNTY5OSwtMTIzMjk3Njc2NywxNDA1NDQzNzgwLDM3Nzcx
+MjIyNCwtNjM3NjI2Nzk2LC0xNjk5NDY2ODM3LDEyNjU5MzQ1ND
+ksMTk5NzM1Nzk5NywxMDcxNTg3MDY1LC0zNzg1MzU3NjIsMTcx
+OTQzODQyNSwyMTMxMzM2NTYzLDgyODc4MzcxOSwxMDQ5NjUwMD
+kyLC01Mzg0MjU3NzIsMTg3MTIxMzQ1MSwtNDA5MTI2NjkxLC00
+MDkxMjY2OTFdfQ==
 -->
