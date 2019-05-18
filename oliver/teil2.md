@@ -56,15 +56,59 @@ Bei der Implementierung der Custom Elements haben wir die folgenden Prinzipien u
 	* Man darf der integrierten Anwendung nicht ansehen, dass sie aus vielen Micro-Frontends zusammengesetzt ist. Dies erfordert, dass für alle Custom Elements die selben CSS-Regeln gelten. Darum haben wir die kapselnde Eigenschaft des Shadow-DOM nicht benötigt.
 	* Unverträglich des von uns eingesetzten UI-Frameworks *React* mit dem Shadow-DOM: Der Einsatz von React-Componenten innerhalb des Shadow-DOM führte zu Problemen bei der Event-Verarbeitung (siehe [http://bit.ly/react-shadow-dom](http://bit.ly/react-shadow-dom)).
 * Custom Elements sind nur schmale Wrapper: Die gesamte client-seitige Funktionalität eines Micro-Frontends befindet sich innerhalb einer React-Component (mit Unter-Compenents). Ein Custom Elements ist immer nur ein schmaler Wrapper um diese React-Component.
+* TypeScript: Custom Elements und React-Components sind in TypeScript
 
 Mit diesen Prinzipien sieht die Implementierung des Custom Elements `<select-company/>` folgendermaßen aus:
 ```
+import * as React from "react";  
+import * as ReactDOM from "react-dom";  
+  
+import {SelectCompany, Company} from "./SelectCompany";  
+  
+const scriptPath = document.currentScript.getAttribute("src");  
+  
+class SelectCompanyElement extends HTMLElement {  
+  
+    static get observedAttributes() {  
+        return ["initial-short"];  
+    }  
+  
+    public onChangeCompany: (Company) => void;  
+  
+    readonly basedir: string;  
+  
+    constructor() {  
+        super();  
+        const parts = scriptPath.split("/");  
+        this.basedir = parts.slice(0, parts.length-1).join("/");  
+    }  
+  
+    drawReactComponent() {  
+        ReactDOM.render(<SelectCompany initialShort={this.getAttribute("initial-short")}  
+  basedir={this.basedir}  
+  onChange={(company: Company) => {  
+                                           this.onChangeCompany && this.onChangeCompany(company)  
+                                       }}/>, this);  
+    }  
+  
+    connectedCallback() {  
+        this.drawReactComponent();  
+    }  
+  
+    attributeChangedCallback(name: string, oldValue: string, newValue: string) {  
+        if(newValue && oldValue != newValue) {  
+            this.drawReactComponent();  
+        }  
+    }  
+}  
+  
+customElements.define("select-company", SelectCompanyElement);
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzU5NjE0ODIsODMwNTY0NDM4LDE1Nz
-k1MTY0MywtMTY5NDk2NDU3LDEyODkxNzI2OSw4NDg3NjI2OTUs
-MTAzOTgzNzc1NiwtMjczMTU4MTEyLC05ODk1ODc0MzQsLTEwNz
-c2NjQyOTAsNzYzODA4NDA5LDQ2MDUyODI1OCwxMDcyOTM1MzIs
-MTQxODU4MDQyNiwxOTM0NDU3ODU3LDIwNTAwMzYwNjQsLTEyOD
-M1MzcxMCwtODkyMjEwOTFdfQ==
+eyJoaXN0b3J5IjpbLTIyMTY4MDY5Niw4MzA1NjQ0MzgsMTU3OT
+UxNjQzLC0xNjk0OTY0NTcsMTI4OTE3MjY5LDg0ODc2MjY5NSwx
+MDM5ODM3NzU2LC0yNzMxNTgxMTIsLTk4OTU4NzQzNCwtMTA3Nz
+Y2NDI5MCw3NjM4MDg0MDksNDYwNTI4MjU4LDEwNzI5MzUzMiwx
+NDE4NTgwNDI2LDE5MzQ0NTc4NTcsMjA1MDAzNjA2NCwtMTI4Mz
+UzNzEwLC04OTIyMTA5MV19
 -->
