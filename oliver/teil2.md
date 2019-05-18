@@ -107,15 +107,15 @@ export interface Company {
 	const parts = scriptPath.split("/");  
 	const basedir = parts.slice(0, parts.length-1).join("/");
 	```
-* Wie oben beschrieben verwenden wir keinen Shadow-DOM, sondern rendern die DOM-Elemente des Custom Elements in den den Main-DOM. Das aber sollte man nicht im Constructor des Custom Elements tun sondern in der `connectedCallback`-Lifecycle-Methode.
+* Wie oben beschrieben verwenden wir keinen Shadow-DOM, sondern rendern die DOM-Elemente des Custom Elements direkt in den den Main-DOM. Das aber sollte man nicht im Constructor des Custom Elements tun sondern in der `connectedCallback`-Lifecycle-Methode.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3ODUzNTc2MiwxNzE5NDM4NDI1LDIxMz
-EzMzY1NjMsODI4NzgzNzE5LDEwNDk2NTAwOTIsLTUzODQyNTc3
-MiwxODcxMjEzNDUxLC00MDkxMjY2OTEsLTQwOTEyNjY5MSwxNz
-IwNzI3MTYwLC0xOTM5NzEzMzg0LDEyMDE1NTMwNzgsODMwNTY0
-NDM4LDE1Nzk1MTY0MywtMTY5NDk2NDU3LDEyODkxNzI2OSw4ND
-g3NjI2OTUsMTAzOTgzNzc1NiwtMjczMTU4MTEyLC05ODk1ODc0
-MzRdfQ==
+eyJoaXN0b3J5IjpbMTA3MTU4NzA2NSwtMzc4NTM1NzYyLDE3MT
+k0Mzg0MjUsMjEzMTMzNjU2Myw4Mjg3ODM3MTksMTA0OTY1MDA5
+MiwtNTM4NDI1NzcyLDE4NzEyMTM0NTEsLTQwOTEyNjY5MSwtND
+A5MTI2NjkxLDE3MjA3MjcxNjAsLTE5Mzk3MTMzODQsMTIwMTU1
+MzA3OCw4MzA1NjQ0MzgsMTU3OTUxNjQzLC0xNjk0OTY0NTcsMT
+I4OTE3MjY5LDg0ODc2MjY5NSwxMDM5ODM3NzU2LC0yNzMxNTgx
+MTJdfQ==
 -->
