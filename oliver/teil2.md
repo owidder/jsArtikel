@@ -69,12 +69,7 @@ const scriptPath = document.currentScript.getAttribute("src");
   
 class SelectCompanyElement extends HTMLElement {  
   
-    static get observedAttributes() {  
-        return ["initial-short"];  
-    }  
-  
-    public onChangeCompany: (Company) => void;  
-  
+    public onChangeCompany: (Company) => void;    
     readonly basedir: string;  
   
     constructor() {  
@@ -85,8 +80,8 @@ class SelectCompanyElement extends HTMLElement {
   
     drawReactComponent() {  
         ReactDOM.render(<SelectCompany basedir={this.basedir} 
-	        onChange={(company) => {this.onChangeCompany(company)}  
-           }/>, this);  
+	        onChange={(company) => {this.onChangeCompany(company)}}/>,
+	        this);  
     }  
   
     connectedCallback() {  
@@ -103,10 +98,10 @@ class SelectCompanyElement extends HTMLElement {
 customElements.define("select-company", SelectCompanyElement);
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI5OTMyODEzLDgzMDU2NDQzOCwxNTc5NT
-E2NDMsLTE2OTQ5NjQ1NywxMjg5MTcyNjksODQ4NzYyNjk1LDEw
-Mzk4Mzc3NTYsLTI3MzE1ODExMiwtOTg5NTg3NDM0LC0xMDc3Nj
-Y0MjkwLDc2MzgwODQwOSw0NjA1MjgyNTgsMTA3MjkzNTMyLDE0
-MTg1ODA0MjYsMTkzNDQ1Nzg1NywyMDUwMDM2MDY0LC0xMjgzNT
-M3MTAsLTg5MjIxMDkxXX0=
+eyJoaXN0b3J5IjpbMjEyMDM4Mzg0Nyw4MzA1NjQ0MzgsMTU3OT
+UxNjQzLC0xNjk0OTY0NTcsMTI4OTE3MjY5LDg0ODc2MjY5NSwx
+MDM5ODM3NzU2LC0yNzMxNTgxMTIsLTk4OTU4NzQzNCwtMTA3Nz
+Y2NDI5MCw3NjM4MDg0MDksNDYwNTI4MjU4LDEwNzI5MzUzMiwx
+NDE4NTgwNDI2LDE5MzQ0NTc4NTcsMjA1MDAzNjA2NCwtMTI4Mz
+UzNzEwLC04OTIyMTA5MV19
 -->
