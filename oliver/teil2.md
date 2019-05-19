@@ -20,7 +20,7 @@ Jedes Custom Element greift wiederum nur auf Services des Self-Contained-Systems
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190518-02/oliver/StockPrice.png"/>
 
-In diesem Beispiel nutzt das System "StockPrice" die Micro-Frontends von "Company" und "StockHistory". Genauso könnte aber auch z.B. "StockHistory" das ein Mirco-Frontend von "C
+In diesem Beispiel nutzt das System "StockPrice" die Micro-Frontends von "Company" und "StockHistory". Genauso könnte aber auch z.B. "StockHistory" das ein Mirco-Frontend von "Company" nutzen oder umgekehrt.
 
 ## Das Micro-Frontend von "Company"
 Das SCS "Company" stellt den Service "companies" zur Verfügung. Er liefert Namen und Abkürzungen aller Firmen aus dem Dow Jones:
@@ -275,13 +275,14 @@ customElements.define("company-correlation",
 Unsere Erfahrungen mit Custom Elements für die Integration von Micro-Frontends waren weitestgehend positiv. Dennoch hat jede Münze mindestens zwei Seiten:
 
 Vorteile:
-* Komplett unabhängiges Deployment: Da die Custom Elements erst zur Laufzeit geladen werden, kann ein Self-Contained-System seine Micro-Frontends ändern und neu deployen, ohne dass eines der Self-Contained-System, die das Micro-Frontend einbinden
+* Komplett unabhängiges Deployment: Da die Custom Elements erst zur Laufzeit geladen werden, kann ein Self-Contained-System seine Micro-Frontends ändern und neu deployen, ohne dass eines der Systeme, die das Micro-Frontend einbinden, neu deployt werden muss. 
+* Einfache Schnittstellen: Das nutzende System 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNjc0MzQ4NCwtNjY5ODk1NTI4LDEwNT
-EyNDY3NTgsLTU1MjEwOTQxMSw3MDM0MzY3NTUsLTIxMTU1Mzg1
-NzEsMTIyNzgzMjAyOCw3NTY2Mzc1NSwxMzIwNDY2NTkxLDE0Nj
-EyNDY1MjQsMTI0NTY1MDI2MCwtMTQ2OTYzMzEwNywtMTY4NTYy
-NTY5OSwtMTIzMjk3Njc2NywxNDA1NDQzNzgwLDM3NzcxMjIyNC
-wtNjM3NjI2Nzk2LC0xNjk5NDY2ODM3LDEyNjU5MzQ1NDksMTk5
-NzM1Nzk5N119
+eyJoaXN0b3J5IjpbODY3NDU0NjU5LC02Njk4OTU1MjgsMTA1MT
+I0Njc1OCwtNTUyMTA5NDExLDcwMzQzNjc1NSwtMjExNTUzODU3
+MSwxMjI3ODMyMDI4LDc1NjYzNzU1LDEzMjA0NjY1OTEsMTQ2MT
+I0NjUyNCwxMjQ1NjUwMjYwLC0xNDY5NjMzMTA3LC0xNjg1NjI1
+Njk5LC0xMjMyOTc2NzY3LDE0MDU0NDM3ODAsMzc3NzEyMjI0LC
+02Mzc2MjY3OTYsLTE2OTk0NjY4MzcsMTI2NTkzNDU0OSwxOTk3
+MzU3OTk3XX0=
 -->
