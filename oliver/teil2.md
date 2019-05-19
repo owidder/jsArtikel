@@ -64,7 +64,7 @@ Bei der Implementierung der Custom Elements haben wir die folgenden Prinzipien u
 * Custom Elements sind nur schmale Wrapper: Die gesamte client-seitige Funktionalität eines Micro-Frontends befindet sich innerhalb einer React-Component (mit Unter-Compenents). Ein Custom Elements ist immer nur ein schmaler Wrapper um diese React-Component. Dieses Prinzip hat es uns erlaubt, die Funktionalität der React-Component auch noch an anderen Stellen zu verwenden.
 * Ein Custom Element ruft nur Services von der Adresse auf, von der er ausgeliefert wurde. 
 
-Mit diesen Prinzipien sieht die Implementierung des Custom Elements `<select-company/>` folgendermaßen aus (in TypeScript):
+Mit diesen Prinzipien sieht die Implementierung des Custom Elements `<select-company/>` folgendermaßen aus (File `SelectCompanyElement.tsx`):
 ```
 import * as React from "react";  
 import * as ReactDOM from "react-dom";  
@@ -208,11 +208,11 @@ Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, 
 </script>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU2NjM3NTUsMTMyMDQ2NjU5MSwxNDYxMj
-Q2NTI0LDEyNDU2NTAyNjAsLTE0Njk2MzMxMDcsLTE2ODU2MjU2
-OTksLTEyMzI5NzY3NjcsMTQwNTQ0Mzc4MCwzNzc3MTIyMjQsLT
-YzNzYyNjc5NiwtMTY5OTQ2NjgzNywxMjY1OTM0NTQ5LDE5OTcz
-NTc5OTcsMTA3MTU4NzA2NSwtMzc4NTM1NzYyLDE3MTk0Mzg0Mj
-UsMjEzMTMzNjU2Myw4Mjg3ODM3MTksMTA0OTY1MDA5MiwtNTM4
-NDI1NzcyXX0=
+eyJoaXN0b3J5IjpbMTQ2MzgwNjg1Nyw3NTY2Mzc1NSwxMzIwND
+Y2NTkxLDE0NjEyNDY1MjQsMTI0NTY1MDI2MCwtMTQ2OTYzMzEw
+NywtMTY4NTYyNTY5OSwtMTIzMjk3Njc2NywxNDA1NDQzNzgwLD
+M3NzcxMjIyNCwtNjM3NjI2Nzk2LC0xNjk5NDY2ODM3LDEyNjU5
+MzQ1NDksMTk5NzM1Nzk5NywxMDcxNTg3MDY1LC0zNzg1MzU3Nj
+IsMTcxOTQzODQyNSwyMTMxMzM2NTYzLDgyODc4MzcxOSwxMDQ5
+NjUwMDkyXX0=
 -->
