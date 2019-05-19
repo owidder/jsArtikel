@@ -184,13 +184,14 @@ export class SelectCompany extends React.Component<SelectCompanyProps, SelectCom
 ```
 
 * Als Eingabefeld verwenden wir `AutoComplete` aus der Bibliothek *Ant Design* (siehe [https://ant.design/](https://ant.design/))
-* Der Aufruf des Service "companies" findet in der React-Lifecycle-Methode `componentDidMount` statt. `componentDidMount` wird nach dem ersten Rendern der Component aufgerufen, wenn sich erzeugten DOM-Elemente im DOM-Tree befinden. Nachdem d
+* Der Aufruf des Service "companies" findet in der React-Lifecycle-Methode `componentDidMount` statt. `componentDidMount` wird nach dem ersten Rendern der Component aufgerufen, wenn sich erzeugten DOM-Elemente im DOM-Tree befinden. Nachdem der Service "companies" ein Array mit Namen und Abkürzungen geliefert hat, werden sie in den State der React-Component gelegt.
+	* 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3MzU3MTI4OSwxMjQ1NjUwMjYwLC0xND
-Y5NjMzMTA3LC0xNjg1NjI1Njk5LC0xMjMyOTc2NzY3LDE0MDU0
-NDM3ODAsMzc3NzEyMjI0LC02Mzc2MjY3OTYsLTE2OTk0NjY4Mz
-csMTI2NTkzNDU0OSwxOTk3MzU3OTk3LDEwNzE1ODcwNjUsLTM3
-ODUzNTc2MiwxNzE5NDM4NDI1LDIxMzEzMzY1NjMsODI4NzgzNz
-E5LDEwNDk2NTAwOTIsLTUzODQyNTc3MiwxODcxMjEzNDUxLC00
-MDkxMjY2OTFdfQ==
+eyJoaXN0b3J5IjpbMjYyODAwOTYzLDEyNDU2NTAyNjAsLTE0Nj
+k2MzMxMDcsLTE2ODU2MjU2OTksLTEyMzI5NzY3NjcsMTQwNTQ0
+Mzc4MCwzNzc3MTIyMjQsLTYzNzYyNjc5NiwtMTY5OTQ2NjgzNy
+wxMjY1OTM0NTQ5LDE5OTczNTc5OTcsMTA3MTU4NzA2NSwtMzc4
+NTM1NzYyLDE3MTk0Mzg0MjUsMjEzMTMzNjU2Myw4Mjg3ODM3MT
+ksMTA0OTY1MDA5MiwtNTM4NDI1NzcyLDE4NzEyMTM0NTEsLTQw
+OTEyNjY5MV19
 -->
