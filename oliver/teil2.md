@@ -183,9 +183,9 @@ export class SelectCompany extends React.Component<SelectCompanyProps, SelectCom
 }
 ```
 
-* Als Eingabefeld verwenden wir `AutoComplete` aus der 
+* Als Eingabefeld verwenden wir `AutoComplete` aus der Bibliothek *Ant Design* (siehe [https://ant.design/](https://ant.design/)*)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0MzU4NDI1LDEyNDU2NTAyNjAsLTE0Nj
+eyJoaXN0b3J5IjpbMzcxNTAyMjQxLDEyNDU2NTAyNjAsLTE0Nj
 k2MzMxMDcsLTE2ODU2MjU2OTksLTEyMzI5NzY3NjcsMTQwNTQ0
 Mzc4MCwzNzc3MTIyMjQsLTYzNzYyNjc5NiwtMTY5OTQ2NjgzNy
 wxMjY1OTM0NTQ5LDE5OTczNTc5OTcsMTA3MTU4NzA2NSwtMzc4
