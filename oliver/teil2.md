@@ -200,7 +200,7 @@ module.exports = {
         selectCompanyElement: "./src/SelectCompanyElement.tsx"  
   },  
     output: {  
-        filename: "build/static/js/[name].js",  
+        filename: "build/[name].js",  
     },  
     devtool: "source-map",  
     module: {  
@@ -214,7 +214,7 @@ module.exports = {
 
 ## Das Custom Element "company-correlation"
 
-Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, können nun dem Custom Element `<company-correlation/>` - das Micro-Frontend des Self-Contained-Systems "StockHistory" - übergeben werden. Dazu hat das 
+Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, können nun dem Custom Element `<company-correlation/>` - das Micro-Frontend des Self-Contained-Systems "StockHistory" - übergeben werden. Dazu hat das `<company-correlation/>` 
 
 ```
 <select-company id="selectCompany1"></select-company>
@@ -224,7 +224,7 @@ Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, 
 </script>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5NTMxNTY1Miw3NTY2Mzc1NSwxMzIwND
+eyJoaXN0b3J5IjpbMTIyNzgzMjAyOCw3NTY2Mzc1NSwxMzIwND
 Y2NTkxLDE0NjEyNDY1MjQsMTI0NTY1MDI2MCwtMTQ2OTYzMzEw
 NywtMTY4NTYyNTY5OSwtMTIzMjk3Njc2NywxNDA1NDQzNzgwLD
 M3NzcxMjIyNCwtNjM3NjI2Nzk2LC0xNjk5NDY2ODM3LDEyNjU5
