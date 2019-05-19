@@ -189,6 +189,10 @@ export class SelectCompany extends React.Component<SelectCompanyProps, SelectCom
 * In `handleSearch()` werden aus den vom Service geladenen Company-Namen, diejenigen gefiltert, die dem eingegebene Teilstring entsprechen, so dass `AutoComplete` eine Vorschlagsliste anzeigen kann.
 * `handleSelect()` wird aufgerufen, wenn eine Company ausgewählt worden ist. Hier wird die vom Custom Element über die Property `onChange` übergebene Callback-Function  aufgerufen.
 
+## Webpack
+
+Mit folgender Webpack-Konfiguration lassen sich nun Custom Element und Rea
+
 ## Das Custom Element "company-correlation"
 
 Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, können nun dem Custom Element `<company-correlation/>` - das Micro-Frontend des Self-Contained-Systems "StockHistory" - übergeben werden. Dazu hat das 
@@ -201,11 +205,11 @@ Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, 
 </script>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyMDQ2NjU5MSwxNDYxMjQ2NTI0LDEyND
-U2NTAyNjAsLTE0Njk2MzMxMDcsLTE2ODU2MjU2OTksLTEyMzI5
-NzY3NjcsMTQwNTQ0Mzc4MCwzNzc3MTIyMjQsLTYzNzYyNjc5Ni
-wtMTY5OTQ2NjgzNywxMjY1OTM0NTQ5LDE5OTczNTc5OTcsMTA3
-MTU4NzA2NSwtMzc4NTM1NzYyLDE3MTk0Mzg0MjUsMjEzMTMzNj
-U2Myw4Mjg3ODM3MTksMTA0OTY1MDA5MiwtNTM4NDI1NzcyLDE4
-NzEyMTM0NTFdfQ==
+eyJoaXN0b3J5IjpbMTM3MTQ0OTI1MCwxMzIwNDY2NTkxLDE0Nj
+EyNDY1MjQsMTI0NTY1MDI2MCwtMTQ2OTYzMzEwNywtMTY4NTYy
+NTY5OSwtMTIzMjk3Njc2NywxNDA1NDQzNzgwLDM3NzcxMjIyNC
+wtNjM3NjI2Nzk2LC0xNjk5NDY2ODM3LDEyNjU5MzQ1NDksMTk5
+NzM1Nzk5NywxMDcxNTg3MDY1LC0zNzg1MzU3NjIsMTcxOTQzOD
+QyNSwyMTMxMzM2NTYzLDgyODc4MzcxOSwxMDQ5NjUwMDkyLC01
+Mzg0MjU3NzJdfQ==
 -->
