@@ -188,12 +188,16 @@ export class SelectCompany extends React.Component<SelectCompanyProps, SelectCom
 	Dies führt zu einem erneuten Rendern der Component.
 * In `handleSearch()` werden aus den vom Service geladenen Company-Namen, diejenigen gefiltert, die dem eingegebene Teilstring entsprechen, so dass `AutoComplete` eine Vorschlagsliste anzeigen kann.
 * `handleSelect()` wird aufgerufen, wenn eine Company ausgewählt worden ist. Hier wird die vom Custom Element über die Property `onChange` übergebene Callback-Function  aufgerufen.
+
+## Das Custom Element "company-correlation"
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MTI0NjUyNCwxMjQ1NjUwMjYwLC0xND
-Y5NjMzMTA3LC0xNjg1NjI1Njk5LC0xMjMyOTc2NzY3LDE0MDU0
-NDM3ODAsMzc3NzEyMjI0LC02Mzc2MjY3OTYsLTE2OTk0NjY4Mz
-csMTI2NTkzNDU0OSwxOTk3MzU3OTk3LDEwNzE1ODcwNjUsLTM3
-ODUzNTc2MiwxNzE5NDM4NDI1LDIxMzEzMzY1NjMsODI4NzgzNz
-E5LDEwNDk2NTAwOTIsLTUzODQyNTc3MiwxODcxMjEzNDUxLC00
-MDkxMjY2OTFdfQ==
+eyJoaXN0b3J5IjpbMTQwNzExNjAxNSwxNDYxMjQ2NTI0LDEyND
+U2NTAyNjAsLTE0Njk2MzMxMDcsLTE2ODU2MjU2OTksLTEyMzI5
+NzY3NjcsMTQwNTQ0Mzc4MCwzNzc3MTIyMjQsLTYzNzYyNjc5Ni
+wtMTY5OTQ2NjgzNywxMjY1OTM0NTQ5LDE5OTczNTc5OTcsMTA3
+MTU4NzA2NSwtMzc4NTM1NzYyLDE3MTk0Mzg0MjUsMjEzMTMzNj
+U2Myw4Mjg3ODM3MTksMTA0OTY1MDA5MiwtNTM4NDI1NzcyLDE4
+NzEyMTM0NTFdfQ==
 -->
