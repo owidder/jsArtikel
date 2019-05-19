@@ -236,9 +236,10 @@ document.getElementById("selectCompany2").onChangeCompany =
 </script>
 ```
 
-Im Gegensatz zu `<select-company/>` setzen wir bei `<company-correlation/>` die Attribute. Dafür müssen wir 
+Im Gegensatz zu `<select-company/>` setzen wir bei `<company-correlation/>` die Attribute. Dafür müssen wir im Custom Element die Lifecycle-Methode `attributeChangedCallback()` implementieren:
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3MDYyOTQyNiwtNTUyMTA5NDExLDcwMz
+eyJoaXN0b3J5IjpbMTA1MTI0Njc1OCwtNTUyMTA5NDExLDcwMz
 QzNjc1NSwtMjExNTUzODU3MSwxMjI3ODMyMDI4LDc1NjYzNzU1
 LDEzMjA0NjY1OTEsMTQ2MTI0NjUyNCwxMjQ1NjUwMjYwLC0xND
 Y5NjMzMTA3LC0xNjg1NjI1Njk5LC0xMjMyOTc2NzY3LDE0MDU0
