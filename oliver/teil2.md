@@ -247,8 +247,9 @@ class CompanyCorrelationElement extends HTMLElement {
   
     drawReactComponent() {  
         ReactDOM.render(<CompanyCorrelation
-	        basedir={basedir}  shortX={this.getAttribute("short-x")}  
-  shortY={this.getAttribute("short-y")}/>, this);  
+	        basedir={basedir}
+		    shortX={this.getAttribute("short-x")}
+		    shortY={this.getAttribute("short-y")}/>, this);  
     }  
   
     attributeChangedCallback() {  
@@ -264,12 +265,13 @@ customElements.define("company-correlation",
 	CompanyCorrelationElement);
 ```
 
+* Über `static get observedAttributes()` teilen wir dem B
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc3NjExMywxMDUxMjQ2NzU4LC01NTIxMD
-k0MTEsNzAzNDM2NzU1LC0yMTE1NTM4NTcxLDEyMjc4MzIwMjgs
-NzU2NjM3NTUsMTMyMDQ2NjU5MSwxNDYxMjQ2NTI0LDEyNDU2NT
-AyNjAsLTE0Njk2MzMxMDcsLTE2ODU2MjU2OTksLTEyMzI5NzY3
-NjcsMTQwNTQ0Mzc4MCwzNzc3MTIyMjQsLTYzNzYyNjc5NiwtMT
-Y5OTQ2NjgzNywxMjY1OTM0NTQ5LDE5OTczNTc5OTcsMTA3MTU4
-NzA2NV19
+eyJoaXN0b3J5IjpbMTMzNTI5MjIwMSwxMDUxMjQ2NzU4LC01NT
+IxMDk0MTEsNzAzNDM2NzU1LC0yMTE1NTM4NTcxLDEyMjc4MzIw
+MjgsNzU2NjM3NTUsMTMyMDQ2NjU5MSwxNDYxMjQ2NTI0LDEyND
+U2NTAyNjAsLTE0Njk2MzMxMDcsLTE2ODU2MjU2OTksLTEyMzI5
+NzY3NjcsMTQwNTQ0Mzc4MCwzNzc3MTIyMjQsLTYzNzYyNjc5Ni
+wtMTY5OTQ2NjgzNywxMjY1OTM0NTQ5LDE5OTczNTc5OTcsMTA3
+MTU4NzA2NV19
 -->
