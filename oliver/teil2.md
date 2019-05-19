@@ -211,7 +211,8 @@ module.exports = {
     }  
 }
 ```
-N
+Nach dem Aufruf von Webpack liegt im Verzeichnis `build` ein File mit Namen `selectCompanyElement.js`.
+
 ## Das Custom Element "company-correlation"
 
 Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, können nun dem Custom Element `<company-correlation/>` - das Micro-Frontend des Self-Contained-Systems "StockHistory" - übergeben werden. Dazu hat das `<company-correlation/>` 
@@ -224,11 +225,11 @@ Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, 
 </script>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDIwNTQ3OCwxMjI3ODMyMDI4LDc1Nj
-YzNzU1LDEzMjA0NjY1OTEsMTQ2MTI0NjUyNCwxMjQ1NjUwMjYw
-LC0xNDY5NjMzMTA3LC0xNjg1NjI1Njk5LC0xMjMyOTc2NzY3LD
-E0MDU0NDM3ODAsMzc3NzEyMjI0LC02Mzc2MjY3OTYsLTE2OTk0
-NjY4MzcsMTI2NTkzNDU0OSwxOTk3MzU3OTk3LDEwNzE1ODcwNj
-UsLTM3ODUzNTc2MiwxNzE5NDM4NDI1LDIxMzEzMzY1NjMsODI4
-NzgzNzE5XX0=
+eyJoaXN0b3J5IjpbLTIxMTU1Mzg1NzEsMTIyNzgzMjAyOCw3NT
+Y2Mzc1NSwxMzIwNDY2NTkxLDE0NjEyNDY1MjQsMTI0NTY1MDI2
+MCwtMTQ2OTYzMzEwNywtMTY4NTYyNTY5OSwtMTIzMjk3Njc2Ny
+wxNDA1NDQzNzgwLDM3NzcxMjIyNCwtNjM3NjI2Nzk2LC0xNjk5
+NDY2ODM3LDEyNjU5MzQ1NDksMTk5NzM1Nzk5NywxMDcxNTg3MD
+Y1LC0zNzg1MzU3NjIsMTcxOTQzODQyNSwyMTMxMzM2NTYzLDgy
+ODc4MzcxOV19
 -->
