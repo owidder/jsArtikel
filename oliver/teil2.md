@@ -176,18 +176,20 @@ export class SelectCompany extends React.Component<SelectCompanyProps, SelectCom
 	            dataSource={this.state.data} 
 	            onSearch={(text) => this.handleSearch(text)} 
 	            onSelect={(value: string) => this.handleSelect(value)}
-	            value={this.state.value}  
-  placeholder="Enter company"/>  
+	            value={this.state.value}
+	            placeholder="Enter company"/>  
         </div>  
     }  
 }
 ```
+
+* Als Eingabefeld verwenden wir `AutoComplete` aus der 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0NDkxMTY5NywxMjQ1NjUwMjYwLC0xND
-Y5NjMzMTA3LC0xNjg1NjI1Njk5LC0xMjMyOTc2NzY3LDE0MDU0
-NDM3ODAsMzc3NzEyMjI0LC02Mzc2MjY3OTYsLTE2OTk0NjY4Mz
-csMTI2NTkzNDU0OSwxOTk3MzU3OTk3LDEwNzE1ODcwNjUsLTM3
-ODUzNTc2MiwxNzE5NDM4NDI1LDIxMzEzMzY1NjMsODI4NzgzNz
-E5LDEwNDk2NTAwOTIsLTUzODQyNTc3MiwxODcxMjEzNDUxLC00
-MDkxMjY2OTFdfQ==
+eyJoaXN0b3J5IjpbLTQ0MzU4NDI1LDEyNDU2NTAyNjAsLTE0Nj
+k2MzMxMDcsLTE2ODU2MjU2OTksLTEyMzI5NzY3NjcsMTQwNTQ0
+Mzc4MCwzNzc3MTIyMjQsLTYzNzYyNjc5NiwtMTY5OTQ2NjgzNy
+wxMjY1OTM0NTQ5LDE5OTczNTc5OTcsMTA3MTU4NzA2NSwtMzc4
+NTM1NzYyLDE3MTk0Mzg0MjUsMjEzMTMzNjU2Myw4Mjg3ODM3MT
+ksMTA0OTY1MDA5MiwtNTM4NDI1NzcyLDE4NzEyMTM0NTEsLTQw
+OTEyNjY5MV19
 -->
