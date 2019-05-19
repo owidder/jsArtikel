@@ -224,15 +224,23 @@ Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, 
 <company-correlation id="companyCorrelation"></company-correlation>
 <script>
 document.getElementById("selectCompany1").onChangeCompany = 
-	function() {
+	function(company) {
+		document.getElementById("companyCorrelation")
+			.setAttribute("short-y", company.short);
+	}
+document.getElementById("selectCompany2").onChangeCompany = 
+	function(company) {
+		document.getElementById("companyCorrelation")
+			.setAttribute("short-x", company.short);
+	}
 </script>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzQ5NzA4ODgsNzAzNDM2NzU1LC0yMT
-E1NTM4NTcxLDEyMjc4MzIwMjgsNzU2NjM3NTUsMTMyMDQ2NjU5
-MSwxNDYxMjQ2NTI0LDEyNDU2NTAyNjAsLTE0Njk2MzMxMDcsLT
-E2ODU2MjU2OTksLTEyMzI5NzY3NjcsMTQwNTQ0Mzc4MCwzNzc3
-MTIyMjQsLTYzNzYyNjc5NiwtMTY5OTQ2NjgzNywxMjY1OTM0NT
-Q5LDE5OTczNTc5OTcsMTA3MTU4NzA2NSwtMzc4NTM1NzYyLDE3
-MTk0Mzg0MjVdfQ==
+eyJoaXN0b3J5IjpbLTU1MjEwOTQxMSw3MDM0MzY3NTUsLTIxMT
+U1Mzg1NzEsMTIyNzgzMjAyOCw3NTY2Mzc1NSwxMzIwNDY2NTkx
+LDE0NjEyNDY1MjQsMTI0NTY1MDI2MCwtMTQ2OTYzMzEwNywtMT
+Y4NTYyNTY5OSwtMTIzMjk3Njc2NywxNDA1NDQzNzgwLDM3Nzcx
+MjIyNCwtNjM3NjI2Nzk2LC0xNjk5NDY2ODM3LDEyNjU5MzQ1ND
+ksMTk5NzM1Nzk5NywxMDcxNTg3MDY1LC0zNzg1MzU3NjIsMTcx
+OTQzODQyNV19
 -->
