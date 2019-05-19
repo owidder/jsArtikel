@@ -20,6 +20,7 @@ Jedes Custom Element greift wiederum nur auf Services des Self-Contained-Systems
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190518-02/oliver/StockPrice.png"/>
 
+In diesem Beispiel nutzt das System "StockPrice" die Micro-Frontends von "Company" und "StockHistory". Genauso könnte aber auch z.B. "StockHistory" das ein Mirco-Frontend von "C
 
 ## Das Micro-Frontend von "Company"
 Das SCS "Company" stellt den Service "companies" zur Verfügung. Er liefert Namen und Abkürzungen aller Firmen aus dem Dow Jones:
@@ -276,7 +277,7 @@ Unsere Erfahrungen mit Custom Elements für die Integration von Micro-Frontends 
 Vorteile:
 * Komplett unabhängiges Deployment: Da die Custom Elements erst zur Laufzeit geladen werden, kann ein Self-Contained-System seine Micro-Frontends ändern und neu deployen, ohne dass eines der Self-Contained-System, die das Micro-Frontend einbinden
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NjUwMjgzMSwtNjY5ODk1NTI4LDEwNT
+eyJoaXN0b3J5IjpbLTIzNjc0MzQ4NCwtNjY5ODk1NTI4LDEwNT
 EyNDY3NTgsLTU1MjEwOTQxMSw3MDM0MzY3NTUsLTIxMTU1Mzg1
 NzEsMTIyNzgzMjAyOCw3NTY2Mzc1NSwxMzIwNDY2NTkxLDE0Nj
 EyNDY1MjQsMTI0NTY1MDI2MCwtMTQ2OTYzMzEwNywtMTY4NTYy
