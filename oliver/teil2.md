@@ -191,13 +191,13 @@ export class SelectCompany extends React.Component<SelectCompanyProps, SelectCom
 
 ## Das Custom Element "company-correlation"
 
-Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies
+Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, können nun dem Micro-Frontend des Self-Contained-Systems "StockHistory" übergeben werden.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE5NDg5NjY2LDE0NjEyNDY1MjQsMTI0NT
-Y1MDI2MCwtMTQ2OTYzMzEwNywtMTY4NTYyNTY5OSwtMTIzMjk3
-Njc2NywxNDA1NDQzNzgwLDM3NzcxMjIyNCwtNjM3NjI2Nzk2LC
-0xNjk5NDY2ODM3LDEyNjU5MzQ1NDksMTk5NzM1Nzk5NywxMDcx
-NTg3MDY1LC0zNzg1MzU3NjIsMTcxOTQzODQyNSwyMTMxMzM2NT
-YzLDgyODc4MzcxOSwxMDQ5NjUwMDkyLC01Mzg0MjU3NzIsMTg3
-MTIxMzQ1MV19
+eyJoaXN0b3J5IjpbMjA1NzUwNTE4NCwxNDYxMjQ2NTI0LDEyND
+U2NTAyNjAsLTE0Njk2MzMxMDcsLTE2ODU2MjU2OTksLTEyMzI5
+NzY3NjcsMTQwNTQ0Mzc4MCwzNzc3MTIyMjQsLTYzNzYyNjc5Ni
+wtMTY5OTQ2NjgzNywxMjY1OTM0NTQ5LDE5OTczNTc5OTcsMTA3
+MTU4NzA2NSwtMzc4NTM1NzYyLDE3MTk0Mzg0MjUsMjEzMTMzNj
+U2Myw4Mjg3ODM3MTksMTA0OTY1MDA5MiwtNTM4NDI1NzcyLDE4
+NzEyMTM0NTFdfQ==
 -->
