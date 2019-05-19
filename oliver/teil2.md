@@ -238,12 +238,38 @@ document.getElementById("selectCompany2").onChangeCompany =
 
 Im Gegensatz zu `<select-company/>` setzen wir bei `<company-correlation/>` die Attribute. Dafür müssen wir im Custom Element die Lifecycle-Methode `attributeChangedCallback()` implementieren:
 
+```
+class CompanyCorrelationElement extends HTMLElement {  
+  
+    static get observedAttributes() {  
+        return ["short-x", "short-y"];  
+    }  
+  
+    drawReactComponent() {  
+        ReactDOM.render(<CompanyCorrelation
+	        basedir={basedir}  shortX={this.getAttribute("short-x")}  
+  shortY={this.getAttribute("short-y")}/>, this);  
+    }  
+  
+    attributeChangedCallback() {  
+        this.drawReactComponent();  
+    }  
+  
+    connectedCallback() {  
+        this.drawReactComponent();  
+    }  
+}  
+  
+customElements.define("company-correlation", 
+	CompanyCorrelationElement);
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1MTI0Njc1OCwtNTUyMTA5NDExLDcwMz
-QzNjc1NSwtMjExNTUzODU3MSwxMjI3ODMyMDI4LDc1NjYzNzU1
-LDEzMjA0NjY1OTEsMTQ2MTI0NjUyNCwxMjQ1NjUwMjYwLC0xND
-Y5NjMzMTA3LC0xNjg1NjI1Njk5LC0xMjMyOTc2NzY3LDE0MDU0
-NDM3ODAsMzc3NzEyMjI0LC02Mzc2MjY3OTYsLTE2OTk0NjY4Mz
-csMTI2NTkzNDU0OSwxOTk3MzU3OTk3LDEwNzE1ODcwNjUsLTM3
-ODUzNTc2Ml19
+eyJoaXN0b3J5IjpbNzc3NjExMywxMDUxMjQ2NzU4LC01NTIxMD
+k0MTEsNzAzNDM2NzU1LC0yMTE1NTM4NTcxLDEyMjc4MzIwMjgs
+NzU2NjM3NTUsMTMyMDQ2NjU5MSwxNDYxMjQ2NTI0LDEyNDU2NT
+AyNjAsLTE0Njk2MzMxMDcsLTE2ODU2MjU2OTksLTEyMzI5NzY3
+NjcsMTQwNTQ0Mzc4MCwzNzc3MTIyMjQsLTYzNzYyNjc5NiwtMT
+Y5OTQ2NjgzNywxMjY1OTM0NTQ5LDE5OTczNTc5OTcsMTA3MTU4
+NzA2NV19
 -->
