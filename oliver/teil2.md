@@ -164,9 +164,6 @@ export class SelectCompany extends React.Component<SelectCompanyProps, SelectCom
     }  
   
     async getCompanies(): Promise<Company[]> {  
-        return await fetch(
-		        `${this.props.basedir}/../../service/companies`
-	        ).then(resp => resp.json());  
     }  
   
     async componentDidMount() {  
@@ -187,11 +184,11 @@ export class SelectCompany extends React.Component<SelectCompanyProps, SelectCom
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NTY1MDI2MCwtMTQ2OTYzMzEwNywtMT
-Y4NTYyNTY5OSwtMTIzMjk3Njc2NywxNDA1NDQzNzgwLDM3Nzcx
-MjIyNCwtNjM3NjI2Nzk2LC0xNjk5NDY2ODM3LDEyNjU5MzQ1ND
-ksMTk5NzM1Nzk5NywxMDcxNTg3MDY1LC0zNzg1MzU3NjIsMTcx
-OTQzODQyNSwyMTMxMzM2NTYzLDgyODc4MzcxOSwxMDQ5NjUwMD
-kyLC01Mzg0MjU3NzIsMTg3MTIxMzQ1MSwtNDA5MTI2NjkxLC00
+eyJoaXN0b3J5IjpbMTY5Nzg5MjQxNiwxMjQ1NjUwMjYwLC0xND
+Y5NjMzMTA3LC0xNjg1NjI1Njk5LC0xMjMyOTc2NzY3LDE0MDU0
+NDM3ODAsMzc3NzEyMjI0LC02Mzc2MjY3OTYsLTE2OTk0NjY4Mz
+csMTI2NTkzNDU0OSwxOTk3MzU3OTk3LDEwNzE1ODcwNjUsLTM3
+ODUzNTc2MiwxNzE5NDM4NDI1LDIxMzEzMzY1NjMsODI4NzgzNz
+E5LDEwNDk2NTAwOTIsLTUzODQyNTc3MiwxODcxMjEzNDUxLC00
 MDkxMjY2OTFdfQ==
 -->
