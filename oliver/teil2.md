@@ -267,9 +267,13 @@ customElements.define("company-correlation",
 
 * Über `static get observedAttributes()` teilen wir der Custom-Element-API mit, für welche Attribute wir uns interessieren und über Änderungen informiert werden wollen. Es wird dann jedes Mal `attributeChangedCallback()` aufgerufen.
 	Im Sinne unseres Small-Wrapper-Principles tun wir bei jeder Attribute-Änderung nichts weiter, als die React-Component mit neuen Properties zu rendern.
-* Die React-Component `CompanyCorrelation` ist etwas komplexer. Der Einfachheit wegen soll die Implementierung hier nicht im Einzelnen gezeigt werden. Interessierte finden den Code unter [http://bit.ly/companyCorrelation](http://bit.ly/companyCorrelation). 
+* Die React-Component `CompanyCorrelation` ist etwas komplexer. Der Einfachheit wegen soll die Implementierung hier nicht im Einzelnen gezeigt werden. Interessierte finden den Code unter [http://bit.ly/companyCorrelation](http://bit.ly/companyCorrelation).
+
+## Fazit
+
+Unsere Erfahrungen mit Custom Elements für due  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjkzMzgzNTMsLTY2OTg5NTUyOCwxMD
+eyJoaXN0b3J5IjpbLTE5NTMxNTIwMzAsLTY2OTg5NTUyOCwxMD
 UxMjQ2NzU4LC01NTIxMDk0MTEsNzAzNDM2NzU1LC0yMTE1NTM4
 NTcxLDEyMjc4MzIwMjgsNzU2NjM3NTUsMTMyMDQ2NjU5MSwxND
 YxMjQ2NTI0LDEyNDU2NTAyNjAsLTE0Njk2MzMxMDcsLTE2ODU2
