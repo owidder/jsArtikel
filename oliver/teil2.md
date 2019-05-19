@@ -271,13 +271,16 @@ customElements.define("company-correlation",
 
 ## Fazit
 
-Unsere Erfahrungen mit Custom Elements für due  
+Unsere Erfahrungen mit Custom Elements für die Integration von Micro-Frontends waren weitestgehend positiv. Dennoch hat jede Münze mindestens zwei Seiten:
+
+Vorteile:
+* Komplett unabhängiges Deployment: D
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTMxNTIwMzAsLTY2OTg5NTUyOCwxMD
-UxMjQ2NzU4LC01NTIxMDk0MTEsNzAzNDM2NzU1LC0yMTE1NTM4
-NTcxLDEyMjc4MzIwMjgsNzU2NjM3NTUsMTMyMDQ2NjU5MSwxND
-YxMjQ2NTI0LDEyNDU2NTAyNjAsLTE0Njk2MzMxMDcsLTE2ODU2
-MjU2OTksLTEyMzI5NzY3NjcsMTQwNTQ0Mzc4MCwzNzc3MTIyMj
-QsLTYzNzYyNjc5NiwtMTY5OTQ2NjgzNywxMjY1OTM0NTQ5LDE5
-OTczNTc5OTddfQ==
+eyJoaXN0b3J5IjpbMzc3NTcyMjkxLC02Njk4OTU1MjgsMTA1MT
+I0Njc1OCwtNTUyMTA5NDExLDcwMzQzNjc1NSwtMjExNTUzODU3
+MSwxMjI3ODMyMDI4LDc1NjYzNzU1LDEzMjA0NjY1OTEsMTQ2MT
+I0NjUyNCwxMjQ1NjUwMjYwLC0xNDY5NjMzMTA3LC0xNjg1NjI1
+Njk5LC0xMjMyOTc2NzY3LDE0MDU0NDM3ODAsMzc3NzEyMjI0LC
+02Mzc2MjY3OTYsLTE2OTk0NjY4MzcsMTI2NTkzNDU0OSwxOTk3
+MzU3OTk3XX0=
 -->
