@@ -184,9 +184,9 @@ export class SelectCompany extends React.Component<SelectCompanyProps, SelectCom
 ```
 
 * Als Eingabefeld verwenden wir `AutoComplete` aus der Bibliothek *Ant Design* (siehe [https://ant.design/](https://ant.design/))
-* Der Aufruf des Service "companies" findet 
+* Der Aufruf des Service "companies" findet in der React-Lifecycle-Methode `componentDidMount` statt. `componentDidMount` wird nach dem ersten Rendern der Component aufgerufen, wenn sich die v
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTMwMDc0MTUsMTI0NTY1MDI2MCwtMT
+eyJoaXN0b3J5IjpbLTEyMjIwODgxMzAsMTI0NTY1MDI2MCwtMT
 Q2OTYzMzEwNywtMTY4NTYyNTY5OSwtMTIzMjk3Njc2NywxNDA1
 NDQzNzgwLDM3NzcxMjIyNCwtNjM3NjI2Nzk2LC0xNjk5NDY2OD
 M3LDEyNjU5MzQ1NDksMTk5NzM1Nzk5NywxMDcxNTg3MDY1LC0z
