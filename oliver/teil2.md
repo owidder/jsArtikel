@@ -275,6 +275,48 @@ customElements.define("company-correlation",
 
 Die Kursdaten werden dann im State der React-Component abgelegt:
 
+```
+export interface EndOfDayPrice {  
+    date: string;  
+    price: number;  
+}
+
+interface CorrelationProps {  
+    shortX: string;  
+    shortY: string;  
+    basedir: string;  
+}  
+  
+interface CorrelationState {  
+    pricesX: EndOfDayPrice[];  
+    pricesY: EndOfDayPrice[];  
+}
+
+export class CompanyCorrelation extends React.Component<CorrelationProps, CorrelationState> {  
+  
+    readonly state: CorrelationState = {pricesX: [], pricesY: []}
+
+async loadData(symbol: string): Promise<EndOfDayPrice[]> {  
+    const response = await fetch(`${this.props.basedir}/../../service/${symbol}`);  
+    return await response.json();  
+}  
+  
+async componentDidUpdate(prevProps: CorrelationProps, prevState: CorrelationState) {  
+    if((this.props.shortX && this.state.pricesX.length == 0) || (this.props.shortX != prevProps.shortX)) {  
+        const pricesX = await this.loadData(this.props.shortX);  
+        this.setState({pricesX});  
+    }  
+    if((this.props.shortY && this.state.pricesY.length == 0) || (this.props.shortY !== prevProps.shortY)) {  
+        const pricesY = await this.loadData(this.props.shortY);  
+        this.setState({pricesY});  
+    }  
+    if(this.state.width !== prevState.width || this.state.height !== prevState.height) {  
+        this.drawScatterPlot || (this.drawScatterPlot = initScatterPlot(this.svgRef.current));  
+    }  
+  
+    this.drawScatterPlot && this.drawScatterPlot(this.props.shortX, this.props.shortY, this.state.pricesX, this.state.pricesY);  
+}
+```
 
 ## Fazit
 
@@ -290,11 +332,11 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTQ3MjIyNjgsOTQwODg2MzYwLC02Nj
-k4OTU1MjgsMTA1MTI0Njc1OCwtNTUyMTA5NDExLDcwMzQzNjc1
-NSwtMjExNTUzODU3MSwxMjI3ODMyMDI4LDc1NjYzNzU1LDEzMj
-A0NjY1OTEsMTQ2MTI0NjUyNCwxMjQ1NjUwMjYwLC0xNDY5NjMz
-MTA3LC0xNjg1NjI1Njk5LC0xMjMyOTc2NzY3LDE0MDU0NDM3OD
-AsMzc3NzEyMjI0LC02Mzc2MjY3OTYsLTE2OTk0NjY4MzcsMTI2
-NTkzNDU0OV19
+eyJoaXN0b3J5IjpbMjA3MzczNzM3Miw5NDA4ODYzNjAsLTY2OT
+g5NTUyOCwxMDUxMjQ2NzU4LC01NTIxMDk0MTEsNzAzNDM2NzU1
+LC0yMTE1NTM4NTcxLDEyMjc4MzIwMjgsNzU2NjM3NTUsMTMyMD
+Q2NjU5MSwxNDYxMjQ2NTI0LDEyNDU2NTAyNjAsLTE0Njk2MzMx
+MDcsLTE2ODU2MjU2OTksLTEyMzI5NzY3NjcsMTQwNTQ0Mzc4MC
+wzNzc3MTIyMjQsLTYzNzYyNjc5NiwtMTY5OTQ2NjgzNywxMjY1
+OTM0NTQ5XX0=
 -->
