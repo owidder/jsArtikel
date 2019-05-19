@@ -211,7 +211,7 @@ module.exports = {
     }  
 }
 ```
-
+N
 ## Das Custom Element "company-correlation"
 
 Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, können nun dem Custom Element `<company-correlation/>` - das Micro-Frontend des Self-Contained-Systems "StockHistory" - übergeben werden. Dazu hat das `<company-correlation/>` 
@@ -224,11 +224,11 @@ Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, 
 </script>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyNzgzMjAyOCw3NTY2Mzc1NSwxMzIwND
-Y2NTkxLDE0NjEyNDY1MjQsMTI0NTY1MDI2MCwtMTQ2OTYzMzEw
-NywtMTY4NTYyNTY5OSwtMTIzMjk3Njc2NywxNDA1NDQzNzgwLD
-M3NzcxMjIyNCwtNjM3NjI2Nzk2LC0xNjk5NDY2ODM3LDEyNjU5
-MzQ1NDksMTk5NzM1Nzk5NywxMDcxNTg3MDY1LC0zNzg1MzU3Nj
-IsMTcxOTQzODQyNSwyMTMxMzM2NTYzLDgyODc4MzcxOSwxMDQ5
-NjUwMDkyXX0=
+eyJoaXN0b3J5IjpbLTE0MDIwNTQ3OCwxMjI3ODMyMDI4LDc1Nj
+YzNzU1LDEzMjA0NjY1OTEsMTQ2MTI0NjUyNCwxMjQ1NjUwMjYw
+LC0xNDY5NjMzMTA3LC0xNjg1NjI1Njk5LC0xMjMyOTc2NzY3LD
+E0MDU0NDM3ODAsMzc3NzEyMjI0LC02Mzc2MjY3OTYsLTE2OTk0
+NjY4MzcsMTI2NTkzNDU0OSwxOTk3MzU3OTk3LDEwNzE1ODcwNj
+UsLTM3ODUzNTc2MiwxNzE5NDM4NDI1LDIxMzEzMzY1NjMsODI4
+NzgzNzE5XX0=
 -->
