@@ -273,7 +273,7 @@ customElements.define("company-correlation",
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190519-01/oliver/companyCorrelation.png"/>
 
-Die Kursdaten werden dann 
+Die Kursdaten werden dann im State der React-Component abgelegt:
 
 
 ## Fazit
@@ -290,11 +290,11 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzY5MjIyMTkwLDk0MDg4NjM2MCwtNjY5OD
-k1NTI4LDEwNTEyNDY3NTgsLTU1MjEwOTQxMSw3MDM0MzY3NTUs
-LTIxMTU1Mzg1NzEsMTIyNzgzMjAyOCw3NTY2Mzc1NSwxMzIwND
-Y2NTkxLDE0NjEyNDY1MjQsMTI0NTY1MDI2MCwtMTQ2OTYzMzEw
-NywtMTY4NTYyNTY5OSwtMTIzMjk3Njc2NywxNDA1NDQzNzgwLD
-M3NzcxMjIyNCwtNjM3NjI2Nzk2LC0xNjk5NDY2ODM3LDEyNjU5
-MzQ1NDldfQ==
+eyJoaXN0b3J5IjpbLTEwMTQ3MjIyNjgsOTQwODg2MzYwLC02Nj
+k4OTU1MjgsMTA1MTI0Njc1OCwtNTUyMTA5NDExLDcwMzQzNjc1
+NSwtMjExNTUzODU3MSwxMjI3ODMyMDI4LDc1NjYzNzU1LDEzMj
+A0NjY1OTEsMTQ2MTI0NjUyNCwxMjQ1NjUwMjYwLC0xNDY5NjMz
+MTA3LC0xNjg1NjI1Njk5LC0xMjMyOTc2NzY3LDE0MDU0NDM3OD
+AsMzc3NzEyMjI0LC02Mzc2MjY3OTYsLTE2OTk0NjY4MzcsMTI2
+NTkzNDU0OV19
 -->
