@@ -265,9 +265,9 @@ customElements.define("company-correlation",
 	CompanyCorrelationElement);
 ```
 
-* Über `static get observedAttributes()` teilen wir dem B
+* Über `static get observedAttributes()` teilen wir der Custom-Element-API mit, für welche Attribute wir uns interessieren und über Änderungen informiert werden wollen. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzNTI5MjIwMSwxMDUxMjQ2NzU4LC01NT
+eyJoaXN0b3J5IjpbLTY1OTg4NTE3NiwxMDUxMjQ2NzU4LC01NT
 IxMDk0MTEsNzAzNDM2NzU1LC0yMTE1NTM4NTcxLDEyMjc4MzIw
 MjgsNzU2NjM3NTUsMTMyMDQ2NjU5MSwxNDYxMjQ2NTI0LDEyND
 U2NTAyNjAsLTE0Njk2MzMxMDcsLTE2ODU2MjU2OTksLTEyMzI5
