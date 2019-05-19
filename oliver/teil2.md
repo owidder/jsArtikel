@@ -8,7 +8,7 @@ Mit der aus den Micro-Frontends integrierten Beispiel-Anwendung "StockPrice" kan
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190515-01/oliver/correlationApp.png"/>
 
 Dazu kann man in den beiden Automplete-Eingabefeldern am oberen Rand jeweils eine Firma (aus dem Dow Jones) eingeben. Hat man beide Firmen eingegeben, wird der Chart angezeigt. 
-Live kann man die Anwendung hier sehen: [http://bit.ly/stockprice-app](http://bit.ly/stockprice-app)
+Live kann man die Anwendung hier sehen: [http://bit.ly/stockprice-page](http://bit.ly/stockprice-page)
 
 ## Die Self-Contained-Systems "Company" und "StockHistory"
 Die Anwendung "StockPrice" besteht aus 2 Self-Contained-Systems (SCS) "Company" und "StockHistory", deren Micro-Frontends auf einer Seite mit Hilfe von Custom Elements integriert werden:
@@ -225,11 +225,11 @@ Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, 
 </script>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTU1Mzg1NzEsMTIyNzgzMjAyOCw3NT
-Y2Mzc1NSwxMzIwNDY2NTkxLDE0NjEyNDY1MjQsMTI0NTY1MDI2
-MCwtMTQ2OTYzMzEwNywtMTY4NTYyNTY5OSwtMTIzMjk3Njc2Ny
-wxNDA1NDQzNzgwLDM3NzcxMjIyNCwtNjM3NjI2Nzk2LC0xNjk5
-NDY2ODM3LDEyNjU5MzQ1NDksMTk5NzM1Nzk5NywxMDcxNTg3MD
-Y1LC0zNzg1MzU3NjIsMTcxOTQzODQyNSwyMTMxMzM2NTYzLDgy
-ODc4MzcxOV19
+eyJoaXN0b3J5IjpbNzAzNDM2NzU1LC0yMTE1NTM4NTcxLDEyMj
+c4MzIwMjgsNzU2NjM3NTUsMTMyMDQ2NjU5MSwxNDYxMjQ2NTI0
+LDEyNDU2NTAyNjAsLTE0Njk2MzMxMDcsLTE2ODU2MjU2OTksLT
+EyMzI5NzY3NjcsMTQwNTQ0Mzc4MCwzNzc3MTIyMjQsLTYzNzYy
+Njc5NiwtMTY5OTQ2NjgzNywxMjY1OTM0NTQ5LDE5OTczNTc5OT
+csMTA3MTU4NzA2NSwtMzc4NTM1NzYyLDE3MTk0Mzg0MjUsMjEz
+MTMzNjU2M119
 -->
