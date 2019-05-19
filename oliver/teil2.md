@@ -191,9 +191,9 @@ export class SelectCompany extends React.Component<SelectCompanyProps, SelectCom
 
 ## Das Custom Element "company-correlation"
 
-Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, können nun dem Micro-Frontend des Self-Contained-Systems "StockHistory" übergeben werden.
+Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, können nun dem Custom Element `<company-correlation/>` - das Micro-Frontend des Self-Contained-Systems "StockHistory" - übergeben werden.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1NzUwNTE4NCwxNDYxMjQ2NTI0LDEyND
+eyJoaXN0b3J5IjpbLTIxMDkwNTcyNCwxNDYxMjQ2NTI0LDEyND
 U2NTAyNjAsLTE0Njk2MzMxMDcsLTE2ODU2MjU2OTksLTEyMzI5
 NzY3NjcsMTQwNTQ0Mzc4MCwzNzc3MTIyMjQsLTYzNzYyNjc5Ni
 wtMTY5OTQ2NjgzNywxMjY1OTM0NTQ5LDE5OTczNTc5OTcsMTA3
