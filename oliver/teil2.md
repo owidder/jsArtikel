@@ -281,9 +281,10 @@ Vorteile:
 Nachteile:
 * Seiten, die viele Micro-Frontends einbinden, müssen von vielen System JavaScript-Files laden
 * Zusätzliche Komplexität durch Custom Elements
-* Werden Micro-Frontends mehrfach eingebunden, werden ggf. identischen Server-Calls ausgef
+* Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
+	* z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxMjY5ODA5NiwtNjY5ODk1NTI4LDEwNT
+eyJoaXN0b3J5IjpbLTQ0NzA2NTU3MywtNjY5ODk1NTI4LDEwNT
 EyNDY3NTgsLTU1MjEwOTQxMSw3MDM0MzY3NTUsLTIxMTU1Mzg1
 NzEsMTIyNzgzMjAyOCw3NTY2Mzc1NSwxMzIwNDY2NTkxLDE0Nj
 EyNDY1MjQsMTI0NTY1MDI2MCwtMTQ2OTYzMzEwNywtMTY4NTYy
