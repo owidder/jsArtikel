@@ -191,9 +191,25 @@ export class SelectCompany extends React.Component<SelectCompanyProps, SelectCom
 
 ## Webpack
 
-Mit folgender Webpack-Konfiguration lassen sich nun Custom Element und React-Component in eine JavaScript-File packen, so dass es integrierenden Anwendung (hier "StockPrice") verwendet werden kann:
+Mit folgender Webpack-Konfiguration lassen sich nun Custom Element und React-Component in eine JavaScript-File mit Namen `selectCompanyElement.js` packen, so dass es integrierenden Anwendung (hier "StockPrice") verwendet werden kann:
 
 ```
+module.exports = {  
+    mode: process.env.NODE_ENV,  
+    entry: {  
+        selectCompanyElement: "./src/SelectCompanyElement.tsx"  
+  },  
+    output: {  
+        filename: "build/static/js/[name].js",  
+    },  
+    devtool: "source-map",  
+    module: {  
+        rules: [{test: /\.(ts|tsx)$/, use: "ts-loader"}]  
+    },  
+    resolve: {  
+        extensions: [".tsx", ".ts", ".js"]  
+    }  
+}
 ```
 
 ## Das Custom Element "company-correlation"
@@ -208,7 +224,7 @@ Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, 
 </script>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MzgwNjg1Nyw3NTY2Mzc1NSwxMzIwND
+eyJoaXN0b3J5IjpbLTg5NTMxNTY1Miw3NTY2Mzc1NSwxMzIwND
 Y2NTkxLDE0NjEyNDY1MjQsMTI0NTY1MDI2MCwtMTQ2OTYzMzEw
 NywtMTY4NTYyNTY5OSwtMTIzMjk3Njc2NywxNDA1NDQzNzgwLD
 M3NzcxMjIyNCwtNjM3NjI2Nzk2LC0xNjk5NDY2ODM3LDEyNjU5
