@@ -216,7 +216,7 @@ Nach dem Aufruf von Webpack liegt im Verzeichnis `build` ein File mit Namen `sel
 ## Das Custom Element "company-correlation"
 
 Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, können nun dem Custom Element `<company-correlation/>` - das Micro-Frontend des Self-Contained-Systems "StockHistory" - übergeben werden. Dazu hat `<company-correlation/>` die zwei Attribute `short-x` und `short-y`.
-Über `short-x` kann man die Abkürzung der Company übergeben, die auf der X-Achse angezeigt werden soll. Analog übergibt man über `short-y` die Abkürzung der Firma, die auf fer  
+Über `short-x` kann man die Abkürzung der Company übergeben, die auf der X-Achse angezeigt werden soll. Analog übergibt man über `short-y` die Abkürzung der Firma, die auf der Y-Achse angezeigt werden soll:
 
 ```
 <select-company id="selectCompany1"></select-company>
@@ -226,7 +226,7 @@ Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, 
 </script>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5MDg1ODU4NCw3MDM0MzY3NTUsLTIxMT
+eyJoaXN0b3J5IjpbLTc5NDc0MjQzNyw3MDM0MzY3NTUsLTIxMT
 U1Mzg1NzEsMTIyNzgzMjAyOCw3NTY2Mzc1NSwxMzIwNDY2NTkx
 LDE0NjEyNDY1MjQsMTI0NTY1MDI2MCwtMTQ2OTYzMzEwNywtMT
 Y4NTYyNTY5OSwtMTIzMjk3Njc2NywxNDA1NDQzNzgwLDM3Nzcx
