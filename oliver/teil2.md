@@ -274,13 +274,13 @@ customElements.define("company-correlation",
 Unsere Erfahrungen mit Custom Elements für die Integration von Micro-Frontends waren weitestgehend positiv. Dennoch hat jede Münze mindestens zwei Seiten:
 
 Vorteile:
-* Komplett unabhängiges Deployment: D
+* Komplett unabhängiges Deployment: Da die Custom Elements erst zur Laufzeit geladen werden, kann ein Self-Contained-System seine Micro-Frontends ändern und neu deployen, ohne dass eines der Self-Contained-System, die das Micro-Frontend einbinden
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc3NTcyMjkxLC02Njk4OTU1MjgsMTA1MT
-I0Njc1OCwtNTUyMTA5NDExLDcwMzQzNjc1NSwtMjExNTUzODU3
-MSwxMjI3ODMyMDI4LDc1NjYzNzU1LDEzMjA0NjY1OTEsMTQ2MT
-I0NjUyNCwxMjQ1NjUwMjYwLC0xNDY5NjMzMTA3LC0xNjg1NjI1
-Njk5LC0xMjMyOTc2NzY3LDE0MDU0NDM3ODAsMzc3NzEyMjI0LC
-02Mzc2MjY3OTYsLTE2OTk0NjY4MzcsMTI2NTkzNDU0OSwxOTk3
-MzU3OTk3XX0=
+eyJoaXN0b3J5IjpbLTQ3NjUwMjgzMSwtNjY5ODk1NTI4LDEwNT
+EyNDY3NTgsLTU1MjEwOTQxMSw3MDM0MzY3NTUsLTIxMTU1Mzg1
+NzEsMTIyNzgzMjAyOCw3NTY2Mzc1NSwxMzIwNDY2NTkxLDE0Nj
+EyNDY1MjQsMTI0NTY1MDI2MCwtMTQ2OTYzMzEwNywtMTY4NTYy
+NTY5OSwtMTIzMjk3Njc2NywxNDA1NDQzNzgwLDM3NzcxMjIyNC
+wtNjM3NjI2Nzk2LC0xNjk5NDY2ODM3LDEyNjU5MzQ1NDksMTk5
+NzM1Nzk5N119
 -->
