@@ -268,8 +268,10 @@ customElements.define("company-correlation",
 
 * Über `static get observedAttributes()` teilen wir der Custom-Element-API mit, für welche Attribute wir uns interessieren und über Änderungen informiert werden wollen. Es wird dann jedes Mal `attributeChangedCallback()` aufgerufen.
 	Im Sinne unseres Small-Wrapper-Principles tun wir bei jeder Attribute-Änderung nichts weiter, als die React-Component mit neuen Properties zu rendern.
-* Die React-Component `CompanyCorrelation` ist etwas komplexer. Der Einfachheit wegen soll die Implementierung hier nicht im Einzelnen gezeigt werden. Interessierte finden den Code unter [http://bit.ly/companyCorrelation](http://bit.ly/companyCorrelation).
-	Das Custom Element `<company-correlation/>` gibt die Attribute `short-x` und `short-y` an die React-Component als Properties `shortX` bzw. `shortY` weiter. Diese lädt bei jeder Änderung ihrer Properties die historischen Kursdaten der jeweilige Company über einen Service-Call vom System "StockHistory":
+
+## Die React-Component "CompanyCorrelation"
+
+Das Custom Element `<company-correlation/>` gibt die Attribute `short-x` und `short-y` an die React-Component als Properties `shortX` bzw. `shortY` weiter. Diese lädt bei jeder Änderung ihrer Properties die historischen Kursdaten der jeweilige Company über einen Service-Call vom System "StockHistory":
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190519-01/oliver/companyCorrelation.png"/>
 
@@ -334,11 +336,11 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4MDIxMTk2NCw5NDA4ODYzNjAsLTY2OT
-g5NTUyOCwxMDUxMjQ2NzU4LC01NTIxMDk0MTEsNzAzNDM2NzU1
-LC0yMTE1NTM4NTcxLDEyMjc4MzIwMjgsNzU2NjM3NTUsMTMyMD
-Q2NjU5MSwxNDYxMjQ2NTI0LDEyNDU2NTAyNjAsLTE0Njk2MzMx
-MDcsLTE2ODU2MjU2OTksLTEyMzI5NzY3NjcsMTQwNTQ0Mzc4MC
-wzNzc3MTIyMjQsLTYzNzYyNjc5NiwtMTY5OTQ2NjgzNywxMjY1
-OTM0NTQ5XX0=
+eyJoaXN0b3J5IjpbLTE5MzM2OTU5NDgsOTQwODg2MzYwLC02Nj
+k4OTU1MjgsMTA1MTI0Njc1OCwtNTUyMTA5NDExLDcwMzQzNjc1
+NSwtMjExNTUzODU3MSwxMjI3ODMyMDI4LDc1NjYzNzU1LDEzMj
+A0NjY1OTEsMTQ2MTI0NjUyNCwxMjQ1NjUwMjYwLC0xNDY5NjMz
+MTA3LC0xNjg1NjI1Njk5LC0xMjMyOTc2NzY3LDE0MDU0NDM3OD
+AsMzc3NzEyMjI0LC02Mzc2MjY3OTYsLTE2OTk0NjY4MzcsMTI2
+NTkzNDU0OV19
 -->
