@@ -215,7 +215,7 @@ Nach dem Aufruf von Webpack liegt im Verzeichnis `build` ein File mit Namen `sel
 
 ## Das Custom Element "company-correlation"
 
-Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, können nun dem Custom Element `<company-correlation/>` - das Micro-Frontend des Self-Contained-Systems "StockHistory" - übergeben werden. Dazu hat das `<company-correlation/>` 
+Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, können nun dem Custom Element `<company-correlation/>` - das Micro-Frontend des Self-Contained-Systems "StockHistory" - übergeben werden. Dazu hat das `<company-correlation/>` die zwei Attribute `short-x` und `short-y`
 
 ```
 <select-company id="selectCompany1"></select-company>
@@ -225,11 +225,11 @@ Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, 
 </script>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzAzNDM2NzU1LC0yMTE1NTM4NTcxLDEyMj
-c4MzIwMjgsNzU2NjM3NTUsMTMyMDQ2NjU5MSwxNDYxMjQ2NTI0
-LDEyNDU2NTAyNjAsLTE0Njk2MzMxMDcsLTE2ODU2MjU2OTksLT
-EyMzI5NzY3NjcsMTQwNTQ0Mzc4MCwzNzc3MTIyMjQsLTYzNzYy
-Njc5NiwtMTY5OTQ2NjgzNywxMjY1OTM0NTQ5LDE5OTczNTc5OT
-csMTA3MTU4NzA2NSwtMzc4NTM1NzYyLDE3MTk0Mzg0MjUsMjEz
-MTMzNjU2M119
+eyJoaXN0b3J5IjpbODU2NjIwMDI2LDcwMzQzNjc1NSwtMjExNT
+UzODU3MSwxMjI3ODMyMDI4LDc1NjYzNzU1LDEzMjA0NjY1OTEs
+MTQ2MTI0NjUyNCwxMjQ1NjUwMjYwLC0xNDY5NjMzMTA3LC0xNj
+g1NjI1Njk5LC0xMjMyOTc2NzY3LDE0MDU0NDM3ODAsMzc3NzEy
+MjI0LC02Mzc2MjY3OTYsLTE2OTk0NjY4MzcsMTI2NTkzNDU0OS
+wxOTk3MzU3OTk3LDEwNzE1ODcwNjUsLTM3ODUzNTc2MiwxNzE5
+NDM4NDI1XX0=
 -->
