@@ -191,7 +191,10 @@ export class SelectCompany extends React.Component<SelectCompanyProps, SelectCom
 
 ## Webpack
 
-Mit folgender Webpack-Konfiguration lassen sich nun Custom Element und Rea
+Mit folgender Webpack-Konfiguration lassen sich nun Custom Element und React-Component in eine JavaScript-File packen, so dass es integrierenden Anwendung (hier "StockPrice") verwendet werden kann:
+
+```
+```
 
 ## Das Custom Element "company-correlation"
 
@@ -205,11 +208,11 @@ Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, 
 </script>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3MTQ0OTI1MCwxMzIwNDY2NTkxLDE0Nj
-EyNDY1MjQsMTI0NTY1MDI2MCwtMTQ2OTYzMzEwNywtMTY4NTYy
-NTY5OSwtMTIzMjk3Njc2NywxNDA1NDQzNzgwLDM3NzcxMjIyNC
-wtNjM3NjI2Nzk2LC0xNjk5NDY2ODM3LDEyNjU5MzQ1NDksMTk5
-NzM1Nzk5NywxMDcxNTg3MDY1LC0zNzg1MzU3NjIsMTcxOTQzOD
-QyNSwyMTMxMzM2NTYzLDgyODc4MzcxOSwxMDQ5NjUwMDkyLC01
-Mzg0MjU3NzJdfQ==
+eyJoaXN0b3J5IjpbNzU2NjM3NTUsMTMyMDQ2NjU5MSwxNDYxMj
+Q2NTI0LDEyNDU2NTAyNjAsLTE0Njk2MzMxMDcsLTE2ODU2MjU2
+OTksLTEyMzI5NzY3NjcsMTQwNTQ0Mzc4MCwzNzc3MTIyMjQsLT
+YzNzYyNjc5NiwtMTY5OTQ2NjgzNywxMjY1OTM0NTQ5LDE5OTcz
+NTc5OTcsMTA3MTU4NzA2NSwtMzc4NTM1NzYyLDE3MTk0Mzg0Mj
+UsMjEzMTMzNjU2Myw4Mjg3ODM3MTksMTA0OTY1MDA5MiwtNTM4
+NDI1NzcyXX0=
 -->
