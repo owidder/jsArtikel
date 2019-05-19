@@ -163,28 +163,27 @@ export class SelectCompany extends React.Component<SelectCompanyProps, SelectCom
         this.setState({value: full})  
     }  
   
-    async getCompanies(): Promise<Company[]> {  
-    }  
-  
     async componentDidMount() {  
-        const companies = await this.getCompanies();  
+        const companies = await fetch(
+		        `${this.props.basedir}/../../service/companies`
+	        ).then(resp => resp.json());  
         this.setState({companies});  
     }  
   
     render() {  
         return <div className="input-field">  
             <AutoComplete  
-  dataSource={this.state.data}  
-  onSearch={(text) => this.handleSearch(text)}  
-  onSelect={this.handleSelect.bind(this)}  
-  value={this.state.value}  
+	            dataSource={this.state.data} 
+	            onSearch={(text) => this.handleSearch(text)} 
+	            onSelect={(value: string) => this.handleSelect(value)}
+	            value={this.state.value}  
   placeholder="Enter company"/>  
         </div>  
     }  
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5Nzg5MjQxNiwxMjQ1NjUwMjYwLC0xND
+eyJoaXN0b3J5IjpbMTE0NDkxMTY5NywxMjQ1NjUwMjYwLC0xND
 Y5NjMzMTA3LC0xNjg1NjI1Njk5LC0xMjMyOTc2NzY3LDE0MDU0
 NDM3ODAsMzc3NzEyMjI0LC02Mzc2MjY3OTYsLTE2OTk0NjY4Mz
 csMTI2NTkzNDU0OSwxOTk3MzU3OTk3LDEwNzE1ODcwNjUsLTM3
