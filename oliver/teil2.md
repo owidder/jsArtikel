@@ -20,7 +20,8 @@ Jedes Custom Element greift wiederum nur auf Services des Self-Contained-Systems
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190520-01/oliver/StockPrice.png"/>
 
-In diesem Beispiel nutzt das System "StockPrice" die Micro-Frontends von "Company" und "StockHistory". Genauso könnte aber auch z.B. "StockHistory" das ein Mirco-Frontend von "Company" nutzen oder umgekehrt.
+* In diesem Beispiel nutzt das System "StockPrice" die Micro-Frontends von "Company" und "StockHistory". Genauso könnte aber auch z.B. "StockHistory" das ein Mirco-Frontend von "Company" nutzen oder umgekehrt.
+* Wir gehen hier davon aus, dass sich alle Services hi 
 
 ## Das Micro-Frontend von "Company"
 Das SCS "Company" stellt den Service "companies" zur Verfügung. Er liefert Namen und Abkürzungen aller Firmen aus dem Dow Jones:
@@ -335,7 +336,7 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxOTc2MTc4Myw0MDMwMTY0MzEsLTcxMT
+eyJoaXN0b3J5IjpbLTg4NDE1MzM0Niw0MDMwMTY0MzEsLTcxMT
 Y5NTc5Niw5NDA4ODYzNjAsLTY2OTg5NTUyOCwxMDUxMjQ2NzU4
 LC01NTIxMDk0MTEsNzAzNDM2NzU1LC0yMTE1NTM4NTcxLDEyMj
 c4MzIwMjgsNzU2NjM3NTUsMTMyMDQ2NjU5MSwxNDYxMjQ2NTI0
