@@ -333,7 +333,7 @@ export class CompanyCorrelation extends
 }
 ```
 
-Die React-Component `CompanyCorrelation` ist etwas komplexer. Der Einfachheit wegen soll die Implementierung hier nicht im Einzelnen gezeigt werden. Interessierte finden den Code unter [http://bit.ly/companyCorrelation](http://bit.ly/companyCorrelation).
+Der komplette Code der React-Component `CompanyCorrelation` ist etwas komplexer. Der Einfachheit wegen soll er hier nicht im Einzelnen gezeigt werden. Interessierte finden den Code unter [http://bit.ly/companyCorrelation](http://bit.ly/companyCorrelation).
 
 ## Fazit
 
@@ -349,11 +349,11 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5OTU3MjE1Niw3OTIxNjU1MjAsMTQwMD
-kzMDU1NywtMTA4NTU2MzE4OCw5NjkxMjY2NzYsLTIxMjkwNjc3
-NywtNTg4ODYxMjIwLDQwMzAxNjQzMSwtNzExNjk1Nzk2LDk0MD
-g4NjM2MCwtNjY5ODk1NTI4LDEwNTEyNDY3NTgsLTU1MjEwOTQx
-MSw3MDM0MzY3NTUsLTIxMTU1Mzg1NzEsMTIyNzgzMjAyOCw3NT
-Y2Mzc1NSwxMzIwNDY2NTkxLDE0NjEyNDY1MjQsMTI0NTY1MDI2
-MF19
+eyJoaXN0b3J5IjpbMzExMTQyOTc0LDc5MjE2NTUyMCwxNDAwOT
+MwNTU3LC0xMDg1NTYzMTg4LDk2OTEyNjY3NiwtMjEyOTA2Nzc3
+LC01ODg4NjEyMjAsNDAzMDE2NDMxLC03MTE2OTU3OTYsOTQwOD
+g2MzYwLC02Njk4OTU1MjgsMTA1MTI0Njc1OCwtNTUyMTA5NDEx
+LDcwMzQzNjc1NSwtMjExNTUzODU3MSwxMjI3ODMyMDI4LDc1Nj
+YzNzU1LDEzMjA0NjY1OTEsMTQ2MTI0NjUyNCwxMjQ1NjUwMjYw
+XX0=
 -->
