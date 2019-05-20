@@ -284,21 +284,21 @@ export interface EndOfDayPrice {
     price: number;  
 }
 
-interface CorrelationProps {  
+interface Props {  
     shortX: string;  
     shortY: string;  
     basedir: string;  
 }  
   
-interface CorrelationState {  
+interface State {  
     pricesX: EndOfDayPrice[];  
     pricesY: EndOfDayPrice[];  
 }
 
 export class CompanyCorrelation extends
-	React.Component<CorrelationProps, CorrelationState> {  
+	React.Component<Props, State> {  
   
-    readonly state: CorrelationState = {pricesX: [], pricesY: []}
+    readonly state: State = {pricesX: [], pricesY: []}
 
 	async loadData(symbol: string): Promise<EndOfDayPrice[]> {  
 	    const response = await 
@@ -335,11 +335,11 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjYwMjY0MDcsLTcxMTY5NTc5Niw5NDA4OD
-YzNjAsLTY2OTg5NTUyOCwxMDUxMjQ2NzU4LC01NTIxMDk0MTEs
-NzAzNDM2NzU1LC0yMTE1NTM4NTcxLDEyMjc4MzIwMjgsNzU2Nj
-M3NTUsMTMyMDQ2NjU5MSwxNDYxMjQ2NTI0LDEyNDU2NTAyNjAs
-LTE0Njk2MzMxMDcsLTE2ODU2MjU2OTksLTEyMzI5NzY3NjcsMT
-QwNTQ0Mzc4MCwzNzc3MTIyMjQsLTYzNzYyNjc5NiwtMTY5OTQ2
-NjgzN119
+eyJoaXN0b3J5IjpbNDAzMDE2NDMxLC03MTE2OTU3OTYsOTQwOD
+g2MzYwLC02Njk4OTU1MjgsMTA1MTI0Njc1OCwtNTUyMTA5NDEx
+LDcwMzQzNjc1NSwtMjExNTUzODU3MSwxMjI3ODMyMDI4LDc1Nj
+YzNzU1LDEzMjA0NjY1OTEsMTQ2MTI0NjUyNCwxMjQ1NjUwMjYw
+LC0xNDY5NjMzMTA3LC0xNjg1NjI1Njk5LC0xMjMyOTc2NzY3LD
+E0MDU0NDM3ODAsMzc3NzEyMjI0LC02Mzc2MjY3OTYsLTE2OTk0
+NjY4MzddfQ==
 -->
