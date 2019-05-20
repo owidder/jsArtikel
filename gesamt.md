@@ -89,7 +89,7 @@ Laden Sie diese Seite in einem Browser, der die nötigen APIs unterstützt, wird
 
 *Bild 1 - Dom mit Web-Component*
 
-<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190515-01/oliver/correlationApp.png"/>
+<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190520-01/images/say-hello-dom.png"/>
 
 Jeder Web-Entwickler der eins der bekannten Frameworks wie Angular oder React verwendet hat weiß, dass die sinnvolle Aufteilung einer Applikation in Komponenten die Entwicklung und Weiterentwicklung erheblich vereinfacht. Leider geht diese Struktur verloren, sobald die Inhalte einer Angular oder React Komponente in den Dom-Tree des Browsers eingefügt werden. Aus den sorgsam aufgebauten Komponenten bleibt dann nur noch eine Sammlung von HTML-Tags übrig, die, ohne den Einsatz spezieller Werkzeuge, insbesondere die Fehlersuche erschweren. Diese Komponenten-Struktur, auch im Dom-Tree des Browsers sichtbar zu machen, ist Aufgabe der "Custom elements" Spezifikation. In *Bild 1* sehen Sie wie die in *Beispiel 1* deklarierte Komponente als Tag *say-hello* im Inspector des Safari-Browsers angezeigt wird. Um dieses Verhalten zu erreichen sind zwei Dinge nötig:
 * unsere Klasse muß von der Klasse *HTMLElement* erben
@@ -622,5 +622,5 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NTAzMDA1Nl19
+eyJoaXN0b3J5IjpbMzkxMjY5ODcwXX0=
 -->
