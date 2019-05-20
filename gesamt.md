@@ -8,7 +8,7 @@ Microservices haben sich im Backend Bereich in vielen Projekten als erfolgreiche
 * Integration im Frontend über Verlinkung (funktioniert am besten wenn jedes Micro-Frontend eine abgeschlossene Funktionalität aufweisen kann)
 * Integration im Frontend über Web-Components
 
-In einem großen Projekt in der Finanzindustrie mit über 40 Self-Contained-Systems haben wir uns für Web-Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir die Web-Compnents API, um bestehende React-Components zu "wrappen". Die anderen Micro-Frontends benutzen dann die Web-Componente und wissen gar nicht, dass im Hintergrund React seine Dienste versieht. Dieser Ansatz hat folgende Vorteile:
+In einem großen Projekt in der Finanzindustrie mit über 40 Self-Contained-Systems haben wir uns für Web-Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir die Web-Compnents API, um bestehende React-Components zu "wrappen". Die anderen Micro-Frontends benutzen dann die Web-Componente ohne zu wissen, dass im Hintergrund React seine Dienste versieht. Dieser Ansatz hat folgende Vorteile:
 * einfache Integration im Frontend
 * schlanke API
 * Web-Standard
@@ -46,11 +46,11 @@ IE und Edge, die Browser von Microsoft, bieten zum derzeitigen Zeitpunkt keine U
 
 Für neuere Browser, außer Microsoft Edge, sieht die Web-Components Unterstützung  gut aus, für alle anderen gibt es ein Polyfill. Nähere Informationen zu Verwendung und Installation finden Sie unter https://www.webcomponents.org/polyfills. Dieses Poylfill rüstet sowohl die "Custom Elements" API als auch die "Shadow DOM" API für ältere Browser nach. Bei der Verwendung der "Shadow DOM" API ist allerdings Vorsicht geboten, das es negative Auswirkungen auf die Render-Performanz einer Seite haben kann. 
 
-# Was sind Web components
+# Was sind Web Components
 
 Web-Components ist erst einmal nur eine Meta-Spezifikation für folgende Spezifikationen:
 
-* Custom elements
+* Custom Elements
 * Shadow Dom
 * ES Modules
 * HTML Templates
@@ -622,5 +622,5 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwNDk5MDEwMl19
+eyJoaXN0b3J5IjpbODYwOTQ0NDE4XX0=
 -->
