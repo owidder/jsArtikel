@@ -155,6 +155,8 @@ customElements.define('say-hello', SayHello);
 </html>
 ```
 
+Wahlweise können Sie 
+
 ## HTML Templates
 
 Die Spezifikation für "HTML Templates" beschäftigt sich mit der Fragestellung wie HTML-Code Fragmente von HTML definiert und wiederverwendet werden können. "HTML Templates" sind daher auch ohne Web-Components verwendbar und Web-Components können auch ohne "HTML Templates" entwickelt werden. Die Verwendung von Templates erleichtert aber die Entwicklung von Web-Components und erlaubt die klare Trennung von Code und Markup.
@@ -621,6 +623,6 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0NTQ1MjAyNywtNTU1NDE3NzI4LDM5MT
+eyJoaXN0b3J5IjpbLTg0NTgwMTUwNywtNTU1NDE3NzI4LDM5MT
 I2OTg3MF19
 -->
