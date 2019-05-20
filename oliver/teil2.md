@@ -272,7 +272,7 @@ customElements.define("company-correlation",
 
 ## Die React-Component "CompanyCorrelation"
 
-Das Custom Element `<company-correlation/>` gibt die Attribute `short-x` und `short-y` an die React-Component als Properties `shortX` bzw. `shortY` weiter. Diese lädt bei jeder Änderung ihrer Properties die historischen Kursdaten der jeweilige Company über einen Service-Call vom System "StockHistory":
+Das Custom Element `<company-correlation/>` gibt die Attribute `short-x` und `short-y` an die React-Component als Properties `shortX` bzw. `shortY` weiter. Diese lädt bei jeder Änderung ihrer Properties () die historischen Kursdaten der jeweilige Company über einen Service-Call vom System "StockHistory":
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190519-01/oliver/companyCorrelation.png"/>
 
@@ -306,14 +306,10 @@ export class CompanyCorrelation extends
 	    return await response.json();  
 	}  
   
-	async componentDidUpdate(prevProps: CorrelationProps, prevState: CorrelationState) {  
-    if((this.props.shortX && this.state.pricesX.length == 0) || (this.props.shortX != prevProps.shortX)) {  
+	async componentDidUpdate() {  
         const pricesX = await this.loadData(this.props.shortX);  
-        this.setState({pricesX});  
-    }  
-    if((this.props.shortY && this.state.pricesY.length == 0) || (this.props.shortY !== prevProps.shortY)) {  
         const pricesY = await this.loadData(this.props.shortY);  
-        this.setState({pricesY});  
+        this.setState({pricesX, pricesY});  
     }  
     ...
 
@@ -339,7 +335,7 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDIyODAwMzQsLTcxMTY5NTc5Niw5ND
+eyJoaXN0b3J5IjpbLTE2NjIwNzY2MzQsLTcxMTY5NTc5Niw5ND
 A4ODYzNjAsLTY2OTg5NTUyOCwxMDUxMjQ2NzU4LC01NTIxMDk0
 MTEsNzAzNDM2NzU1LC0yMTE1NTM4NTcxLDEyMjc4MzIwMjgsNz
 U2NjM3NTUsMTMyMDQ2NjU5MSwxNDYxMjQ2NTI0LDEyNDU2NTAy
