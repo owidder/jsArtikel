@@ -17,12 +17,13 @@ Die Anwendung "StockPrice" besteht aus den zwei Self-Contained-Systems (SCS) "Co
 2. SCS "StockHistory": Stellt einen Service zur Verfügung, über den die historischen Aktienkurse abgefragt werden können. Das Micro-Frontend ist der Scatterplot-Chart. 
 	Er kann über ein Custom Element mit Namen `<company-correlation/>` eingebunden werden.
 
-Jedes Self-Contained-System liefert sein Micro-Frontend (JavaScript-File mit dem Code des Cust. So hostet z.B. das System "Company" das JavaScript-File `selectComponentElement.js`, das den Code für das Custom Element `<select-company/>` enthält.
+Jedes Self-Contained-System liefert sein Micro-Frontend (JavaScript-File mit dem Code des Custom Elements) selber aus. 
+So hostet z.B. das System "Company" das JavaScript-File `selectComponentElement.js`, das den Code für das Custom Element `<select-company/>` enthält.
 Jedes Custom Element greift wiederum nur auf Services des Self-Contained-Systems zu, von dem es ausgeliefert wurde.
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190520-01/oliver/StockPrice.png"/>
 
-* In diesem Beispiel nutzt das System "StockPrice" die Micro-Frontends von "Company" und "StockHistory". Genauso könnte aber auch z.B. "StockHistory" das ein Mirco-Frontend von "Company" nutzen oder umgekehrt.
+* In diesem Beispiel nutzt das System "StockPrice" die Micro-Frontends von "Company" und "StockHistory". Genauso könnte aber auch "StockHistory" ein Micro-Frontend von "Company" nutzen oder umgekehrt.
 * Wir gehen hier davon aus, dass alle Services hinter einem Reverse-Proxy über dieselbe Domain zu erreichen sind. Das ist für Anwendungen, die aus vielen Self-Contained-Systems bestehen nicht ungewöhnlich. 
 	(So schließt man auch mögliche Probleme mit CORS-Einschränkungen (Cross-Origin Resource Sharing) des Browsers aus) 
 
@@ -347,7 +348,7 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1NjE2MDk0OCwtMjEyOTA2Nzc3LC01OD
+eyJoaXN0b3J5IjpbMTkxMDE3MDkwMiwtMjEyOTA2Nzc3LC01OD
 g4NjEyMjAsNDAzMDE2NDMxLC03MTE2OTU3OTYsOTQwODg2MzYw
 LC02Njk4OTU1MjgsMTA1MTI0Njc1OCwtNTUyMTA5NDExLDcwMz
 QzNjc1NSwtMjExNTUzODU3MSwxMjI3ODMyMDI4LDc1NjYzNzU1
