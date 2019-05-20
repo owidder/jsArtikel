@@ -103,11 +103,12 @@ export interface Company {
     full: string;  
 }
 ```
-* Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Aufruf des Service "companies" innerhalb der React-Component statt. Darum geben wir der React-Component über die Property `basedir` die Adresse mit, von der aus der Code des Custom Elements ausgeliefert wurde. Denn dort kann die React-Component auch den Service finden. Diese Adresse holen wir uns über: 
+* Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Aufruf des Service "companies" innerhalb der React-Component statt. Darum geben wir der React-Component über die Property `basedir` die Adresse mit, von der aus der Code des Custom Elements ausgeliefert wurde. Denn dort kann die React-Component auch den Service finden. 
+	Diese Adresse holen wir uns über: 
 	```
 	const scriptPath = document.currentScript.getAttribute("src")
 	```
-	und schnibbeln dann das letzte Pfad-Element (den Namen des JavaScript-Files) weg:
+	und schnibbeln dann einfach das letzte Pfad-Element (den Namen des JavaScript-Files) weg:
 	```
 	const parts = scriptPath.split("/");  
 	const basedir = parts.slice(0, parts.length-1).join("/");
@@ -349,7 +350,7 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NjU4NDY0OSwtMTA4NTU2MzE4OCw5Nj
+eyJoaXN0b3J5IjpbMTQwMDkzMDU1NywtMTA4NTU2MzE4OCw5Nj
 kxMjY2NzYsLTIxMjkwNjc3NywtNTg4ODYxMjIwLDQwMzAxNjQz
 MSwtNzExNjk1Nzk2LDk0MDg4NjM2MCwtNjY5ODk1NTI4LDEwNT
 EyNDY3NTgsLTU1MjEwOTQxMSw3MDM0MzY3NTUsLTIxMTU1Mzg1
