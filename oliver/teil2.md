@@ -192,8 +192,7 @@ export class SelectCompany extends React.Component<Props, State> {
 ```
 
 * Als Eingabefeld verwenden wir `AutoComplete` aus der Bibliothek *Ant Design* (siehe [https://ant.design/](https://ant.design/))
-* Der Aufruf des Service "companies" findet in der React-Lifecycle-Methode `componentDidMount()` statt. `componentDidMount()` wird nach dem ersten Rendern (Methode `render()`) der Component aufgerufen, wenn sich erzeugten DOM-Elemente im DOM-Tree befinden. 
-	Nachdem der Service "companies" ein Array mit Namen und Abkürzungen geliefert hat, werden sie in den State der React-Component gelegt.
+* Der Aufruf des Service "companies" findet in der React-Lifecycle-Methode `componentDidMount()` statt. Nachdem der Service "companies" ein Array mit Namen und Abkürzungen geliefert hat, werden sie in den State der React-Component gelegt.
 	Dies führt zu einem erneuten Rendern der Component.
 * In `handleSearch()` werden aus den vom Service geladenen Company-Namen, diejenigen gefiltert, die dem eingegebene Teilstring entsprechen, so dass `AutoComplete` eine Vorschlagsliste anzeigen kann.
 * `handleSelect()` wird aufgerufen, wenn eine Company ausgewählt worden ist. Hier wird die vom Custom Element über die Property `onChange` übergebene Callback-Function  aufgerufen.
@@ -350,11 +349,11 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Mjg5NDY4MDQsMTQwMDkzMDU1NywtMT
-A4NTU2MzE4OCw5NjkxMjY2NzYsLTIxMjkwNjc3NywtNTg4ODYx
-MjIwLDQwMzAxNjQzMSwtNzExNjk1Nzk2LDk0MDg4NjM2MCwtNj
-Y5ODk1NTI4LDEwNTEyNDY3NTgsLTU1MjEwOTQxMSw3MDM0MzY3
-NTUsLTIxMTU1Mzg1NzEsMTIyNzgzMjAyOCw3NTY2Mzc1NSwxMz
-IwNDY2NTkxLDE0NjEyNDY1MjQsMTI0NTY1MDI2MCwtMTQ2OTYz
-MzEwN119
+eyJoaXN0b3J5IjpbMzUxMDE2MjA1LDE0MDA5MzA1NTcsLTEwOD
+U1NjMxODgsOTY5MTI2Njc2LC0yMTI5MDY3NzcsLTU4ODg2MTIy
+MCw0MDMwMTY0MzEsLTcxMTY5NTc5Niw5NDA4ODYzNjAsLTY2OT
+g5NTUyOCwxMDUxMjQ2NzU4LC01NTIxMDk0MTEsNzAzNDM2NzU1
+LC0yMTE1NTM4NTcxLDEyMjc4MzIwMjgsNzU2NjM3NTUsMTMyMD
+Q2NjU5MSwxNDYxMjQ2NTI0LDEyNDU2NTAyNjAsLTE0Njk2MzMx
+MDddfQ==
 -->
