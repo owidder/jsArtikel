@@ -155,7 +155,7 @@ customElements.define('say-hello', SayHello);
 </html>
 ```
 
-Wahlweise können Sie das auch hier betrachten: [https://owidder.github.io/jsArtikel/say-hello/import.html](https://owidder.github.io/jsArtikel/say-hello/import.html)
+Wahlweise können Sie das auch hier betrachten: [http://bit.ly/say-hello-example](http://bit.ly/say-hello-example)
 
 ## HTML Templates
 
@@ -623,6 +623,6 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY1NTUyOTM3LC01NTU0MTc3MjgsMzkxMj
-Y5ODcwXX0=
+eyJoaXN0b3J5IjpbLTE1NTE5NTAxNjcsLTU1NTQxNzcyOCwzOT
+EyNjk4NzBdfQ==
 -->
