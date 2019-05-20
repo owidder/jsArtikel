@@ -220,7 +220,7 @@ Nach dem Aufruf von Webpack liegt im Verzeichnis `build` ein File mit Namen `sel
 ## Das Custom Element "company-correlation"
 
 Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, können nun dem Custom Element `<company-correlation/>` - das Micro-Frontend des Self-Contained-Systems "StockHistory" - übergeben werden. Dazu hat `<company-correlation/>` die zwei Attribute `short-x` und `short-y`.
-Über `short-x` kann man die Abkürzung der Company übergeben, die auf der X-Achse angezeigt werden soll. Analog übergibt man über `short-y` die Abkürzung der Firma, die auf der Y-Achse angezeigt werden soll:
+Über `short-x` kann man die Abkürzung der Company übergeben, die auf der X-Achse angezeigt werden soll. Analog übergibt man über `short-y` die Abkürzung der Firma, die auf der Y-Achse angezeigt werden soll. Vereinfacht sieht der Code der integrierten Gesamt-Anwendung "StockPrice" wie folgt aus:
 
 ```
 <select-company id="selectCompany1"></select-company>
@@ -337,11 +337,11 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4ODg2MTIyMCw0MDMwMTY0MzEsLTcxMT
-Y5NTc5Niw5NDA4ODYzNjAsLTY2OTg5NTUyOCwxMDUxMjQ2NzU4
-LC01NTIxMDk0MTEsNzAzNDM2NzU1LC0yMTE1NTM4NTcxLDEyMj
-c4MzIwMjgsNzU2NjM3NTUsMTMyMDQ2NjU5MSwxNDYxMjQ2NTI0
-LDEyNDU2NTAyNjAsLTE0Njk2MzMxMDcsLTE2ODU2MjU2OTksLT
-EyMzI5NzY3NjcsMTQwNTQ0Mzc4MCwzNzc3MTIyMjQsLTYzNzYy
-Njc5Nl19
+eyJoaXN0b3J5IjpbLTIxMjkwNjc3NywtNTg4ODYxMjIwLDQwMz
+AxNjQzMSwtNzExNjk1Nzk2LDk0MDg4NjM2MCwtNjY5ODk1NTI4
+LDEwNTEyNDY3NTgsLTU1MjEwOTQxMSw3MDM0MzY3NTUsLTIxMT
+U1Mzg1NzEsMTIyNzgzMjAyOCw3NTY2Mzc1NSwxMzIwNDY2NTkx
+LDE0NjEyNDY1MjQsMTI0NTY1MDI2MCwtMTQ2OTYzMzEwNywtMT
+Y4NTYyNTY5OSwtMTIzMjk3Njc2NywxNDA1NDQzNzgwLDM3Nzcx
+MjIyNF19
 -->
