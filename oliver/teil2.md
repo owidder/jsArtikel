@@ -12,10 +12,12 @@ Live kann man die Anwendung hier sehen: [http://bit.ly/stockprice-page](http://b
 
 ## Die Self-Contained-Systems "Company" und "StockHistory"
 Die Anwendung "StockPrice" besteht aus den zwei Self-Contained-Systems (SCS) "Company" und "StockHistory", deren Micro-Frontends auf einer Web-Seite mit Hilfe von Custom Elements integriert werden:
-1. SCS "Company": Stellt einen Service zur Verfügung, über den Namen und Abkürzungen aller Dow-Jones-Companies abgeholt werden können. Das Micro-Frontend ist ein Eingabefeld mit Autocompletion, das über ein Custom Element mit Namen `<select-company/>` eingebunden werden kann.
-2. SCS "StockHistory": Stellt einen Service zur Verfügung, über den die historischen Aktienkurse abgefragt werden können. Das Micro-Frontend ist der Scatterplot-Chart und kann über ein Custom Element mit Namen `<company-correlation/>` eingebunden werden.
+1. SCS "Company": Stellt einen Service zur Verfügung, über den Namen und Abkürzungen aller Dow-Jones-Companies abgeholt werden können. Das Micro-Frontend ist ein Eingabefeld mit Autocompletion.
+	Es kann über ein Custom Element mit Namen `<select-company/>` eingebunden werden kann.
+2. SCS "StockHistory": Stellt einen Service zur Verfügung, über den die historischen Aktienkurse abgefragt werden können. Das Micro-Frontend ist der Scatterplot-Chart. 
+	Er kann über ein Custom Element mit Namen `<company-correlation/>` eingebunden werden.
 
-Die Custom Elements werden von dem jeweiligen Self-Contained-System ausgeliefert. So hostet z.B. das System "Company" das JavaScript-File `selectComponentElement.js`, das den Code für das Custom Element `<select-company/>` enthält.
+Jedes Self-Contained-System liefert sein Micro-Frontend (JavaScript-File mit dem Code des Cust. So hostet z.B. das System "Company" das JavaScript-File `selectComponentElement.js`, das den Code für das Custom Element `<select-company/>` enthält.
 Jedes Custom Element greift wiederum nur auf Services des Self-Contained-Systems zu, von dem es ausgeliefert wurde.
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190520-01/oliver/StockPrice.png"/>
@@ -345,7 +347,7 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyMTY0NDA0MywtMjEyOTA2Nzc3LC01OD
+eyJoaXN0b3J5IjpbLTU1NjE2MDk0OCwtMjEyOTA2Nzc3LC01OD
 g4NjEyMjAsNDAzMDE2NDMxLC03MTE2OTU3OTYsOTQwODg2MzYw
 LC02Njk4OTU1MjgsMTA1MTI0Njc1OCwtNTUyMTA5NDExLDcwMz
 QzNjc1NSwtMjExNTUzODU3MSwxMjI3ODMyMDI4LDc1NjYzNzU1
