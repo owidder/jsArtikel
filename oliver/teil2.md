@@ -223,6 +223,11 @@ Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, 
 Über `short-x` kann man die Abkürzung der Company übergeben, die auf der X-Achse angezeigt werden soll. Analog übergibt man über `short-y` die Abkürzung der Firma, die auf der Y-Achse angezeigt werden soll. Vereinfacht sieht der Code der integrierten Gesamt-Anwendung "StockPrice" wie folgt aus:
 
 ```
+<head>
+<script src="./company/build/selectCompanyElement.js"></script>  
+<script src="./stockHistory/build//companyCorrelationElement.js"></script>
+</head>
+
 <select-company id="selectCompany1"></select-company>
 <select-company id="selectCompany2"></select-company>
 <company-correlation id="companyCorrelation"></company-correlation>
@@ -337,11 +342,11 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjkwNjc3NywtNTg4ODYxMjIwLDQwMz
-AxNjQzMSwtNzExNjk1Nzk2LDk0MDg4NjM2MCwtNjY5ODk1NTI4
-LDEwNTEyNDY3NTgsLTU1MjEwOTQxMSw3MDM0MzY3NTUsLTIxMT
-U1Mzg1NzEsMTIyNzgzMjAyOCw3NTY2Mzc1NSwxMzIwNDY2NTkx
-LDE0NjEyNDY1MjQsMTI0NTY1MDI2MCwtMTQ2OTYzMzEwNywtMT
-Y4NTYyNTY5OSwtMTIzMjk3Njc2NywxNDA1NDQzNzgwLDM3Nzcx
-MjIyNF19
+eyJoaXN0b3J5IjpbNTI2NzMxMjYyLC0yMTI5MDY3NzcsLTU4OD
+g2MTIyMCw0MDMwMTY0MzEsLTcxMTY5NTc5Niw5NDA4ODYzNjAs
+LTY2OTg5NTUyOCwxMDUxMjQ2NzU4LC01NTIxMDk0MTEsNzAzND
+M2NzU1LC0yMTE1NTM4NTcxLDEyMjc4MzIwMjgsNzU2NjM3NTUs
+MTMyMDQ2NjU5MSwxNDYxMjQ2NTI0LDEyNDU2NTAyNjAsLTE0Nj
+k2MzMxMDcsLTE2ODU2MjU2OTksLTEyMzI5NzY3NjcsMTQwNTQ0
+Mzc4MF19
 -->
