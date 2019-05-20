@@ -65,9 +65,10 @@ Live kann man sich das Element hier ansehen: [http://bit.ly/stockprice-company](
 ## Das Custom Element "select-company"
 Bei der Implementierung der Custom Elements haben wir die folgenden Prinzipien umgesetzt:
 * Kein Shadow-DOM: Wir haben bewusst auf den Shadow-DOM verzichtet. Dies hatte zwei Gründe:
-	* Man darf der integrierten Anwendung nicht ansehen, dass sie aus vielen Micro-Frontends zusammengesetzt ist. Dies erfordert, dass für alle Custom Elements die selben CSS-Regeln gelten. Darum haben wir die kapselnde Eigenschaft des Shadow-DOM nicht benötigt.
+	* Man soll der integrierten Anwendung nicht ansehen, dass sie aus vielen Micro-Frontends zusammengesetzt ist. Dies erfordert, dass für alle Custom Elements die selben CSS-Regeln gelten. Darum haben wir die kapselnde Eigenschaft des Shadow-DOM nicht benötigt.
 	* Unverträglich des von uns eingesetzten UI-Frameworks *React* mit dem Shadow-DOM: Der Einsatz von React-Componenten innerhalb des Shadow-DOM führte zu Problemen bei der Event-Verarbeitung (siehe [http://bit.ly/react-shadow-dom](http://bit.ly/react-shadow-dom)).
-* Custom Elements sind nur schmale Wrapper: Die gesamte client-seitige Funktionalität eines Micro-Frontends befindet sich innerhalb einer React-Component (mit Unter-Compenents). Ein Custom Elements ist immer nur ein schmaler Wrapper um diese React-Component. Dieses Prinzip hat es uns erlaubt, die Funktionalität der React-Component auch noch an anderen Stellen zu verwenden.
+* Custom Elements sind nur schmale Wrapper: Die gesamte client-seitige Funktionalität eines Micro-Frontends befindet sich innerhalb einer React-Component (mit ihren Unter-Compenents). 
+	Ein Custom Elements ist immer nur ein schmaler Wrapper um diese React-Component. Dieses Prinzip hat es uns erlaubt, die Funktionalität der React-Component auch noch an anderen Stellen zu verwenden.
 * Ein Custom Element ruft nur Services von der Adresse auf, von der er ausgeliefert wurde. 
 
 Mit diesen Prinzipien sieht die Implementierung des Custom Elements `<select-company/>` folgendermaßen aus (File `SelectCompanyElement.tsx`):
@@ -348,11 +349,11 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODU1NjMxODgsOTY5MTI2Njc2LC0yMT
-I5MDY3NzcsLTU4ODg2MTIyMCw0MDMwMTY0MzEsLTcxMTY5NTc5
-Niw5NDA4ODYzNjAsLTY2OTg5NTUyOCwxMDUxMjQ2NzU4LC01NT
-IxMDk0MTEsNzAzNDM2NzU1LC0yMTE1NTM4NTcxLDEyMjc4MzIw
-MjgsNzU2NjM3NTUsMTMyMDQ2NjU5MSwxNDYxMjQ2NTI0LDEyND
-U2NTAyNjAsLTE0Njk2MzMxMDcsLTE2ODU2MjU2OTksLTEyMzI5
-NzY3NjddfQ==
+eyJoaXN0b3J5IjpbMTI2MTIzMDU1NSwtMTA4NTU2MzE4OCw5Nj
+kxMjY2NzYsLTIxMjkwNjc3NywtNTg4ODYxMjIwLDQwMzAxNjQz
+MSwtNzExNjk1Nzk2LDk0MDg4NjM2MCwtNjY5ODk1NTI4LDEwNT
+EyNDY3NTgsLTU1MjEwOTQxMSw3MDM0MzY3NTUsLTIxMTU1Mzg1
+NzEsMTIyNzgzMjAyOCw3NTY2Mzc1NSwxMzIwNDY2NTkxLDE0Nj
+EyNDY1MjQsMTI0NTY1MDI2MCwtMTQ2OTYzMzEwNywtMTY4NTYy
+NTY5OV19
 -->
