@@ -281,8 +281,8 @@ customElements.define("company-correlation",
 	CompanyCorrelationElement);
 ```
 
-* Über `static get observedAttributes()` teilen wir der Custom-Element-API mit, für welche Attribute wir uns interessieren und über Änderungen informiert werden wollen. Es wird dann jedes Mal `attributeChangedCallback()` aufgerufen.
-* Im Sinne unseres Small-Wrapper-Principles tun wir bei jeder Attribute-Änderung nichts weiter, als die React-Component mit den neuen Properties neu zu rendern.
+* Über `static get observedAttributes()` teilen wir der Custom-Element-API mit, für welche Attribute wir uns interessieren und über Änderungen informiert werden wollen. Mit jeder Änderung eines Attributes wird dann `attributeChangedCallback()` aufgerufen.
+* Im Sinne unseres Small-Wrapper-Principles tun wir in `attributeChangedCallback()` nichts weiter, als die React-Component mit den neuen Properties neu zu rendern.
 
 ## Die React-Component "CompanyCorrelation"
 
@@ -349,11 +349,11 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzMDA1Mzc1OSwxNDAwOTMwNTU3LC0xMD
-g1NTYzMTg4LDk2OTEyNjY3NiwtMjEyOTA2Nzc3LC01ODg4NjEy
-MjAsNDAzMDE2NDMxLC03MTE2OTU3OTYsOTQwODg2MzYwLC02Nj
-k4OTU1MjgsMTA1MTI0Njc1OCwtNTUyMTA5NDExLDcwMzQzNjc1
-NSwtMjExNTUzODU3MSwxMjI3ODMyMDI4LDc1NjYzNzU1LDEzMj
-A0NjY1OTEsMTQ2MTI0NjUyNCwxMjQ1NjUwMjYwLC0xNDY5NjMz
-MTA3XX0=
+eyJoaXN0b3J5IjpbLTE1ODc2NDMyNzUsMTQwMDkzMDU1NywtMT
+A4NTU2MzE4OCw5NjkxMjY2NzYsLTIxMjkwNjc3NywtNTg4ODYx
+MjIwLDQwMzAxNjQzMSwtNzExNjk1Nzk2LDk0MDg4NjM2MCwtNj
+Y5ODk1NTI4LDEwNTEyNDY3NTgsLTU1MjEwOTQxMSw3MDM0MzY3
+NTUsLTIxMTU1Mzg1NzEsMTIyNzgzMjAyOCw3NTY2Mzc1NSwxMz
+IwNDY2NTkxLDE0NjEyNDY1MjQsMTI0NTY1MDI2MCwtMTQ2OTYz
+MzEwN119
 -->
