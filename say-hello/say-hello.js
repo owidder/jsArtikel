@@ -1,4 +1,4 @@
-export class SayHello extends HTMLelement {
+export class SayHello extends HTMLElement {
     constructor() {
         super();
         let shadowRoot = this.attachShadow({mode: 'open'});
