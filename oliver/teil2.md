@@ -24,8 +24,8 @@ Jedes Custom Element greift wiederum nur auf Services des Self-Contained-Systems
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190520-01/oliver/StockPrice.png"/>
 
 * In diesem Beispiel nutzt das System "StockPrice" die Micro-Frontends von "Company" und "StockHistory". Genauso könnte aber auch "StockHistory" ein Micro-Frontend von "Company" nutzen oder umgekehrt.
-* Wir gehen hier davon aus, dass alle Services hinter einem Reverse-Proxy über dieselbe Domain zu erreichen sind. Das ist für Anwendungen, die aus vielen Self-Contained-Systems bestehen nicht ungewöhnlich. 
-	(So schließt man auch mögliche Probleme mit CORS-Einschränkungen (Cross-Origin Resource Sharing) des Browsers aus) 
+* Wir gehen hier davon aus, dass alle Self-Contained-Systems hinter einem Reverse-Proxy unterhalb derselben Domain zu erreichen sind. Das ist für Anwendungen, die aus vielen Self-Contained-Systems bestehen nicht ungewöhnlich. 
+	(So schließt man auch mögliche Probleme mit CORS-Einschränkungen des Browsers aus) 
 
 ## Das Micro-Frontend von "Company"
 Das SCS "Company" stellt den Service "companies" zur Verfügung. Er liefert Namen und Abkürzungen aller Firmen aus dem Dow Jones:
@@ -348,11 +348,11 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxMDE3MDkwMiwtMjEyOTA2Nzc3LC01OD
-g4NjEyMjAsNDAzMDE2NDMxLC03MTE2OTU3OTYsOTQwODg2MzYw
-LC02Njk4OTU1MjgsMTA1MTI0Njc1OCwtNTUyMTA5NDExLDcwMz
-QzNjc1NSwtMjExNTUzODU3MSwxMjI3ODMyMDI4LDc1NjYzNzU1
-LDEzMjA0NjY1OTEsMTQ2MTI0NjUyNCwxMjQ1NjUwMjYwLC0xND
-Y5NjMzMTA3LC0xNjg1NjI1Njk5LC0xMjMyOTc2NzY3LDE0MDU0
-NDM3ODBdfQ==
+eyJoaXN0b3J5IjpbOTY5MTI2Njc2LC0yMTI5MDY3NzcsLTU4OD
+g2MTIyMCw0MDMwMTY0MzEsLTcxMTY5NTc5Niw5NDA4ODYzNjAs
+LTY2OTg5NTUyOCwxMDUxMjQ2NzU4LC01NTIxMDk0MTEsNzAzND
+M2NzU1LC0yMTE1NTM4NTcxLDEyMjc4MzIwMjgsNzU2NjM3NTUs
+MTMyMDQ2NjU5MSwxNDYxMjQ2NTI0LDEyNDU2NTAyNjAsLTE0Nj
+k2MzMxMDcsLTE2ODU2MjU2OTksLTEyMzI5NzY3NjcsMTQwNTQ0
+Mzc4MF19
 -->
