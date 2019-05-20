@@ -1,9 +1,9 @@
 # Integration von zwei Micro-Frontends über Custom Elements am konkreten Beispiel
-Im Folgenden wollen wir zeigen, wie wir Custom Elements in einem großen Projekt in der Finanzindustrie mit über 40 Self-Contained-Systems eingesetzt haben. 
-Dazu zeigen wir exemplarisch an einer kleinen Beispiel-Anwendung, die aus zwei Self-Contained-Systems besteht, die Integration der Micro-Frontends über Custom Elements.
+Im Folgenden wollen wir zeigen, wie wir Custom Elements zur Integration von Micro-Frontends in einem großen Projekt in der Finanzindustrie mit über 40 Self-Contained-Systems eingesetzt haben. 
+Das zeigen wir exemplarisch an einer kleinen Beispiel-Anwendung, die aus zwei Self-Contained-Systems besteht.
 
 ## Die Beispiel-Anwendung "StockPrice": Korrelation von Aktienkursen
-Mit der aus den Micro-Frontends integrierten Beispiel-Anwendung "StockPrice" kann man sich Charts erzeugen lassen, die die Aktienkurse (Jahre 2014 bis 2018) von zwei Firmen als Scatterplot inklusive Korrelationskoeffizienten darstellen.  
+Mit der aus zwei Micro-Frontends bestehenden Beispiel-Anwendung "StockPrice" kann man sich Charts erzeugen lassen, die die Aktienkurse (Jahre 2014 bis 2018) von zwei Firmen als Scatterplot inklusive Korrelationskoeffizienten darstellen.  
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190515-01/oliver/correlationApp.png"/>
 
@@ -345,11 +345,11 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM4ODY1MDQxLC0yMTI5MDY3NzcsLTU4OD
-g2MTIyMCw0MDMwMTY0MzEsLTcxMTY5NTc5Niw5NDA4ODYzNjAs
-LTY2OTg5NTUyOCwxMDUxMjQ2NzU4LC01NTIxMDk0MTEsNzAzND
-M2NzU1LC0yMTE1NTM4NTcxLDEyMjc4MzIwMjgsNzU2NjM3NTUs
-MTMyMDQ2NjU5MSwxNDYxMjQ2NTI0LDEyNDU2NTAyNjAsLTE0Nj
-k2MzMxMDcsLTE2ODU2MjU2OTksLTEyMzI5NzY3NjcsMTQwNTQ0
-Mzc4MF19
+eyJoaXN0b3J5IjpbLTIxMzQzMTg1NTQsLTIxMjkwNjc3NywtNT
+g4ODYxMjIwLDQwMzAxNjQzMSwtNzExNjk1Nzk2LDk0MDg4NjM2
+MCwtNjY5ODk1NTI4LDEwNTEyNDY3NTgsLTU1MjEwOTQxMSw3MD
+M0MzY3NTUsLTIxMTU1Mzg1NzEsMTIyNzgzMjAyOCw3NTY2Mzc1
+NSwxMzIwNDY2NTkxLDE0NjEyNDY1MjQsMTI0NTY1MDI2MCwtMT
+Q2OTYzMzEwNywtMTY4NTYyNTY5OSwtMTIzMjk3Njc2NywxNDA1
+NDQzNzgwXX0=
 -->
