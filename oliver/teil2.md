@@ -185,7 +185,8 @@ export class SelectCompany extends React.Component<SelectCompanyProps, SelectCom
 ```
 
 * Als Eingabefeld verwenden wir `AutoComplete` aus der Bibliothek *Ant Design* (siehe [https://ant.design/](https://ant.design/))
-* Der Aufruf des Service "companies" findet in der React-Lifecycle-Methode `componentDidMount()` statt. `componentDidMount()` wird nach dem ersten Rendern (Methode `render()`) der Component aufgerufen, wenn sich erzeugten DOM-Elemente im DOM-Tree befinden. Nachdem der Service "companies" ein Array mit Namen und Abkürzungen geliefert hat, werden sie in den State der React-Component gelegt.
+* Der Aufruf des Service "companies" findet in der React-Lifecycle-Methode `componentDidMount()` statt. `componentDidMount()` wird nach dem ersten Rendern (Methode `render()`) der Component aufgerufen, wenn sich erzeugten DOM-Elemente im DOM-Tree befinden. 
+	Nachdem der Service "companies" ein Array mit Namen und Abkürzungen geliefert hat, werden sie in den State der React-Component gelegt.
 	Dies führt zu einem erneuten Rendern der Component.
 * In `handleSearch()` werden aus den vom Service geladenen Company-Namen, diejenigen gefiltert, die dem eingegebene Teilstring entsprechen, so dass `AutoComplete` eine Vorschlagsliste anzeigen kann.
 * `handleSelect()` wird aufgerufen, wenn eine Company ausgewählt worden ist. Hier wird die vom Custom Element über die Property `onChange` übergebene Callback-Function  aufgerufen.
@@ -271,7 +272,7 @@ customElements.define("company-correlation",
 
 ## Die React-Component "CompanyCorrelation"
 
-Das Custom Element `<company-correlation/>` gibt die Attribute `short-x` und `short-y` an die React-Component als Properties `shortX` bzw. `shortY` weiter. Diese lädt bei jeder Änderung ihrer Properties die historischen Kursdaten der jeweilige Company über einen Service-Call vom System "StockHistory":
+Das Custom Element `<company-correlation/>` gibt die Attribute `short-x` und `short-y` an die React-Component als Properties `shortX` bzw. `shortY` weiter. Diese lädt bei jeder Änderung ihrer Properties (React-Lifecycle-Methode `componentDidUpdate()`) die historischen Kursdaten der jeweilige Company über einen Service-Call vom System "StockHistory":
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190519-01/oliver/companyCorrelation.png"/>
 
@@ -283,21 +284,21 @@ export interface EndOfDayPrice {
     price: number;  
 }
 
-interface CorrelationProps {  
+interface Props {  
     shortX: string;  
     shortY: string;  
     basedir: string;  
 }  
   
-interface CorrelationState {  
+interface State {  
     pricesX: EndOfDayPrice[];  
     pricesY: EndOfDayPrice[];  
 }
 
 export class CompanyCorrelation extends
-	React.Component<CorrelationProps, CorrelationState> {  
+	React.Component<Props, State> {  
   
-    readonly state: CorrelationState = {pricesX: [], pricesY: []}
+    readonly state: State = {pricesX: [], pricesY: []}
 
 	async loadData(symbol: string): Promise<EndOfDayPrice[]> {  
 	    const response = await 
@@ -305,14 +306,10 @@ export class CompanyCorrelation extends
 	    return await response.json();  
 	}  
   
-async componentDidUpdate(prevProps: CorrelationProps, prevState: CorrelationState) {  
-    if((this.props.shortX && this.state.pricesX.length == 0) || (this.props.shortX != prevProps.shortX)) {  
+	async componentDidUpdate() {  
         const pricesX = await this.loadData(this.props.shortX);  
-        this.setState({pricesX});  
-    }  
-    if((this.props.shortY && this.state.pricesY.length == 0) || (this.props.shortY !== prevProps.shortY)) {  
         const pricesY = await this.loadData(this.props.shortY);  
-        this.setState({pricesY});  
+        this.setState({pricesX, pricesY});  
     }  
     ...
 
@@ -338,11 +335,11 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxMTY5NTc5Niw5NDA4ODYzNjAsLTY2OT
-g5NTUyOCwxMDUxMjQ2NzU4LC01NTIxMDk0MTEsNzAzNDM2NzU1
-LC0yMTE1NTM4NTcxLDEyMjc4MzIwMjgsNzU2NjM3NTUsMTMyMD
-Q2NjU5MSwxNDYxMjQ2NTI0LDEyNDU2NTAyNjAsLTE0Njk2MzMx
-MDcsLTE2ODU2MjU2OTksLTEyMzI5NzY3NjcsMTQwNTQ0Mzc4MC
-wzNzc3MTIyMjQsLTYzNzYyNjc5NiwtMTY5OTQ2NjgzNywxMjY1
-OTM0NTQ5XX0=
+eyJoaXN0b3J5IjpbNDAzMDE2NDMxLC03MTE2OTU3OTYsOTQwOD
+g2MzYwLC02Njk4OTU1MjgsMTA1MTI0Njc1OCwtNTUyMTA5NDEx
+LDcwMzQzNjc1NSwtMjExNTUzODU3MSwxMjI3ODMyMDI4LDc1Nj
+YzNzU1LDEzMjA0NjY1OTEsMTQ2MTI0NjUyNCwxMjQ1NjUwMjYw
+LC0xNDY5NjMzMTA3LC0xNjg1NjI1Njk5LC0xMjMyOTc2NzY3LD
+E0MDU0NDM3ODAsMzc3NzEyMjI0LC02Mzc2MjY3OTYsLTE2OTk0
+NjY4MzddfQ==
 -->
