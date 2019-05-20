@@ -192,7 +192,7 @@ export class SelectCompany extends React.Component<Props, State> {
 ```
 
 * Als Eingabefeld verwenden wir `AutoComplete` aus der Bibliothek *Ant Design* (siehe [https://ant.design/](https://ant.design/))
-* Nachdem sich die React-Component zum ersten Mal gerendert hat, wird in der React-Lifecycle-Methode `componentDidMount()` der Service "companies" aufgerufen. Das vom Service gelieferte Array mit Namwird sie in den State der React-Component gelegt.
+* Nachdem sich die React-Component zum ersten Mal gerendert hat, wird in der React-Lifecycle-Methode `componentDidMount()` der Service "companies" aufgerufen. Das vom Service zurück gelieferte Array mit Namen und Abkürzungen des Companies wird in den State der React-Component gelegt, so dass das Eingabefeld erneut gerendert wird.
 * In `handleSearch()` werden aus den vom Service geladenen Company-Namen, diejenigen gefiltert, die dem eingegebene Teilstring entsprechen, so dass `AutoComplete` eine Vorschlagsliste anzeigen kann.
 * `handleSelect()` wird aufgerufen, wenn eine Company ausgewählt worden ist. Hier wird die vom Custom Element über die Property `onChange` übergebene Callback-Function  aufgerufen.
 
@@ -348,11 +348,11 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY4Mzg4MzY4LDE0MDA5MzA1NTcsLTEwOD
-U1NjMxODgsOTY5MTI2Njc2LC0yMTI5MDY3NzcsLTU4ODg2MTIy
-MCw0MDMwMTY0MzEsLTcxMTY5NTc5Niw5NDA4ODYzNjAsLTY2OT
-g5NTUyOCwxMDUxMjQ2NzU4LC01NTIxMDk0MTEsNzAzNDM2NzU1
-LC0yMTE1NTM4NTcxLDEyMjc4MzIwMjgsNzU2NjM3NTUsMTMyMD
-Q2NjU5MSwxNDYxMjQ2NTI0LDEyNDU2NTAyNjAsLTE0Njk2MzMx
-MDddfQ==
+eyJoaXN0b3J5IjpbMTcxMjg2MDc3MiwxNDAwOTMwNTU3LC0xMD
+g1NTYzMTg4LDk2OTEyNjY3NiwtMjEyOTA2Nzc3LC01ODg4NjEy
+MjAsNDAzMDE2NDMxLC03MTE2OTU3OTYsOTQwODg2MzYwLC02Nj
+k4OTU1MjgsMTA1MTI0Njc1OCwtNTUyMTA5NDExLDcwMzQzNjc1
+NSwtMjExNTUzODU3MSwxMjI3ODMyMDI4LDc1NjYzNzU1LDEzMj
+A0NjY1OTEsMTQ2MTI0NjUyNCwxMjQ1NjUwMjYwLC0xNDY5NjMz
+MTA3XX0=
 -->
