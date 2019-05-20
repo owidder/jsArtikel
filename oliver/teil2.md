@@ -252,7 +252,7 @@ document.getElementById("selectCompany2").onChangeCompany =
 </body>
 ```
 
-Im Gegensatz zu `<select-company/>` setzen wir bei `<company-correlation/>` die Attribute und ändern sie auch ggf. mehrfach. Dafür müssen wir im Custom Element die Lifecycle-Methode `attributeChangedCallback()` implementieren:
+Im Gegensatz zu `<select-company/>` besitzt `<company-correlation/>` Attribute, die sich auch mehrfach ändern können. Dafür müssen wir im Custom Element die Lifecycle-Methode `attributeChangedCallback()` implementieren:
 
 ```
 class CompanyCorrelationElement extends HTMLElement {  
@@ -349,7 +349,7 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2MzUwMTAwNiwxNDAwOTMwNTU3LC0xMD
+eyJoaXN0b3J5IjpbMTEzMDA1Mzc1OSwxNDAwOTMwNTU3LC0xMD
 g1NTYzMTg4LDk2OTEyNjY3NiwtMjEyOTA2Nzc3LC01ODg4NjEy
 MjAsNDAzMDE2NDMxLC03MTE2OTU3OTYsOTQwODg2MzYwLC02Nj
 k4OTU1MjgsMTA1MTI0Njc1OCwtNTUyMTA5NDExLDcwMzQzNjc1
