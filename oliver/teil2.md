@@ -141,21 +141,21 @@ export interface Company {
     full: string;  
 }  
   
-interface SelectCompanyProps {  
+interface Props {  
     initialShort?: string;  
     onChange: (company: Company)  => void;  
     basedir: string;  
 }  
   
-interface SelectCompanyState {  
+interface State {  
     companies: Company[];  
     data: string[];  
     value?: string;  
 }  
   
-export class SelectCompany extends React.Component<SelectCompanyProps, SelectCompanyState> {  
+export class SelectCompany extends React.Component<Props, State> {  
   
-    readonly state: SelectCompanyState = {data: [], companies: []};  
+    readonly state: State = {data: [], companies: []};  
   
     handleSearch(value: string) {  
         const data = _.uniq(this.state.companies.map(
@@ -350,11 +350,11 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwMDkzMDU1NywtMTA4NTU2MzE4OCw5Nj
-kxMjY2NzYsLTIxMjkwNjc3NywtNTg4ODYxMjIwLDQwMzAxNjQz
-MSwtNzExNjk1Nzk2LDk0MDg4NjM2MCwtNjY5ODk1NTI4LDEwNT
-EyNDY3NTgsLTU1MjEwOTQxMSw3MDM0MzY3NTUsLTIxMTU1Mzg1
-NzEsMTIyNzgzMjAyOCw3NTY2Mzc1NSwxMzIwNDY2NTkxLDE0Nj
-EyNDY1MjQsMTI0NTY1MDI2MCwtMTQ2OTYzMzEwNywtMTY4NTYy
-NTY5OV19
+eyJoaXN0b3J5IjpbLTE5Mjg5NDY4MDQsMTQwMDkzMDU1NywtMT
+A4NTU2MzE4OCw5NjkxMjY2NzYsLTIxMjkwNjc3NywtNTg4ODYx
+MjIwLDQwMzAxNjQzMSwtNzExNjk1Nzk2LDk0MDg4NjM2MCwtNj
+Y5ODk1NTI4LDEwNTEyNDY3NTgsLTU1MjEwOTQxMSw3MDM0MzY3
+NTUsLTIxMTU1Mzg1NzEsMTIyNzgzMjAyOCw3NTY2Mzc1NSwxMz
+IwNDY2NTkxLDE0NjEyNDY1MjQsMTI0NTY1MDI2MCwtMTQ2OTYz
+MzEwN119
 -->
