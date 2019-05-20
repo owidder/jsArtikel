@@ -198,7 +198,7 @@ export class SelectCompany extends React.Component<Props, State> {
 
 ## Webpack
 
-Mit folgender Webpack-Konfiguration lassen sich nun Custom Element und React-Component in eine JavaScript-File mit Namen `selectCompanyElement.js` packen, so dass es integrierenden Anwendung (hier "StockPrice") verwendet werden kann:
+Mit folgender Webpack-Konfiguration lassen sich nun Custom Element und React-Component in eine JavaScript-File mit Namen `selectCompanyElement.js` packen, so dass es von der integrierenden Anwendung (hier "StockPrice") verwendet werden kann:
 
 ```
 module.exports = {  
@@ -222,8 +222,9 @@ Nach dem Aufruf von Webpack liegt im Verzeichnis `build` ein File mit Namen `sel
 
 ## Das Custom Element "company-correlation"
 
-Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, können nun dem Custom Element `<company-correlation/>` - das Micro-Frontend des Self-Contained-Systems "StockHistory" - übergeben werden. Dazu hat `<company-correlation/>` die zwei Attribute `short-x` und `short-y`.
-Über `short-x` kann man die Abkürzung der Company übergeben, die auf der X-Achse angezeigt werden soll. Analog übergibt man über `short-y` die Abkürzung der Firma, die auf der Y-Achse angezeigt werden soll. Vereinfacht sieht der Code der integrierten Gesamt-Anwendung "StockPrice" wie folgt aus:
+Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, können nun dem Custom Element `<company-correlation/>` - das Micro-Frontend des Self-Contained-Systems "StockHistory" - übergeben werden. 
+Dazu hat `<company-correlation/>` die zwei Attribute `short-x` und `short-y`.
+Über `short-x` kann man die Abkürzung der Company übergeben, die auf der X-Achse angezeigt werden soll. Analog übergibt man über `short-y` die Abkürzung der Firma, die auf der Y-Achse angezeigt werden soll. Vereinfacht sieht der Code der Gesamt-Anwendung "StockPrice" wie folgt aus:
 
 ```
 <head>
@@ -348,7 +349,7 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxMjg2MDc3MiwxNDAwOTMwNTU3LC0xMD
+eyJoaXN0b3J5IjpbLTU2MzUwMTAwNiwxNDAwOTMwNTU3LC0xMD
 g1NTYzMTg4LDk2OTEyNjY3NiwtMjEyOTA2Nzc3LC01ODg4NjEy
 MjAsNDAzMDE2NDMxLC03MTE2OTU3OTYsOTQwODg2MzYwLC02Nj
 k4OTU1MjgsMTA1MTI0Njc1OCwtNTUyMTA5NDExLDcwMzQzNjc1
