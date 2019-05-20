@@ -68,10 +68,10 @@ Bei der Implementierung der Custom Elements haben wir die folgenden Prinzipien u
 	* Man soll der integrierten Anwendung nicht ansehen, dass sie aus vielen Micro-Frontends zusammengesetzt ist. Dies erfordert, dass für alle Custom Elements die selben CSS-Regeln gelten. Darum haben wir die kapselnde Eigenschaft des Shadow-DOM nicht benötigt.
 	* Unverträglich des von uns eingesetzten UI-Frameworks *React* mit dem Shadow-DOM: Der Einsatz von React-Componenten innerhalb des Shadow-DOM führte zu Problemen bei der Event-Verarbeitung (siehe [http://bit.ly/react-shadow-dom](http://bit.ly/react-shadow-dom)).
 * Custom Elements sind nur schmale Wrapper: Die gesamte client-seitige Funktionalität eines Micro-Frontends befindet sich innerhalb einer React-Component (mit ihren Unter-Compenents). 
-	Ein Custom Elements ist immer nur ein schmaler Wrapper um diese React-Component. Dieses Prinzip hat es uns erlaubt, die Funktionalität der React-Component auch noch an anderen Stellen zu verwenden.
-* Ein Custom Element ruft nur Services von der Adresse auf, von der er ausgeliefert wurde. 
+	Ein Custom Elements ist immer nur ein schmaler Wrapper um diese React-Component. Dieses Prinzip hat es uns erlaubt, die Funktionalität der React-Components auch noch an anderen Stellen zu verwenden.
+* Ein Custom Element ruft nur Services von der Adresse auf, von der es ausgeliefert wurde. 
 
-Mit diesen Prinzipien sieht die Implementierung des Custom Elements `<select-company/>` folgendermaßen aus (File `SelectCompanyElement.tsx`):
+Mit diesen Prinzipien sieht die Implementierung (`SelectCompanyElement.tsx`) des Custom Elements `<select-company/>` folgendermaßen aus:
 ```
 import * as React from "react";  
 import * as ReactDOM from "react-dom";  
@@ -349,7 +349,7 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2MTIzMDU1NSwtMTA4NTU2MzE4OCw5Nj
+eyJoaXN0b3J5IjpbMTk5NjU4NDY0OSwtMTA4NTU2MzE4OCw5Nj
 kxMjY2NzYsLTIxMjkwNjc3NywtNTg4ODYxMjIwLDQwMzAxNjQz
 MSwtNzExNjk1Nzk2LDk0MDg4NjM2MCwtNjY5ODk1NTI4LDEwNT
 EyNDY3NTgsLTU1MjEwOTQxMSw3MDM0MzY3NTUsLTIxMTU1Mzg1
