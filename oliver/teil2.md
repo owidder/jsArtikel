@@ -18,7 +18,7 @@ Die Anwendung "StockPrice" besteht aus 2 Self-Contained-Systems (SCS) "Company" 
 Die Custom Elements werden von dem jeweiligen Self-Contained-System ausgeliefert. So hostet z.B. das System "Company" das JavaScript-File `selectComponentElement.js`, das den Code für das Custom Element `<select-company/>` enthält.
 Jedes Custom Element greift wiederum nur auf Services des Self-Contained-Systems zu, von dem es ausgeliefert wurde.
 
-<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190518-02/oliver/StockPrice.png"/>
+<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190520-01/oliver/StockPrice.png"/>
 
 In diesem Beispiel nutzt das System "StockPrice" die Micro-Frontends von "Company" und "StockHistory". Genauso könnte aber auch z.B. "StockHistory" das ein Mirco-Frontend von "Company" nutzen oder umgekehrt.
 
@@ -335,11 +335,11 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDAzMDE2NDMxLC03MTE2OTU3OTYsOTQwOD
-g2MzYwLC02Njk4OTU1MjgsMTA1MTI0Njc1OCwtNTUyMTA5NDEx
-LDcwMzQzNjc1NSwtMjExNTUzODU3MSwxMjI3ODMyMDI4LDc1Nj
-YzNzU1LDEzMjA0NjY1OTEsMTQ2MTI0NjUyNCwxMjQ1NjUwMjYw
-LC0xNDY5NjMzMTA3LC0xNjg1NjI1Njk5LC0xMjMyOTc2NzY3LD
-E0MDU0NDM3ODAsMzc3NzEyMjI0LC02Mzc2MjY3OTYsLTE2OTk0
-NjY4MzddfQ==
+eyJoaXN0b3J5IjpbMTUxOTc2MTc4Myw0MDMwMTY0MzEsLTcxMT
+Y5NTc5Niw5NDA4ODYzNjAsLTY2OTg5NTUyOCwxMDUxMjQ2NzU4
+LC01NTIxMDk0MTEsNzAzNDM2NzU1LC0yMTE1NTM4NTcxLDEyMj
+c4MzIwMjgsNzU2NjM3NTUsMTMyMDQ2NjU5MSwxNDYxMjQ2NTI0
+LDEyNDU2NTAyNjAsLTE0Njk2MzMxMDcsLTE2ODU2MjU2OTksLT
+EyMzI5NzY3NjcsMTQwNTQ0Mzc4MCwzNzc3MTIyMjQsLTYzNzYy
+Njc5Nl19
 -->
