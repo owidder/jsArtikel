@@ -39,7 +39,7 @@ Das SCS "Company" stellt den Service "companies" zur Verfügung. Er liefert Name
 
 Neben dem Service "companies" liefert das SCS "Company" auch ein Micro-Frontend aus. Dieses Micro-Frontend (ein JavaScript-File) enthält ein Custom Element mit Namen `<select-company/>`, das wiederum den Service "companies" aufruft. 
 
-<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190516-01/oliver/company.png"/>
+<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190520-02/oliver/company.png"/>
 
 `<select-company/>` rendert sich als Eingabefeld mit Autocompletion-Funktionalität, über das eine Firma aus dem Dow Jones eingegeben werden kann.
 
@@ -348,11 +348,11 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY5MTI2Njc2LC0yMTI5MDY3NzcsLTU4OD
-g2MTIyMCw0MDMwMTY0MzEsLTcxMTY5NTc5Niw5NDA4ODYzNjAs
-LTY2OTg5NTUyOCwxMDUxMjQ2NzU4LC01NTIxMDk0MTEsNzAzND
-M2NzU1LC0yMTE1NTM4NTcxLDEyMjc4MzIwMjgsNzU2NjM3NTUs
-MTMyMDQ2NjU5MSwxNDYxMjQ2NTI0LDEyNDU2NTAyNjAsLTE0Nj
-k2MzMxMDcsLTE2ODU2MjU2OTksLTEyMzI5NzY3NjcsMTQwNTQ0
-Mzc4MF19
+eyJoaXN0b3J5IjpbLTEwODU1NjMxODgsOTY5MTI2Njc2LC0yMT
+I5MDY3NzcsLTU4ODg2MTIyMCw0MDMwMTY0MzEsLTcxMTY5NTc5
+Niw5NDA4ODYzNjAsLTY2OTg5NTUyOCwxMDUxMjQ2NzU4LC01NT
+IxMDk0MTEsNzAzNDM2NzU1LC0yMTE1NTM4NTcxLDEyMjc4MzIw
+MjgsNzU2NjM3NTUsMTMyMDQ2NjU5MSwxNDYxMjQ2NTI0LDEyND
+U2NTAyNjAsLTE0Njk2MzMxMDcsLTE2ODU2MjU2OTksLTEyMzI5
+NzY3NjddfQ==
 -->
