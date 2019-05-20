@@ -126,7 +126,7 @@ Die "ES Module" Spezifikation definiert ein API, die es erlaubt, JavaScript Doku
 python -m SimpleHTTPServer 8000
 ```
 
-Die Seite können Sie dann über die URL http://localhost:8000/example4.html laden und der Text "hello again" erscheint dann wie erwartet im Browser Fenster.
+Die Seite können Sie dann über die URL http://localhost:8000/import.html laden und der Text "hello again" erscheint dann wie erwartet im Browser Fenster.
 
 
 *Beispiel 4 - say-hello.js*
@@ -621,5 +621,6 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1NTQxNzcyOCwzOTEyNjk4NzBdfQ==
+eyJoaXN0b3J5IjpbLTY0NTQ1MjAyNywtNTU1NDE3NzI4LDM5MT
+I2OTg3MF19
 -->
