@@ -3,7 +3,7 @@ Im Folgenden wollen wir zeigen, wie wir Custom Elements zur Integration von Micr
 Das zeigen wir exemplarisch an einer kleinen Beispiel-Anwendung, die aus zwei Self-Contained-Systems besteht.
 
 ## Die Beispiel-Anwendung "StockPrice": Korrelation von Aktienkursen
-Mit der aus zwei Micro-Frontends bestehenden Beispiel-Anwendung "StockPrice" kann man sich Charts erzeugen lassen, die die Aktienkurse (Jahre 2014 bis 2018) von zwei Firmen als Scatterplot inklusive Korrelationskoeffizienten darstellen.  
+Mit der aus zwei Micro-Frontends bestehenden Beispiel-Anwendung "StockPrice" kann man sich Charts erzeugen lassen, die die Aktienkurse (Jahre 2014 bis 2018) von zwei Firmen als Scatterplot inklusive Korrelationskoeffizienten darstellen:  
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190515-01/oliver/correlationApp.png"/>
 
@@ -11,7 +11,7 @@ Dazu kann man in den beiden Automplete-Eingabefeldern am oberen Rand jeweils ein
 Live kann man die Anwendung hier sehen: [http://bit.ly/stockprice-page](http://bit.ly/stockprice-page)
 
 ## Die Self-Contained-Systems "Company" und "StockHistory"
-Die Anwendung "StockPrice" besteht aus 2 Self-Contained-Systems (SCS) "Company" und "StockHistory", deren Micro-Frontends auf einer Seite mit Hilfe von Custom Elements integriert werden:
+Die Anwendung "StockPrice" besteht aus den zwei Self-Contained-Systems (SCS) "Company" und "StockHistory", deren Micro-Frontends auf einer Web-Seite mit Hilfe von Custom Elements integriert werden:
 1. SCS "Company": Stellt einen Service zur Verfügung, über den Namen und Abkürzungen aller Dow-Jones-Companies abgeholt werden können. Das Micro-Frontend ist ein Eingabefeld mit Autocompletion, das über ein Custom Element mit Namen `<select-company/>` eingebunden werden kann.
 2. SCS "StockHistory": Stellt einen Service zur Verfügung, über den die historischen Aktienkurse abgefragt werden können. Das Micro-Frontend ist der Scatterplot-Chart und kann über ein Custom Element mit Namen `<company-correlation/>` eingebunden werden.
 
@@ -345,11 +345,11 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzQzMTg1NTQsLTIxMjkwNjc3NywtNT
-g4ODYxMjIwLDQwMzAxNjQzMSwtNzExNjk1Nzk2LDk0MDg4NjM2
-MCwtNjY5ODk1NTI4LDEwNTEyNDY3NTgsLTU1MjEwOTQxMSw3MD
-M0MzY3NTUsLTIxMTU1Mzg1NzEsMTIyNzgzMjAyOCw3NTY2Mzc1
-NSwxMzIwNDY2NTkxLDE0NjEyNDY1MjQsMTI0NTY1MDI2MCwtMT
-Q2OTYzMzEwNywtMTY4NTYyNTY5OSwtMTIzMjk3Njc2NywxNDA1
-NDQzNzgwXX0=
+eyJoaXN0b3J5IjpbMTgyMTY0NDA0MywtMjEyOTA2Nzc3LC01OD
+g4NjEyMjAsNDAzMDE2NDMxLC03MTE2OTU3OTYsOTQwODg2MzYw
+LC02Njk4OTU1MjgsMTA1MTI0Njc1OCwtNTUyMTA5NDExLDcwMz
+QzNjc1NSwtMjExNTUzODU3MSwxMjI3ODMyMDI4LDc1NjYzNzU1
+LDEzMjA0NjY1OTEsMTQ2MTI0NjUyNCwxMjQ1NjUwMjYwLC0xND
+Y5NjMzMTA3LC0xNjg1NjI1Njk5LC0xMjMyOTc2NzY3LDE0MDU0
+NDM3ODBdfQ==
 -->
