@@ -185,7 +185,8 @@ export class SelectCompany extends React.Component<SelectCompanyProps, SelectCom
 ```
 
 * Als Eingabefeld verwenden wir `AutoComplete` aus der Bibliothek *Ant Design* (siehe [https://ant.design/](https://ant.design/))
-* Der Aufruf des Service "companies" findet in der React-Lifecycle-Methode `componentDidMount()` statt. `componentDidMount()` wird nach dem ersten Rendern (Methode `render()`) der Component aufgerufen, wenn sich erzeugten DOM-Elemente im DOM-Tree befinden. Nachdem der Service "companies" ein Array mit Namen und Abkürzungen geliefert hat, werden sie in den State der React-Component gelegt.
+* Der Aufruf des Service "companies" findet in der React-Lifecycle-Methode `componentDidMount()` statt. `componentDidMount()` wird nach dem ersten Rendern (Methode `render()`) der Component aufgerufen, wenn sich erzeugten DOM-Elemente im DOM-Tree befinden. 
+	Nachdem der Service "companies" ein Array mit Namen und Abkürzungen geliefert hat, werden sie in den State der React-Component gelegt.
 	Dies führt zu einem erneuten Rendern der Component.
 * In `handleSearch()` werden aus den vom Service geladenen Company-Namen, diejenigen gefiltert, die dem eingegebene Teilstring entsprechen, so dass `AutoComplete` eine Vorschlagsliste anzeigen kann.
 * `handleSelect()` wird aufgerufen, wenn eine Company ausgewählt worden ist. Hier wird die vom Custom Element über die Property `onChange` übergebene Callback-Function  aufgerufen.
@@ -338,11 +339,11 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxMTY5NTc5Niw5NDA4ODYzNjAsLTY2OT
-g5NTUyOCwxMDUxMjQ2NzU4LC01NTIxMDk0MTEsNzAzNDM2NzU1
-LC0yMTE1NTM4NTcxLDEyMjc4MzIwMjgsNzU2NjM3NTUsMTMyMD
-Q2NjU5MSwxNDYxMjQ2NTI0LDEyNDU2NTAyNjAsLTE0Njk2MzMx
-MDcsLTE2ODU2MjU2OTksLTEyMzI5NzY3NjcsMTQwNTQ0Mzc4MC
-wzNzc3MTIyMjQsLTYzNzYyNjc5NiwtMTY5OTQ2NjgzNywxMjY1
-OTM0NTQ5XX0=
+eyJoaXN0b3J5IjpbLTExMzY5Mjk4MDIsLTcxMTY5NTc5Niw5ND
+A4ODYzNjAsLTY2OTg5NTUyOCwxMDUxMjQ2NzU4LC01NTIxMDk0
+MTEsNzAzNDM2NzU1LC0yMTE1NTM4NTcxLDEyMjc4MzIwMjgsNz
+U2NjM3NTUsMTMyMDQ2NjU5MSwxNDYxMjQ2NTI0LDEyNDU2NTAy
+NjAsLTE0Njk2MzMxMDcsLTE2ODU2MjU2OTksLTEyMzI5NzY3Nj
+csMTQwNTQ0Mzc4MCwzNzc3MTIyMjQsLTYzNzYyNjc5NiwtMTY5
+OTQ2NjgzN119
 -->
