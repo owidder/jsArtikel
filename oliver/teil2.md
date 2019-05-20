@@ -225,12 +225,14 @@ Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, 
 ```
 <head>
 <script src="./company/build/selectCompanyElement.js"></script>  
-<script src="./stockHistory/build//companyCorrelationElement.js"></script>
+<script src="./stockHistory/build/companyCorrelationElement.js"></script>
 </head>
 
+<body>
 <select-company id="selectCompany1"></select-company>
 <select-company id="selectCompany2"></select-company>
 <company-correlation id="companyCorrelation"></company-correlation>
+
 <script>
 document.getElementById("selectCompany1").onChangeCompany = 
 	function(company) {
@@ -243,9 +245,10 @@ document.getElementById("selectCompany2").onChangeCompany =
 			.setAttribute("short-x", company.short);
 	}
 </script>
+</body>
 ```
 
-Im Gegensatz zu `<select-company/>` setzen wir bei `<company-correlation/>` die Attribute. Dafür müssen wir im Custom Element die Lifecycle-Methode `attributeChangedCallback()` implementieren:
+Im Gegensatz zu `<select-company/>` setzen wir bei `<company-correlation/>` die Attribute und ändern sie auch ggf. mehrfach. Dafür müssen wir im Custom Element die Lifecycle-Methode `attributeChangedCallback()` implementieren:
 
 ```
 class CompanyCorrelationElement extends HTMLElement {  
@@ -342,11 +345,11 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI2NzMxMjYyLC0yMTI5MDY3NzcsLTU4OD
-g2MTIyMCw0MDMwMTY0MzEsLTcxMTY5NTc5Niw5NDA4ODYzNjAs
-LTY2OTg5NTUyOCwxMDUxMjQ2NzU4LC01NTIxMDk0MTEsNzAzND
-M2NzU1LC0yMTE1NTM4NTcxLDEyMjc4MzIwMjgsNzU2NjM3NTUs
-MTMyMDQ2NjU5MSwxNDYxMjQ2NTI0LDEyNDU2NTAyNjAsLTE0Nj
-k2MzMxMDcsLTE2ODU2MjU2OTksLTEyMzI5NzY3NjcsMTQwNTQ0
-Mzc4MF19
+eyJoaXN0b3J5IjpbLTIyODMzNDY1NCwtMjEyOTA2Nzc3LC01OD
+g4NjEyMjAsNDAzMDE2NDMxLC03MTE2OTU3OTYsOTQwODg2MzYw
+LC02Njk4OTU1MjgsMTA1MTI0Njc1OCwtNTUyMTA5NDExLDcwMz
+QzNjc1NSwtMjExNTUzODU3MSwxMjI3ODMyMDI4LDc1NjYzNzU1
+LDEzMjA0NjY1OTEsMTQ2MTI0NjUyNCwxMjQ1NjUwMjYwLC0xND
+Y5NjMzMTA3LC0xNjg1NjI1Njk5LC0xMjMyOTc2NzY3LDE0MDU0
+NDM3ODBdfQ==
 -->
