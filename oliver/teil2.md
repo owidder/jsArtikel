@@ -22,7 +22,7 @@ Jedes Custom Element greift wiederum nur auf Services des Self-Contained-Systems
 
 * In diesem Beispiel nutzt das System "StockPrice" die Micro-Frontends von "Company" und "StockHistory". Genauso könnte aber auch z.B. "StockHistory" das ein Mirco-Frontend von "Company" nutzen oder umgekehrt.
 * Wir gehen hier davon aus, dass alle Services hinter einem Reverse-Proxy über dieselbe Domain zu erreichen sind. Das ist für Anwendungen, die aus vielen Self-Contained-Systems bestehen nicht ungewöhnlich. 
-	So schließt man auch mögliche Probleme mit CORS 
+	(So schließt man auch mögliche Probleme mit CORS-Einschränkungen (Cross-Origin Resource Sharing) des Browsers aus) 
 
 ## Das Micro-Frontend von "Company"
 Das SCS "Company" stellt den Service "companies" zur Verfügung. Er liefert Namen und Abkürzungen aller Firmen aus dem Dow Jones:
@@ -337,11 +337,11 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDAwNzQ5NDgsNDAzMDE2NDMxLC03MTE2OT
-U3OTYsOTQwODg2MzYwLC02Njk4OTU1MjgsMTA1MTI0Njc1OCwt
-NTUyMTA5NDExLDcwMzQzNjc1NSwtMjExNTUzODU3MSwxMjI3OD
-MyMDI4LDc1NjYzNzU1LDEzMjA0NjY1OTEsMTQ2MTI0NjUyNCwx
-MjQ1NjUwMjYwLC0xNDY5NjMzMTA3LC0xNjg1NjI1Njk5LC0xMj
-MyOTc2NzY3LDE0MDU0NDM3ODAsMzc3NzEyMjI0LC02Mzc2MjY3
-OTZdfQ==
+eyJoaXN0b3J5IjpbLTU4ODg2MTIyMCw0MDMwMTY0MzEsLTcxMT
+Y5NTc5Niw5NDA4ODYzNjAsLTY2OTg5NTUyOCwxMDUxMjQ2NzU4
+LC01NTIxMDk0MTEsNzAzNDM2NzU1LC0yMTE1NTM4NTcxLDEyMj
+c4MzIwMjgsNzU2NjM3NTUsMTMyMDQ2NjU5MSwxNDYxMjQ2NTI0
+LDEyNDU2NTAyNjAsLTE0Njk2MzMxMDcsLTE2ODU2MjU2OTksLT
+EyMzI5NzY3NjcsMTQwNTQ0Mzc4MCwzNzc3MTIyMjQsLTYzNzYy
+Njc5Nl19
 -->
