@@ -306,7 +306,7 @@ export class CompanyCorrelation extends
 	    return await response.json();  
 	}  
   
-async componentDidUpdate(prevProps: CorrelationProps, prevState: CorrelationState) {  
+	async componentDidUpdate(prevProps: CorrelationProps, prevState: CorrelationState) {  
     if((this.props.shortX && this.state.pricesX.length == 0) || (this.props.shortX != prevProps.shortX)) {  
         const pricesX = await this.loadData(this.props.shortX);  
         this.setState({pricesX});  
@@ -339,7 +339,7 @@ Nachteile:
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzY5Mjk4MDIsLTcxMTY5NTc5Niw5ND
+eyJoaXN0b3J5IjpbLTEyNDIyODAwMzQsLTcxMTY5NTc5Niw5ND
 A4ODYzNjAsLTY2OTg5NTUyOCwxMDUxMjQ2NzU4LC01NTIxMDk0
 MTEsNzAzNDM2NzU1LC0yMTE1NTM4NTcxLDEyMjc4MzIwMjgsNz
 U2NjM3NTUsMTMyMDQ2NjU5MSwxNDYxMjQ2NTI0LDEyNDU2NTAy
