@@ -153,7 +153,6 @@ customElements.define('say-hello', SayHello);
         <say-hello></say-hello>
     </body>
 </html>
-
 ```
 
 ## HTML Templates
@@ -622,5 +621,5 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkxMjY5ODcwXX0=
+eyJoaXN0b3J5IjpbLTU1NTQxNzcyOCwzOTEyNjk4NzBdfQ==
 -->
