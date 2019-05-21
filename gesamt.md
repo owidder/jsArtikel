@@ -320,7 +320,9 @@ Wir gehen hier davon aus, dass alle Self-Contained-Systems hinter einem Reverse-
 	(So schließt man auch mögliche Probleme mit CORS-Einschränkungen des Browsers aus) 
 
 ## Das Micro-Frontend von "Company"
-Das SCS "Company" stellt den Service "companies" zur Verfügung. Er liefert Namen und Abkürzungen aller Firmen aus dem Dow Jones:
+Das Self-Contained-System "Company" stellt einen Service mit Namen "companies" zur Verfügung. Er liefert Namen und Abkürzungen aller Firmen aus dem Dow Jones:
+
+*Response des Service "companies"*
 ```
 [
    {"short":"MMM","full":"3M Company"},
@@ -329,8 +331,9 @@ Das SCS "Company" stellt den Service "companies" zur Verfügung. Er liefert Name
 ]
 ```
 
-Neben dem Service "companies" liefert das SCS "Company" auch ein Micro-Frontend aus. Dieses Micro-Frontend (ein JavaScript-File) enthält ein Custom Element mit Namen `<select-company/>`, das wiederum den Service "companies" aufruft. 
+Neben dem Service "companies" liefert das Self-Contained-System "Company" auch ein Micro-Frontend aus. Dieses Micro-Frontend (ein JavaScript-File) enthält ein Custom Element mit Namen `select-company`, das wiederum den Service "companies" aufruft. 
 
+*Bild 4 - "Company" mot
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190520-02/oliver/company.png"/>
 
 `<select-company/>` rendert sich als Eingabefeld mit Autocompletion-Funktionalität, über das eine Firma aus dem Dow Jones eingegeben werden kann.
@@ -642,7 +645,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDAwODM0OTIsLTEwNTYzNzk1MjcsLT
-E5ODgxNDA0MiwtMTYxOTAzNjc5OCwtMTU1MTk1MDE2NywtNTU1
-NDE3NzI4LDM5MTI2OTg3MF19
+eyJoaXN0b3J5IjpbLTkwNzAxNjc0NCwtMTA1NjM3OTUyNywtMT
+k4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0
+MTc3MjgsMzkxMjY5ODcwXX0=
 -->
