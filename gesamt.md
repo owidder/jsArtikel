@@ -5,7 +5,9 @@ FX besteht aus (zur Zeit) ca. 50 Self-Contained-Systems, die jeweils für eine b
 Jedes Self-Contained-System hat eine unabhängige Datenhaltung (teilweise SQL, teilweise NoSQL) und liefert die für den Aufruf der eigenen Services benötigten Oberflächen aus (Micro-Frontends).
 Untereinander kommunizieren die Self-Contained-Systems asynchron über Kafka.
 
-<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190521-01/images/fx.png"/>
+<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190521-02/images/fx.png"/>
+
+Zur Integration der Micro-Frontends im B
 
 
 # UI und Microservices
@@ -633,6 +635,6 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1OTY4NTY0LC0xNjE5MDM2Nzk4LC0xNT
-UxOTUwMTY3LC01NTU0MTc3MjgsMzkxMjY5ODcwXX0=
+eyJoaXN0b3J5IjpbMTIyNTgzODIxOSwtMTYxOTAzNjc5OCwtMT
+U1MTk1MDE2NywtNTU1NDE3NzI4LDM5MTI2OTg3MF19
 -->
