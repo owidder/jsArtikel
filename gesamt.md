@@ -9,7 +9,7 @@ Untereinander kommunizieren die Self-Contained-Systems asynchron über Kafka.
 *Bild 1 - Das System FX*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190521-03/images/fx.png"/>
 
-Wir haben uns für Web Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir die Web-Compnents-API, um bestehende React Components zu "wrappen". Die anderen Micro-Frontends benutzen dann die Web-Component ohne zu wissen, dass im Hintergrund React seine Dienste versieht. Dieser Ansatz hat folgende Vorteile:
+Wir haben uns für Web Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir die Web-Compnents-API, um bestehende React Components zu "wrappen". Andere Systeme benutzen dann die Web-Component ohne zu wissen, dass im Hintergrund React seine Dienste versieht. Dieser Ansatz hat folgende Vorteile:
 * einfache Integration im Frontend
 * schlanke API
 * Web-Standard
@@ -17,7 +17,7 @@ Wir haben uns für Web Components als Werkzeug zur Integration unserer Micro-Fro
 
 # UI und Microservices
 
-Microservices haben sich im Backend Bereich in vielen Projekten als erfolgreiches Architektur-Pattern etabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, dass es schwierig ist aus einer Vielzahl einzelner Frontends (Micro-Frontends) eine Lösung mit einem einheitlichen Look-And-Feel und einer konsistenten User-Experience herzustellen. Aus diesem Grund gibt es auch verschiedene Ansätze, mit dieser Herausforderung umzugehen:
+Microservices haben sich im Backend-Bereich in vielen Projekten als erfolgreiches Architektur-Pattern etabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, dass es schwierig ist, aus einer Vielzahl einzelner Frontends (Micro-Frontends) eine Lösung mit einem einheitlichen Look-And-Feel und einer konsistenten User-Experience herzustellen. Aus diesem Grund gibt es auch verschiedene Ansätze, mit dieser Herausforderung umzugehen:
 
 * Integration im Backend über vorhandene Mechanismen wie Server-Side-Includes
 * Integration im Backend aber mit zusätzlicher Tool Unterstützung (https://www.mosaic9.org)
@@ -652,8 +652,7 @@ Nachteile:
 	Z.B. führen die beiden `select-company`-Custom-Elements  auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODQ4OTAxMDYsNjUzNDMzNzk3LDg0ND
-gyMzg0MiwtMTA1NjM3OTUyNywtMTk4ODE0MDQyLC0xNjE5MDM2
-Nzk4LC0xNTUxOTUwMTY3LC01NTU0MTc3MjgsMzkxMjY5ODcwXX
-0=
+eyJoaXN0b3J5IjpbNzIxMjE0MjA5LDY1MzQzMzc5Nyw4NDQ4Mj
+M4NDIsLTEwNTYzNzk1MjcsLTE5ODgxNDA0MiwtMTYxOTAzNjc5
+OCwtMTU1MTk1MDE2NywtNTU1NDE3NzI4LDM5MTI2OTg3MF19
 -->
