@@ -645,7 +645,7 @@ Unsere Erfahrungen mit Custom Elements für die Integration von Micro-Frontends 
 Vorteile:
 * Komplett unabhängiges Deployment: Da die Custom Elements erst zur Laufzeit geladen werden, kann ein Self-Contained-System seine Micro-Frontends ändern und neu deployen, ohne dass eines der Systeme, die das Micro-Frontend einbinden, neu gabaut und deployt werden muss. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
-	Falls das Micro-Frontend jedoch auch Informationen zurück liefern soll, wie z.B. bei `<select-company/>` benötigt man als komplexere Schnittstelle eine Callback-Function. 
+	Falls das Micro-Frontend jedoch auch Informationen zurück liefern soll, wie z.B. bei `<select-company/>` benötigt man als komplexere Schnittstelle eine Callback-Function. Im Projekt verwenden wir hierfür auch die Pub/Sub-Library *postal.js* ([https://github.com/postaljs/postal.js)
 
 Nachteile:
 * Seiten, die viele Micro-Frontends einbinden, müssen von vielen System JavaScript-Files laden
@@ -654,7 +654,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3NDc5Mzk0MCwtMTA1NjM3OTUyNywtMT
+eyJoaXN0b3J5IjpbMTMxNTAyMTY5OSwtMTA1NjM3OTUyNywtMT
 k4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0
 MTc3MjgsMzkxMjY5ODcwXX0=
 -->
