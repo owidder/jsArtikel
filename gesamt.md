@@ -1,3 +1,6 @@
+# FX
+
+
 # UI und Microservices
 
 Microservices haben sich im Backend Bereich in vielen Projekten als erfolgreiches Architektur-Pattern etabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, dass es schwierig ist aus einer Vielzahl einzelner Frontends (Micro-Frontends) eine Lösung mit einem einheitlichen Look-And-Feel und einer konsistenten User-Experience herzustellen. Aus diesem Grund gibt es auch verschiedene Ansätze mit dieser Herausforderung umzugehen:
@@ -623,6 +626,6 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTE5NTAxNjcsLTU1NTQxNzcyOCwzOT
-EyNjk4NzBdfQ==
+eyJoaXN0b3J5IjpbMTQ0NTc3NzEwMiwtMTU1MTk1MDE2NywtNT
+U1NDE3NzI4LDM5MTI2OTg3MF19
 -->
