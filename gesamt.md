@@ -2,7 +2,8 @@
 
 Mit dem Projekt *FX* erstellt die Otto-Tochter *EOS* eine neue zentrale Anwendung für die Inkassobearbeitung. 
 FX besteht aus (zur Zeit) ca. 50 Self-Contained-Systems, die jeweils für eine bestimmte Fachlichkeit verantwortlich sind (z.B. Zahlungszuordnung, Buchhaltung, Ablaufsteuerung, Daten-Analyse, ...). 
-Jedes Self-Contained-System hat eine unabhängige Datenhaltung (Postrgres, Mongo, Elastic Search, ...) und liefert die für den Aufruf der eigenen Services benötigten Oberflächen aus (Micro-Frontends).
+Jedes Self-Contained-System hat eine unabhängige Datenhaltung (PostrgreSQL, MongoDB, Elastic Search, ...).
+Jedes Self-Contained-System liefert die für den Aufruf der eigenen Services benötigten Oberflächen selbst aus (Micro-Frontends).
 Untereinander kommunizieren die Self-Contained-Systems asynchron über Kafka.
 
 *Bild 1 - Das System FX*
@@ -651,7 +652,7 @@ Nachteile:
 	Z.B. führen die beiden `select-company`-Custom-Elements  auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTgzMzc1MDA5LDg0NDgyMzg0MiwtMTA1Nj
-M3OTUyNywtMTk4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUw
-MTY3LC01NTU0MTc3MjgsMzkxMjY5ODcwXX0=
+eyJoaXN0b3J5IjpbMTgxNTQ5MTYwNyw4NDQ4MjM4NDIsLTEwNT
+YzNzk1MjcsLTE5ODgxNDA0MiwtMTYxOTAzNjc5OCwtMTU1MTk1
+MDE2NywtNTU1NDE3NzI4LDM5MTI2OTg3MF19
 -->
