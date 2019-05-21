@@ -554,7 +554,7 @@ document.getElementById("selectCompany2").onChangeCompany =
 
 Im Gegensatz zu `select-company` besitzt `company-correlation` Attribute, die sich auch mehrfach ändern können. Dafür müssen wir im Custom Element die Lifecycle-Methode `attributeChangedCallback()` implementieren:
 
-*Listing 10 - Custom Element `CompanyCorrela
+*Listing 10 - Custom Element `CompanyCorrelation.tsx`*
 ```
 class CompanyCorrelationElement extends HTMLElement {  
   
@@ -587,8 +587,9 @@ customElements.define("company-correlation",
 
 ## Die React-Component "CompanyCorrelation"
 
-Das Custom Element `<company-correlation/>` gibt die Attribute `short-x` und `short-y` an die React-Component als Properties `shortX` bzw. `shortY` weiter. Diese lädt bei jeder Änderung ihrer Properties (React-Lifecycle-Methode `componentDidUpdate()`) die historischen Kursdaten der jeweilige Company über einen Service-Call vom System "StockHistory":
+Das Custom Element `company-correlation` gibt die Attribute `short-x` und `short-y` an die React Component als Properties `shortX` bzw. `shortY` weiter. Diese lädt bei jeder Änderung ihrer Properties (React-Lifecycle-Methode `componentDidUpdate()`) die historischen Kursdaten der jeweilige Company über einen Service-Call vom System "StockHistory":
 
+*Bild 7 - Das System "StockPrice"*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190520-03/oliver/companyCorrelation.png"/>
 
 Die Kursdaten werden dann im State der React-Component abgelegt:
@@ -651,7 +652,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODgzNDcyMTcxLC0xMDU2Mzc5NTI3LC0xOT
-g4MTQwNDIsLTE2MTkwMzY3OTgsLTE1NTE5NTAxNjcsLTU1NTQx
-NzcyOCwzOTEyNjk4NzBdfQ==
+eyJoaXN0b3J5IjpbLTEwMzQwMjMyMzMsLTEwNTYzNzk1MjcsLT
+E5ODgxNDA0MiwtMTYxOTAzNjc5OCwtMTU1MTk1MDE2NywtNTU1
+NDE3NzI4LDM5MTI2OTg3MF19
 -->
