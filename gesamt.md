@@ -7,7 +7,7 @@ Jedes Self-Contained-System liefert die für den Aufruf der eigenen Services ben
 Untereinander kommunizieren die Self-Contained-Systems asynchron über Kafka.
 
 *Bild 1 - Das System FX*
-<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190521-02/images/fx.png"/>
+<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190521-03/images/fx.png"/>
 
 Wir haben uns für Web Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir die Web-Compnents-API, um bestehende React Components zu "wrappen". Die anderen Micro-Frontends benutzen dann die Web-Component ohne zu wissen, dass im Hintergrund React seine Dienste versieht. Dieser Ansatz hat folgende Vorteile:
 * einfache Integration im Frontend
@@ -652,7 +652,8 @@ Nachteile:
 	Z.B. führen die beiden `select-company`-Custom-Elements  auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjUzNDMzNzk3LDg0NDgyMzg0MiwtMTA1Nj
-M3OTUyNywtMTk4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUw
-MTY3LC01NTU0MTc3MjgsMzkxMjY5ODcwXX0=
+eyJoaXN0b3J5IjpbLTEyODQ4OTAxMDYsNjUzNDMzNzk3LDg0ND
+gyMzg0MiwtMTA1NjM3OTUyNywtMTk4ODE0MDQyLC0xNjE5MDM2
+Nzk4LC0xNTUxOTUwMTY3LC01NTU0MTc3MjgsMzkxMjY5ODcwXX
+0=
 -->
