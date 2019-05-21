@@ -1,4 +1,6 @@
-# Das Projekt FX
+# Das Projekt "FX" und die Integration von Micro-Frontends über Ci
+
+Mit dem Projekt FX
 
 
 # UI und Microservices
@@ -626,6 +628,6 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzIwMTk3NjksLTE1NTE5NTAxNjcsLT
-U1NTQxNzcyOCwzOTEyNjk4NzBdfQ==
+eyJoaXN0b3J5IjpbMTYyMjI5MDU3OSwtMTU1MTk1MDE2NywtNT
+U1NDE3NzI4LDM5MTI2OTg3MF19
 -->
