@@ -424,11 +424,11 @@ customElements.define("select-company", SelectCompanyElement);
 	
 	Als `onChange`-Property übergeben wir eine Lambda-Function, die wiederum die Callback-Function aufruft, die dem Custom Element über die `onChangeCompany`-Property übergeben wurde.
 
-## Die React-Component "SelectCompany"
+## Die React Component "SelectCompany"
 
-Die React-Component `SelectCompany` enthält die eigentliche Funktionalität des Micro-Frontends:
+Die React Component `SelectCompany` enthält die eigentliche Funktionalität des Micro-Frontends:
 
-*Listing 8 - React-Component `SelectCompany.tsx`
+*Listing 8 - React Component `SelectCompany.tsx`*
 ```
 import * as React from "react";  
 import * as _ from "lodash";  
@@ -498,7 +498,7 @@ export class SelectCompany extends React.Component<Props, State> {
 
 Mit folgender Webpack-Konfiguration lassen sich nun Custom Element und React-Component in eine JavaScript-File mit Namen `selectCompanyElement.js` packen, so dass es von der integrierenden Anwendung (hier "StockPrice") verwendet werden kann:
 
-*Listing 8 - `webpack.config.js`*
+*Listing 9 - `webpack.config.js`*
 ```
 module.exports = {  
     mode: process.env.NODE_ENV,  
@@ -521,10 +521,11 @@ Nach dem Aufruf von Webpack liegt im Verzeichnis `build` ein File mit Namen `sel
 
 ## Das Custom Element "company-correlation"
 
-Die über die zwei Custom Elements `<select-company/>` ausgewählten Companies, können nun dem Custom Element `<company-correlation/>` - das Micro-Frontend des Self-Contained-Systems "StockHistory" - übergeben werden. 
-Dazu hat `<company-correlation/>` die zwei Attribute `short-x` und `short-y`.
+Die über die zwei `select-company`-Custom-Elements  ausgewählten Companies, können nun dem Custom Element `company-correlation` - das Micro-Frontend des Self-Contained-Systems "StockHistory" - übergeben werden. 
+Dazu hat `company-correlation` die zwei Attribute `short-x` und `short-y`.
 Über `short-x` kann man die Abkürzung der Company übergeben, die auf der X-Achse angezeigt werden soll. Analog übergibt man über `short-y` die Abkürzung der Firma, die auf der Y-Achse angezeigt werden soll. Vereinfacht sieht der Code der Gesamt-Anwendung "StockPrice" wie folgt aus:
 
+*Listing 9 - Die Web-Seite von "StockPrice"*
 ```
 <head>
 <script src="./company/build/selectCompanyElement.js"></script>  
@@ -649,7 +650,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2NDk5Mzc5NiwtMTA1NjM3OTUyNywtMT
+eyJoaXN0b3J5IjpbMTM2Nzg1Njk3MiwtMTA1NjM3OTUyNywtMT
 k4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0
 MTc3MjgsMzkxMjY5ODcwXX0=
 -->
