@@ -54,18 +54,18 @@ IE und Edge, die Browser von Microsoft, bieten zum derzeitigen Zeitpunkt keine U
 
 ## Polyfill
 
-Für neuere Browser, außer Microsoft Edge, sieht die Web-Components Unterstützung  gut aus, für alle anderen gibt es ein Polyfill. Nähere Informationen zu Verwendung und Installation finden Sie unter https://www.webcomponents.org/polyfills. Dieses Poylfill rüstet sowohl die Custom-Elements-API als auch die Shadow-Dom-API für ältere Browser nach. Bei der Verwendung der "Shadow DOM" API ist allerdings Vorsicht geboten, da es negative Auswirkungen auf die Render-Performanz einer Seite haben kann. 
+Für neuere Browser, außer Microsoft Edge, sieht die Web-Components Unterstützung  gut aus, für alle anderen gibt es ein Polyfill. Nähere Informationen zu Verwendung und Installation finden Sie unter https://www.webcomponents.org/polyfills. Dieses Poylfill rüstet sowohl die Custom-Elements-API als auch die Shadow-Dom-API für ältere Browser nach. Bei der Verwendung der Shadow-Dom-API ist allerdings Vorsicht geboten, da es negative Auswirkungen auf die Render-Performanz einer Seite haben kann. 
 
 # Was sind Web Components
 
-Web-Components ist erst einmal nur eine Meta-Spezifikation für folgende Spezifikationen:
+Web Components ist erst einmal nur eine Meta-Spezifikation für folgende Spezifikationen:
 
 * Custom Elements
 * Shadow Dom
 * ES Modules
 * HTML Templates
 
-Wenn ein Browser diese APIs gemäß der Spezifikationen implementiert, können Sie eigene Elemente definieren und dieser als neue Tags in einer HTML-Seite verwenden. Eine einfache Deklaration einer "Web-Component" sehen Sie in Listing 1.
+Wenn ein Browser diese APIs gemäß der Spezifikationen implementiert, können Sie eigene Elemente definieren und diese als neue Tags in einer HTML-Seite verwenden. Eine einfache Deklaration einer "Web-Component" sehen Sie in Listing 1.
 
 *Listing 1 - hello.html*
 ```HTML
@@ -653,7 +653,7 @@ Nachteile:
 	Z.B. führen die beiden `select-company`-Custom-Elements  auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwOTExODM2Niw2NTM0MzM3OTcsODQ0OD
+eyJoaXN0b3J5IjpbMTk4NTQ3NjIxMSw2NTM0MzM3OTcsODQ0OD
 IzODQyLC0xMDU2Mzc5NTI3LC0xOTg4MTQwNDIsLTE2MTkwMzY3
 OTgsLTE1NTE5NTAxNjcsLTU1NTQxNzcyOCwzOTEyNjk4NzBdfQ
 ==
