@@ -18,7 +18,7 @@ Wo Licht ist, ist natürlich auch Schatten. Auf die vorhandenen Nachteile werden
 
 # UI und Microservices
 
-Microservices haben sich im Backend Bereich in vielen Projekten als erfolgreiches Architektur-Pattern etabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, dass es schwierig ist aus einer Vielzahl einzelner Frontends (Micro-Frontends) eine Lösung mit einem einheitlichen Look-And-Feel und einer konsistenten User-Experience herzustellen. Aus diesem Grund gibt es auch verschiedene Ansätze mit dieser Herausforderung umzugehen:
+Microservices haben sich im Backend Bereich in vielen Projekten als erfolgreiches Architektur-Pattern etabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, dass es schwierig ist aus einer Vielzahl einzelner Frontends (Micro-Frontends) eine Lösung mit einem einheitlichen Look-And-Feel und einer konsistenten User-Experience herzustellen. Aus diesem Grund gibt es auch verschiedene Ansätze, mit dieser Herausforderung umzugehen:
 
 * Integration im Backend über vorhandene Mechanismen wie Server-Side-Includes
 * Integration im Backend aber mit zusätzlicher Tool Unterstützung (https://www.mosaic9.org)
@@ -26,10 +26,7 @@ Microservices haben sich im Backend Bereich in vielen Projekten als erfolgreiche
 * Integration im Frontend über Verlinkung (funktioniert am besten wenn jedes Micro-Frontend eine abgeschlossene Funktionalität aufweisen kann)
 * Integration im Frontend über Web-Components
 
-
-
-
-Bevor es an die Details unserer Verwendung vom Web-Components geht, lohnt es sich erst einmal zu klären, was Web-Components denn überhaupt sind. 
+Bevor es an die Details unserer Verwendung vom Web-Components geht, lohnt es sich erst einmal zu klären, was Komponenten im Allgemeinen und Web-Components im Speziellen denn überhaupt sind. 
 
 # Was sind Komponenten ?
 
@@ -636,7 +633,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3MjUyMjQxNiwtMTk4ODE0MDQyLC0xNj
+eyJoaXN0b3J5IjpbLTg5NTg4OTQzNSwtMTk4ODE0MDQyLC0xNj
 E5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0MTc3MjgsMzkxMjY5
 ODcwXX0=
 -->
