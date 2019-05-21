@@ -1,8 +1,8 @@
 # Das Projekt "FX" und die Integration von Micro-Frontends über Web-Components
 
 Mit dem Projekt FX erstellt EOS eine neue zentrale Anwendung für die Inkassobearbeitung. 
-FX besteht aus (zur Zeit) ca. 50 Self-Contained-Systems, die jeweils für eine bestimmte Fachlichkeit verantwortlich sind (Zahlungszuordnung, Buchhaltung, Ablaufsteuerung, Daten-Analyse, ...). 
-Jedes Self-Contained-System hat eine unabhängige Datenhaltung (teilweise SQL, teilweise NoSQL) und liefert die für den Aufruf der eigenen Services benötigten Oberflächen aus (Micro-Frontends).
+FX besteht aus (zur Zeit) ca. 50 Self-Contained-Systems, die jeweils für eine bestimmte Fachlichkeit verantwortlich sind (z.B. Zahlungszuordnung, Buchhaltung, Ablaufsteuerung, Daten-Analyse, ...). 
+Jedes Self-Contained-System hat eine unabhängige Datenhaltung (Postrgres, Mongo, Elastic Search, ...) und liefert die für den Aufruf der eigenen Services benötigten Oberflächen aus (Micro-Frontends).
 Untereinander kommunizieren die Self-Contained-Systems asynchron über Kafka.
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190521-02/images/fx.png"/>
@@ -636,6 +636,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODgxNDA0MiwtMTYxOTAzNjc5OCwtMT
-U1MTk1MDE2NywtNTU1NDE3NzI4LDM5MTI2OTg3MF19
+eyJoaXN0b3J5IjpbOTY2NTkwMjkxLC0xOTg4MTQwNDIsLTE2MT
+kwMzY3OTgsLTE1NTE5NTAxNjcsLTU1NTQxNzcyOCwzOTEyNjk4
+NzBdfQ==
 -->
