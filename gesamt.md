@@ -14,9 +14,6 @@ Wir haben uns für Web Components als Werkzeug zur Integration unserer Micro-Fro
 * Web-Standard
 * Abhängigkeit zum verwendeten Framework (hier React) bleibt auf das einzelne Micro-Frontend beschränkt.
 
-Wo Licht ist, ist natürlich auch Schatten. Auf die vorhandenen Nachteile werden wir genauer eingehen, wenn es um die Details der Micro-Frontend Integration in unserem Projekt geht.
-
-
 # UI und Microservices
 
 Microservices haben sich im Backend Bereich in vielen Projekten als erfolgreiches Architektur-Pattern etabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, dass es schwierig ist aus einer Vielzahl einzelner Frontends (Micro-Frontends) eine Lösung mit einem einheitlichen Look-And-Feel und einer konsistenten User-Experience herzustellen. Aus diesem Grund gibt es auch verschiedene Ansätze, mit dieser Herausforderung umzugehen:
@@ -654,7 +651,7 @@ Nachteile:
 	Z.B. führen die beiden `select-company`-Custom-Elements  auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTQ1NjI4NDMsLTEwNTYzNzk1MjcsLT
-E5ODgxNDA0MiwtMTYxOTAzNjc5OCwtMTU1MTk1MDE2NywtNTU1
-NDE3NzI4LDM5MTI2OTg3MF19
+eyJoaXN0b3J5IjpbODQ0ODIzODQyLC0xMDU2Mzc5NTI3LC0xOT
+g4MTQwNDIsLTE2MTkwMzY3OTgsLTE1NTE5NTAxNjcsLTU1NTQx
+NzcyOCwzOTEyNjk4NzBdfQ==
 -->
