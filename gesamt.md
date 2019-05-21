@@ -587,13 +587,14 @@ customElements.define("company-correlation",
 
 ## Die React-Component "CompanyCorrelation"
 
-Das Custom Element `company-correlation` gibt die Attribute `short-x` und `short-y` an die React Component als Properties `shortX` bzw. `shortY` weiter. Diese lädt bei jeder Änderung ihrer Properties (React-Lifecycle-Methode `componentDidUpdate()`) die historischen Kursdaten der jeweilige Company über einen Service-Call vom System "StockHistory":
+Das Custom Element `company-correlation` gibt die Attribute `short-x` und `short-y` an die React Component `CompanyCorrelation` als Properties `shortX` bzw. `shortY` weiter. Diese lädt bei jeder Änderung ihrer Properties (React-Lifecycle-Methode `componentDidUpdate()`) die historischen Kursdaten der jeweilige Company über einen Service-Call vom System "StockHistory":
 
-*Bild 7 - Das System "StockPrice"*
+*Bild 7 - Das System "StockPrice" mit Micro-Frontend*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190520-03/oliver/companyCorrelation.png"/>
 
 Die Kursdaten werden dann im State der React-Component abgelegt:
 
+*Listing 11 - React Component `CompanyCorrelation.tsx` (Auszug)*
 ```
 export interface EndOfDayPrice {  
     date: string;  
@@ -635,7 +636,7 @@ export class CompanyCorrelation extends
 }
 ```
 
-Der komplette Code der React-Component `CompanyCorrelation` ist etwas komplexer. Der Einfachheit wegen soll er hier nicht im Einzelnen gezeigt werden. Interessierte finden den Code unter [http://bit.ly/companyCorrelation](http://bit.ly/companyCorrelation).
+Der komplette Code der React Component `CompanyCorrelation` ist etwas komplexer. Der Einfachheit wegen soll er hier nicht im Einzelnen gezeigt werden. Interessierte finden den Code unter [http://bit.ly/companyCorrelation](http://bit.ly/companyCorrelation).
 
 ## Fazit
 
@@ -652,7 +653,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzQwMjMyMzMsLTEwNTYzNzk1MjcsLT
-E5ODgxNDA0MiwtMTYxOTAzNjc5OCwtMTU1MTk1MDE2NywtNTU1
-NDE3NzI4LDM5MTI2OTg3MF19
+eyJoaXN0b3J5IjpbLTE2NTY2NzU3MSwtMTA1NjM3OTUyNywtMT
+k4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0
+MTc3MjgsMzkxMjY5ODcwXX0=
 -->
