@@ -366,7 +366,7 @@ Wie oben schon erwähnt, haben wir uns bei der Implementierung der Custom Elemen
 
 Mit diesen Prinzipien sieht die Implementierung (`SelectCompanyElement.tsx`) des Custom Elements `select-company` folgendermaßen aus:
 
-*Listing 7 - `SelectCompanyElemen
+*Listing 7 - `SelectCompanyElement.tsx`*
 ```
 import * as React from "react";  
 import * as ReactDOM from "react-dom";  
@@ -392,16 +392,17 @@ customElements.define("select-company", SelectCompanyElement);
 ```
 * `SelectCompany` ist die React-Component, in der sich die eigentliche Funktionalität des Micro-Frontends befindet
 * `Company` ist ein einfaches Interface, das die Daten beschreibt, wie sie vom Service "companies" kommen:
-```
-export interface Company {  
-    short: string;  
-    full: string;  
-}
-```
+	```
+	export interface Company {  
+	    short: string;  
+	    full: string;  
+	}
+	```
 * Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Aufruf des Service "companies" innerhalb der React-Component statt. Darum geben wir der React-Component über die Property `basedir` die Adresse mit, von der aus der Code des Custom Elements ausgeliefert wurde. Denn dort kann die React-Component auch den Service finden. 
 	Diese Adresse holen wir uns über: 
 	```
-	const scriptPath = document.currentScript.getAttribute("src")
+	const scriptPath = 
+		document.currentScript.getAttribute("src")
 	```
 	und schnibbeln dann einfach das letzte Pfad-Element (den Namen des JavaScript-Files) weg:
 	```
@@ -645,7 +646,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3OTg0MzU0NSwtMTA1NjM3OTUyNywtMT
+eyJoaXN0b3J5IjpbLTkxMTE5MjMzOCwtMTA1NjM3OTUyNywtMT
 k4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0
 MTc3MjgsMzkxMjY5ODcwXX0=
 -->
