@@ -283,7 +283,7 @@ Beim näheren Betrachten dieses Beispiels wird deutlich, dass die Custom Element
 ## Web-Components aber einfach
 
 Die direkte Benutzung der Web-Components-API ist für kleinere Aufgaben ausreichend. Auch für spezialisierte Aufgaben, wie die Integration von Micro-Frontends, sind die Custom Elements durchaus geeignet.
- für umfangreichre Projekte jedoch zu rudimentär. Aus diesem Grund existieren mittlerweile einige Frameworks und Libraries um genau an diesem Punkt Abhilfe zu schaffen. Zu nennen ist vor allem stencil.js, von den Ionic Machern. Dieses Tool stellt einen Compiler zur Verfügung der den stencil.js Code direkt in die passenden Web-Components API Aufrufe übersetzt. Eine andere  Alternative ist LitElement (https://lit-element.polymer-project.org) von Google oder SkateJS (https://skatejs.netlify.com).
+Wem die Spezifikationen des Web-Component-Standards zu rudimentär sind, kann inzwischen in schaffen. Zu nennen ist vor allem stencil.js, von den Ionic Machern. Dieses Tool stellt einen Compiler zur Verfügung der den stencil.js Code direkt in die passenden Web-Components API Aufrufe übersetzt. Eine andere  Alternative ist LitElement (https://lit-element.polymer-project.org) von Google oder SkateJS (https://skatejs.netlify.com).
 
 # Integration von zwei Micro-Frontends über Custom Elements am konkreten Beispiel
 Im Folgenden wollen wir zeigen, wie wir Custom Elements zur Integration von Micro-Frontends in einem großen Projekt in der Finanzindustrie mit über 40 Self-Contained-Systems eingesetzt haben. 
@@ -637,7 +637,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDQ3OTI2NTIsLTEwNTYzNzk1MjcsLT
-E5ODgxNDA0MiwtMTYxOTAzNjc5OCwtMTU1MTk1MDE2NywtNTU1
-NDE3NzI4LDM5MTI2OTg3MF19
+eyJoaXN0b3J5IjpbNDk0NDM1NDAsLTEwNTYzNzk1MjcsLTE5OD
+gxNDA0MiwtMTYxOTAzNjc5OCwtMTU1MTk1MDE2NywtNTU1NDE3
+NzI4LDM5MTI2OTg3MF19
 -->
