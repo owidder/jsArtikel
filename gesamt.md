@@ -47,13 +47,14 @@ Bevor es aber an die Details der Spezifikation geht, lohnt sich ein kurzer Abste
 
 ## Native
 
-Benutzer von Firefox, Chrome und Safari können sich freuen, da alle wichtigen Aspekte wie "Custom Elements", "Shadow Dom" und "HTML templates" unterstützt werden. Bei der Verwendung von Safari muss man lediglich mit einer kleinen Einschränkung leben, da nur  "Autonomous custom elements" aber keine "Customized built-in elements" verwendet werden können. Das bedeutet, dass in Safari zwar eigene Komponenten erstellt und verwendet werden können, die aber keine Möglichkeit bieten, Eigenschaften von bestehenden HTML-Elementen (wie z.B. von einem Button) wiederzuverwenden (http://bit.ly/customized-builtin-example).
+Benutzer von Firefox, Chrome und Safari können sich freuen, da alle wichtigen Aspekte wie *Custom Elements*, *Shadow Dom* und *HTML Templates* unterstützt werden. 
+Bei der Verwendung von Safari muss man lediglich mit einer kleinen Einschränkung leben, da nur  "Autonomous custom elements" aber keine "Customized built-in elements" verwendet werden können. Das bedeutet, dass in Safari zwar eigene Komponenten erstellt und verwendet werden können, die aber keine Möglichkeit bieten, Eigenschaften von bestehenden HTML-Elementen (wie z.B. von einem Button) wiederzuverwenden (http://bit.ly/customized-builtin-example).
 
 IE und Edge, die Browser von Microsoft, bieten zum derzeitigen Zeitpunkt keine Unterstützung für Web-Components. Für die Zukunft ist aber auch hier Besserung zu erwarten. Die zukünftige Version von Edge wird auf Chromium, der Open-Source Variante von Chrome, aufbauen und damit dann ebenfalls die Web-Components Spezifikation vollständig unterstützen.
 
 ## Polyfill
 
-Für neuere Browser, außer Microsoft Edge, sieht die Web-Components Unterstützung  gut aus, für alle anderen gibt es ein Polyfill. Nähere Informationen zu Verwendung und Installation finden Sie unter https://www.webcomponents.org/polyfills. Dieses Poylfill rüstet sowohl die "Custom Elements" API als auch die "Shadow DOM" API für ältere Browser nach. Bei der Verwendung der "Shadow DOM" API ist allerdings Vorsicht geboten, da es negative Auswirkungen auf die Render-Performanz einer Seite haben kann. 
+Für neuere Browser, außer Microsoft Edge, sieht die Web-Components Unterstützung  gut aus, für alle anderen gibt es ein Polyfill. Nähere Informationen zu Verwendung und Installation finden Sie unter https://www.webcomponents.org/polyfills. Dieses Poylfill rüstet sowohl die Custom-Elements-API als auch die Shadow-Dom-API für ältere Browser nach. Bei der Verwendung der "Shadow DOM" API ist allerdings Vorsicht geboten, da es negative Auswirkungen auf die Render-Performanz einer Seite haben kann. 
 
 # Was sind Web Components
 
@@ -652,7 +653,8 @@ Nachteile:
 	Z.B. führen die beiden `select-company`-Custom-Elements  auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUyNTgzNjU0LDY1MzQzMzc5Nyw4NDQ4Mj
-M4NDIsLTEwNTYzNzk1MjcsLTE5ODgxNDA0MiwtMTYxOTAzNjc5
-OCwtMTU1MTk1MDE2NywtNTU1NDE3NzI4LDM5MTI2OTg3MF19
+eyJoaXN0b3J5IjpbLTMwOTExODM2Niw2NTM0MzM3OTcsODQ0OD
+IzODQyLC0xMDU2Mzc5NTI3LC0xOTg4MTQwNDIsLTE2MTkwMzY3
+OTgsLTE1NTE5NTAxNjcsLTU1NTQxNzcyOCwzOTEyNjk4NzBdfQ
+==
 -->
