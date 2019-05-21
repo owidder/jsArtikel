@@ -122,7 +122,7 @@ Der Parameter `{mode: 'open'}` sagt der API übrigens, dass wir auf das Versteck
 
 Die Shadow-DOM-Spezifikation ist neben der Custom-Elements-Spezifikation der wichtigste Bestandteil der Web-Components-Spezifikation. Leider mussten wir im Laufe unseres Projekts feststellen, dass sie für unser Projekt mehr Probleme verursacht als löst. Das hat folgende Gründe:
 
-* React Events und Shadow-Dom vertragen sich nicht, da Reacts Event System keine Events von Custom Elements" empfangen kann. Am Anfang haben wir das durch eine von uns gepatchte React Version umgangen, was es aber schwierig machte auf neue React Versionen zu migrieren.
+* React Events und Shadow Dom vertragen sich nicht, da Reacts Event System keine Events von Custom Elements empfangen kann. Am Anfang haben wir das durch eine von uns gepatchte React Version umgangen, was es aber schwierig machte auf neue React Versionen zu migrieren.
 * Um ein einheitliches Look-And-Feel über alle Micro-Frontends zu gewährleisten hatten wir uns sowieso für ein zentrales Stylesheet entschieden.
 
 Aus diesen Gründen verzichten wir aktuell auf die Verwendung des "Shadow Dom".
@@ -635,7 +635,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYyODE3OTU1LC0xMDU2Mzc5NTI3LC0xOT
-g4MTQwNDIsLTE2MTkwMzY3OTgsLTE1NTE5NTAxNjcsLTU1NTQx
-NzcyOCwzOTEyNjk4NzBdfQ==
+eyJoaXN0b3J5IjpbLTE2Mzg4MjM0MCwtMTA1NjM3OTUyNywtMT
+k4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0
+MTc3MjgsMzkxMjY5ODcwXX0=
 -->
