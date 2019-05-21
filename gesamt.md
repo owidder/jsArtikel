@@ -105,7 +105,7 @@ Wie oben schon erwähnt besteht die Web-Components-Spezifikation aus mehreren AP
 
 Jeder Web-Entwickler, der eins der bekannten Frameworks wie Angular oder React verwendet hat, weiß, dass die sinnvolle Aufteilung einer Applikation in Komponenten die Entwicklung und Weiterentwicklung erheblich vereinfacht. Leider geht diese Struktur verloren, sobald die Inhalte einer Angular oder React Komponente in den Dom-Tree des Browsers eingefügt werden. Aus den sorgsam aufgebauten Komponenten bleibt dann nur noch eine Sammlung von HTML-Tags übrig, die - zumindest ohne den Einsatz spezieller Werkzeuge - insbesondere die Fehlersuche erschweren. Diese Komponenten-Struktur, auch im Dom-Tree des Browsers sichtbar zu machen, ist Aufgabe der "Custom elements" Spezifikation. In *Bild 2* sehen Sie wie die in *Beispiel 1* deklarierte Komponente als Tag *say-hello* im Inspector des Safari-Browsers angezeigt wird. Um dieses Verhalten zu erreichen sind zwei Dinge nötig:
 * unsere Klasse muß von der Klasse `HTMLElement` erben
-* über den Aufruf von `customElements.define` wird unserer Klasse ein HTML-Tag zugeordnet (`<say-hello><`.
+* über den Aufruf von `customElements.define` wird unserer Klasse ein HTML-Tag zugeordnet (`say-hello`).
 
 Dass der Name unseres Tags einen Bindestricht enthält, ist dabei kein Zufall, sondern eine durch die Spezifikation vorgegeben Namenskonvention. Dadurch wird eine Namenskollision mit vorhandenen oder zukünftigen HTML-Tags vermieden. 
 
@@ -120,7 +120,7 @@ Die Verwendung des "Shadow Dom" sehen Sie in Beispiel 1 bei der Verwendung des `
 
 Der Parameter `{mode: 'open'}` sagt der API übrigens, dass wir auf das Verstecken der Implementierungsdetails verzichten.
 
-Die "Shadow DOM" Spezifikation ist neben der "Custom elements" Spezifikation der wichtigste Bestandteil der "Web components" Spezifikation. Leider mussten wir im Laufe unseres Projekts feststellen, das sie für unser Projekt mehr Problem verursacht als löst. Das hat folgende Gründe:
+Die "Shadow DOM" Spezifikation ist neben der "Custom elements" Spezifikation der wichtigste Bestandteil der "Web components" Spezifikation. Leider mussten wir im Laufe unseres Projekts feststellen, das sie für unser Projekt mehr Probleme verursacht als löst. Das hat folgende Gründe:
 
 * React Events und "Shadow dom" vertragen sich nicht, da Reacts Event System keine Events von "Custom elements" empfangen kann. Am Anfang haben wir das durch eine von uns gepatchte React Version umgangen, was es aber schwierig machte auf neue React Versionen zu migrieren.
 * Um ein einheitliches Look-And-Feel über alle Micro-Frontends zu gewährleisten hatten wir uns sowieso für ein zentrales Stylesheet entschieden.
@@ -635,7 +635,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY3MjgyMTUzLC0xMDU2Mzc5NTI3LC0xOT
+eyJoaXN0b3J5IjpbNjQzNDUzNTUzLC0xMDU2Mzc5NTI3LC0xOT
 g4MTQwNDIsLTE2MTkwMzY3OTgsLTE1NTE5NTAxNjcsLTU1NTQx
 NzcyOCwzOTEyNjk4NzBdfQ==
 -->
