@@ -645,8 +645,8 @@ Unsere Erfahrungen mit Custom Elements für die Integration von Micro-Frontends 
 
 Nachteile:
 * Seiten, die viele Micro-Frontends einbinden, müssen von vielen Systemen JavaScript-Files laden.
-* Entwicklungsprozess schwieriger, da während der Entwicklung des eigenen Frontends, auf die Web-Components anderer Systemen zugegriffen werden muß.
-* Build-Prozeß ist aufwendiger.
+* Entwicklungsprozess ist schwieriger, da während der Entwicklung des eigenen Frontends, auf die Web-Components anderer Systemen zugegriffen werden muß.
+* Der Build-Prozeß ist aufwendiger.
 * Zusätzliche Komplexität durch die Verwendung von Custom Elements.
 * Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
 	Z.B. führen die beiden `select-company`-Custom-Elements  auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
