@@ -65,7 +65,7 @@ Web Components ist erst einmal nur eine Meta-Spezifikation für folgende Spezifi
 * ES Modules
 * HTML Templates
 
-Wenn ein Browser diese APIs gemäß der Spezifikationen implementiert, können Sie eigene Elemente definieren und diese als neue Tags in einer HTML-Seite verwenden. Eine einfache Deklaration einer "Web-Component" sehen Sie in Listing 1.
+Wenn ein Browser diese APIs gemäß der Spezifikationen implementiert, können Sie eigene Elemente definieren und diese als neue Tags in einer HTML-Seite verwenden. Eine einfache Deklaration einer Web Component sehen Sie in Listing 1.
 
 *Listing 1 - hello.html*
 ```HTML
@@ -88,10 +88,9 @@ Wenn ein Browser diese APIs gemäß der Spezifikationen implementiert, können S
      <p>I'm not red</p>
 </body>
 </html>
-
 ```
 
-Laden Sie diese Seite in einem Browser, der die nötigen APIs unterstützt, wird eine Seite mit dem Text "hello again" angezeigt. Die Erklärungen zu diesem Beispiel finden Sie in den folgenden Abschnitten über die einzelnen Bestandteile der Web-Components Spezifikation.
+Laden Sie diese Seite in einem Browser, der die nötigen APIs unterstützt, wird eine Seite mit dem Text "hello again" angezeigt (http://bit.ly/hello-example). Die Erklärungen zu diesem Beispiel finden Sie in den folgenden Abschnitten über die einzelnen Bestandteile der Web-Components Spezifikation.
 
 # Die APIs
 
@@ -653,8 +652,8 @@ Nachteile:
 	Z.B. führen die beiden `select-company`-Custom-Elements  auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4NTQ3NjIxMSw2NTM0MzM3OTcsODQ0OD
-IzODQyLC0xMDU2Mzc5NTI3LC0xOTg4MTQwNDIsLTE2MTkwMzY3
-OTgsLTE1NTE5NTAxNjcsLTU1NTQxNzcyOCwzOTEyNjk4NzBdfQ
-==
+eyJoaXN0b3J5IjpbMjAwOTQ2MzQyNywxOTg1NDc2MjExLDY1Mz
+QzMzc5Nyw4NDQ4MjM4NDIsLTEwNTYzNzk1MjcsLTE5ODgxNDA0
+MiwtMTYxOTAzNjc5OCwtMTU1MTk1MDE2NywtNTU1NDE3NzI4LD
+M5MTI2OTg3MF19
 -->
