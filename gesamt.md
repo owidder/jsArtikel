@@ -31,7 +31,7 @@ Bevor es an die Details unserer Verwendung vom Web-Components geht, lohnt es sic
 
 1992 wurde Visual-Basic 2.0 von Microsoft der Öffentlichkeit präsentiert. Neben neuen Sprachfeatures für objekt-orientierte Programmierung bot Visual-Basic mit der VBX (Visual-Basic-Extension) Schnittstelle die Möglichkeit, beliebige UI-Komponenten anderer Hersteller in eigenen Programme zu verwenden. 1995 zog dann Borland mit Delphi 1.0 und der Visual-Component Library nach. Java unternahm dann 1997 mit Swing und JavaBeans ebenfalls den Versuch an diese Erfolge anzuknüpfen. Mit allerdings eher mäßigem Erfolg, da sich im Gegensatz zu den Komponenten-Modellen von Microsoft oder Borland eine eher begrenzte 3rd-Party-Unterstützung entwickelte. 
 
-Die zunehmender Verbreitung des Web und Konzepten wie SPAs (Single-Page-Applications) sowie neuen Frameworks wie Angular oder React erlaubte es dann den Web-Entwicklern, die im Desktop-Umfeld bereits erfolgreiche Komponenten basierte Entwicklung für Web-Anwendungen zu verwenden.
+Die zunehmende Verbreitung des Web und von Konzepten wie SPAs (Single-Page-Applications) sowie neuen Frameworks wie Angular oder React erlaubte es dann den Web-Entwicklern, die im Desktop-Umfeld bereits erfolgreiche Komponenten basierte Entwicklung für Web-Anwendungen zu verwenden.
 
 Auch wenn diese Beispiele alle aus dem UI Umfeld stammen, muss es sich bei einer Komponente nicht unbedingt um eine UI-Komponente handeln. Grundlegende Voraussetzung für eine Komponente ist lediglich eine definierte Schnittstelle um verschiedene Komponenten verknüpfen und in eigene Anwendungen integrieren zu können.   
 
@@ -43,11 +43,11 @@ Aus diesem Grund wurde 2012 der erste Entwurf der Web-Components Spezifikation v
 
 # Browser Support
 
-Bevor es aber an die Details der Spezifikation geht, lohn sich ein kurzer Abstecher zu "Can I Use" (https://caniuse.com/#search=components) um zu prüfen, wie es um den Browser Support dieser Spezifikation bestellt ist. 
+Bevor es aber an die Details der Spezifikation geht, lohnt sich ein kurzer Abstecher zu "Can I Use" (https://caniuse.com/#search=components), um zu prüfen, wie es um den Browser Support dieser Spezifikation bestellt ist. 
 
 ## Native
 
-Benutzer von Firefox, Chrome und Safari  können sich freuen, da alle wichtigen Aspekte wie "Custom Elements", "Shadow Dom" und "HTML templates" unterstützt werden. Bei der Verwendung von Safari muss man lediglich mit einer kleinen Einschränkung leben, da nur  "Autonomous custom elements" aber keine "Customized built-in elements" verwendet werden können. Das bedeutet, dass in Safari zwar eigene Komponenten erstellt und verwendet werden können, die aber keine Möglichkeit bieten, Eigenschaften von bestehenden HTML-Elementen (wie z.B. von einem Button) wiederzuverwenden (http://bit.ly/customized-builtin-example).
+Benutzer von Firefox, Chrome und Safari können sich freuen, da alle wichtigen Aspekte wie "Custom Elements", "Shadow Dom" und "HTML templates" unterstützt werden. Bei der Verwendung von Safari muss man lediglich mit einer kleinen Einschränkung leben, da nur  "Autonomous custom elements" aber keine "Customized built-in elements" verwendet werden können. Das bedeutet, dass in Safari zwar eigene Komponenten erstellt und verwendet werden können, die aber keine Möglichkeit bieten, Eigenschaften von bestehenden HTML-Elementen (wie z.B. von einem Button) wiederzuverwenden (http://bit.ly/customized-builtin-example).
 
 IE und Edge, die Browser von Microsoft, bieten zum derzeitigen Zeitpunkt keine Unterstützung für Web-Components. Für die Zukunft ist aber auch hier Besserung zu erwarten. Die zukünftige Version von Edge wird auf Chromium, der Open-Source Variante von Chrome, aufbauen und damit dann ebenfalls die Web-Components Spezifikation vollständig unterstützen.
 
@@ -652,8 +652,7 @@ Nachteile:
 	Z.B. führen die beiden `select-company`-Custom-Elements  auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTIzNjIwMjcsNjUzNDMzNzk3LDg0ND
-gyMzg0MiwtMTA1NjM3OTUyNywtMTk4ODE0MDQyLC0xNjE5MDM2
-Nzk4LC0xNTUxOTUwMTY3LC01NTU0MTc3MjgsMzkxMjY5ODcwXX
-0=
+eyJoaXN0b3J5IjpbMzUyNTgzNjU0LDY1MzQzMzc5Nyw4NDQ4Mj
+M4NDIsLTEwNTYzNzk1MjcsLTE5ODgxNDA0MiwtMTYxOTAzNjc5
+OCwtMTU1MTk1MDE2NywtNTU1NDE3NzI4LDM5MTI2OTg3MF19
 -->
