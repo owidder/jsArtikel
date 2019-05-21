@@ -1,3 +1,10 @@
+# Das Projekt "FX" und die Integration von Micro-Frontends über Web-Components
+
+Mit dem Projekt FX erstellt EOS eine neue zentrale Anwendung für die Inkassobearbeitung. 
+FX besteht aus (zur Zeit) ca. 50 Self-Contained-Systems, die jeweils für eine bestimmte Fachlichkeit verantwortlich sind (Zahlungszuordnung, Buchhaltung, Ablaufsteuerung, Daten-Analyse, ...)
+
+
+
 # UI und Microservices
 
 Microservices haben sich im Backend Bereich in vielen Projekten als erfolgreiches Architektur-Pattern etabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, dass es schwierig ist aus einer Vielzahl einzelner Frontends (Micro-Frontends) eine Lösung mit einem einheitlichen Look-And-Feel und einer konsistenten User-Experience herzustellen. Aus diesem Grund gibt es auch verschiedene Ansätze mit dieser Herausforderung umzugehen:
@@ -126,7 +133,7 @@ Die "ES Module" Spezifikation definiert ein API, die es erlaubt, JavaScript Doku
 python -m SimpleHTTPServer 8000
 ```
 
-Die Seite können Sie dann über die URL http://localhost:8000/example4.html laden und der Text "hello again" erscheint dann wie erwartet im Browser Fenster.
+Die Seite können Sie dann über die URL http://localhost:8000/import.html laden und der Text "hello again" erscheint dann wie erwartet im Browser Fenster.
 
 
 *Beispiel 4 - say-hello.js*
@@ -154,6 +161,8 @@ customElements.define('say-hello', SayHello);
     </body>
 </html>
 ```
+
+Wahlweise können Sie das auch hier betrachten: [http://bit.ly/say-hello-example](http://bit.ly/say-hello-example)
 
 ## HTML Templates
 
@@ -621,5 +630,6 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1NTQxNzcyOCwzOTEyNjk4NzBdfQ==
+eyJoaXN0b3J5IjpbLTE2MTkwMzY3OTgsLTE1NTE5NTAxNjcsLT
+U1NTQxNzcyOCwzOTEyNjk4NzBdfQ==
 -->
