@@ -310,10 +310,9 @@ Jedes Self-Contained-System liefert sein Micro-Frontend (JavaScript-File mit dem
 So hostet z.B. das System "Company" das JavaScript-File `selectComponentElement.js`, das den Code für das Custom Element `select-company` enthält.
 Jedes Custom Element greift wiederum nur auf Services des Self-Contained-Systems zu, von dem es ausgeliefert wurde.
 
-Darüber hinaus existiert das System "StockPrice", dass allerdings lediglich die Web-Seite ausliefert, die die Micro-Frontends von "Company" und "StockHistory" einbindet. (Genauso gut könnte aber auch "Company" oder "StockHistory" die Seite ausliefern)
+Darüber hinaus existiert das System "StockPrice", das allerdings lediglich die Web-Seite ausliefert, die die Micro-Frontends von "Company" und "StockHistory" einbindet. (Genauso gut könnte aber auch "Company" oder "StockHistory" die Seite ausliefern)
 
-
-*Bild 3 - Systeme und Micro-Frontends von der Anwendung "StockPrice"*
+*Bild 4 - Systeme und Micro-Frontends von der Anwendung "StockPrice"*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190520-01/oliver/StockPrice.png"/>
 
 Wir gehen hier davon aus, dass alle Self-Contained-Systems hinter einem Reverse-Proxy unterhalb derselben Domain zu erreichen sind. Das ist für Anwendungen, die aus vielen Self-Contained-Systems bestehen nicht ungewöhnlich. 
@@ -332,12 +331,12 @@ Das Self-Contained-System "Company" stellt einen Service mit Namen "companies" z
 
 Neben dem Service "companies" liefert das Self-Contained-System "Company" auch ein Micro-Frontend aus. Dieses Micro-Frontend (ein JavaScript-File) enthält ein Custom Element mit Namen `select-company`, das wiederum den Service "companies" aufruft. 
 
-*Bild 4 - "Company" mit Micro-Frontend*
+*Bild 5 - Das System "Company" mit Micro-Frontend*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190520-02/oliver/company.png"/>
 
 `select-company` rendert sich als Eingabefeld mit Autocompletion-Funktionalität, über das eine Firma aus dem Dow Jones eingegeben werden kann.
 
-*Bild 5 - Das Micro-Frontend von "Companies"*
+*Bild 6 - Das Micro-Frontend von "Companies"*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190516-02/oliver/selectCompany.png"/>
 
 Verwenden kann man das Element z.B. so:
@@ -645,7 +644,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxMjAxMTQ0NSwtMTA1NjM3OTUyNywtMT
-k4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0
-MTc3MjgsMzkxMjY5ODcwXX0=
+eyJoaXN0b3J5IjpbLTExNjgzMjQxMjAsLTEwNTYzNzk1MjcsLT
+E5ODgxNDA0MiwtMTYxOTAzNjc5OCwtMTU1MTk1MDE2NywtNTU1
+NDE3NzI4LDM5MTI2OTg3MF19
 -->
