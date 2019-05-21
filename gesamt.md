@@ -297,14 +297,14 @@ Mit der aus zwei Micro-Frontends bestehenden Beispiel-Anwendung "StockPrice" kan
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190515-01/oliver/correlationApp.png"/>
 
 Dazu kann man in den beiden Automplete-Eingabefeldern am oberen Rand jeweils eine Firma (aus dem Dow Jones) eingeben. Hat man beide Firmen eingegeben, wird der Chart angezeigt. 
-Live kann man die Anwendung hier sehen: [http://bit.ly/stockprice-page](http://bit.ly/stockprice-page)
+Live kann man die Anwendung hier sehen: http://bit.ly/stockprice-page
 
 ## Die Self-Contained-Systems "Company" und "StockHistory"
-Die Anwendung "StockPrice" besteht aus den zwei Self-Contained-Systems (SCS) "Company" und "StockHistory", deren Micro-Frontends auf einer Web-Seite mit Hilfe von Custom Elements integriert werden:
-1. SCS "Company": Stellt einen Service zur Verfügung, über den Namen und Abkürzungen aller Dow-Jones-Companies abgeholt werden können. Das Micro-Frontend ist ein Eingabefeld mit Autocompletion.
-	Es kann über ein Custom Element mit Namen `<select-company/>` eingebunden werden kann.
-2. SCS "StockHistory": Stellt einen Service zur Verfügung, über den die historischen Aktienkurse abgefragt werden können. Das Micro-Frontend ist der Scatterplot-Chart. 
-	Er kann über ein Custom Element mit Namen `<company-correlation/>` eingebunden werden.
+Die Anwendung "StockPrice" besteht aus den zwei Self-Contained-Systems "Company" und "StockHistory", deren Micro-Frontends auf einer Web-Seite mit Hilfe von Custom Elements integriert werden:
+1. "Company": Stellt einen Service zur Verfügung, über den Namen und Abkürzungen aller Dow-Jones-Companies abgeholt werden können. Das Micro-Frontend ist ein Eingabefeld mit Autocompletion.
+	Es kann über ein Custom Element mit Namen `select-company` eingebunden werden kann.
+2. "StockHistory": Stellt einen Service zur Verfügung, über den die historischen Aktienkurse abgefragt werden können. Das Micro-Frontend ist der Scatterplot-Chart. 
+	Er kann über ein Custom Element mit Namen `company-correlation` eingebunden werden.
 
 Jedes Self-Contained-System liefert sein Micro-Frontend (JavaScript-File mit dem Code des Custom Elements) selber aus. 
 So hostet z.B. das System "Company" das JavaScript-File `selectComponentElement.js`, das den Code für das Custom Element `<select-company/>` enthält.
@@ -639,7 +639,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTE0NjY4OTgsLTEwNTYzNzk1MjcsLT
-E5ODgxNDA0MiwtMTYxOTAzNjc5OCwtMTU1MTk1MDE2NywtNTU1
-NDE3NzI4LDM5MTI2OTg3MF19
+eyJoaXN0b3J5IjpbLTk5MTEwODA0MSwtMTA1NjM3OTUyNywtMT
+k4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0
+MTc3MjgsMzkxMjY5ODcwXX0=
 -->
