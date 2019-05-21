@@ -554,6 +554,7 @@ document.getElementById("selectCompany2").onChangeCompany =
 
 Im Gegensatz zu `select-company` besitzt `company-correlation` Attribute, die sich auch mehrfach ändern können. Dafür müssen wir im Custom Element die Lifecycle-Methode `attributeChangedCallback()` implementieren:
 
+*Listing 10 - Custom Element `CompanyCorrela
 ```
 class CompanyCorrelationElement extends HTMLElement {  
   
@@ -650,7 +651,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM2NDI4NDU3LC0xMDU2Mzc5NTI3LC0xOT
+eyJoaXN0b3J5IjpbODgzNDcyMTcxLC0xMDU2Mzc5NTI3LC0xOT
 g4MTQwNDIsLTE2MTkwMzY3OTgsLTE1NTE5NTAxNjcsLTU1NTQx
 NzcyOCwzOTEyNjk4NzBdfQ==
 -->
