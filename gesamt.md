@@ -122,7 +122,7 @@ Die Verwendung des Shadow Dom sehen Sie in Beispiel 1 bei Aufruf von `this.attac
 
 Der Parameter `{mode: 'open'}` sagt der API übrigens, dass wir auf das Verstecken der Implementierungsdetails verzichten.
 
-Die Shadow-DOM-Spezifikation ist neben der Custom-Elements-Spezifikation der wichtigste Bestandteil der Web-Components-Spezifikation. Leider mussten wir im Laufe unseres Projekts feststellen, dass sie für unser Projekt mehr Probleme verursacht als löst. Das hat folgende Gründe:
+Die Shadow-Dom-Spezifikation ist neben den Custom Elements der wichtigste Bestandteil der Web-Components-Spezifikation. Leider mussten wir im Laufe unseres Projekts feststellen, dass sie für unser Projekt mehr Probleme verursacht als löst. Das hat folgende Gründe:
 
 * React Events und Shadow Dom vertragen sich nicht, da Reacts Event System keine Events von Custom Elements empfangen kann. Am Anfang haben wir das durch eine von uns gepatchte React Version umgangen, was es aber schwierig machte auf neue React Versionen zu migrieren. Das Problem ist heute noch nicht gelöst (http://bit.ly/react-shadow-dom)
 * Um ein einheitliches Look-And-Feel über alle Micro-Frontends zu gewährleisten hatten wir uns sowieso für ein zentrales Stylesheet entschieden.
@@ -175,7 +175,7 @@ Wahlweise können Sie das auch hier betrachten: [http://bit.ly/say-hello-example
 
 Die Spezifikation für *HTML Templates* beschäftigt sich mit der Fragestellung wie HTML-Code Fragmente von HTML definiert und wiederverwendet werden können. HTML Templates sind daher auch ohne Web-Components verwendbar und Web-Components können auch ohne HTML Templates entwickelt werden. Die Verwendung von Templates erleichtert aber die Entwicklung von Web Components und erlaubt die klare Trennung von Code und Markup.
 
-In Beispiel 3 sehen Sie wie "HTML Templates" verwendet werden. Das Beispiel zeigt darüberhinaus die Verwendung von sogenannten *Slots*. Slots erlauben es, HTML-Fragmente anzugeben, die den entsprechend benannten Part im Template ersetzen. Bei der Ausführung von Beispiel 5 wird daher 
+In Beispiel 3 sehen Sie wie "HTML Templates" verwendet werden. Das Beispiel zeigt darüberhinaus die Verwendung von sogenannten *Slots*. Sie erlauben es, HTML-Fragmente anzugeben, die den entsprechend benannten Part im Template ersetzen. Bei der Ausführung von Beispiel 5 wird daher 
 ```HTML
 <slot name="and-more"></slot>
 ``` 
@@ -227,7 +227,7 @@ ersetzt durch
 
 # Aus dem Leben einer Komponente
 
-Wie man eine Komponente definiert und verwendet haben Sie in den vorherigen Beispielen gesehen. In Beispiel 6, sehen Sie was man darüber hinaus mit Web-Components noch so alles anstellen kann. Dazu gehört:
+Wie man eine Komponente definiert und verwendet, haben Sie in den vorherigen Beispielen gesehen. In Beispiel 6, sehen Sie was man darüber hinaus mit Web-Components noch so alles anstellen kann. Dazu gehört:
 * die Verwendung von Attributen, um Daten an die Komponente zu übertragen
 * die Verwendung eines Listeners, um auf Ereignisse zu reagieren
 * das Überschreiben von Methoden `observedAttributes` und `connectedCallback`, um die Komponente an die eigenen Bedürfnisse anzupassen.
@@ -636,7 +636,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NzczNDY2OCwtMTA1NjM3OTUyNywtMT
+eyJoaXN0b3J5IjpbMTg5MDE3MTI3NiwtMTA1NjM3OTUyNywtMT
 k4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0
 MTc3MjgsMzkxMjY5ODcwXX0=
 -->
