@@ -333,11 +333,12 @@ Das Self-Contained-System "Company" stellt einen Service mit Namen "companies" z
 
 Neben dem Service "companies" liefert das Self-Contained-System "Company" auch ein Micro-Frontend aus. Dieses Micro-Frontend (ein JavaScript-File) enthält ein Custom Element mit Namen `select-company`, das wiederum den Service "companies" aufruft. 
 
-*Bild 4 - "Company" mot
+*Bild 4 - "Company" mit Micro-Frontend*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190520-02/oliver/company.png"/>
 
-`<select-company/>` rendert sich als Eingabefeld mit Autocompletion-Funktionalität, über das eine Firma aus dem Dow Jones eingegeben werden kann.
+`select-company` rendert sich als Eingabefeld mit Autocompletion-Funktionalität, über das eine Firma aus dem Dow Jones eingegeben werden kann.
 
+*Bild 5 - Das Micro-Frontend von "Companies"*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190516-02/oliver/selectCompany.png"/>
 
 Verwenden kann man das Element z.B. so:
@@ -645,7 +646,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNzAxNjc0NCwtMTA1NjM3OTUyNywtMT
+eyJoaXN0b3J5IjpbMTYxMjAzMzQxOCwtMTA1NjM3OTUyNywtMT
 k4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0
 MTc3MjgsMzkxMjY5ODcwXX0=
 -->
