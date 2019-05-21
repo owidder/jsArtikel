@@ -1,6 +1,6 @@
-# Das Projekt "FX" und die Integration von Micro-Frontends über Web-Components
+# Das Projekt *FX* und die Integration von Micro-Frontends über Web Components
 
-Mit dem Projekt FX erstellt EOS eine neue zentrale Anwendung für die Inkassobearbeitung. 
+Mit dem Projekt *FX* erstellt EOS eine neue zentrale Anwendung für die Inkassobearbeitung. 
 FX besteht aus (zur Zeit) ca. 50 Self-Contained-Systems, die jeweils für eine bestimmte Fachlichkeit verantwortlich sind (z.B. Zahlungszuordnung, Buchhaltung, Ablaufsteuerung, Daten-Analyse, ...). 
 Jedes Self-Contained-System hat eine unabhängige Datenhaltung (Postrgres, Mongo, Elastic Search, ...) und liefert die für den Aufruf der eigenen Services benötigten Oberflächen aus (Micro-Frontends).
 Untereinander kommunizieren die Self-Contained-Systems asynchron über Kafka.
@@ -8,7 +8,7 @@ Untereinander kommunizieren die Self-Contained-Systems asynchron über Kafka.
 *Bild 1 - Das System FX*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190521-02/images/fx.png"/>
 
-Wir haben uns für Web-Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir die Web-Compnents API, um bestehende React-Components zu "wrappen". Die anderen Micro-Frontends benutzen dann die Web-Component ohne zu wissen, dass im Hintergrund React seine Dienste versieht. Dieser Ansatz hat folgende Vorteile:
+Wir haben uns für Web Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir die Web-Compnents-API, um bestehende React Components zu "wrappen". Die anderen Micro-Frontends benutzen dann die Web-Component ohne zu wissen, dass im Hintergrund React seine Dienste versieht. Dieser Ansatz hat folgende Vorteile:
 * einfache Integration im Frontend
 * schlanke API
 * Web-Standard
@@ -654,7 +654,7 @@ Nachteile:
 	Z.B. führen die beiden `select-company`-Custom-Elements  auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1Mzg0ODU2MywtMTA1NjM3OTUyNywtMT
-k4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0
-MTc3MjgsMzkxMjY5ODcwXX0=
+eyJoaXN0b3J5IjpbLTEwOTQ1NjI4NDMsLTEwNTYzNzk1MjcsLT
+E5ODgxNDA0MiwtMTYxOTAzNjc5OCwtMTU1MTk1MDE2NywtNTU1
+NDE3NzI4LDM5MTI2OTg3MF19
 -->
