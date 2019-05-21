@@ -105,18 +105,18 @@ Wie oben schon erwähnt besteht die Web-Components-Spezifikation aus mehreren AP
 
 Jeder Web-Entwickler, der eins der bekannten Frameworks wie Angular oder React verwendet hat, weiß, dass die sinnvolle Aufteilung einer Applikation in Komponenten die Entwicklung und Weiterentwicklung erheblich vereinfacht. Leider geht diese Struktur verloren, sobald die Inhalte einer Angular oder React Komponente in den Dom-Tree des Browsers eingefügt werden. Aus den sorgsam aufgebauten Komponenten bleibt dann nur noch eine Sammlung von HTML-Tags übrig, die - zumindest ohne den Einsatz spezieller Werkzeuge - insbesondere die Fehlersuche erschweren. Diese Komponenten-Struktur, auch im Dom-Tree des Browsers sichtbar zu machen, ist Aufgabe der Custom-Elements-Spezifikation. In *Bild 2* sehen Sie wie die in *Beispiel 1* deklarierte Komponente als Tag `say-hello` im Inspector des Safari-Browsers angezeigt wird. Um dieses Verhalten zu erreichen sind zwei Dinge nötig:
 * unsere Klasse muß von der Klasse `HTMLElement` erben
-* über den Aufruf von `customElements.define` wird unserer Klasse ein HTML-Tag zugeordnet (`say-hello`).
+* über den Aufruf von `customElements.define` wird unserer Klasse ein HTML-Tag zugeordnet (`<say-hello>`).
 
 Dass der Name unseres Tags einen Bindestricht enthält, ist dabei kein Zufall, sondern eine durch die Spezifikation vorgegeben Namenskonvention. Dadurch wird eine Namenskollision mit vorhandenen oder zukünftigen HTML-Tags vermieden. 
 
 ## Shadow Dom
 
-Die Kapselung von HTML Code in einer Komponente löst aber nur ein Teil des Problems. Neben HTML gibt es ja auch noch CSS. Ursprünglich arbeiten CSS Selektoren über alle Elemente einer Seite. Das würde bedeuten, dass wir mit den Styling-Regeln unsere Komponente das umgebende Layout zerstören könnten. Das widerspricht ganz klar dem Konzept einer Komponente, unabhängig und wiederverwendbar zu sein. Aus diesem Grund wurde die "Shadow Dom" Spezifikation ins Leben gerufen. Diese Spezifikation erfüllt 2 Aufgaben:
+Die Kapselung von HTML Code in einer Komponente löst aber nur ein Teil des Problems. Neben HTML gibt es ja auch noch CSS. Ursprünglich arbeiten CSS Selektoren über alle Elemente einer Seite. Das würde bedeuten, dass wir mit den Styling-Regeln unsere Komponente das umgebende Layout zerstören könnten. Das widerspricht ganz klar dem Konzept einer Komponente, unabhängig und wiederverwendbar zu sein. Aus diesem Grund wurde die Shadow-Dom-Spezifikation ins Leben gerufen. Diese Spezifikation erfüllt 2 Aufgaben:
 
 * Style Informationen bleiben innerhalb der Komponente
 * die interne Implementierung der Komponente ist nicht sichtbar
 
-Die Verwendung des "Shadow Dom" sehen Sie in Beispiel 1 bei der Verwendung des `this.attachShadow({mode: 'open'})` Aufrufs. Dieser Aufruf erzeugt für unsere Komponente einen eigenen lokalen "Dom-Tree" und beschränkt dadurch den Geltungsbereich der CSS-Regel. Das `p` Tag nach unserem `<say-hello>` ist daher nicht von der Änderung der Hintergrund Farbe betroffen. 
+Die Verwendung des Shadow Dom sehen Sie in Beispiel 1 bei Aufruf von `this.attachShadow({mode: 'open'})`. Dieser Aufruf erzeugt für unsere Komponente einen eigenen lokalen Dom-Tree und beschränkt dadurch den Geltungsbereich der CSS-Regel. Das `p`-Tag nach unserem `<say-hello>` ist daher nicht von der Änderung der Hintergrund Farbe betroffen. 
 
 Der Parameter `{mode: 'open'}` sagt der API übrigens, dass wir auf das Verstecken der Implementierungsdetails verzichten.
 
@@ -635,7 +635,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0NTA3OTk5NywtMTA1NjM3OTUyNywtMT
+eyJoaXN0b3J5IjpbMTAzOTAxMzQ0MCwtMTA1NjM3OTUyNywtMT
 k4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0
 MTc3MjgsMzkxMjY5ODcwXX0=
 -->
