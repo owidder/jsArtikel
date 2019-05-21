@@ -66,9 +66,9 @@ Web-Components ist erst einmal nur eine Meta-Spezifikation für folgende Spezifi
 * ES Modules
 * HTML Templates
 
-Wenn ein Browser diese APIs gemäß der Spezifikationen implementiert, können Sie eigene Elemente definieren und dieser als neue Tags in einer HTML-Seite verwenden. Eine einfache Deklaration einer "Web-Component" sehen Sie in dem nachfolgenden Beispiel 1.
+Wenn ein Browser diese APIs gemäß der Spezifikationen implementiert, können Sie eigene Elemente definieren und dieser als neue Tags in einer HTML-Seite verwenden. Eine einfache Deklaration einer "Web-Component" sehen Sie in Listing 1.
 
-*Beispiel 1 - hello.html*
+*Listing 1 - hello.html*
 ```HTML
 <html>
 <head>
@@ -135,7 +135,7 @@ React ist übrigens nicht das einzige Framework, das Probleme im Umgang mit Web-
 
 Die ES-Module-Spezifikation definiert ein API, die es erlaubt, JavaScript Dokumente in andere Java-Skript Dokumente einzubinden. Ursprünglich wurde über die HTML-Import-Spezifikation versucht diese Verhalten zu spezifizieren. Diese Spezifikation wurde aber von den Entwicklungen im JavaScript Umfeld überholt. Statt eigene Konzepte zu definieren, wie es die HTML-Import-Spezifikation versuchte bedienen sich ES Modules den aus der JavaScript Entwicklung vertrauten Konzepten. 
 
-Im Beispiel 4 sehen Sie ein Beispiel für die Verwendung von ES Modules. Für das Ausführen dieses Beispiels genügt es nicht mehr, die Datei *import.html* direkt in einem Browser zu öffnen. Man benötigt einen einfachen lokalen Webserver, wie z.B. das *SimpleHTTPServer*-Package von Python:
+In Listing 2 sehen Sie ein Beispiel für die Verwendung von ES Modules. Für das Ausführen dieses Beispiels genügt es nicht mehr, die Datei *import.html* direkt in einem Browser zu öffnen. Man benötigt einen einfachen lokalen Webserver, wie z.B. das *SimpleHTTPServer*-Package von Python:
 
 ```
 python -m SimpleHTTPServer 8000
@@ -143,7 +143,7 @@ python -m SimpleHTTPServer 8000
 
 Die Seite können Sie dann über die URL http://localhost:8000/import.html laden und der Text "hello again" erscheint dann wie erwartet im Browser Fenster.
 
-*Beispiel 2 - say-hello.js*
+*Listing 2 - say-hello.js*
 ```JavaScript
 export class SayHello extends HTMLelement {
     constructor() {
@@ -155,7 +155,7 @@ export class SayHello extends HTMLelement {
 
 customElements.define('say-hello', SayHello);
 ```
-*Beispiel 2 - import.html*
+*L 2 - import.html*
 ```HTML
 <html>
     <head>
@@ -320,9 +320,8 @@ Wir gehen hier davon aus, dass alle Self-Contained-Systems hinter einem Reverse-
 	(So schließt man auch mögliche Probleme mit CORS-Einschränkungen des Browsers aus) 
 
 ## Das Micro-Frontend von "Company"
-Das Self-Contained-System "Company" stellt einen Service mit Namen "companies" zur Verfügung. Er liefert Namen und Abkürzungen aller Firmen aus dem Dow Jones:
+Das Self-Contained-System "Company" stellt einen Service mit Namen "companies" zur Verfügung. Er liefert Namen und Abkürzungen aller Firmen aus dem Dow Jones. Der Response sieht folgendermaßen aus:
 
-*Response des Service "companies"*
 ```
 [
    {"short":"MMM","full":"3M Company"},
@@ -646,7 +645,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMjAzMzQxOCwtMTA1NjM3OTUyNywtMT
-k4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0
-MTc3MjgsMzkxMjY5ODcwXX0=
+eyJoaXN0b3J5IjpbODc4ODk1MjUsLTEwNTYzNzk1MjcsLTE5OD
+gxNDA0MiwtMTYxOTAzNjc5OCwtMTU1MTk1MDE2NywtNTU1NDE3
+NzI4LDM5MTI2OTg3MF19
 -->
