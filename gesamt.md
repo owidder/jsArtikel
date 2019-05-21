@@ -122,11 +122,10 @@ Der Parameter `{mode: 'open'}` sagt der API übrigens, dass wir auf das Versteck
 
 Die Shadow-DOM-Spezifikation ist neben der Custom-Elements-Spezifikation der wichtigste Bestandteil der Web-Components-Spezifikation. Leider mussten wir im Laufe unseres Projekts feststellen, dass sie für unser Projekt mehr Probleme verursacht als löst. Das hat folgende Gründe:
 
-* React Events und Shadow Dom vertragen sich nicht, da Reacts Event System keine Events von Custom Elements empfangen kann. Am Anfang haben wir das durch eine von uns gepatchte React Version umgangen, was es aber schwierig machte auf neue React Versionen zu migrieren.
+* React Events und Shadow Dom vertragen sich nicht, da Reacts Event System keine Events von Custom Elements empfangen kann. Am Anfang haben wir das durch eine von uns gepatchte React Version umgangen, was es aber schwierig machte auf neue React Versionen zu migrieren. Das Problem ist heute noch nicht gelöst (http://bit.ly/react-shadow-dom)
 * Um ein einheitliches Look-And-Feel über alle Micro-Frontends zu gewährleisten hatten wir uns sowieso für ein zentrales Stylesheet entschieden.
 
-Aus diesen Gründen verzichten wir aktuell auf die Verwendung des "Shadow Dom".
-
+Aus diesen Gründen verzichten wir aktuell auf die Verwendung des Shadow Dom.
 
 React ist übrigens nicht das einzige Framework, das Probleme im Umgang mit Web-Components hat. Eine aktuelle Übersicht zum Stand der Kompatibilität von verschiedenen Frameworks und Web-Components finden Sie unter https://custom-elements-everywhere.com.
 
@@ -635,7 +634,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Mzg4MjM0MCwtMTA1NjM3OTUyNywtMT
-k4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0
-MTc3MjgsMzkxMjY5ODcwXX0=
+eyJoaXN0b3J5IjpbLTE3MTM3MDA2OTAsLTEwNTYzNzk1MjcsLT
+E5ODgxNDA0MiwtMTYxOTAzNjc5OCwtMTU1MTk1MDE2NywtNTU1
+NDE3NzI4LDM5MTI2OTg3MF19
 -->
