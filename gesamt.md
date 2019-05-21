@@ -653,7 +653,7 @@ Nachteile:
 
 Vorteile:
 * Komplett unabhängiges Deployment: Da die Custom Elements erst zur Laufzeit geladen werden, kann ein Self-Contained-System seine Micro-Frontends ändern und neu deployen, ohne dass eines der Systeme, die das Micro-Frontend einbinden, neu gebaut und deployt werden muss.
-* Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-System wiederzuverwenden. 
+* Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 	Falls das Micro-Frontend jedoch auch Informationen zurück liefern soll, wie z.B. bei `select-company` benötigt man als komplexere Schnittstelle eine Callback-Function. Im Projekt verwenden wir hierfür auch die Pub/Sub-Library *postal.js* (https://github.com/postaljs/postal.js).
 
