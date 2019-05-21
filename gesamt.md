@@ -5,6 +5,7 @@ FX besteht aus (zur Zeit) ca. 50 Self-Contained-Systems, die jeweils für eine b
 Jedes Self-Contained-System hat eine unabhängige Datenhaltung (Postrgres, Mongo, Elastic Search, ...) und liefert die für den Aufruf der eigenen Services benötigten Oberflächen aus (Micro-Frontends).
 Untereinander kommunizieren die Self-Contained-Systems asynchron über Kafka.
 
+*Das System FX*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190521-02/images/fx.png"/>
 
 Wir haben uns für Web-Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir die Web-Compnents API, um bestehende React-Components zu "wrappen". Die anderen Micro-Frontends benutzen dann die Web-Component ohne zu wissen, dass im Hintergrund React seine Dienste versieht. Dieser Ansatz hat folgende Vorteile:
@@ -65,7 +66,7 @@ Web-Components ist erst einmal nur eine Meta-Spezifikation für folgende Spezifi
 * ES Modules
 * HTML Templates
 
-Wenn ein Browser diese APIs gemäß der Spezifikationen implementiert, können Sie eigene Elemente definieren und dieser als neue Tags in einer HTML-Seite verwenden. Eine einfache Deklaration einer "Web-Component" sehen Sie in Beispiel 1.
+Wenn ein Browser diese APIs gemäß der Spezifikationen implementiert, können Sie eigene Elemente definieren und dieser als neue Tags in einer HTML-Seite verwenden. Eine einfache Deklaration einer "Web-Component" sehen Sie in dem Beispiel *hello.html*.
 
 *Beispiel 1 - hello.html*
 ```HTML
@@ -633,7 +634,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NzA4ODEyNywtMTA1NjM3OTUyNywtMT
+eyJoaXN0b3J5IjpbMTE2NDE4MDA3NCwtMTA1NjM3OTUyNywtMT
 k4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0
 MTc3MjgsMzkxMjY5ODcwXX0=
 -->
