@@ -131,7 +131,9 @@ React ist übrigens nicht das einzige Framework, das Probleme im Umgang mit Web-
 
 ## ES Modules
 
-Die "ES Module" Spezifikation definiert ein API, die es erlaubt, JavaScript Dokumente in andere Java-Skript Dokumente einzubinden. Ursprünglich wurde über die "HTML Import" Spezifikation versucht diese Verhalten zu spezifizieren. Diese Spezifikation wurde aber von den Entwicklungen im JavaScript Umfeld überholt. Statt eigene Konzepte zu definieren  wie es die "HTML Import" Spezifikation versuchte bedient sich die "ES Module" Spezifikation den aus der JavaScript Entwicklung vertrauten Konzepten. Im Beispiel 4 sehen Sie ein Beispiel für die Verwendung der "ES Modules" API. Für das Ausführen dieses Beispiels genügt es nicht mehr, die Datei import.html direkt in einem Browser zu öffnen. Am einfachsten ist es einen lokalen Webserver mit dem SimpleHTTPServer Package von Python zu starten:
+Die ES-Module-Spezifikation definiert ein API, die es erlaubt, JavaScript Dokumente in andere Java-Skript Dokumente einzubinden. Ursprünglich wurde über die HTML-Import-Spezifikation versucht diese Verhalten zu spezifizieren. Diese Spezifikation wurde aber von den Entwicklungen im JavaScript Umfeld überholt. Statt eigene Konzepte zu definieren, wie es die HTML-Import-Spezifikation versuchte bedienen sich ES Modules den aus der JavaScript Entwicklung vertrauten Konzepten. 
+
+Im Beispiel 4 sehen Sie ein Beispiel für die Verwendung der "ES Modules" API. Für das Ausführen dieses Beispiels genügt es nicht mehr, die Datei import.html direkt in einem Browser zu öffnen. Am einfachsten ist es einen lokalen Webserver mit dem SimpleHTTPServer Package von Python zu starten:
 
 ```
 python -m SimpleHTTPServer 8000
@@ -140,7 +142,7 @@ python -m SimpleHTTPServer 8000
 Die Seite können Sie dann über die URL http://localhost:8000/import.html laden und der Text "hello again" erscheint dann wie erwartet im Browser Fenster.
 
 
-*Beispiel 4 - say-hello.js*
+*Beispiel 2 - say-hello.js*
 ```JavaScript
 export class SayHello extends HTMLelement {
     constructor() {
@@ -634,7 +636,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTM3MDA2OTAsLTEwNTYzNzk1MjcsLT
-E5ODgxNDA0MiwtMTYxOTAzNjc5OCwtMTU1MTk1MDE2NywtNTU1
-NDE3NzI4LDM5MTI2OTg3MF19
+eyJoaXN0b3J5IjpbNDgyMTY4NzEwLC0xMDU2Mzc5NTI3LC0xOT
+g4MTQwNDIsLTE2MTkwMzY3OTgsLTE1NTE5NTAxNjcsLTU1NTQx
+NzcyOCwzOTEyNjk4NzBdfQ==
 -->
