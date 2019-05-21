@@ -342,7 +342,7 @@ Neben dem Service "companies" liefert das Self-Contained-System "Company" auch e
 Verwenden kann man das Element z.B. so:
 
 *Listing 6 - Verwendung von `select-company`*
-```HT
+```HTML
 <select-company></select-company>
 <div id="company"></div>
 <script>
@@ -356,13 +356,11 @@ element.onChangeCompany = function (company) {
 ```
 Dem Custom Element `select-company` kann als Property `onChangeCompany` eine Callback-Function übergeben werden. Diese wird nach der Eingabe durch den Anwender mit dem entsprechenden Company-Object (z.B.: `{short: "AAPL", full: "Apple Inc."}`) aufgerufen.
 
-Live kann man sich das Element hier ansehen: [http://bit.ly/stockprice-company](http://bit.ly/stockprice-company)
+Live kann man sich das Element hier ansehen: http://bit.ly/stockprice-company
 
 ## Das Custom Element "select-company"
-Bei der Implementierung der Custom Elements haben wir die folgenden Prinzipien umgesetzt:
-* Kein Shadow-DOM: Wir haben bewusst auf den Shadow-DOM verzichtet. Dies hatte zwei Gründe:
-	* Man soll der integrierten Anwendung nicht ansehen, dass sie aus vielen Micro-Frontends zusammengesetzt ist. Dies erfordert, dass für alle Custom Elements die selben CSS-Regeln gelten. Darum haben wir die kapselnde Eigenschaft des Shadow-DOM nicht benötigt.
-	* Unverträglich des von uns eingesetzten UI-Frameworks *React* mit dem Shadow-DOM: Der Einsatz von React-Componenten innerhalb des Shadow-DOM führte zu Problemen bei der Event-Verarbeitung (siehe [http://bit.ly/react-shadow-dom](http://bit.ly/react-shadow-dom)).
+Wie oben schon erwähnt, haben wir uns bei der Implementierung der Custom Elements an die folgenden Prinzipien gehalten:
+* Kein Shadow-DOM
 * Custom Elements sind nur schmale Wrapper: Die gesamte client-seitige Funktionalität eines Micro-Frontends befindet sich innerhalb einer React-Component (mit ihren Unter-Compenents). 
 	Ein Custom Elements ist immer nur ein schmaler Wrapper um diese React-Component. Dieses Prinzip hat es uns erlaubt, die Funktionalität der React-Components auch noch an anderen Stellen zu verwenden.
 * Ein Custom Element ruft nur Services von der Adresse auf, von der es ausgeliefert wurde. 
@@ -646,7 +644,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1MzU1MzQ0NCwtMTA1NjM3OTUyNywtMT
-k4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0
-MTc3MjgsMzkxMjY5ODcwXX0=
+eyJoaXN0b3J5IjpbMzMyODYxNjMyLC0xMDU2Mzc5NTI3LC0xOT
+g4MTQwNDIsLTE2MTkwMzY3OTgsLTE1NTE5NTAxNjcsLTU1NTQx
+NzcyOCwzOTEyNjk4NzBdfQ==
 -->
