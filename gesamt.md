@@ -366,7 +366,7 @@ Wie oben schon erwähnt, haben wir uns bei der Implementierung der Custom Elemen
 
 Mit diesen Prinzipien sieht die Implementierung (`SelectCompanyElement.tsx`) des Custom Elements `select-company` folgendermaßen aus:
 
-*Listing 7 - `SelectCompanyElement.tsx`*
+*Listing 7 - Custom Element `SelectCompanyElement.tsx`*
 ```
 import * as React from "react";  
 import * as ReactDOM from "react-dom";  
@@ -552,7 +552,7 @@ document.getElementById("selectCompany2").onChangeCompany =
 </body>
 ```
 
-Im Gegensatz zu `<select-company/>` besitzt `<company-correlation/>` Attribute, die sich auch mehrfach ändern können. Dafür müssen wir im Custom Element die Lifecycle-Methode `attributeChangedCallback()` implementieren:
+Im Gegensatz zu `select-company` besitzt `company-correlation` Attribute, die sich auch mehrfach ändern können. Dafür müssen wir im Custom Element die Lifecycle-Methode `attributeChangedCallback()` implementieren:
 
 ```
 class CompanyCorrelationElement extends HTMLElement {  
@@ -650,7 +650,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2Nzg1Njk3MiwtMTA1NjM3OTUyNywtMT
-k4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0
-MTc3MjgsMzkxMjY5ODcwXX0=
+eyJoaXN0b3J5IjpbNjM2NDI4NDU3LC0xMDU2Mzc5NTI3LC0xOT
+g4MTQwNDIsLTE2MTkwMzY3OTgsLTE1NTE5NTAxNjcsLTU1NTQx
+NzcyOCwzOTEyNjk4NzBdfQ==
 -->
