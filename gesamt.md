@@ -227,15 +227,15 @@ ersetzt durch
 
 # Aus dem Leben einer Komponente
 
-Wie man eine Komponente definiert und verwendet, haben Sie in den vorherigen Beispielen gesehen. In Beispiel 6, sehen Sie was man darüber hinaus mit Web-Components noch so alles anstellen kann. Dazu gehört:
+Wie man eine Komponente definiert und verwendet, haben Sie in den vorherigen Beispielen gesehen. In Beispiel 4, sehen Sie was man darüber hinaus mit Web-Components noch so alles anstellen kann. Dazu gehört:
 * die Verwendung von Attributen, um Daten an die Komponente zu übertragen
 * die Verwendung eines Listeners, um auf Ereignisse zu reagieren
 * das Überschreiben von Methoden `observedAttributes` und `connectedCallback`, um die Komponente an die eigenen Bedürfnisse anzupassen.
 
-Beim näheren Betrachten dieses Beispiels wird deutlich, dass die "Custom elements" API alles nötige zur Verfügung stellt um eine wiederverwendbare Komponente zu erstellen. Allerdings ist dafür recht viel Code nötig und so elegant wie man es von React oder Angular gewohnt ist, sieht der Code auch nicht aus. 
+Beim näheren Betrachten dieses Beispiels wird deutlich, dass die Custom Elements alles nötige zur Verfügung stellen, um eine wiederverwendbare Komponente zu erstellen. Allerdings ist dafür recht viel Code nötig und so elegant wie man es von React oder Angular gewohnt ist, sieht der Code auch nicht aus. 
 
 
-*Beispiel 6 - listener.html*
+*Beispiel 4 - listener.html*
 ```HTML
 <html>
 <head>
@@ -636,7 +636,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MDE3MTI3NiwtMTA1NjM3OTUyNywtMT
-k4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0
-MTc3MjgsMzkxMjY5ODcwXX0=
+eyJoaXN0b3J5IjpbNjM2OTYwMDEsLTEwNTYzNzk1MjcsLTE5OD
+gxNDA0MiwtMTYxOTAzNjc5OCwtMTU1MTk1MDE2NywtNTU1NDE3
+NzI4LDM5MTI2OTg3MF19
 -->
