@@ -171,13 +171,13 @@ Wahlweise können Sie das auch hier betrachten: [http://bit.ly/say-hello-example
 
 ## HTML Templates
 
-Die Spezifikation für HTML Templates beschäftigt sich mit der Fragestellung wie HTML-Code Fragmente von HTML definiert und wiederverwendet werden können. "HTML Templates" sind daher auch ohne Web-Components verwendbar und Web-Components können auch ohne "HTML Templates" entwickelt werden. Die Verwendung von Templates erleichtert aber die Entwicklung von Web-Components und erlaubt die klare Trennung von Code und Markup.
+Die Spezifikation für *HTML Templates* beschäftigt sich mit der Fragestellung wie HTML-Code Fragmente von HTML definiert und wiederverwendet werden können. HTML Templates sind daher auch ohne Web-Components verwendbar und Web-Components können auch ohne HTML Templates entwickelt werden. Die Verwendung von Templates erleichtert aber die Entwicklung von Web Components und erlaubt die klare Trennung von Code und Markup.
 
-In Beispiel 5 sehen Sie wie "HTML Templates" verwendet werden. Das Beispiel zeigt darüberhinaus die Verwendung von "slots". Sie erlauben HTML-Fragmente anzugeben, die den entsprechend benannten Part im Template ersetzen. Bei der Ausführung von Beispiel 5 wird daher 
+In Beispiel 3 sehen Sie wie "HTML Templates" verwendet werden. Das Beispiel zeigt darüberhinaus die Verwendung von sogenannten *Slots*. Slots erlauben es, HTML-Fragmente anzugeben, die den entsprechend benannten Part im Template ersetzen. Bei der Ausführung von Beispiel 5 wird daher 
 ```HTML
 <slot name="and-more"></slot>
 ``` 
-durch 
+ersetzt durch 
 
 ```HTML
 <div slot="and-more">
@@ -185,9 +185,8 @@ durch
 </div>
 ```
 
-ersetzt.
 
-*Beispiel 5 - import.html*
+*Beispiel 3 - import.html*
 ```HTML
 <html>
 <head>
@@ -635,7 +634,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTg3OTM5MCwtMTA1NjM3OTUyNywtMT
-k4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0
-MTc3MjgsMzkxMjY5ODcwXX0=
+eyJoaXN0b3J5IjpbMzUzMzQ5NDM1LC0xMDU2Mzc5NTI3LC0xOT
+g4MTQwNDIsLTE2MTkwMzY3OTgsLTE1NTE5NTAxNjcsLTU1NTQx
+NzcyOCwzOTEyNjk4NzBdfQ==
 -->
