@@ -7,8 +7,13 @@ Untereinander kommunizieren die Self-Contained-Systems asynchron über Kafka.
 
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190521-02/images/fx.png"/>
 
-Zur Integration der Micro-Frontends im Browser werden Custom Elements aus Web-Components-Standard verwendet. 
-Der Artikel soll 
+Wir haben uns für Web-Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir die Web-Compnents API, um bestehende React-Components zu "wrappen". Die anderen Micro-Frontends benutzen dann die Web-Componente ohne zu wissen, dass im Hintergrund React seine Dienste versieht. Dieser Ansatz hat folgende Vorteile:
+* einfache Integration im Frontend
+* schlanke API
+* Web-Standard
+* Abhängigkeit zum verwendeten Framework (hier React) bleibt auf das einzelne Micro-Frontend beschränkt.
+
+Wo Licht ist, ist natürlich auch Schatten. Auf die vorhandenen Nachteile werden wir genauer eingehen, wenn es um die Details der Micro-Frontend Integration in unserem Projekt geht.
 
 
 # UI und Microservices
@@ -21,13 +26,8 @@ Microservices haben sich im Backend Bereich in vielen Projekten als erfolgreiche
 * Integration im Frontend über Verlinkung (funktioniert am besten wenn jedes Micro-Frontend eine abgeschlossene Funktionalität aufweisen kann)
 * Integration im Frontend über Web-Components
 
-In einem großen Projekt in der Finanzindustrie mit über 40 Self-Contained-Systems haben wir uns für Web-Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir die Web-Compnents API, um bestehende React-Components zu "wrappen". Die anderen Micro-Frontends benutzen dann die Web-Componente ohne zu wissen, dass im Hintergrund React seine Dienste versieht. Dieser Ansatz hat folgende Vorteile:
-* einfache Integration im Frontend
-* schlanke API
-* Web-Standard
-* Abhängigkeit zum verwendeten Framework (hier React) bleibt auf das einzelne Micro-Frontend beschränkt.
 
-Wo Licht ist, ist natürlich auch Schatten. Auf die vorhandenen Nachteile werden wir genauer eingehen, wenn es um die Details der Micro-Frontend Integration in unserem Projekt geht.
+
 
 Bevor es an die Details unserer Verwendung vom Web-Components geht, lohnt es sich erst einmal zu klären, was Web-Components denn überhaupt sind. 
 
@@ -636,6 +636,6 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk3NDcyNTI3LC0xNjE5MDM2Nzk4LC0xNT
-UxOTUwMTY3LC01NTU0MTc3MjgsMzkxMjY5ODcwXX0=
+eyJoaXN0b3J5IjpbLTE5ODgxNDA0MiwtMTYxOTAzNjc5OCwtMT
+U1MTk1MDE2NywtNTU1NDE3NzI4LDM5MTI2OTg3MF19
 -->
