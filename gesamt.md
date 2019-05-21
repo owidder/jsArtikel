@@ -90,7 +90,8 @@ Wenn ein Browser diese APIs gemäß der Spezifikationen implementiert, können S
 </html>
 ```
 
-Laden Sie diese Seite in einem Browser, der die nötigen APIs unterstützt, wird eine Seite mit dem Text "hello again" angezeigt (http://bit.ly/hello-example). Die Erklärungen zu diesem Beispiel finden Sie in den folgenden Abschnitten über die einzelnen Bestandteile der Web-Components Spezifikation.
+Laden Sie diese Seite in einem Browser, der die nötigen APIs unterstützt, wird eine Seite mit dem Text "hello again" angezeigt (http://bit.ly/hello-example). 
+Die Erklärungen zu diesem Beispiel finden Sie in den folgenden Abschnitten über die einzelnen Bestandteile der Web-Components Spezifikation.
 
 # Die APIs
 
@@ -98,12 +99,14 @@ Wie oben schon erwähnt besteht die Web-Components-Spezifikation aus mehreren AP
 
 ## Custom Elements
 
+Jeder Web-Entwickler, der eins der bekannten Frameworks wie Angular oder React verwendet hat, weiß, dass die sinnvolle Aufteilung einer Applikation in Komponenten die Entwicklung und Weiterentwicklung erheblich vereinfacht. Leider geht diese Struktur verloren, sobald die Inhalte einer Angular oder React Komponente in den Dom-Tree des Browsers eingefügt werden. Aus den sorgsam aufgebauten Komponenten bleibt dann nur noch eine Sammlung von HTML-Tags übrig, die - zumindest ohne den Einsatz spezieller Werkzeuge - insbesondere die Fehlersuche erschweren. Diese Komponenten-Struktur, auch im Dom-Tree des Browsers sichtbar zu machen, ist Aufgabe der *Custom-Elements*. 
+
+In *Bild 2* sehen Sie wie die in *Beispiel 1* deklarierte Komponente als Tag `say-hello` im Inspector des Safari-Browsers angezeigt wird. 
+
 *Bild 2 - Dom-Tree mit Web-Component*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190520-01/images/say-hello-dom.png"/>
 
-Jeder Web-Entwickler, der eins der bekannten Frameworks wie Angular oder React verwendet hat, weiß, dass die sinnvolle Aufteilung einer Applikation in Komponenten die Entwicklung und Weiterentwicklung erheblich vereinfacht. Leider geht diese Struktur verloren, sobald die Inhalte einer Angular oder React Komponente in den Dom-Tree des Browsers eingefügt werden. Aus den sorgsam aufgebauten Komponenten bleibt dann nur noch eine Sammlung von HTML-Tags übrig, die - zumindest ohne den Einsatz spezieller Werkzeuge - insbesondere die Fehlersuche erschweren. Diese Komponenten-Struktur, auch im Dom-Tree des Browsers sichtbar zu machen, ist Aufgabe der *Custom-Elements*. 
-
-In *Bild 2* sehen Sie wie die in *Beispiel 1* deklarierte Komponente als Tag `say-hello` im Inspector des Safari-Browsers angezeigt wird. Um dieses Verhalten zu erreichen sind zwei Dinge nötig:
+Um dieses Verhalten zu erreichen sind zwei Dinge nötig:
 * unsere Klasse muß von der Klasse `HTMLElement` erben
 * über den Aufruf von `customElements.define` wird unserer Klasse ein HTML-Tag zugeordnet (`say-hello`).
 
@@ -652,8 +655,8 @@ Nachteile:
 	Z.B. führen die beiden `select-company`-Custom-Elements  auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwOTQ2MzQyNywxOTg1NDc2MjExLDY1Mz
-QzMzc5Nyw4NDQ4MjM4NDIsLTEwNTYzNzk1MjcsLTE5ODgxNDA0
-MiwtMTYxOTAzNjc5OCwtMTU1MTk1MDE2NywtNTU1NDE3NzI4LD
-M5MTI2OTg3MF19
+eyJoaXN0b3J5IjpbNjI1NTMyMTI5LDE5ODU0NzYyMTEsNjUzND
+MzNzk3LDg0NDgyMzg0MiwtMTA1NjM3OTUyNywtMTk4ODE0MDQy
+LC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0MTc3MjgsMz
+kxMjY5ODcwXX0=
 -->
