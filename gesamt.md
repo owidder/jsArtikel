@@ -407,9 +407,10 @@ customElements.define("select-company", SelectCompanyElement);
 	und schnibbeln dann einfach das letzte Pfad-Element (den Namen des JavaScript-Files) weg:
 	```
 	const parts = scriptPath.split("/");  
-	const basedir = parts.slice(0, parts.length-1).join("/");
+	const basedir = 
+		parts.slice(0, parts.length-1).join("/");
 	```
-* Wie oben beschrieben verwenden wir keinen Shadow-DOM, sondern rendern die DOM-Elemente des Custom Elements direkt in den den Main-DOM. Das sollte man aber nicht im Constructor des Custom Elements tun sondern in der `connectedCallback`-Lifecycle-Methode. 
+* Wie schon erwähnt verwenden wir keinen Shadow Dom, sondern rendern die Dom-Elemente des Custom Elements direkt in den den Main-Dom. Das sollte man aber nicht im Constructor des Custom Elements tun sondern in der `connectedCallback`-Lifecycle-Methode. 
 	Dort rendern wir die React-Component:
 	```
     connectedCallback() {  
@@ -646,7 +647,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMTE5MjMzOCwtMTA1NjM3OTUyNywtMT
-k4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0
-MTc3MjgsMzkxMjY5ODcwXX0=
+eyJoaXN0b3J5IjpbLTI5NTYyMzEwLC0xMDU2Mzc5NTI3LC0xOT
+g4MTQwNDIsLTE2MTkwMzY3OTgsLTE1NTE5NTAxNjcsLTU1NTQx
+NzcyOCwzOTEyNjk4NzBdfQ==
 -->
