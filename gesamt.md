@@ -135,7 +135,7 @@ React ist übrigens nicht das einzige Framework, das Probleme im Umgang mit Web-
 
 Die ES-Module-Spezifikation definiert ein API, die es erlaubt, JavaScript Dokumente in andere Java-Skript Dokumente einzubinden. Ursprünglich wurde über die HTML-Import-Spezifikation versucht diese Verhalten zu spezifizieren. Diese Spezifikation wurde aber von den Entwicklungen im JavaScript Umfeld überholt. Statt eigene Konzepte zu definieren, wie es die HTML-Import-Spezifikation versuchte bedienen sich ES Modules den aus der JavaScript Entwicklung vertrauten Konzepten. 
 
-In Listing 2 sehen Sie ein Beispiel für die Verwendung von ES Modules. Für das Ausführen dieses Beispiels genügt es nicht mehr, die Datei *import.html* direkt in einem Browser zu öffnen. Man benötigt einen einfachen lokalen Webserver, wie z.B. das *SimpleHTTPServer*-Package von Python:
+In Listing 2 und Listing 3 sehen Sie ein Beispiel für die Verwendung von ES Modules. Für das Ausführen dieses Beispiels genügt es nicht mehr, die Datei *import.html* direkt in einem Browser zu öffnen. Man benötigt einen einfachen lokalen Webserver, wie z.B. das *SimpleHTTPServer*-Package von Python:
 
 ```
 python -m SimpleHTTPServer 8000
@@ -155,7 +155,7 @@ export class SayHello extends HTMLelement {
 
 customElements.define('say-hello', SayHello);
 ```
-*L 2 - import.html*
+*Listing 3 - import.html*
 ```HTML
 <html>
     <head>
@@ -175,7 +175,7 @@ Wahlweise können Sie das auch hier betrachten: [http://bit.ly/say-hello-example
 
 Die Spezifikation für *HTML Templates* beschäftigt sich mit der Fragestellung wie HTML-Code Fragmente von HTML definiert und wiederverwendet werden können. HTML Templates sind daher auch ohne Web-Components verwendbar und Web-Components können auch ohne HTML Templates entwickelt werden. Die Verwendung von Templates erleichtert aber die Entwicklung von Web Components und erlaubt die klare Trennung von Code und Markup.
 
-In Beispiel 3 sehen Sie wie "HTML Templates" verwendet werden. Das Beispiel zeigt darüberhinaus die Verwendung von sogenannten *Slots*. Sie erlauben es, HTML-Fragmente anzugeben, die den entsprechend benannten Part im Template ersetzen. Bei der Ausführung von Beispiel 5 wird daher 
+In Beispiel 3 sehen Sie wie "HTML Templates" verwendet werden. Das Beispiel zeigt darüberhinaus die Verwendung von sogenannten *Slots*. Sie erlauben es, HTML-Fragmente anzugeben, die den entsprechend benannten Part im Template ersetzen. Bei der Ausführung von Listing 4 wird daher 
 ```HTML
 <slot name="and-more"></slot>
 ``` 
@@ -188,7 +188,7 @@ ersetzt durch
 ```
 
 
-*Beispiel 3 - import.html*
+*Listimg 4 - import.html*
 ```HTML
 <html>
 <head>
@@ -235,7 +235,7 @@ Wie man eine Komponente definiert und verwendet, haben Sie in den vorherigen Bei
 Beim näheren Betrachten dieses Beispiels wird deutlich, dass die Custom Elements alles nötige zur Verfügung stellen, um eine wiederverwendbare Komponente zu erstellen. Allerdings ist dafür recht viel Code nötig und so elegant wie man es von React oder Angular gewohnt ist, sieht der Code auch nicht aus. 
 
 
-*Beispiel 4 - listener.html*
+*Listing 5 - listener.html*
 ```HTML
 <html>
 <head>
@@ -280,7 +280,7 @@ Beim näheren Betrachten dieses Beispiels wird deutlich, dass die Custom Element
 </html>
 ```
 
-## Web-Components aber einfach
+## Web Components aber einfach
 
 Die direkte Benutzung der Web-Components-API ist für kleinere Aufgaben ausreichend. Auch für spezialisierte Aufgaben, wie die Integration von Micro-Frontends, sind die Custom Elements durchaus geeignet.
 Wem die Spezifikationen des Web-Component-Standards zu rudimentär sind, kann inzwischen inzwischen auf Frameworks und Libraries zurückgreifen, die die Arbeit mit Web Components vereinfachen. 
@@ -293,7 +293,7 @@ Das zeigen wir exemplarisch an einer kleinen Beispiel-Anwendung, die aus zwei Se
 ## Die Beispiel-Anwendung "StockPrice": Korrelation von Aktienkursen
 Mit der aus zwei Micro-Frontends bestehenden Beispiel-Anwendung "StockPrice" kann man sich Charts erzeugen lassen, die die Aktienkurse (Jahre 2014 bis 2018) von zwei Firmen als Scatterplot inklusive Korrelationskoeffizienten darstellen:  
 
-*Bild 2 - Die Anwendung "SockPrice"*
+*Bild 3 - Die Oberfläche Anwendung "StockPrice"*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190515-01/oliver/correlationApp.png"/>
 
 Dazu kann man in den beiden Automplete-Eingabefeldern am oberen Rand jeweils eine Firma (aus dem Dow Jones) eingeben. Hat man beide Firmen eingegeben, wird der Chart angezeigt. 
@@ -645,7 +645,7 @@ Nachteile:
 	* Z.B. führen die beiden Custom Elements `<select-company/>` auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc4ODk1MjUsLTEwNTYzNzk1MjcsLTE5OD
-gxNDA0MiwtMTYxOTAzNjc5OCwtMTU1MTk1MDE2NywtNTU1NDE3
-NzI4LDM5MTI2OTg3MF19
+eyJoaXN0b3J5IjpbMjAxMjAxMTQ0NSwtMTA1NjM3OTUyNywtMT
+k4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0
+MTc3MjgsMzkxMjY5ODcwXX0=
 -->
