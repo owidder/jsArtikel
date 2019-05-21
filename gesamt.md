@@ -7,9 +7,9 @@ Jedes Self-Contained-System liefert die für den Aufruf der eigenen Services ben
 Untereinander kommunizieren die Self-Contained-Systems asynchron über Kafka.
 
 *Bild 1 - Das System FX*
-<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190521-02/images/fx.png"/>
+<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190521-03/images/fx.png"/>
 
-Wir haben uns für Web Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir die Web-Compnents-API, um bestehende React Components zu "wrappen". Die anderen Micro-Frontends benutzen dann die Web-Component ohne zu wissen, dass im Hintergrund React seine Dienste versieht. Dieser Ansatz hat folgende Vorteile:
+Wir haben uns für Web Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir die Web-Compnents-API, um bestehende React Components zu "wrappen". Andere Systeme benutzen dann die Web-Component ohne zu wissen, dass im Hintergrund React seine Dienste versieht. Dieser Ansatz hat folgende Vorteile:
 * einfache Integration im Frontend
 * schlanke API
 * Web-Standard
@@ -17,7 +17,7 @@ Wir haben uns für Web Components als Werkzeug zur Integration unserer Micro-Fro
 
 # UI und Microservices
 
-Microservices haben sich im Backend Bereich in vielen Projekten als erfolgreiches Architektur-Pattern etabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, dass es schwierig ist aus einer Vielzahl einzelner Frontends (Micro-Frontends) eine Lösung mit einem einheitlichen Look-And-Feel und einer konsistenten User-Experience herzustellen. Aus diesem Grund gibt es auch verschiedene Ansätze, mit dieser Herausforderung umzugehen:
+Microservices haben sich im Backend-Bereich in vielen Projekten als erfolgreiches Architektur-Pattern etabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, dass es schwierig ist, aus einer Vielzahl einzelner Frontends (Micro-Frontends) eine Lösung mit einem einheitlichen Look-And-Feel und einer konsistenten User-Experience herzustellen. Aus diesem Grund gibt es auch verschiedene Ansätze, mit dieser Herausforderung umzugehen:
 
 * Integration im Backend über vorhandene Mechanismen wie Server-Side-Includes
 * Integration im Backend aber mit zusätzlicher Tool Unterstützung (https://www.mosaic9.org)
@@ -29,9 +29,9 @@ Bevor es an die Details unserer Verwendung vom Web-Components geht, lohnt es sic
 
 # Was sind Komponenten ?
 
-1992 wurde Visual-Basic 2.0 von Microsoft der Öffentlichkeit präsentiert. Neben neuen Sprachfeatures für Objekt orientierte Programmierung, bot Visual-Basic  mit der VBX (Visual-Basic-Extension) Schnittstelle die Möglichkeit beliebige UI-Komponenten anderer Hersteller in eigenen Programme zu verwenden. 1995 zog dann Borland mit Delphi 1.0 und der Visual-Component Library nach. Java unternahm dann 1997 mit Swing und JavaBeans ebenfalls den Versuch an diese Erfolge anzuknüpfen. Mit allerdings eher mäßigem Erfolg, da sich im Gegensatz zu den Kompomenten-Modellen von Microsoft oder Borland eine eher begrenzte 3rd Party Unterstützung entwickelte. 
+1992 wurde Visual-Basic 2.0 von Microsoft der Öffentlichkeit präsentiert. Neben neuen Sprachfeatures für objekt-orientierte Programmierung bot Visual-Basic mit der VBX (Visual-Basic-Extension) Schnittstelle die Möglichkeit, beliebige UI-Komponenten anderer Hersteller in eigenen Programme zu verwenden. 1995 zog dann Borland mit Delphi 1.0 und der Visual-Component Library nach. Java unternahm dann 1997 mit Swing und JavaBeans ebenfalls den Versuch an diese Erfolge anzuknüpfen. Mit allerdings eher mäßigem Erfolg, da sich im Gegensatz zu den Komponenten-Modellen von Microsoft oder Borland eine eher begrenzte 3rd-Party-Unterstützung entwickelte. 
 
-Die zunehmender Verbreitung des Web und Konzepten wie SPAs (Single-Page-Applications) sowie neuen Frameworks wie Angular oder React erlaubte es dann den Web-Entwicklern, die im Desktop-Umfeld bereits erfolgreiche Komponenten basierte Entwicklung für Web-Anwendungen zu verwenden.
+Die zunehmende Verbreitung des Web und von Konzepten wie SPAs (Single-Page-Applications) sowie neuen Frameworks wie Angular oder React erlaubte es dann den Web-Entwicklern, die im Desktop-Umfeld bereits erfolgreiche Komponenten basierte Entwicklung für Web-Anwendungen zu verwenden.
 
 Auch wenn diese Beispiele alle aus dem UI Umfeld stammen, muss es sich bei einer Komponente nicht unbedingt um eine UI-Komponente handeln. Grundlegende Voraussetzung für eine Komponente ist lediglich eine definierte Schnittstelle um verschiedene Komponenten verknüpfen und in eigene Anwendungen integrieren zu können.   
 
@@ -43,28 +43,29 @@ Aus diesem Grund wurde 2012 der erste Entwurf der Web-Components Spezifikation v
 
 # Browser Support
 
-Bevor es aber an die Details der Spezifikation geht, lohn sich ein kurzer Abstecher zu "Can I Use" (https://caniuse.com/#search=components) um zu prüfen, wie es um den Browser Support dieser Spezifikation bestellt ist. 
+Bevor es aber an die Details der Spezifikation geht, lohnt sich ein kurzer Abstecher zu "Can I Use" (https://caniuse.com/#search=components), um zu prüfen, wie es um den Browser Support dieser Spezifikation bestellt ist. 
 
 ## Native
 
-Benutzer von Firefox, Chrome und Safari  können sich freuen, da alle wichtigen Aspekte wie "Custom Elements", "Shadow Dom" und "HTML templates" unterstützt werden. Bei der Verwendung von Safari muss man lediglich mit einer kleinen Einschränkung leben, da nur  "Autonomous custom elements" aber keine "Customized built-in elements" verwendet werden können. Das bedeutet, dass in Safari zwar eigene Komponenten erstellt und verwendet werden können, die aber keine Möglichkeit bieten, Eigenschaften von bestehenden HTML-Elementen (wie z.B. von einem Button) wiederzuverwenden (http://bit.ly/customized-builtin-example).
+Benutzer von Firefox, Chrome und Safari können sich freuen, da alle wichtigen Aspekte wie *Custom Elements*, *Shadow Dom* und *HTML Templates* unterstützt werden. 
+Bei der Verwendung von Safari muss man lediglich mit einer kleinen Einschränkung leben, da nur  "Autonomous custom elements" aber keine "Customized built-in elements" verwendet werden können. Das bedeutet, dass in Safari zwar eigene Komponenten erstellt und verwendet werden können, die aber keine Möglichkeit bieten, Eigenschaften von bestehenden HTML-Elementen (wie z.B. von einem Button) wiederzuverwenden (http://bit.ly/customized-builtin-example).
 
 IE und Edge, die Browser von Microsoft, bieten zum derzeitigen Zeitpunkt keine Unterstützung für Web-Components. Für die Zukunft ist aber auch hier Besserung zu erwarten. Die zukünftige Version von Edge wird auf Chromium, der Open-Source Variante von Chrome, aufbauen und damit dann ebenfalls die Web-Components Spezifikation vollständig unterstützen.
 
 ## Polyfill
 
-Für neuere Browser, außer Microsoft Edge, sieht die Web-Components Unterstützung  gut aus, für alle anderen gibt es ein Polyfill. Nähere Informationen zu Verwendung und Installation finden Sie unter https://www.webcomponents.org/polyfills. Dieses Poylfill rüstet sowohl die "Custom Elements" API als auch die "Shadow DOM" API für ältere Browser nach. Bei der Verwendung der "Shadow DOM" API ist allerdings Vorsicht geboten, da es negative Auswirkungen auf die Render-Performanz einer Seite haben kann. 
+Für neuere Browser, außer Microsoft Edge, sieht die Web-Components Unterstützung  gut aus, für alle anderen gibt es ein Polyfill. Nähere Informationen zu Verwendung und Installation finden Sie unter https://www.webcomponents.org/polyfills. Dieses Poylfill rüstet sowohl die Custom-Elements-API als auch die Shadow-Dom-API für ältere Browser nach. Bei der Verwendung der Shadow-Dom-API ist allerdings Vorsicht geboten, da es negative Auswirkungen auf die Render-Performanz einer Seite haben kann. 
 
 # Was sind Web Components
 
-Web-Components ist erst einmal nur eine Meta-Spezifikation für folgende Spezifikationen:
+Web Components ist erst einmal nur eine Meta-Spezifikation für folgende Spezifikationen:
 
 * Custom Elements
 * Shadow Dom
 * ES Modules
 * HTML Templates
 
-Wenn ein Browser diese APIs gemäß der Spezifikationen implementiert, können Sie eigene Elemente definieren und dieser als neue Tags in einer HTML-Seite verwenden. Eine einfache Deklaration einer "Web-Component" sehen Sie in Listing 1.
+Wenn ein Browser diese APIs gemäß der Spezifikationen implementiert, können Sie eigene Elemente definieren und diese als neue Tags in einer HTML-Seite verwenden. Eine einfache Deklaration einer "Web-Component" sehen Sie in Listing 1.
 
 *Listing 1 - hello.html*
 ```HTML
@@ -652,7 +653,8 @@ Nachteile:
 	Z.B. führen die beiden `select-company`-Custom-Elements  auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjUzNDMzNzk3LDg0NDgyMzg0MiwtMTA1Nj
-M3OTUyNywtMTk4ODE0MDQyLC0xNjE5MDM2Nzk4LC0xNTUxOTUw
-MTY3LC01NTU0MTc3MjgsMzkxMjY5ODcwXX0=
+eyJoaXN0b3J5IjpbMTk4NTQ3NjIxMSw2NTM0MzM3OTcsODQ0OD
+IzODQyLC0xMDU2Mzc5NTI3LC0xOTg4MTQwNDIsLTE2MTkwMzY3
+OTgsLTE1NTE5NTAxNjcsLTU1NTQxNzcyOCwzOTEyNjk4NzBdfQ
+==
 -->
