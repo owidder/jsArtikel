@@ -1,7 +1,7 @@
 # Integration von Micro-Frontends über Web Components im Projekt *FX*
 
 Mit dem Projekt *FX* erstellt die Otto-Tochter *EOS* eine neue zentrale Anwendung für die Inkassobearbeitung. 
-FX besteht aus (zur Zeit) ca. 50 Self-Contained-Systems, die jeweils für eine bestimmte Fachlichkeit verantwortlich sind (z.B. Zahlungszuordnung, Buchhaltung, Ablaufsteuerung, Daten-Analyse, ...). 
+FX besteht aus (zur Zeit) ca. 50 Self-Contained-Systems, die jeweils für eine bestimmte Fachlichkeit verantwortlich sind (z.B. Zahlungszuordnung, Buchhaltung, Ablaufsteuerung oder Daten-Analyse). 
 Jedes Self-Contained-System hat eine unabhängige Datenhaltung (PostrgreSQL, MongoDB, Elastic Search, ...).
 Jedes Self-Contained-System liefert die für den Aufruf der eigenen Services benötigten Oberflächen (Micro-Frontends) selbst aus.
 Untereinander kommunizieren die Self-Contained-Systems asynchron über Kafka.
