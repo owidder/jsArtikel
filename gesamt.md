@@ -176,7 +176,7 @@ Wahlweise können Sie das Beispiel auch hier betrachten: [http://bit.ly/say-hell
 
 Die Spezifikation für *HTML Templates* beschäftigt sich mit der Fragestellung wie HTML-Code Fragmente definiert und wiederverwendet werden können. HTML Templates sind daher auch ohne Web-Components verwendbar und Web-Components können auch ohne HTML Templates entwickelt werden. Die Verwendung von Templates erleichtert aber die Erstellung von Web Components und erlaubt die klare Trennung von Code und Markup.
 
-In Beispiel 3 sehen Sie wie "HTML Templates" verwendet werden. Das Beispiel zeigt darüberhinaus die Verwendung von sogenannten *Slots*. Sie erlauben es, HTML-Code anzugeben, der den entsprechend benannten Part im Template ersetzt. Bei der Ausführung von Listing 4 wird daher 
+In Listing 4  sehen Sie wie "HTML Templates" verwendet werden. Das Beispiel zeigt darüberhinaus die Verwendung von sogenannten *Slots*. Sie erlauben es HTML-Code anzugeben, der den entsprechend benannten Part im Template ersetzt. Bei der Ausführung von Listing 4 wird daher 
 ```HTML
 <slot name="and-more"></slot>
 ``` 
