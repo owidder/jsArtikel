@@ -231,7 +231,7 @@ ersetzt durch
 Wie man eine Komponente definiert und verwendet, haben Sie in den vorherigen Beispielen gesehen. In Beispiel 4, sehen Sie was man darüber hinaus mit Web-Components noch so alles anstellen kann. Dazu gehört:
 * die Verwendung von Attributen, um Daten an die Komponente zu übertragen
 * die Verwendung eines Listeners, um auf Ereignisse zu reagieren
-* das Überschreiben von Methoden `observedAttributes` und `connectedCallback`, um die Komponente an die eigenen Bedürfnisse anzupassen.
+* das Überschreiben von Methoden wie `observedAttributes` und `connectedCallback`, um die Komponente an die eigenen Bedürfnisse anzupassen.
 
 Beim näheren Betrachten dieses Beispiels wird deutlich, dass die Custom Elements alles nötige zur Verfügung stellen, um eine wiederverwendbare Komponente zu erstellen. Allerdings ist dafür recht viel Code nötig und so elegant wie man es von React oder Angular gewohnt ist, sieht der Code auch nicht aus. 
 
