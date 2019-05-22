@@ -56,7 +56,7 @@ IE und Edge, die Browser von Microsoft, bieten zum derzeitigen Zeitpunkt keine U
 
 Für neuere Browser, außer Microsoft Edge, sieht die Web-Components Unterstützung also gut aus, für alle anderen gibt es ein Polyfill. Nähere Informationen zu Verwendung und Installation finden Sie unter https://www.webcomponents.org/polyfills. Dieses Poylfill rüstet sowohl die Custom-Elements-API als auch die Shadow-Dom-API für ältere Browser nach. Bei der Verwendung der Shadow-Dom-API des Polyfills ist allerdings Vorsicht geboten, da es negative Auswirkungen auf die Render-Performanz einer Seite haben kann. 
 
-# Was sind Web Components
+# Was sind Web Components?
 
 Web Components ist erst einmal nur eine Meta-Spezifikation für folgende Spezifikationen:
 
@@ -134,7 +134,7 @@ React ist übrigens nicht das einzige Framework, das Probleme im Umgang mit Web-
 
 ## ES Modules
 
-Die ES-Module-Spezifikation definiert ein API, die es erlaubt, JavaScript Dokumente in andere Java-Skript Dokumente einzubinden. Ursprünglich wurde über die HTML-Import-Spezifikation versucht diese Verhalten zu spezifizieren. Diese Spezifikation wurde aber von den Entwicklungen im JavaScript Umfeld überholt. Statt eigene Konzepte zu definieren, wie es die HTML-Import-Spezifikation versuchte bedienen sich ES Modules den aus der JavaScript Entwicklung vertrauten Konzepten. 
+Die ES-Module-Spezifikation definiert ein API, die es erlaubt, JavaScript Dokumente in andere JavaScript Dokumente einzubinden. Ursprünglich wurde über die HTML-Import-Spezifikation versucht diese Verhalten zu spezifizieren. Diese Spezifikation wurde aber von den Entwicklungen im JavaScript Umfeld überholt. Statt eigene Konzepte zu definieren, wie es die HTML-Import-Spezifikation versuchte, bedienen sich ES Modules den aus der JavaScript Entwicklung vertrauten Konzepten. 
 
 In Listing 2 und Listing 3 sehen Sie ein Beispiel für die Verwendung von ES Modules. Für das Ausführen dieses Beispiels genügt es nicht mehr, die Datei *import.html* direkt in einem Browser zu öffnen. Man benötigt einen einfachen lokalen Webserver, wie z.B. das *SimpleHTTPServer*-Package von Python:
 
@@ -174,9 +174,9 @@ Wahlweise können Sie das Beispiel auch hier betrachten: [http://bit.ly/say-hell
 
 ## HTML Templates
 
-Die Spezifikation für *HTML Templates* beschäftigt sich mit der Fragestellung wie HTML-Code Fragmente definiert und wiederverwendet werden können. HTML Templates sind daher auch ohne Web-Components verwendbar und Web-Components können auch ohne HTML Templates entwickelt werden. Die Verwendung von Templates erleichtert aber die Erstellung von Web Components und erlaubt die klare Trennung von Code und Markup.
+Die Spezifikation für *HTML Templates* beschäftigt sich mit der Fragestellung wie HTML-Code Fragmente definiert und wiederverwendet werden können. HTML Templates sind daher auch ohne Web-Components verwendbar und Web Components können auch ohne HTML Templates entwickelt werden. Die Verwendung von Templates erleichtert aber die Erstellung von Web Components und erlaubt die klare Trennung von Code und Markup.
 
-In Listing 4  sehen Sie wie "HTML Templates" verwendet werden. Das Beispiel zeigt darüberhinaus die Verwendung von sogenannten *Slots*. Sie erlauben es HTML-Code anzugeben, der den entsprechend benannten Part im Template ersetzt. Bei der Ausführung von Listing 4 wird daher 
+In Listing 4 sehen Sie wie "HTML Templates" verwendet werden. Das Beispiel zeigt darüberhinaus die Verwendung von sogenannten *Slots*. Sie erlauben es HTML-Code anzugeben, der den entsprechend benannten Part im Template ersetzt. Bei der Ausführung von Listing 4 wird daher 
 ```HTML
 <slot name="and-more"></slot>
 ``` 
@@ -189,7 +189,7 @@ ersetzt durch
 ```
 
 
-*Listimg 4 - import.html*
+*Listing 4 - import.html*
 ```HTML
 <html>
 <head>
@@ -228,7 +228,7 @@ ersetzt durch
 
 # Aus dem Leben einer Komponente
 
-Wie man eine Komponente definiert und verwendet, haben Sie in den vorherigen Beispielen gesehen. In Beispiel 4, sehen Sie was man darüber hinaus mit Web-Components noch so alles anstellen kann. Dazu gehört:
+Wie man eine Komponente definiert und verwendet, haben Sie in den vorherigen Beispielen gesehen. In Beispiel 4 sehen Sie was man darüber hinaus mit Web Components noch so alles anstellen kann. Dazu gehört:
 * die Verwendung von Attributen, um Daten an die Komponente zu übertragen
 * die Verwendung eines Listeners, um auf Ereignisse zu reagieren
 * das Überschreiben von Methoden wie `observedAttributes` und `connectedCallback`, um die Komponente an die eigenen Bedürfnisse anzupassen.
@@ -292,12 +292,12 @@ Im Folgenden wollen wir zeigen, wie wir Custom Elements zur Integration von Micr
 Das zeigen wir exemplarisch an einer kleinen Beispiel-Anwendung, die aus zwei Self-Contained-Systems besteht.
 
 ## Die Beispiel-Anwendung "StockPrice": Korrelation von Aktienkursen
-Mit der aus zwei Micro-Frontends bestehenden Beispiel-Anwendung "StockPrice" kann man sich Charts erzeugen lassen, die die Aktienkurse (Jahre 2014 bis 2018) von zwei Firmen als Scatterplot inklusive Korrelationskoeffizienten darstellen:  
+Mit der aus zwei Micro-Frontends bestehenden Beispiel-Anwendung "StockPrice" kann man sich Charts erzeugen lassen, die Aktienkurse (Jahre 2014 bis 2018) von zwei Firmen als Scatterplot inklusive Korrelationskoeffizienten darstellen:  
 
 *Bild 3 - Die Oberfläche Anwendung "StockPrice"*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190515-01/oliver/correlationApp.png"/>
 
-Dazu kann man in den beiden Automplete-Eingabefeldern am oberen Rand jeweils eine Firma (aus dem Dow Jones) eingeben. Hat man beide Firmen eingegeben, wird der Chart angezeigt. 
+Dazu kann man in den beiden Autocomplete-Eingabefeldern am oberen Rand jeweils eine Firma (aus dem Dow Jones) eingeben. Hat man beide Firmen eingegeben, wird der Chart angezeigt. 
 Live kann man die Anwendung hier sehen: http://bit.ly/stockprice-page
 
 ## Die Self-Contained-Systems "Company" und "StockHistory"
@@ -491,7 +491,7 @@ export class SelectCompany extends React.Component<Props, State> {
 ```
 
 * Als Eingabefeld verwenden wir `AutoComplete` aus der Bibliothek *Ant Design* (https://ant.design)
-* Nachdem sich die React-Component zum ersten Mal gerendert hat, wird in der React-Lifecycle-Methode `componentDidMount()` der Service "companies" aufgerufen. Das vom Service zurück gelieferte Array mit Namen und Abkürzungen des Companies wird in den State der React-Component gelegt.
+* Nachdem sich die React-Component zum ersten Mal gerendert hat, wird in der React-Lifecycle-Methode `componentDidMount()` der Service "companies" aufgerufen. Das vom Service zurückgelieferte Array mit Namen und Abkürzungen des Companies wird in den State der React-Component gelegt.
 * In `handleSearch()` werden aus den vom Service geladenen Company-Namen diejenigen gefiltert, die dem eingegebenen Teilstring entsprechen, so dass `AutoComplete` eine Vorschlagsliste anzeigen kann.
 * `handleSelect()` wird aufgerufen, wenn eine Company ausgewählt worden ist. Hier wird die vom Custom Element über die Property `onChange` übergebene Callback-Function  aufgerufen.
 
@@ -637,7 +637,7 @@ export class CompanyCorrelation extends
 }
 ```
 
-Der komplette Code der React Component `CompanyCorrelation` ist etwas komplexer. Der Einfachheit wegen soll er hier nicht im Einzelnen gezeigt werden. Interessierte finden den Code unter http://bit.ly/companyCorrelation.
+Der komplette Code der React-Component `CompanyCorrelation` ist etwas komplexer. Der Einfachheit wegen soll er hier nicht im Einzelnen gezeigt werden. Interessierte finden den Code unter http://bit.ly/companyCorrelation.
 
 ## Fazit
 
