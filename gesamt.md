@@ -284,11 +284,11 @@ Beim näheren Betrachten dieses Beispiels wird deutlich, dass die Custom Element
 ## Web Components aber einfach
 
 Die direkte Benutzung der Web-Components-API ist für kleinere Aufgaben ausreichend. Auch für spezialisierte Aufgaben, wie die Integration von Micro-Frontends, sind die Custom Elements durchaus geeignet.
-Wem die Spezifikationen des Web-Component-Standards zu rudimentär sind, kann inzwischen auf verschiedenste Frameworks und Libraries zurückgegriffen werden, die die Arbeit mit Web Components vereinfachen. 
+Wem die Spezifikationen des Web-Component-Standards zu rudimentär sind, kann inzwischen auf verschiedenste Frameworks und Libraries zurückgreifen, die die Arbeit mit Web Components vereinfachen. 
 Zu nennen ist vor allem *stencil.js* (https://stenciljs.com), von den Ionic Machern. Dieses Tool stellt einen Compiler zur Verfügung, der den stencil.js-Code direkt in die passenden Web-Components API Aufrufe übersetzt. Alternativen sind *LitElement* (https://lit-element.polymer-project.org) von Google oder SkateJS (https://skatejs.netlify.com).
 
 # Integration von zwei Micro-Frontends über Custom Elements am konkreten Beispiel
-Im Folgenden wollen wir konkret zeigen, wie wir Custom Elements zur Integration von Micro-Frontends im Projekt FX einsetzen. 
+Im Folgenden wollen wir zeigen, wie wir Custom Elements zur Integration von Micro-Frontends im Projekt FX einsetzen. 
 Das zeigen wir exemplarisch an einer kleinen Beispiel-Anwendung, die aus zwei Self-Contained-Systems besteht.
 
 ## Die Beispiel-Anwendung "StockPrice": Korrelation von Aktienkursen
