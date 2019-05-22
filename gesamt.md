@@ -399,7 +399,7 @@ customElements.define("select-company", SelectCompanyElement);
 	    full: string;  
 	}
 	```
-* Gemäß dem Prinzip, dass alle Funktionalität in der Rect-Component liegt, findet auch der Aufruf des Service "companies" innerhalb der React-Component statt. Darum geben wir der React-Component über die Property `basedir` die Adresse mit, von der aus der Code des Custom Elements ausgeliefert wurde. Denn dort kann die React-Component auch den Service finden. 
+* Gemäß dem Prinzip, dass alle Funktionalität in der React-Component liegt, soll auch der Aufruf des Service "companies" innerhalb der React-Component stattfinden. Darum geben wir der React-Component über die Property `basedir` die Adresse des Proxies mit, da von dort der Code des Custom Elements ausgeliefert wurde. Denn über diese Adresse kann die React-Component dann auch den Service aurufen. 
 	Diese Adresse holen wir uns über: 
 	```
 	const scriptPath = 
