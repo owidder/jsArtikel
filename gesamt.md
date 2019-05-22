@@ -4,12 +4,12 @@ Mit dem Projekt *FX* erstellt die Otto-Tochter *EOS* eine neue zentrale Anwendun
 FX besteht aus (zur Zeit) ca. 50 Self-Contained-Systems, die jeweils für eine bestimmte Fachlichkeit verantwortlich sind (z.B. Zahlungszuordnung, Buchhaltung, Ablaufsteuerung oder Daten-Analyse). 
 Jedes Self-Contained-System hat eine unabhängige Datenhaltung (PostrgreSQL, MongoDB, Elastic Search, ...) und
 jedes Self-Contained-System liefert die für den Aufruf der eigenen Services benötigten Oberflächen (Micro-Frontends) selbst aus.
-Die Kommunikation innerhalb eines Self-Contained-Systems, also vom Micro-Frontend zum Backend, finded über eine Rest-API statt. Die Kommunikation zwishcen Self-Contained-Systems finde ausschließlich asynchron über Kafka statt.
+Die Kommunikation innerhalb eines Self-Contained-Systems, also vom Micro-Frontend zum Backend, finded über eine Rest-API statt. Die Kommunikation zwischen Self-Contained-Systems findet ausschließlich asynchron über Kafka statt.
 
 *Bild 1 - Das System FX*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190521-03/images/fx.png"/>
 
-Im Projekt *FX* haben haben wir uns für Web Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir die Web-Components-API, um bestehende React Components zu "wrappen". Die einzeln Self-Contained-Systems benutzen dann lediglich die  Web-Component ohne zu wissen, dass im Hintergrund React seine Dienste versieht. Dieser Ansatz bietet folgende Vorteile:
+Im Projekt *FX* haben wir uns für Web Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir die Web-Components-API, um bestehende React Components zu "wrappen". Die einzelnen Self-Contained-Systems benutzen dann lediglich die  Web-Component ohne zu wissen, dass im Hintergrund React seine Dienste versieht. Dieser Ansatz bietet folgende Vorteile:
 * einfache Integration im Frontend
 * schlanke API
 * Web-Standard
@@ -25,11 +25,11 @@ Microservices haben sich im Backend-Bereich in vielen Projekten als erfolgreiche
 * Integration im Frontend über Verlinkung (funktioniert am besten wenn jedes Micro-Frontend eine abgeschlossene Funktionalität aufweisen kann)
 * Integration im Frontend über Web-Components
 
-Bevor es an die Details unserer Verwendung vom Web-Components geht, lohnt es sich erst einmal zu klären, was Komponenten im Allgemeinen und Web-Components im Speziellen überhaupt sind. 
+Bevor es an die Details unserer Verwendung von Web-Components geht, lohnt es sich zu klären, was Komponenten im Allgemeinen und Web-Components im Speziellen überhaupt sind. 
 
-# Was sind Komponenten ?
+# Was sind Komponenten?
 
-1992 wurde Visual-Basic 2.0 von Microsoft der Öffentlichkeit präsentiert. Neben neuen Sprachfeatures für objekt-orientierte Programmierung bot Visual-Basic mit der VBX (Visual-Basic-Extension) Schnittstelle die Möglichkeit, beliebige UI-Komponenten anderer Hersteller in eigenen Programme zu verwenden. 1995 zog dann Borland mit Delphi 1.0 und der Visual-Component Library nach. Java unternahm dann 1997 mit Swing und JavaBeans ebenfalls den Versuch an diese Erfolge anzuknüpfen. 
+1992 wurde Visual-Basic 2.0 von Microsoft der Öffentlichkeit präsentiert. Neben neuen Sprachfeatures für objekt-orientierte Programmierung bot Visual-Basic mit der VBX (Visual-Basic-Extension) Schnittstelle die Möglichkeit, beliebige UI-Komponenten anderer Hersteller in eigenen Programmen zu verwenden. 1995 zog dann Borland mit Delphi 1.0 und der Visual-Component Library nach. Java unternahm dann 1997 mit Swing und JavaBeans ebenfalls den Versuch an diese Erfolge anzuknüpfen. 
 
 Die zunehmende Verbreitung des Web und die Entwicklung neuer Konzepte wie SPAs (Single-Page-Applications) und Frameworks wie Angular oder React erlaubte es dann auch den Web-Entwicklern, die im Desktop-Umfeld bereits erfolgreiche Komponenten basierte Entwicklung für Web-Anwendungen zu verwenden.
 
@@ -58,7 +58,7 @@ Für neuere Browser, außer Microsoft Edge, sieht die Web-Components Unterstütz
 
 # Was sind Web Components
 
-Web Components ist erst einmal nur eine Meta-Spezifikation für folgende Spezifikationen:
+Web Components beschreiben erst einmal nur eine Meta-Spezifikation für folgende Spezifikationen:
 
 * Custom Elements
 * Shadow Dom
@@ -107,10 +107,10 @@ In *Bild 2* sehen Sie wie die in *Beispiel 1* deklarierte Komponente als Tag `sa
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190520-01/images/say-hello-dom.png"/>
 
 Um dieses Verhalten zu erreichen sind zwei Dinge nötig:
-* unsere Klasse muß von der Klasse `HTMLElement` erben
+* unsere Klasse muss von der Klasse `HTMLElement` erben
 * über den Aufruf von `customElements.define` wird unserer Klasse ein HTML-Tag zugeordnet (`say-hello`).
 
-Dass der Name unseres Tags einen Bindestricht enthält, ist dabei kein Zufall, sondern eine durch die Spezifikation vorgegeben Namenskonvention. Hiermit wird eine Namenskollision mit vorhandenen oder zukünftigen HTML-Tags vermieden. 
+Dass der Name unseres Tags einen Bindestrich enthält, ist dabei kein Zufall, sondern eine durch die Spezifikation vorgegeben Namenskonvention. Hiermit wird eine Namenskollision mit vorhandenen oder zukünftigen HTML-Tags vermieden. 
 
 ## Shadow Dom
 
@@ -134,7 +134,7 @@ React ist übrigens nicht das einzige Framework, das Probleme im Umgang mit Web-
 
 ## ES Modules
 
-Die ES-Module-Spezifikation definiert ein API, die es erlaubt, JavaScript Dokumente in andere Java-Skript Dokumente einzubinden. Ursprünglich wurde über die HTML-Import-Spezifikation versucht diese Verhalten zu spezifizieren. Diese Spezifikation wurde aber von den Entwicklungen im JavaScript Umfeld überholt. Statt eigene Konzepte zu definieren, wie es die HTML-Import-Spezifikation versuchte bedienen sich ES Modules den aus der JavaScript Entwicklung vertrauten Konzepten. 
+Die ES-Module-Spezifikation definiert ein API, das es erlaubt, JavaScript Dokumente in andere Java-Skript Dokumente einzubinden. Ursprünglich wurde über die HTML-Import-Spezifikation versucht dieses Verhalten zu spezifizieren. Diese Spezifikation wurde aber von den Entwicklungen im JavaScript Umfeld überholt. Statt eigene Konzepte zu definieren, wie es die HTML-Import-Spezifikation versuchte, bedienen sich ES Modules den aus der JavaScript Entwicklung vertrauten Konzepten. 
 
 In Listing 2 und Listing 3 sehen Sie ein Beispiel für die Verwendung von ES Modules. Für das Ausführen dieses Beispiels genügt es nicht mehr, die Datei *import.html* direkt in einem Browser zu öffnen. Man benötigt einen einfachen lokalen Webserver, wie z.B. das *SimpleHTTPServer*-Package von Python:
 
@@ -176,7 +176,7 @@ Wahlweise können Sie das Beispiel auch hier betrachten: [http://bit.ly/say-hell
 
 Die Spezifikation für *HTML Templates* beschäftigt sich mit der Fragestellung wie HTML-Code Fragmente definiert und wiederverwendet werden können. HTML Templates sind daher auch ohne Web-Components verwendbar und Web-Components können auch ohne HTML Templates entwickelt werden. Die Verwendung von Templates erleichtert aber die Erstellung von Web Components und erlaubt die klare Trennung von Code und Markup.
 
-In Listing 4  sehen Sie wie "HTML Templates" verwendet werden. Das Beispiel zeigt darüberhinaus die Verwendung von sogenannten *Slots*. Sie erlauben es HTML-Code anzugeben, der den entsprechend benannten Part im Template ersetzt. Bei der Ausführung von Listing 4 wird daher 
+In Listing 4  sehen Sie wie "HTML Templates" verwendet werden. Das Beispiel zeigt darüber hinaus die Verwendung von sogenannten *Slots*. Sie erlauben es HTML-Code anzugeben, der den entsprechend benannten Part im Template ersetzt. Bei der Ausführung von Listing 4 wird daher 
 ```HTML
 <slot name="and-more"></slot>
 ``` 
@@ -297,13 +297,13 @@ Mit der aus zwei Micro-Frontends bestehenden Beispiel-Anwendung "StockPrice" kan
 *Bild 3 - Die Oberfläche Anwendung "StockPrice"*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190515-01/oliver/correlationApp.png"/>
 
-Dazu kann man in den beiden Automplete-Eingabefeldern am oberen Rand jeweils eine Firma (aus dem Dow Jones) eingeben. Hat man beide Firmen eingegeben, wird der Chart angezeigt. 
+Dazu kann man in den beiden Autocomplete-Eingabefeldern am oberen Rand jeweils eine Firma (aus dem Dow Jones) eingeben. Hat man beide Firmen eingegeben, wird der Chart angezeigt. 
 Live kann man die Anwendung hier sehen: http://bit.ly/stockprice-page
 
 ## Die Self-Contained-Systems "Company" und "StockHistory"
 Die Anwendung "StockPrice" besteht aus den zwei Self-Contained-Systems "Company" und "StockHistory", deren Micro-Frontends auf einer Web-Seite mit Hilfe von Custom Elements integriert werden:
 1. "Company": Stellt einen Service zur Verfügung, über den Namen und Abkürzungen aller Dow-Jones-Companies abgeholt werden können. Das Micro-Frontend ist ein Eingabefeld mit Autocompletion.
-	Es kann über ein Custom Element mit Namen `select-company` eingebunden werden kann.
+	Es kann über ein Custom Element mit Namen `select-company` eingebunden werden.
 2. "StockHistory": Stellt einen Service zur Verfügung, über den die historischen Aktienkurse abgefragt werden können. Das Micro-Frontend ist der Scatterplot-Chart. 
 	Er kann über ein Custom Element mit Namen `company-correlation` eingebunden werden.
 
@@ -362,7 +362,7 @@ Live kann man sich das Element hier ansehen: http://bit.ly/stockprice-company
 ## Das Custom Element "select-company"
 Wie oben schon erwähnt, haben wir uns bei der Implementierung der Custom Elements an die folgenden Prinzipien gehalten:
 * Kein Shadow-DOM
-* Custom Elements sind nur schmale Wrapper: Die gesamte client-seitige Funktionalität eines Micro-Frontends befindet sich innerhalb einer React-Component (mit ihren Unter-Compenents)
+* Custom Elements sind nur schmale Wrapper: Die gesamte client-seitige Funktionalität eines Micro-Frontends befindet sich innerhalb einer React-Component (mit ihren Unter-Components)
 * Ein Custom Element ruft nur Services von der Adresse auf, von der es ausgeliefert wurde
 
 Mit diesen Prinzipien sieht die Implementierung (`SelectCompanyElement.tsx`) des Custom Elements `select-company` folgendermaßen aus:
@@ -411,7 +411,7 @@ customElements.define("select-company", SelectCompanyElement);
 	const basedir = 
 		parts.slice(0, parts.length-1).join("/");
 	```
-* Wie schon erwähnt verwenden wir keinen Shadow Dom, sondern rendern die Dom-Elemente des Custom Elements direkt in den den Main-Dom. Das sollte man aber nicht im Constructor des Custom Elements tun sondern in der `connectedCallback`-Lifecycle-Methode. 
+* Wie schon erwähnt verwenden wir keinen Shadow Dom, sondern rendern die Dom-Elemente des Custom Elements direkt in den Main-Dom. Das sollte man aber nicht im Constructor des Custom Elements tun sondern in der `connectedCallback`-Lifecycle-Methode. 
 	Dort rendern wir die React-Component:
 	```
     connectedCallback() {  
@@ -491,13 +491,13 @@ export class SelectCompany extends React.Component<Props, State> {
 ```
 
 * Als Eingabefeld verwenden wir `AutoComplete` aus der Bibliothek *Ant Design* (https://ant.design)
-* Nachdem sich die React-Component zum ersten Mal gerendert hat, wird in der React-Lifecycle-Methode `componentDidMount()` der Service "companies" aufgerufen. Das vom Service zurück gelieferte Array mit Namen und Abkürzungen des Companies wird in den State der React-Component gelegt.
+* Nachdem sich die React-Component zum ersten Mal gerendert hat, wird in der React-Lifecycle-Methode `componentDidMount()` der Service "companies" aufgerufen. Das vom Service zurück gelieferte Array mit Namen und Abkürzungen der Companies wird in den State der React-Component gelegt.
 * In `handleSearch()` werden aus den vom Service geladenen Company-Namen diejenigen gefiltert, die dem eingegebenen Teilstring entsprechen, so dass `AutoComplete` eine Vorschlagsliste anzeigen kann.
 * `handleSelect()` wird aufgerufen, wenn eine Company ausgewählt worden ist. Hier wird die vom Custom Element über die Property `onChange` übergebene Callback-Function  aufgerufen.
 
 ## Webpack
 
-Mit folgender Webpack-Konfiguration lassen sich nun Custom Element und React-Component in eine JavaScript-File mit Namen `selectCompanyElement.js` packen, so dass es von der integrierenden Anwendung (hier "StockPrice") verwendet werden kann:
+Mit folgender Webpack-Konfiguration lassen sich nun Custom Element und React-Component in ein JavaScript-File mit Namen `selectCompanyElement.js` packen, so dass es von der integrierenden Anwendung (hier "StockPrice") verwendet werden kann:
 
 *Listing 9 - `webpack.config.js`*
 ```
@@ -646,9 +646,9 @@ Unsere Erfahrungen mit Custom Elements für die Integration von Micro-Frontends 
 Nachteile:
 * Seiten, die viele Micro-Frontends einbinden, müssen von vielen Systemen JavaScript-Files laden.
 * Entwicklungsprozess ist schwieriger, da während der Entwicklung des eigenen Frontends, auf die Web-Components anderer Systemen zugegriffen werden muß.
-* Der Build-Prozeß ist aufwendiger.
+* Der Build-Prozess ist aufwendiger.
 * Zusätzliche Komplexität durch die Verwendung von Custom Elements.
-* Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
+* Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identische Server-Calls ausgeführt
 	Z.B. führen die beiden `select-company`-Custom-Elements  auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 Vorteile:
