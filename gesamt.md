@@ -20,18 +20,18 @@ Im Projekt *FX* haben haben wir uns für Web Components als Werkzeug zur Integra
 Microservices haben sich im Backend-Bereich in vielen Projekten als erfolgreiches Architektur-Muster etabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, dass es schwierig ist, aus einer Vielzahl einzelner Frontends (Micro-Frontends) eine Lösung mit einem einheitlichen Look-And-Feel und einer konsistenten User-Experience herzustellen. Aus diesem Grund gibt es auch verschiedene Ansätze, mit dieser Herausforderung umzugehen:
 
 * Integration im Backend über vorhandene Mechanismen wie Server-Side-Includes
-* Integration im Backend aber mit zusätzlicher Tool Unterstützung (https://www.mosaic9.org)
+* Integration im Backend, aber mit zusätzlicher Tool Unterstützung (https://www.mosaic9.org)
 * Mono-Repo Ansatz (https://nx.dev)
 * Integration im Frontend über Verlinkung (funktioniert am besten wenn jedes Micro-Frontend eine abgeschlossene Funktionalität aufweisen kann)
 * Integration im Frontend über Web-Components
 
-Bevor es an die Details unserer Verwendung vom Web-Components geht, lohnt es sich erst einmal zu klären, was Komponenten im Allgemeinen und Web-Components im Speziellen denn überhaupt sind. 
+Bevor es an die Details unserer Verwendung vom Web-Components geht, lohnt es sich erst einmal zu klären, was Komponenten im Allgemeinen und Web-Components im Speziellen überhaupt sind. 
 
 # Was sind Komponenten ?
 
 1992 wurde Visual-Basic 2.0 von Microsoft der Öffentlichkeit präsentiert. Neben neuen Sprachfeatures für objekt-orientierte Programmierung bot Visual-Basic mit der VBX (Visual-Basic-Extension) Schnittstelle die Möglichkeit, beliebige UI-Komponenten anderer Hersteller in eigenen Programme zu verwenden. 1995 zog dann Borland mit Delphi 1.0 und der Visual-Component Library nach. Java unternahm dann 1997 mit Swing und JavaBeans ebenfalls den Versuch an diese Erfolge anzuknüpfen. 
 
-Die zunehmende Verbreitung des Web und neuen Konzepten wie SPAs (Single-Page-Applications) und Frameworks wie Angular oder React erlaubte es dann auch den Web-Entwicklern, die im Desktop-Umfeld bereits erfolgreiche Komponenten basierte Entwicklung für Web-Anwendungen zu verwenden.
+Die zunehmende Verbreitung des Web und die Entwicklung neuer Konzepte wie SPAs (Single-Page-Applications) und Frameworks wie Angular oder React erlaubte es dann auch den Web-Entwicklern, die im Desktop-Umfeld bereits erfolgreiche Komponenten basierte Entwicklung für Web-Anwendungen zu verwenden.
 
 Auch wenn diese Beispiele alle aus dem UI Umfeld stammen, muss es sich bei einer Komponente nicht unbedingt um eine UI-Komponente handeln. Grundlegende Voraussetzung für eine Komponente ist lediglich eine definierte Schnittstelle um verschiedene Komponenten verknüpfen und in eigene Anwendungen integrieren zu können.   
 
@@ -54,7 +54,7 @@ IE und Edge, die Browser von Microsoft, bieten zum derzeitigen Zeitpunkt keine U
 
 ## Polyfill
 
-Für neuere Browser, außer Microsoft Edge, sieht die Web-Components Unterstützung also gut aus, für alle anderen gibt es ein Polyfill. Nähere Informationen zu Verwendung und Installation finden Sie unter https://www.webcomponents.org/polyfills. Dieses Poylfill rüstet sowohl die Custom-Elements-API als auch die Shadow-Dom-API für ältere Browser nach. Bei der Verwendung der Shadow-Dom-API ist allerdings Vorsicht geboten, da es negative Auswirkungen auf die Render-Performanz einer Seite haben kann. 
+Für neuere Browser, außer Microsoft Edge, sieht die Web-Components Unterstützung also gut aus, für alle anderen gibt es ein Polyfill. Nähere Informationen zu Verwendung und Installation finden Sie unter https://www.webcomponents.org/polyfills. Dieses Poylfill rüstet sowohl die Custom-Elements-API als auch die Shadow-Dom-API für ältere Browser nach. Bei der Verwendung der Shadow-Dom-API des Polyfills ist allerdings Vorsicht geboten, da es negative Auswirkungen auf die Render-Performanz einer Seite haben kann. 
 
 # Was sind Web Components
 
@@ -99,7 +99,7 @@ Wie oben schon erwähnt besteht die Web-Components-Spezifikation aus mehreren AP
 
 ## Custom Elements
 
-Jeder Web-Entwickler, der eins der bekannten Frameworks wie Angular oder React verwendet hat, weiß, dass die sinnvolle Aufteilung einer Applikation in Komponenten die Entwicklung und Weiterentwicklung vereinfacht. Leider geht diese Struktur verloren, sobald die Inhalte einer Angular oder React Komponente in den Dom-Tree des Browsers eingefügt werden. Aus den sorgsam aufgebauten Komponenten bleibt dann nur noch eine Sammlung von HTML-Tags übrig, die - zumindest ohne den Einsatz spezieller Werkzeuge - insbesondere die Fehlersuche erschweren. Diese Komponenten-Struktur, auch im Dom-Tree des Browsers sichtbar zu machen, ist Aufgabe der *Custom-Elements*. 
+Jeder Web-Entwickler, der eins der bekannten Frameworks wie Angular oder React verwendet hat, weiß, dass die sinnvolle Aufteilung einer Applikation in Komponenten die Entwicklung und Weiterentwicklung vereinfacht. Leider geht diese Struktur verloren, sobald die Inhalte einer Angular oder React Komponente in den Dom-Tree des Browsers eingefügt werden. Aus den sorgsam aufgebauten Komponenten bleibt dann nur noch eine Sammlung von HTML-Tags übrig, die - zumindest ohne den Einsatz spezieller Werkzeuge - vor allem die Fehlersuche erschweren. Diese Komponenten-Struktur, auch im Dom-Tree des Browsers sichtbar zu machen, ist Aufgabe der *Custom-Elements*. 
 
 In *Bild 2* sehen Sie wie die in *Beispiel 1* deklarierte Komponente als Tag `say-hello` im Inspector des Safari-Browsers angezeigt wird. 
 
@@ -174,7 +174,7 @@ Wahlweise können Sie das Beispiel auch hier betrachten: [http://bit.ly/say-hell
 
 ## HTML Templates
 
-Die Spezifikation für *HTML Templates* beschäftigt sich mit der Fragestellung wie HTML-Code Fragmente definiert und wiederverwendet werden können. HTML Templates sind daher auch ohne Web-Components verwendbar und Web-Components können auch ohne HTML Templates entwickelt werden. Die Verwendung von Templates erleichtert aber die Entwicklung von Web Components und erlaubt die klare Trennung von Code und Markup.
+Die Spezifikation für *HTML Templates* beschäftigt sich mit der Fragestellung wie HTML-Code Fragmente definiert und wiederverwendet werden können. HTML Templates sind daher auch ohne Web-Components verwendbar und Web-Components können auch ohne HTML Templates entwickelt werden. Die Verwendung von Templates erleichtert aber die Erstellung von Web Components und erlaubt die klare Trennung von Code und Markup.
 
 In Beispiel 3 sehen Sie wie "HTML Templates" verwendet werden. Das Beispiel zeigt darüberhinaus die Verwendung von sogenannten *Slots*. Sie erlauben es, HTML-Code anzugeben, der den entsprechend benannten Part im Template ersetzt. Bei der Ausführung von Listing 4 wird daher 
 ```HTML
