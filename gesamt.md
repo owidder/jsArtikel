@@ -9,7 +9,7 @@ Die Kommunikation innerhalb eines Self-Contained-Systems, also vom Micro-Fronten
 *Bild 1 - Das System FX*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190521-03/images/fx.png"/>
 
-Im Projekt *FX* haben haben wir uns für Web Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir die Web-Components-API, um bestehende React Components zu "wrappen". Die einzeln Self-Contained-Systems benutzen dann lediglich die  Web-Component ohne zu wissen, dass im Hintergrund React seine Dienste versieht. Dieser Ansatz bietet folgende Vorteile:
+Im Projekt *FX* haben haben wir uns für Web Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir die Web-Components-API, um bestehende React Components zu "wrappen". Die einzeln Self-Connd-System benutzen dann lediglich die  Web-Component ohne zu wissen, dass im Hintergrund React seine Dienste versieht. Dieser Ansatz t folgende Vorteile:
 * einfache Integration im Frontend
 * schlanke API
 * Web-Standard
@@ -17,7 +17,7 @@ Im Projekt *FX* haben haben wir uns für Web Components als Werkzeug zur Integra
 
 # UI und Microservices
 
-Microservices haben sich im Backend-Bereich in vielen Projekten als erfolgreiches Architektur-Muster etabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, dass es schwierig ist, aus einer Vielzahl einzelner Frontends (Micro-Frontends) eine Lösung mit einem einheitlichen Look-And-Feel und einer konsistenten User-Experience herzustellen. Aus diesem Grund gibt es auch verschiedene Ansätze, mit dieser Herausforderung umzugehen:
+Microservices haben sich im Backend-Bereich in vielen Projekten als erfolgreiches Architektur-teretabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, dass es schwierig ist, aus einer Vielzahl einzelner Frontends (Micro-Frontends) eine Lösung mit einem einheitlichen Look-And-Feel und einer konsistenten User-Experience herzustellen. Aus diesem Grund gibt es auch verschiedene Ansätze, mit dieser Herausforderung umzugehen:
 
 * Integration im Backend über vorhandene Mechanismen wie Server-Side-Includes
 * Integration im Backend, aber mit zusätzlicher Tool Unterstützung (https://www.mosaic9.org)
@@ -31,7 +31,7 @@ Bevor es an die Details unserer Verwendung vom Web-Components geht, lohnt es sic
 
 1992 wurde Visual-Basic 2.0 von Microsoft der Öffentlichkeit präsentiert. Neben neuen Sprachfeatures für objekt-orientierte Programmierung bot Visual-Basic mit der VBX (Visual-Basic-Extension) Schnittstelle die Möglichkeit, beliebige UI-Komponenten anderer Hersteller in eigenen Programme zu verwenden. 1995 zog dann Borland mit Delphi 1.0 und der Visual-Component Library nach. Java unternahm dann 1997 mit Swing und JavaBeans ebenfalls den Versuch an diese Erfolge anzuknüpfen. 
 
-Die zunehmende Verbreitung des Web und die Entwicklung neuer Konzepte wie SPAs (Single-Page-Applications) und Frameworks wie Angular oder React erlaubte es dann auch den Web-Entwicklern, die im Desktop-Umfeld bereits erfolgreiche Komponenten basierte Entwicklung für Web-Anwendungen zu verwenden.
+Die zunehmende Verbreitung des Web und die Entwicklung neun Konzepte wie SPAs (Single-Page-Applications) und Frameworks wie Angular oder React erlaubte es dann auch den Web-Entwicklern, die im Desktop-Umfeld bereits erfolgreiche Komponenten basierte Entwicklung für Web-Anwendungen zu verwenden.
 
 Auch wenn diese Beispiele alle aus dem UI Umfeld stammen, muss es sich bei einer Komponente nicht unbedingt um eine UI-Komponente handeln. Grundlegende Voraussetzung für eine Komponente ist lediglich eine definierte Schnittstelle um verschiedene Komponenten verknüpfen und in eigene Anwendungen integrieren zu können.   
 
@@ -50,7 +50,7 @@ Bevor es aber an die Details der Spezifikation geht, lohnt sich ein kurzer Abste
 Benutzer von Firefox, Chrome und Safari können sich freuen, da alle wichtigen Aspekte wie *Custom Elements*, *Shadow Dom* und *HTML Templates* unterstützt werden. 
 Bei der Verwendung von Safari muss man lediglich mit einer kleinen Einschränkung leben, da nur  "Autonomous custom elements" aber keine "Customized built-in elements" verwendet werden können. Das bedeutet, dass in Safari zwar eigene Komponenten erstellt und verwendet werden können, die aber keine Möglichkeit bieten, Eigenschaften von bestehenden HTML-Elementen (wie z.B. von einem Button) wiederzuverwenden (http://bit.ly/customized-builtin-example).
 
-IE und Edge, die Browser von Microsoft, bieten zum derzeitigen Zeitpunkt keine Unterstützung für Web-Components. Für die Zukunft ist hier aber Besserung zu erwarten. Die zukünftige Version von Edge wird auf Chromium, der Open-Source Variante von Chrome, aufbauen und dann ebenfalls die Web-Components Spezifikation vollständig unterstützen.
+IE und Edge, die Browser von Microsoft, bieten zum derzeitigen Zeitpunkt keine Unterstützung für Web-Components. Für die Zukunft ist er ar Besserung zu erwarten. Die zukünftige Version von Edge wird auf Chromium, der Open-Source Variante von Chrome, aufbauen und dann ebenfalls die Web-Components Spezifikation vollständig unterstützen.
 
 ## Polyfill
 
@@ -110,11 +110,11 @@ Um dieses Verhalten zu erreichen sind zwei Dinge nötig:
 * unsere Klasse muß von der Klasse `HTMLElement` erben
 * über den Aufruf von `customElements.define` wird unserer Klasse ein HTML-Tag zugeordnet (`say-hello`).
 
-Dass der Name unseres Tags einen Bindestricht enthält, ist dabei kein Zufall, sondern eine durch die Spezifikation vorgegeben Namenskonvention. Hiermit wird eine Namenskollision mit vorhandenen oder zukünftigen HTML-Tags vermieden. 
+Dass der Name unseres Tags einen Bindestricht enthält, ist dabei kein Zufall, sondern eine r die Spezifikation vorgegeben Namenskonvention. Hiermit wird eine Namenskollision mit vorhandenen oder zukünftigen HTML-Tags vermieden. 
 
 ## Shadow Dom
 
-Die Kapselung von HTML Code in einer Komponente löst aber nur ein Teil des Problems. Neben HTML gibt es auch noch CSS. Ursprünglich arbeiten CSS Selektoren über alle Elemente einer Seite. Das würde bedeuten, dass wir mit den Styling-Regeln unsere Komponente das umgebende Layout zerstören könnten. Das widerspricht allerdings dem Konzept einer Komponente, unabhängig und wiederverwendbar zu sein. Aus diesem Grund gibt es die *Shadow-Dom*-Spezifikation. Diese Spezifikation erfüllt 2 Aufgaben:
+Die Kapselung von HTML Code in einer Komponente löst aber nur ein Teil des Problems. Neben HTML gibt es auch noch CSS. Ursprünglich arbeiten CSS Selektoren über alle Elemente einer Seite. Das würde bedeuten, dass wir mit den Styling-Regeln unsere Komponente das umgebende Layout zerstören könnten. Das widerspricht allerdings dem Konzept einer Komponente, unabhängig und wiederverwendbar zu sein. Aus diesem Grund es die *Shadow-Dom*-Spezifikation. Diese Spezifikation erfüllt 2 Aufgaben:
 
 * Style Informationen bleiben innerhalb der Komponente
 * die interne Implementierung der Komponente ist nicht sichtbar
@@ -176,7 +176,7 @@ Wahlweise können Sie das Beispiel auch hier betrachten: [http://bit.ly/say-hell
 
 Die Spezifikation für *HTML Templates* beschäftigt sich mit der Fragestellung wie HTML-Code Fragmente definiert und wiederverwendet werden können. HTML Templates sind daher auch ohne Web-Components verwendbar und Web-Components können auch ohne HTML Templates entwickelt werden. Die Verwendung von Templates erleichtert aber die Erstellung von Web Components und erlaubt die klare Trennung von Code und Markup.
 
-In Listing 4  sehen Sie wie "HTML Templates" verwendet werden. Das Beispiel zeigt darüberhinaus die Verwendung von sogenannten *Slots*. Sie erlauben es HTML-Code anzugeben, der den entsprechend benannten Part im Template ersetzt. Bei der Ausführung von Listing 4 wird daher 
+In Listing 4  sehen Sie wie "HTML Templates" verwendet werden. Das Beispiel zeigt darüberhinaus die Verwendung von sogenannten *Slots*. Sie erlauben es HTML-ode anzugeben, der den entsprechend benannten Part im Template ersetz. Bei der Ausführung von Listing 4 wird daher 
 ```HTML
 <slot name="and-more"></slot>
 ``` 
@@ -284,7 +284,7 @@ Beim näheren Betrachten dieses Beispiels wird deutlich, dass die Custom Element
 ## Web Components aber einfach
 
 Die direkte Benutzung der Web-Components-API ist für kleinere Aufgaben ausreichend. Auch für spezialisierte Aufgaben, wie die Integration von Micro-Frontends, sind die Custom Elements durchaus geeignet.
-Wem die Spezifikationen des Web-Component-Standards zu rudimentär sind, kann inzwischen auf verschiedenste Frameworks und Libraries zurückgreifen, die die Arbeit mit Web Components vereinfachen. 
+Wem die Spezifikationen des Web-Component-Standards zu rudimentär sind, kann schen verschiedenste Frameworks und Libraries zurückgegriffen werden, die die Arbeit mit Web Components vereinfachen. 
 Zu nennen ist vor allem *stencil.js* (https://stenciljs.com), von den Ionic Machern. Dieses Tool stellt einen Compiler zur Verfügung, der den stencil.js-Code direkt in die passenden Web-Components API Aufrufe übersetzt. Alternativen sind *LitElement* (https://lit-element.polymer-project.org) von Google oder SkateJS (https://skatejs.netlify.com).
 
 # Integration von zwei Micro-Frontends über Custom Elements am konkreten Beispiel
@@ -643,24 +643,17 @@ Der komplette Code der React Component `CompanyCorrelation` ist etwas komplexer.
 
 Unsere Erfahrungen mit Custom Elements für die Integration von Micro-Frontends waren weitestgehend positiv. Dennoch hat jede Münze (mindestens) zwei Seiten:
 
-Nachteile:
-* Seiten, die viele Micro-Frontends einbinden, müssen von vielen Systemen JavaScript-Files laden.
-* Entwicklungsprozess ist schwieriger, da während der Entwicklung des eigenen Frontends, auf die Web-Components anderer Systemen zugegriffen werden muß.
-* Der Build-Prozeß ist aufwendiger.
-* Zusätzliche Komplexität durch die Verwendung von Custom Elements.
-* Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identischen Server-Calls ausgeführt
-	Z.B. führen die beiden `select-company`-Custom-Elements  auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 Vorteile:
-* Komplett unabhängiges Deployment: Da die Custom Elements erst zur Laufzeit geladen werden, kann ein Self-Contained-System seine Micro-Frontends ändern und neu deployen, ohne dass eines der Systeme, die das Micro-Frontend einbinden, neu gebaut und deployt werden muss.
+* Komplett unabhängiges Deployment: Da die Custom Elements erst zur Laufzeit geladen werden, kann ein Self-Contained-System seine Micro-Frontends ändern und neu deployen, ohne dass eines der Systeme, die das Micro-Frontend einbinden, neu gbaut und deployt werden muss.
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 	Falls das Micro-Frontend jedoch auch Informationen zurück liefern soll, wie z.B. bei `select-company` benötigt man als komplexere Schnittstelle eine Callback-Function. Im Projekt verwenden wir hierfür auch die Pub/Sub-Library *postal.js* (https://github.com/postaljs/postal.js).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI1NTMyMTI5LDE5ODU0NzYyMTEsNjUzND
-MzNzk3LDg0NDgyMzg0MiwtMTA1NjM3OTUyNywtMTk4ODE0MDQy
-LC0xNjE5MDM2Nzk4LC0xNTUxOTUwMTY3LC01NTU0MTc3MjgsMz
-kxMjY5ODcwXX0=
+eyJoaXN0b3J5IjpbLTQyMzU4NjcxOSw2MjU1MzIxMjksMTk4NT
+Q3NjIxMSw2NTM0MzM3OTcsODQ0ODIzODQyLC0xMDU2Mzc5NTI3
+LC0xOTg4MTQwNDIsLTE2MTkwMzY3OTgsLTE1NTE5NTAxNjcsLT
+U1NTQxNzcyOCwzOTEyNjk4NzBdfQ==
 -->
