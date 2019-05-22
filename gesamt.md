@@ -9,7 +9,7 @@ Die Kommunikation innerhalb eines Self-Contained-Systems, also vom Micro-Fronten
 *Bild 1 - Das System FX*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190521-03/images/fx.png"/>
 
-Wir haben uns für Web Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir die Web-Components-API, um bestehende React Components zu "wrappen". Die einzeln Self-Contained-Systems benutzen dann lediglich die  Web-Component ohne zu wissen, dass im Hintergrund React seine Dienste versieht. Dieser Ansatz bietet folgende Vorteile:
+Im Projekt *FX* haben haben wir uns für Web Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir die Web-Components-API, um bestehende React Components zu "wrappen". Die einzeln Self-Contained-Systems benutzen dann lediglich die  Web-Component ohne zu wissen, dass im Hintergrund React seine Dienste versieht. Dieser Ansatz bietet folgende Vorteile:
 * einfache Integration im Frontend
 * schlanke API
 * Web-Standard
