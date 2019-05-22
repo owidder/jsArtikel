@@ -338,6 +338,7 @@ Neben dem Service "companies" liefert das Self-Contained-System "Company" auch e
 `select-company` rendert sich als Eingabefeld mit Autocompletion-Funktionalität, über das eine Firma aus dem Dow Jones eingegeben werden kann.
 
 *Bild 6 - Das Micro-Frontend `select-company`*
+
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190516-02/oliver/selectCompany.png"/>
 
 Verwenden kann man das Element z.B. so:
@@ -656,3 +657,6 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 	Falls das Micro-Frontend jedoch auch Informationen zurück liefern soll, wie z.B. bei `select-company` benötigt man als komplexere Schnittstelle eine Callback-Function. Im Projekt verwenden wir hierfür auch die Pub/Sub-Library *postal.js* (https://github.com/postaljs/postal.js).
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE3NTMwMDQ5NzVdfQ==
+-->
