@@ -426,7 +426,7 @@ customElements.define("select-company", SelectCompanyElement);
 Die React Component `SelectCompany` enthält die eigentliche Funktionalität des Micro-Frontends:
 
 *Listing 8 - React Component `SelectCompany.tsx`*
-```
+```JavaScript
 import {AutoComplete} from "antd";  
   
 export interface Company {  
@@ -651,6 +651,6 @@ Vorteile:
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 	Falls das Micro-Frontend jedoch auch Informationen zurück liefern soll, wie z.B. bei `select-company` benötigt man als komplexere Schnittstelle eine Callback-Function. Im Projekt verwenden wir hierfür auch die Pub/Sub-Library *postal.js* (https://github.com/postaljs/postal.js).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE2MDQyNjMwLDEzNzA0NzgzNTAsLTE3NT
-MwMDQ5NzVdfQ==
+eyJoaXN0b3J5IjpbLTIwODg1MDQ0NSwxMzcwNDc4MzUwLC0xNz
+UzMDA0OTc1XX0=
 -->
