@@ -410,7 +410,7 @@ customElements.define("select-company", SelectCompanyElement);
 	const basedir = 
 		parts.slice(0, parts.length-1).join("/");
 	```
-* In der `connectedCallback`-Lifecycle-Methode.rendern wir die React-Component:
+* In der `connectedCallback`-Lifecycle-Methode rendern wir die React-Component:
 	```
     connectedCallback() {  
         ReactDOM.render(<SelectCompany 
@@ -418,9 +418,7 @@ customElements.define("select-company", SelectCompanyElement);
 	        onChange={(company: Company) => 
 		        {this.onChangeCompany(company)}}/>, this);  
     }    
-	```
-	Als Container-Dom-Element (zweiter Parameter der `ReactDOM.render()`-Methode) übergeben wir einfach `this`. Innerhalb der `connectedCallback`-Methode repräsentiert `this` das Root-Element des Custom Elements.
-	
+	```	
 	Als `onChange`-Property übergeben wir eine Lambda-Function, die wiederum die Callback-Function aufruft, die dem Custom Element über die `onChangeCompany`-Property übergeben wurde.
 
 ## Die React Component "SelectCompany"
@@ -429,8 +427,6 @@ Die React Component `SelectCompany` enthält die eigentliche Funktionalität des
 
 *Listing 8 - React Component `SelectCompany.tsx`*
 ```
-import * as React from "react";  
-import * as _ from "lodash";  
 import {AutoComplete} from "antd";  
   
 export interface Company {  
@@ -655,6 +651,6 @@ Vorteile:
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 	Falls das Micro-Frontend jedoch auch Informationen zurück liefern soll, wie z.B. bei `select-company` benötigt man als komplexere Schnittstelle eine Callback-Function. Im Projekt verwenden wir hierfür auch die Pub/Sub-Library *postal.js* (https://github.com/postaljs/postal.js).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMxMjg1ODcyLDEzNzA0NzgzNTAsLTE3NT
+eyJoaXN0b3J5IjpbOTE2MDQyNjMwLDEzNzA0NzgzNTAsLTE3NT
 MwMDQ5NzVdfQ==
 -->
