@@ -451,10 +451,7 @@ export class SelectCompany extends React.Component<Props, State> {
     readonly state: State = {data: [], companies: []};  
   
     handleSearch(value: string) {  
-        const data = _.uniq(this.state.companies.map(
-	        company => company.full).filter(full => 
-		        full.toLowerCase().indexOf(value.toLowerCase()) > -1));  
-        this.setState({data, value})  
+	    ...
     }  
   
     handleSelect(full: string) {  
@@ -651,6 +648,6 @@ Vorteile:
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 	Falls das Micro-Frontend jedoch auch Informationen zurück liefern soll, wie z.B. bei `select-company` benötigt man als komplexere Schnittstelle eine Callback-Function. Im Projekt verwenden wir hierfür auch die Pub/Sub-Library *postal.js* (https://github.com/postaljs/postal.js).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODg1MDQ0NSwxMzcwNDc4MzUwLC0xNz
+eyJoaXN0b3J5IjpbMTQxMzkxNzU2NCwxMzcwNDc4MzUwLC0xNz
 UzMDA0OTc1XX0=
 -->
