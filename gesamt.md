@@ -290,7 +290,7 @@ Zu nennen ist vor allem *stencil.js* (https://stenciljs.com), von den Ionic Mach
 # Integration von zwei Micro-Frontends über Custom Elements am konkreten Beispiel
 Im Folgenden wollen wir zeigen, wie wir Custom Elements zur Integration von Micro-Frontends im Projekt FX einsetzen. 
 Das zeigen wir exemplarisch an einer kleinen Beispiel-Anwendung, die aus zwei Self-Contained-Systems besteht.
-(Alle Listings können Sie auch hier sehen: [https://github.com/owidder/stockPriceCorrelation](https://github.com/owidder/stockPriceCorrelation)
+(Alle Listings kann man hier sehen: [https://github.com/owidder/stockPriceCorrelation](https://github.com/owidder/stockPriceCorrelation))
 
 ## Die Beispiel-Anwendung "StockPrice": Korrelation von Aktienkursen
 Mit der aus zwei Micro-Frontends bestehenden Beispiel-Anwendung "StockPrice" kann man sich Charts erzeugen lassen, die Aktienkurse (Jahre 2014 bis 2018) von zwei Firmen als Scatterplot inklusive Korrelationskoeffizienten darstellen:  
@@ -298,7 +298,7 @@ Mit der aus zwei Micro-Frontends bestehenden Beispiel-Anwendung "StockPrice" kan
 *Bild 3 - Die Oberfläche Anwendung "StockPrice"*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190515-01/oliver/correlationApp.png"/>
 
-Dazu kann man in den beiden Autocomplete-Eingabefeldern am oberen Rand jeweils eine Firma (aus dem Dow Jones) eingeben. Hat man beide Firmen eingegeben, wird der Chart angezeigt. 
+Dazu kann man in den beiden Autocomplete-Eingabefeldern am oberen Rand jeweils eine Firma (aus dem Dow Jones) eingeben. 
 Live kann man die Anwendung hier sehen: http://bit.ly/stockprice-page
 
 ## Die Self-Contained-Systems "Company" und "StockHistory"
@@ -645,6 +645,6 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxNzU5NTE2MywxNDEzOTE3NTY0LDEzNz
-A0NzgzNTAsLTE3NTMwMDQ5NzVdfQ==
+eyJoaXN0b3J5IjpbLTIwOTg1MDA2MjMsMTQxMzkxNzU2NCwxMz
+cwNDc4MzUwLC0xNzUzMDA0OTc1XX0=
 -->
