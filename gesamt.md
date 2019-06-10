@@ -410,8 +410,7 @@ customElements.define("select-company", SelectCompanyElement);
 	const basedir = 
 		parts.slice(0, parts.length-1).join("/");
 	```
-* Wie schon erwähnt verwenden wir keinen Shadow Dom, sondern rendern die Dom-Elemente des Custom Elements direkt in den Main-Dom. Das sollte man aber nicht im Constructor des Custom Elements tun sondern in der `connectedCallback`-Lifecycle-Methode. 
-	Dort rendern wir die React-Component:
+* In der `connectedCallback`-Lifecycle-Methode.rendern wir die React-Component:
 	```
     connectedCallback() {  
         ReactDOM.render(<SelectCompany 
@@ -656,6 +655,6 @@ Vorteile:
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 	Falls das Micro-Frontend jedoch auch Informationen zurück liefern soll, wie z.B. bei `select-company` benötigt man als komplexere Schnittstelle eine Callback-Function. Im Projekt verwenden wir hierfür auch die Pub/Sub-Library *postal.js* (https://github.com/postaljs/postal.js).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4NDE5NDcxNCwxMzcwNDc4MzUwLC0xNz
-UzMDA0OTc1XX0=
+eyJoaXN0b3J5IjpbNTMxMjg1ODcyLDEzNzA0NzgzNTAsLTE3NT
+MwMDQ5NzVdfQ==
 -->
