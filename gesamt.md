@@ -370,10 +370,7 @@ Wie oben schon erwähnt, haben wir uns bei der Implementierung der Custom Elemen
 Mit diesen Prinzipien sieht die Implementierung (`SelectCompanyElement.tsx`) des Custom Elements `select-company` folgendermaßen aus:
 
 *Listing 7 - Custom Element `SelectCompanyElement.tsx`*
-```
-import * as React from "react";  
-import * as ReactDOM from "react-dom";  
-  
+```JavaScript
 import {SelectCompany, Company} from "./SelectCompany";  
   
 const scriptPath = document.currentScript.getAttribute("src");
@@ -659,5 +656,6 @@ Vorteile:
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 	Falls das Micro-Frontend jedoch auch Informationen zurück liefern soll, wie z.B. bei `select-company` benötigt man als komplexere Schnittstelle eine Callback-Function. Im Projekt verwenden wir hierfür auch die Pub/Sub-Library *postal.js* (https://github.com/postaljs/postal.js).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3MDQ3ODM1MCwtMTc1MzAwNDk3NV19
+eyJoaXN0b3J5IjpbMTg4NDE5NDcxNCwxMzcwNDc4MzUwLC0xNz
+UzMDA0OTc1XX0=
 -->
