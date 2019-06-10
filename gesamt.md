@@ -587,7 +587,7 @@ Das Custom Element `company-correlation` gibt die Attribute `short-x` und `short
 Die Kursdaten werden dann im State der React-Component abgelegt:
 
 *Listing 11 - React Component `CompanyCorrelation.tsx` (Auszug)*
-```
+```JavaScript
 export interface EndOfDayPrice {  
     date: string;  
     price: number;  
@@ -648,6 +648,6 @@ Vorteile:
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 	Falls das Micro-Frontend jedoch auch Informationen zurück liefern soll, wie z.B. bei `select-company` benötigt man als komplexere Schnittstelle eine Callback-Function. Im Projekt verwenden wir hierfür auch die Pub/Sub-Library *postal.js* (https://github.com/postaljs/postal.js).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODE2NTM2ODIsMTQxMzkxNzU2NCwxMz
-cwNDc4MzUwLC0xNzUzMDA0OTc1XX0=
+eyJoaXN0b3J5IjpbMTQ4NDY3NTc3NywxNDEzOTE3NTY0LDEzNz
+A0NzgzNTAsLTE3NTMwMDQ5NzVdfQ==
 -->
