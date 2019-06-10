@@ -515,7 +515,7 @@ Nach dem Aufruf von Webpack liegt im Verzeichnis `build` ein File mit Namen `sel
 
 Die über die zwei `select-company`-Custom-Elements  ausgewählten Companies, können nun dem Custom Element `company-correlation` - das Micro-Frontend des Self-Contained-Systems "StockHistory" - übergeben werden. 
 Dazu hat `company-correlation` die zwei Attribute `short-x` und `short-y`.
-Über `short-x` kann man die Abkürzung der Company übergeben, die auf der X-Achse angezeigt werden soll. Analog übergibt man über `short-y` die Abkürzung der Firma, die auf der Y-Achse angezeigt werden soll. Vereinfacht sieht der Code der Gesamt-Anwendung "StockPrice" wie folgt aus:
+Über `short-x` und `short-y` kann man die Abkürzung der Companies übergeben, die auf der X-Achse bzw. Y-Achse angezeigt werden sollen. :
 
 *Listing 9 - Die Web-Seite von "StockPrice"*
 ```JavaScript
@@ -648,6 +648,6 @@ Vorteile:
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 	Falls das Micro-Frontend jedoch auch Informationen zurück liefern soll, wie z.B. bei `select-company` benötigt man als komplexere Schnittstelle eine Callback-Function. Im Projekt verwenden wir hierfür auch die Pub/Sub-Library *postal.js* (https://github.com/postaljs/postal.js).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1NzE0NzIyNiwxNDEzOTE3NTY0LDEzNz
-A0NzgzNTAsLTE3NTMwMDQ5NzVdfQ==
+eyJoaXN0b3J5IjpbLTE1ODE2NTM2ODIsMTQxMzkxNzU2NCwxMz
+cwNDc4MzUwLC0xNzUzMDA0OTc1XX0=
 -->
