@@ -482,7 +482,7 @@ export class SelectCompany extends React.Component<Props, State> {
 ```
 
 * Als Eingabefeld verwenden wir `AutoComplete` aus der Bibliothek *Ant Design* (https://ant.design)
-* Nachdem sich die React-Component zum ersten Mal gerendert hat, wird in der React-Lifecycle-Methode `componentDidMount()` der Service "companies" aufgerufen. Das vom Service zurück gelieferte Array mit Namen und Abkürzungen der Companies wird in den State der React-Component gelegt.
+* Nachdem sich die React-Component zum ersten Mal gerendert hat, wird in der React-Lifecycle-Methode `componentDidMount()` der Service "companies" aufgerufen. 
 * In `handleSearch()` werden aus den vom Service geladenen Company-Namen diejenigen gefiltert, die dem eingegebenen Teilstring entsprechen, so dass `AutoComplete` eine Vorschlagsliste anzeigen kann.
 * `handleSelect()` wird aufgerufen, wenn eine Company ausgewählt worden ist. Hier wird die vom Custom Element über die Property `onChange` übergebene Callback-Function  aufgerufen.
 
@@ -518,7 +518,7 @@ Dazu hat `company-correlation` die zwei Attribute `short-x` und `short-y`.
 Über `short-x` kann man die Abkürzung der Company übergeben, die auf der X-Achse angezeigt werden soll. Analog übergibt man über `short-y` die Abkürzung der Firma, die auf der Y-Achse angezeigt werden soll. Vereinfacht sieht der Code der Gesamt-Anwendung "StockPrice" wie folgt aus:
 
 *Listing 9 - Die Web-Seite von "StockPrice"*
-```
+```JavaScript
 <head>
 <script src="./company/build/selectCompanyElement.js"></script>  
 <script src="./stockHistory/build/companyCorrelationElement.js"></script>
@@ -648,6 +648,6 @@ Vorteile:
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 	Falls das Micro-Frontend jedoch auch Informationen zurück liefern soll, wie z.B. bei `select-company` benötigt man als komplexere Schnittstelle eine Callback-Function. Im Projekt verwenden wir hierfür auch die Pub/Sub-Library *postal.js* (https://github.com/postaljs/postal.js).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMzkxNzU2NCwxMzcwNDc4MzUwLC0xNz
-UzMDA0OTc1XX0=
+eyJoaXN0b3J5IjpbLTg1NzE0NzIyNiwxNDEzOTE3NTY0LDEzNz
+A0NzgzNTAsLTE3NTMwMDQ5NzVdfQ==
 -->
