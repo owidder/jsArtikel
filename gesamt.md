@@ -17,7 +17,7 @@ Im Projekt *FX* haben wir uns für Web Components als Werkzeug zur Integration u
 
 # UI und Microservices
 
-Microservices haben sich im Backend-Bereich in vielen Projekten als  Architektur-Muster etabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, dass es schwierig ist, aus einer Vielzahl einzelner Frontends (Micro-Frontends) eine Lösung mit einem einheitlichen Look-And-Feel und einer konsistenten User-Experience herzustellen. Aus diesem Grund gibt es verschiedene Ansätze, mit dieser Herausforderung umzugehen:
+Microservices haben sich im Backend-Bereich in vielen Projekten als  Architektur-Muster etabliert. Im Frontend-Bereich tut man sich trotz Konzepten wie Self-Contained-Systems ungleich schwerer. Einer der Gründe dürfte sein, dass es schwierig ist, aus einer Vielzahl einzelner Frontends (Micro-Frontends) eine Lösung mit einem einheitlichen Look-And-Feel und einer konsistenten User-Experience herzustellen. Deswegen gibt es verschiedene Ansätze, mit dieser Herausforderung umzugehen:
 
 * Integration im Backend über Mechanismen wie Server-Side-Includes
 * Integration im Backend, aber mit Tool Unterstützung (https://www.mosaic9.org)
