@@ -290,7 +290,7 @@ Zu nennen ist vor allem *stencil.js* (https://stenciljs.com), von den Ionic Mach
 # Integration von zwei Micro-Frontends über Custom Elements am konkreten Beispiel
 Im Folgenden wollen wir zeigen, wie wir Custom Elements zur Integration von Micro-Frontends im Projekt FX einsetzen. 
 Das zeigen wir exemplarisch an einer kleinen Beispiel-Anwendung, die aus zwei Self-Contained-Systems besteht.
-(Alle Listings können Sie auch hier sehen: 
+(Alle Listings können Sie auch hier sehen: [https://github.com/owidder/stockPriceCorrelation](https://github.com/owidder/stockPriceCorrelation)
 
 ## Die Beispiel-Anwendung "StockPrice": Korrelation von Aktienkursen
 Mit der aus zwei Micro-Frontends bestehenden Beispiel-Anwendung "StockPrice" kann man sich Charts erzeugen lassen, die Aktienkurse (Jahre 2014 bis 2018) von zwei Firmen als Scatterplot inklusive Korrelationskoeffizienten darstellen:  
@@ -659,6 +659,5 @@ Vorteile:
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 	Falls das Micro-Frontend jedoch auch Informationen zurück liefern soll, wie z.B. bei `select-company` benötigt man als komplexere Schnittstelle eine Callback-Function. Im Projekt verwenden wir hierfür auch die Pub/Sub-Library *postal.js* (https://github.com/postaljs/postal.js).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjM0NTE2NjEsLTE3NTMwMDQ5NzVdfQ
-==
+eyJoaXN0b3J5IjpbMTM3MDQ3ODM1MCwtMTc1MzAwNDk3NV19
 -->
