@@ -628,7 +628,7 @@ export class CompanyCorrelation extends
 }
 ```
 
-Der komplette Code der React-Component `CompanyCorrelation` ist etwas komplexer. Der Einfachheit wegen soll er hier nicht im Einzelnen gezeigt werden. Interessierte finden den Code unter http://bit.ly/companyCorrelation.
+Den kompletten Code findet man hier: http://bit.ly/companyCorrelation.
 
 ## Fazit
 
@@ -639,8 +639,6 @@ Nachteile:
 * Entwicklungsprozess ist schwieriger, da während der Entwicklung des eigenen Frontends, auf die Web-Components anderer Systemen zugegriffen werden muß.
 * Der Build-Prozess ist aufwendiger.
 * Zusätzliche Komplexität durch die Verwendung von Custom Elements.
-* Werden Micro-Frontends mehrfach eingebunden, werden ggf. mehrfach identische Server-Calls ausgeführt
-	Z.B. führen die beiden `select-company`-Custom-Elements  auf der StockPrice-Page zweimal den gleichen Aufruf des Service "companies" aus. Dies kann man verhindern, was aber zu zusätzlicher Komplexität führt.
 
 Vorteile:
 * Komplett unabhängiges Deployment: Da die Custom Elements erst zur Laufzeit geladen werden, kann ein Self-Contained-System seine Micro-Frontends ändern und neu deployen, ohne dass eines der Systeme, die das Micro-Frontend einbinden, neu gebaut und deployt werden muss.
@@ -648,6 +646,6 @@ Vorteile:
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 	Falls das Micro-Frontend jedoch auch Informationen zurück liefern soll, wie z.B. bei `select-company` benötigt man als komplexere Schnittstelle eine Callback-Function. Im Projekt verwenden wir hierfür auch die Pub/Sub-Library *postal.js* (https://github.com/postaljs/postal.js).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4NDY3NTc3NywxNDEzOTE3NTY0LDEzNz
-A0NzgzNTAsLTE3NTMwMDQ5NzVdfQ==
+eyJoaXN0b3J5IjpbLTE0MzgzNTY0NDAsMTQxMzkxNzU2NCwxMz
+cwNDc4MzUwLC0xNzUzMDA0OTc1XX0=
 -->
