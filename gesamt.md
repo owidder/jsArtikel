@@ -104,7 +104,7 @@ Jeder Web-Entwickler, der eins der bekannten Frameworks wie Angular oder React v
 In *Bild 2* sehen Sie wie die in *Beispiel 1* deklarierte Komponente als Tag `say-hello` im Inspector des Safari-Browsers angezeigt wird. 
 
 *Bild 2 - Dom-Tree mit Web-Component*
-<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190520-01/images/say-hello-dom.png"/>
+<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190611-01/images/say-hello-dom.png"/>
 
 Um dieses Verhalten zu erreichen sind zwei Dinge nötig:
 * unsere Klasse muss von der Klasse `HTMLElement` erben
@@ -562,7 +562,7 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkyMzQwNTA1LDgzMjczODIyOSwyMzI3Mz
-Q2MjksLTIwOTg1MDA2MjMsMTQxMzkxNzU2NCwxMzcwNDc4MzUw
-LC0xNzUzMDA0OTc1XX0=
+eyJoaXN0b3J5IjpbLTE1ODY4OTU1OTQsODMyNzM4MjI5LDIzMj
+czNDYyOSwtMjA5ODUwMDYyMywxNDEzOTE3NTY0LDEzNzA0Nzgz
+NTAsLTE3NTMwMDQ5NzVdfQ==
 -->
