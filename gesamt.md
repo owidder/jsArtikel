@@ -4,7 +4,7 @@ Mit dem Projekt *FX* erstellt die Otto-Tochter *EOS* eine neue zentrale Anwendun
 FX besteht aus (zur Zeit) ca. 50 Self-Contained-Systems, die jeweils für eine bestimmte Fachlichkeit verantwortlich sind (z.B. Zahlungszuordnung, Buchhaltung, Ablaufsteuerung oder Daten-Analyse). 
 Jedes Self-Contained-System hat eine unabhängige Datenhaltung (PostrgreSQL, MongoDB, Elastic Search, ...) und
 jedes Self-Contained-System liefert die für den Aufruf der eigenen Services benötigten Oberflächen (Micro-Frontends) selbst aus.
-Die Kommunikation innerhalb eines Self-Contained-Systems, also vom Micro-Frontend zum Backend, finded über eine Rest-API statt. Die Kommunikation zwischen Self-Contained-Systems findet ausschließlich asynchron über Kafka statt.
+Die Kommunikation innerhalb eines Self-Contained-Systems, also vom Micro-Frontend zum Backend, findet über eine Rest-API statt. Die Kommunikation zwischen Self-Contained-Systems findet ausschließlich asynchron über Kafka statt.
 
 *Bild 1 - Das System FX*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190521-03/images/fx.png"/>
@@ -562,6 +562,7 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjMyNzM0NjI5LC0yMDk4NTAwNjIzLDE0MT
-M5MTc1NjQsMTM3MDQ3ODM1MCwtMTc1MzAwNDk3NV19
+eyJoaXN0b3J5IjpbODMyNzM4MjI5LDIzMjczNDYyOSwtMjA5OD
+UwMDYyMywxNDEzOTE3NTY0LDEzNzA0NzgzNTAsLTE3NTMwMDQ5
+NzVdfQ==
 -->
