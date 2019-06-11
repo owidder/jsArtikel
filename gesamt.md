@@ -7,7 +7,7 @@ jedes Self-Contained-System liefert die für den Aufruf der eigenen Services ben
 Die Kommunikation innerhalb eines Self-Contained-Systems, also vom Micro-Frontend zum Backend, findet über eine Rest-API statt. Die Kommunikation zwischen Self-Contained-Systems findet ausschließlich asynchron über Kafka statt.
 
 *Bild 1 - Das System FX*
-<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190521-03/images/fx.png"/>
+<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190611-01/images/fx.png"/>
 
 Im Projekt *FX* haben wir uns für Web Components als Werkzeug zur Integration unserer Micro-Frontends entschieden. Dabei verwenden wir die Web-Components-API, um bestehende React Components zu "wrappen". Die einzelnen Self-Contained-Systems benutzen dann lediglich die  Web-Component ohne zu wissen, dass im Hintergrund React seine Dienste versieht. Dieser Ansatz bietet folgende Vorteile:
 * einfache Integration im Frontend
@@ -562,7 +562,7 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODMyNzM4MjI5LDIzMjczNDYyOSwtMjA5OD
-UwMDYyMywxNDEzOTE3NTY0LDEzNzA0NzgzNTAsLTE3NTMwMDQ5
-NzVdfQ==
+eyJoaXN0b3J5IjpbNDkyMzQwNTA1LDgzMjczODIyOSwyMzI3Mz
+Q2MjksLTIwOTg1MDA2MjMsMTQxMzkxNzU2NCwxMzcwNDc4MzUw
+LC0xNzUzMDA0OTc1XX0=
 -->
