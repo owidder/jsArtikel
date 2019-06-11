@@ -204,62 +204,6 @@ In Listing 4 sehen in einem Ausschnitt wie "HTML Templates" verwendet werden kö
 
 ```
 
-# Aus dem Leben einer Komponente
-
-Wie eine Komponente definiert und verwendet wird, haben die vorherigen Beispielen gezeigt. In Beispiel 4 sehen Sie noch weitere Möglichkeiten von Web Components. Dazu gehören:
-* die Verwendung von Attributen, um Daten an die Komponente zu übertragen
-* die Verwendung eines Listeners, um auf Ereignisse zu reagieren
-* das Überschreiben von Methoden wie `observedAttributes` und `connectedCallback`, um die Komponente an die eigenen Bedürfnisse anzupassen.
-
-Beim Betrachten dieses Beispiels wird deutlich, dass die Custom Elements alles nötige zur Verfügung stellen, um eine wiederverwendbare Komponente zu erstellen. Allerdings ist das erheblich aufwendiger als man es von React oder Angular gewohnt ist. 
-
-
-*Listing 5 - listener.html*
-```HTML
-    ...
-    <script>
-    class SayHello extends HTMLElement {
-
-        static get observedAttributes() {
-            return ['text'];
-        }
-
-        get value() {
-         return this.getAttribute('text');
-        }
-
-        set value(newValue) {
-            this.setAttribute('text', newValue);
-        }
-
-        attributeChangedCallback(name, oldValue, newValue) {
-           this.text.innerText = this.value;
-        }
-     
-        connectedCallback() {
-            this.button.addEventListener('click', () => this.value = 'changed');
-        }
-
-        constructor() {
-            super();
-            let shadowRoot = this.attachShadow({mode: 'open'});
-            shadowRoot.innerHTML = `<p><span id="text"/>${this.value}</p>
-                                    <button>click</button>`;
-            this.button = this.shadowRoot.querySelector('button');
-            this.text = this.shadowRoot.querySelector('span#text');
-        }
-    }
-    customElements.define('say-hello', SayHello);
-    </script>
-    ...
-```
-
-## Web Components aber einfach
-
-Die direkte Benutzung der Web-Components-API ist für kleinere Aufgaben ausreichend. Auch für spezialisierte Aufgaben, wie die Integration von Micro-Frontends, sind die Custom Elements durchaus geeignet.
-Wem die Spezifikationen des Web-Component-Standards zu rudimentär sind, kann inzwischen auf verschiedenste Frameworks und Libraries zurückgreifen, die die Arbeit mit Web Components vereinfachen. 
-Zu nennen ist vor allem *stencil.js* (https://stenciljs.com), von den Ionic Machern. Dieses Tool stellt einen Compiler zur Verfügung, der den stencil.js-Code direkt in die passenden Web-Components API Aufrufe übersetzt. Alternativen sind *LitElement* (https://lit-element.polymer-project.org) von Google oder SkateJS (https://skatejs.netlify.com).
-
 # Integration von zwei Micro-Frontends über Custom Elements am konkreten Beispiel
 Im Folgenden wollen wir zeigen, wie wir Custom Elements zur Integration von Micro-Frontends im Projekt FX einsetzen. 
 Das zeigen wir exemplarisch an einer kleinen Beispiel-Anwendung, die aus zwei Self-Contained-Systems besteht.
@@ -618,6 +562,6 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTg1MDA2MjMsMTQxMzkxNzU2NCwxMz
-cwNDc4MzUwLC0xNzUzMDA0OTc1XX0=
+eyJoaXN0b3J5IjpbMjMyNzM0NjI5LC0yMDk4NTAwNjIzLDE0MT
+M5MTc1NjQsMTM3MDQ3ODM1MCwtMTc1MzAwNDk3NV19
 -->
