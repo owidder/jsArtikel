@@ -212,7 +212,7 @@ Das zeigen wir exemplarisch an einer kleinen Beispiel-Anwendung, die aus zwei Se
 ## Die Beispiel-Anwendung "StockPrice": Korrelation von Aktienkursen
 Mit der aus zwei Micro-Frontends bestehenden Beispiel-Anwendung "StockPrice" kann man sich Charts erzeugen lassen, die Aktienkurse (Jahre 2014 bis 2018) von zwei Firmen als Scatterplot inklusive Korrelationskoeffizienten darstellen:  
 
-*Bild 3 - Die Oberfläche Anwendung "StockPrice"*
+*Bild 3 - Die Oberfläche der Anwendung "StockPrice"*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190611-01/oliver/correlationApp.png"/>
 
 Dazu kann man in den beiden Autocomplete-Eingabefeldern am oberen Rand jeweils eine Firma (aus dem Dow Jones) eingeben. 
@@ -232,7 +232,7 @@ Jedes Custom Element greift wiederum nur auf Services des Self-Contained-Systems
 Darüber hinaus existiert das System "StockPrice", das allerdings lediglich die Web-Seite ausliefert, die die Micro-Frontends von "Company" und "StockHistory" einbindet.
 
 *Bild 4 - Systeme und Micro-Frontends von der Anwendung "StockPrice"*
-<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190520-01/oliver/StockPrice.png"/>
+<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190611-01/oliver/StockPrice.png"/>
 
 Wir gehen hier davon aus, dass alle Self-Contained-Systems hinter einem Reverse-Proxy unterhalb derselben Domain zu erreichen sind.  
 	(So schließt man auch mögliche Probleme mit CORS-Einschränkungen des Browsers aus) 
@@ -562,7 +562,7 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2MTcxNzY1OCw4MzI3MzgyMjksMjMyNz
-M0NjI5LC0yMDk4NTAwNjIzLDE0MTM5MTc1NjQsMTM3MDQ3ODM1
-MCwtMTc1MzAwNDk3NV19
+eyJoaXN0b3J5IjpbLTE4ODYyNjI0MzUsODMyNzM4MjI5LDIzMj
+czNDYyOSwtMjA5ODUwMDYyMywxNDEzOTE3NTY0LDEzNzA0Nzgz
+NTAsLTE3NTMwMDQ5NzVdfQ==
 -->
