@@ -251,13 +251,13 @@ Das Self-Contained-System "Company" stellt einen Service mit Namen "companies" z
 Neben dem Service "companies" liefert das Self-Contained-System "Company" auch ein Micro-Frontend aus. Dieses Micro-Frontend (ein JavaScript-File) enthält ein Custom Element mit Namen `select-company`, das wiederum den Service "companies" aufruft. 
 
 *Bild 5 - Das System "Company" mit Micro-Frontend*
-<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190520-02/oliver/company.png"/>
+<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190611-01/oliver/company.png"/>
 
 `select-company` rendert sich als Eingabefeld mit Autocompletion-Funktionalität, über das eine Firma aus dem Dow Jones eingegeben werden kann.
 
 *Bild 6 - Das Micro-Frontend `select-company`*
 
-<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190516-02/oliver/selectCompany.png"/>
+<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190611-01/oliver/selectCompany.png"/>
 
 Verwenden kann man das Element z.B. so:
 
@@ -562,7 +562,7 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODYyNjI0MzUsODMyNzM4MjI5LDIzMj
-czNDYyOSwtMjA5ODUwMDYyMywxNDEzOTE3NTY0LDEzNzA0Nzgz
-NTAsLTE3NTMwMDQ5NzVdfQ==
+eyJoaXN0b3J5IjpbLTIyNjU1Mjc3Miw4MzI3MzgyMjksMjMyNz
+M0NjI5LC0yMDk4NTAwNjIzLDE0MTM5MTc1NjQsMTM3MDQ3ODM1
+MCwtMTc1MzAwNDk3NV19
 -->
