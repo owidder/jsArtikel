@@ -499,7 +499,7 @@ customElements.define("company-correlation",
 Das Custom Element `company-correlation` gibt die Attribute `short-x` und `short-y` an die React Component `CompanyCorrelation` als Properties `shortX` bzw. `shortY` weiter. Diese lädt bei jeder Änderung ihrer Properties (React-Lifecycle-Methode `componentDidUpdate()`) die historischen Kursdaten der jeweilige Company über einen Service-Call vom System "StockHistory":
 
 *Bild 7 - Das System "StockPrice" mit Micro-Frontend*
-<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190520-03/oliver/companyCorrelation.png"/>
+<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190611-01/oliver/companyCorrelation.png"/>
 
 Die Kursdaten werden dann im State der React-Component abgelegt:
 
@@ -562,7 +562,7 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyNjU1Mjc3Miw4MzI3MzgyMjksMjMyNz
-M0NjI5LC0yMDk4NTAwNjIzLDE0MTM5MTc1NjQsMTM3MDQ3ODM1
-MCwtMTc1MzAwNDk3NV19
+eyJoaXN0b3J5IjpbNDkyOTMzNzMyLDgzMjczODIyOSwyMzI3Mz
+Q2MjksLTIwOTg1MDA2MjMsMTQxMzkxNzU2NCwxMzcwNDc4MzUw
+LC0xNzUzMDA0OTc1XX0=
 -->
