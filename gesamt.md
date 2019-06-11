@@ -213,7 +213,7 @@ Das zeigen wir exemplarisch an einer kleinen Beispiel-Anwendung, die aus zwei Se
 Mit der aus zwei Micro-Frontends bestehenden Beispiel-Anwendung "StockPrice" kann man sich Charts erzeugen lassen, die Aktienkurse (Jahre 2014 bis 2018) von zwei Firmen als Scatterplot inklusive Korrelationskoeffizienten darstellen:  
 
 *Bild 3 - Die Oberfläche Anwendung "StockPrice"*
-<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@ow20190515-01/oliver/correlationApp.png"/>
+<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190611-01/oliver/correlationApp.png"/>
 
 Dazu kann man in den beiden Autocomplete-Eingabefeldern am oberen Rand jeweils eine Firma (aus dem Dow Jones) eingeben. 
 Live kann man die Anwendung hier sehen: http://bit.ly/stockprice-page
@@ -562,7 +562,7 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODY4OTU1OTQsODMyNzM4MjI5LDIzMj
-czNDYyOSwtMjA5ODUwMDYyMywxNDEzOTE3NTY0LDEzNzA0Nzgz
-NTAsLTE3NTMwMDQ5NzVdfQ==
+eyJoaXN0b3J5IjpbLTc2MTcxNzY1OCw4MzI3MzgyMjksMjMyNz
+M0NjI5LC0yMDk4NTAwNjIzLDE0MTM5MTc1NjQsMTM3MDQ3ODM1
+MCwtMTc1MzAwNDk3NV19
 -->
