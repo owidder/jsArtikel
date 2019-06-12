@@ -214,10 +214,7 @@ So hostet z.B. das System "Company" das JavaScript-File `selectComponentElement.
 Jedes Custom Element greift wiederum nur auf Services des Self-Contained-Systems zu, von dem es ausgeliefert wurde.
 
 *Bild 4 - Systeme und Micro-Frontends von der Anwendung "StockPrice"*
-<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190612-01/oliver/StockPrice.png"/>
-
-Wir gehen hier davon aus, dass alle Self-Contained-Systems hinter einem Reverse-Proxy unterhalb derselben Domain zu erreichen sind.  
-	(So schließt man auch mögliche Probleme mit CORS-Einschränkungen des Browsers aus) 
+<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190612-01/oliver/StockPrice.png"/> 
 
 ## Das Micro-Frontend von "Company"
 Das Self-Contained-System "Company" stellt einen Service mit Namen "companies" zur Verfügung. Er liefert Namen und Abkürzungen aller Firmen aus dem Dow Jones. Der Response sieht folgendermaßen aus:
@@ -544,8 +541,7 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDMwNTA2MjAsLTYwNDQ3ODEwNyw0OT
-I5MzM3MzIsODMyNzM4MjI5LDIzMjczNDYyOSwtMjA5ODUwMDYy
-MywxNDEzOTE3NTY0LDEzNzA0NzgzNTAsLTE3NTMwMDQ5NzVdfQ
-==
+eyJoaXN0b3J5IjpbMzc0ODUxNzcwLC02MDQ0NzgxMDcsNDkyOT
+MzNzMyLDgzMjczODIyOSwyMzI3MzQ2MjksLTIwOTg1MDA2MjMs
+MTQxMzkxNzU2NCwxMzcwNDc4MzUwLC0xNzUzMDA0OTc1XX0=
 -->
