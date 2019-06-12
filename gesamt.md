@@ -354,31 +354,6 @@ export class SelectCompany extends React.Component {
 * In `handleSearch()` werden aus den vom Service geladenen Company-Namen diejenigen gefiltert, die dem eingegebenen Teilstring entsprechen, so dass `AutoComplete` eine Vorschlagsliste anzeigen kann.
 * `handleSelect()` wird aufgerufen, wenn eine Company ausgewählt worden ist. Hier wird die vom Custom Element über die Property `onChange` übergebene Callback-Function  aufgerufen.
 
-## Webpack
-
-Mit folgender Webpack-Konfiguration lassen sich nun Custom Element und React-Component in ein JavaScript-File mit Namen `selectCompanyElement.js` packen, so dass es von der integrierenden Anwendung (hier "StockPrice") verwendet werden kann:
-
-*Listing 9 - `webpack.config.js`*
-```JavaScript
-module.exports = {  
-    mode: process.env.NODE_ENV,  
-    entry: {  
-        selectCompanyElement: "./src/SelectCompanyElement.tsx"  
-  },  
-    output: {  
-        filename: "build/[name].js",  
-    },  
-    devtool: "source-map",  
-    module: {  
-        rules: [{test: /\.(ts|tsx)$/, use: "ts-loader"}]  
-    },  
-    resolve: {  
-        extensions: [".tsx", ".ts", ".js"]  
-    }  
-}
-```
-Nach dem Aufruf von Webpack liegt im Verzeichnis `build` ein File mit Namen `selectCompanyElement.js`.
-
 ## Das Custom Element "company-correlation"
 
 Die über die zwei `select-company`-Custom-Elements  ausgewählten Companies, können nun dem Custom Element `company-correlation` - das Micro-Frontend des Self-Contained-Systems "StockHistory" - übergeben werden. 
@@ -465,8 +440,8 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyOTYzNzUxMSwxMTIxODYyNDE5LDM3ND
-g1MTc3MCwtNjA0NDc4MTA3LDQ5MjkzMzczMiw4MzI3MzgyMjks
-MjMyNzM0NjI5LC0yMDk4NTAwNjIzLDE0MTM5MTc1NjQsMTM3MD
-Q3ODM1MCwtMTc1MzAwNDk3NV19
+eyJoaXN0b3J5IjpbOTcxNDY2NTcyLDE4Mjk2Mzc1MTEsMTEyMT
+g2MjQxOSwzNzQ4NTE3NzAsLTYwNDQ3ODEwNyw0OTI5MzM3MzIs
+ODMyNzM4MjI5LDIzMjczNDYyOSwtMjA5ODUwMDYyMywxNDEzOT
+E3NTY0LDEzNzA0NzgzNTAsLTE3NTMwMDQ5NzVdfQ==
 -->
