@@ -69,29 +69,22 @@ Wenn ein Browser zumindest die ersten beiden APIs gemäß der Spezifikationen im
 
 *Listing 1 - hello.html*
 ```HTML
-<html>
-<head>
-    <script>
-    class SayHello extends HTMLElement {
-        constructor() {
-            super();
-            let shadowRoot = this.attachShadow({mode: 'open'});
-            shadowRoot.innerHTML = `<style> p {background: red}</style>
-                                    <p>hello again</p>`;
-        }
-    }
-    customElements.define('say-hello', SayHello);
-    </script>
-</head>
-<body>
-    <say-hello></say-hello>
-     <p>I'm not red</p>
-</body>
-</html>
+<script>
+ class SayHello extends HTMLElement {
+     constructor() {
+         super();
+         let shadowRoot = this.attachShadow({mode: 'open'});
+         shadowRoot.innerHTML = `<style> p {background: red}</style>
+                                 <p>hello again</p>`;
+     }
+ }
+ customElements.define('say-hello', SayHello);
+</script>
+...
+<say-hello></say-hello>
+<p>I'm not red</p>
 ```
-
-Laden Sie diese Seite in einem Browser, der die nötigen APIs unterstützt, wird eine Seite mit dem Text "hello again" angezeigt (http://bit.ly/hello-example). 
-Die Erklärungen zu diesem Beispiel finden Sie in den folgenden Abschnitten über die  Bestandteile der Web-Components Spezifikation.
+Das Ergebnis können Sie hier sehen: http://bit.ly/hello-example.
 
 # Die APIs
 
@@ -136,14 +129,6 @@ React ist übrigens nicht das einzige Framework, das Probleme im Umgang mit Web-
 
 Die ES-Module-Spezifikation definiert ein API, die es erlaubt, JavaScript Dokumente in andere Java-Skript Dokumente einzubinden. Ursprünglich wurde über die HTML-Import-Spezifikation versucht, dies zu spezifizieren. Diese Spezifikation wurde aber von den Entwicklungen im JavaScript Umfeld eingeholt. Statt eigene Konzepte zu definieren, wie es die HTML-Import-Spezifikation versuchte, bedienen sich ES Modules  bekannten JavaScript Konzepten. 
 
-In Listing 2 und Listing 3 sehen Sie ein Beispiel für die Verwendung von ES Modules. Für das Ausführen dieses Beispiels genügt es nicht, die Datei *import.html* direkt in einem Browser zu öffnen. Man benötigt einen einfachen lokalen Webserver, wie z.B. das *SimpleHTTPServer*-Package von Python:
-
-```
-python -m SimpleHTTPServer 8000
-```
-
-Die Seite können Sie dann über die URL http://localhost:8000/import.html laden und der Text "hello again" erscheint dann wie erwartet im Browser Fenster.
-
 *Listing 2 - say-hello.js*
 ```JavaScript
 export class SayHello extends HTMLelement {
@@ -158,19 +143,13 @@ customElements.define('say-hello', SayHello);
 ```
 *Listing 3 - import.html*
 ```HTML
-<html>
-    <head>
-        <script type="module">
-            import {SayHello} from '/say-hello.js';
-        </script>
-    </head>
-    <body>
-        <say-hello></say-hello>
-    </body>
-</html>
+<script type="module">
+    import {SayHello} from '/say-hello.js';
+</script>
+<say-hello></say-hello>
 ```
 
-Wahlweise können Sie das Beispiel auch hier betrachten: [http://bit.ly/say-hello-example](http://bit.ly/say-hello-example)
+Das Beispiel können Sie hier betrachten: [http://bit.ly/say-hello-example](http://bit.ly/say-hello-example)
 
 ## HTML Templates
 
@@ -229,13 +208,8 @@ Jedes Self-Contained-System liefert sein Micro-Frontend (JavaScript-File mit dem
 So hostet z.B. das System "Company" das JavaScript-File `selectComponentElement.js`, das den Code für das Custom Element `select-company` enthält.
 Jedes Custom Element greift wiederum nur auf Services des Self-Contained-Systems zu, von dem es ausgeliefert wurde.
 
-Darüber hinaus existiert das System "StockPrice", das allerdings lediglich die Web-Seite ausliefert, die die Micro-Frontends von "Company" und "StockHistory" einbindet.
-
 *Bild 4 - Systeme und Micro-Frontends von der Anwendung "StockPrice"*
-<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190611-01/oliver/StockPrice.png"/>
-
-Wir gehen hier davon aus, dass alle Self-Contained-Systems hinter einem Reverse-Proxy unterhalb derselben Domain zu erreichen sind.  
-	(So schließt man auch mögliche Probleme mit CORS-Einschränkungen des Browsers aus) 
+<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190612-01/oliver/StockPrice.png"/> 
 
 ## Das Micro-Frontend von "Company"
 Das Self-Contained-System "Company" stellt einen Service mit Namen "companies" zur Verfügung. Er liefert Namen und Abkürzungen aller Firmen aus dem Dow Jones. Der Response sieht folgendermaßen aus:
@@ -309,7 +283,7 @@ customElements.define("select-company", SelectCompanyElement);
 ```
 * `SelectCompany` ist die React-Component, in der sich die eigentliche Funktionalität des Micro-Frontends befindet
 * `Company` ist ein einfaches Interface, das die Daten beschreibt, wie sie vom Service "companies" kommen:
-	```
+	```JavaScript
 	export interface Company {  
 	    short: string;  
 	    full: string;  
@@ -317,25 +291,17 @@ customElements.define("select-company", SelectCompanyElement);
 	```
 * Gemäß dem Prinzip, dass alle Funktionalität in der React-Component liegt, soll auch der Aufruf des Service "companies" innerhalb der React-Component stattfinden. Darum geben wir der React-Component über die Property `basedir` die Adresse des Proxies mit, da von dort der Code des Custom Elements ausgeliefert wurde. Denn über diese Adresse kann die React-Component dann auch den Service aurufen. 
 	Diese Adresse holen wir uns über: 
-	```
+	```JavaScript
 	const scriptPath = 
 		document.currentScript.getAttribute("src")
 	```
 	und schnibbeln dann einfach das letzte Pfad-Element (den Namen des JavaScript-Files) weg:
-	```
+	```JavaScript
 	const parts = scriptPath.split("/");  
 	const basedir = 
 		parts.slice(0, parts.length-1).join("/");
 	```
-* In der `connectedCallback`-Lifecycle-Methode rendern wir die React-Component:
-	```
-    connectedCallback() {  
-        ReactDOM.render(<SelectCompany 
-	        basedir={basedir} 
-	        onChange={(company: Company) => 
-		        {this.onChangeCompany(company)}}/>, this);  
-    }    
-	```	
+* In der `connectedCallback`-Lifecycle-Methode rendern wir die React-Component.
 	Als `onChange`-Property übergeben wir eine Lambda-Function, die wiederum die Callback-Function aufruft, die dem Custom Element über die `onChangeCompany`-Property übergeben wurde.
 
 ## Die React Component "SelectCompany"
@@ -346,38 +312,10 @@ Die React Component `SelectCompany` enthält die eigentliche Funktionalität des
 ```JavaScript
 import {AutoComplete} from "antd";  
   
-export interface Company {  
-    short: string;  
-    full: string;  
-}  
+export class SelectCompany extends React.Component {  
   
-interface Props {  
-    initialShort?: string;  
-    onChange: (company: Company)  => void;  
-    basedir: string;  
-}  
-  
-interface State {  
-    companies: Company[];  
-    data: string[];  
-    value?: string;  
-}  
-  
-export class SelectCompany extends React.Component<Props, State> {  
-  
-    readonly state: State = {data: [], companies: []};  
-  
-    handleSearch(value: string) {  
-	    ...
-    }  
-  
-    handleSelect(full: string) {  
-        const selectedCompany = this.state.companies.find(
-	        s => (s.full == full));  
-        this.props.onChange(selectedCompany);  
-        this.setState({value: full})  
-    }  
-  
+	...
+	
     async componentDidMount() {  
         const companies = await fetch(
 		        `${this.props.basedir}/../../service/companies`
@@ -389,8 +327,8 @@ export class SelectCompany extends React.Component<Props, State> {
         return <div className="input-field">  
             <AutoComplete  
 	            dataSource={this.state.data} 
-	            onSearch={(text) => this.handleSearch(text)} 
-	            onSelect={(value: string) => this.handleSelect(value)}
+	            onSearch={...} 
+	            onSelect={...}
 	            value={this.state.value}
 	            placeholder="Enter company"/>  
         </div>  
@@ -403,31 +341,6 @@ export class SelectCompany extends React.Component<Props, State> {
 * In `handleSearch()` werden aus den vom Service geladenen Company-Namen diejenigen gefiltert, die dem eingegebenen Teilstring entsprechen, so dass `AutoComplete` eine Vorschlagsliste anzeigen kann.
 * `handleSelect()` wird aufgerufen, wenn eine Company ausgewählt worden ist. Hier wird die vom Custom Element über die Property `onChange` übergebene Callback-Function  aufgerufen.
 
-## Webpack
-
-Mit folgender Webpack-Konfiguration lassen sich nun Custom Element und React-Component in ein JavaScript-File mit Namen `selectCompanyElement.js` packen, so dass es von der integrierenden Anwendung (hier "StockPrice") verwendet werden kann:
-
-*Listing 9 - `webpack.config.js`*
-```
-module.exports = {  
-    mode: process.env.NODE_ENV,  
-    entry: {  
-        selectCompanyElement: "./src/SelectCompanyElement.tsx"  
-  },  
-    output: {  
-        filename: "build/[name].js",  
-    },  
-    devtool: "source-map",  
-    module: {  
-        rules: [{test: /\.(ts|tsx)$/, use: "ts-loader"}]  
-    },  
-    resolve: {  
-        extensions: [".tsx", ".ts", ".js"]  
-    }  
-}
-```
-Nach dem Aufruf von Webpack liegt im Verzeichnis `build` ein File mit Namen `selectCompanyElement.js`.
-
 ## Das Custom Element "company-correlation"
 
 Die über die zwei `select-company`-Custom-Elements  ausgewählten Companies, können nun dem Custom Element `company-correlation` - das Micro-Frontend des Self-Contained-Systems "StockHistory" - übergeben werden. 
@@ -436,12 +349,9 @@ Dazu hat `company-correlation` die zwei Attribute `short-x` und `short-y`.
 
 *Listing 9 - Die Web-Seite von "StockPrice"*
 ```JavaScript
-<head>
 <script src="./company/build/selectCompanyElement.js"></script>  
 <script src="./stockHistory/build/companyCorrelationElement.js"></script>
-</head>
 
-<body>
 <select-company id="selectCompany1"></select-company>
 <select-company id="selectCompany2"></select-company>
 <company-correlation id="companyCorrelation"></company-correlation>
@@ -458,25 +368,19 @@ document.getElementById("selectCompany2").onChangeCompany =
 			.setAttribute("short-x", company.short);
 	}
 </script>
-</body>
 ```
 
 Im Gegensatz zu `select-company` besitzt `company-correlation` Attribute, die sich auch mehrfach ändern können. Dafür müssen wir im Custom Element die Lifecycle-Methode `attributeChangedCallback()` implementieren:
 
 *Listing 10 - Custom Element `CompanyCorrelation.tsx`*
-```
+```JavaScript
 class CompanyCorrelationElement extends HTMLElement {  
   
     static get observedAttributes() {  
         return ["short-x", "short-y"];  
     }  
   
-    drawReactComponent() {  
-        ReactDOM.render(<CompanyCorrelation
-	        basedir={basedir}
-		    shortX={this.getAttribute("short-x")}
-		    shortY={this.getAttribute("short-y")}/>, this);  
-    }  
+    drawReactComponent() {...}  
   
     attributeChangedCallback() {  
         this.drawReactComponent();  
@@ -486,9 +390,6 @@ class CompanyCorrelationElement extends HTMLElement {
         this.drawReactComponent();  
     }  
 }  
-  
-customElements.define("company-correlation", 
-	CompanyCorrelationElement);
 ```
 
 * Über `static get observedAttributes()` teilen wir der Custom-Element-API mit, für welche Attribute wir uns interessieren und über Änderungen informiert werden wollen. Mit jeder Änderung eines Attributes wird dann `attributeChangedCallback()` aufgerufen.
@@ -501,51 +402,7 @@ Das Custom Element `company-correlation` gibt die Attribute `short-x` und `short
 *Bild 7 - Das System "StockPrice" mit Micro-Frontend*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190611-01/oliver/companyCorrelation.png"/>
 
-Die Kursdaten werden dann im State der React-Component abgelegt:
-
-*Listing 11 - React Component `CompanyCorrelation.tsx` (Auszug)*
-```JavaScript
-export interface EndOfDayPrice {  
-    date: string;  
-    price: number;  
-}
-
-interface Props {  
-    shortX: string;  
-    shortY: string;  
-    basedir: string;  
-}  
-  
-interface State {  
-    pricesX: EndOfDayPrice[];  
-    pricesY: EndOfDayPrice[];  
-}
-
-export class CompanyCorrelation extends
-	React.Component<Props, State> {  
-  
-    readonly state: State = {pricesX: [], pricesY: []}
-
-	async loadData(symbol: string): Promise<EndOfDayPrice[]> {  
-	    const response = await 
-		    fetch(`${this.props.basedir}/../../service/${symbol}`);  
-	    return await response.json();  
-	}  
-  
-	async componentDidUpdate() {  
-        const pricesX = await this.loadData(this.props.shortX);  
-        const pricesY = await this.loadData(this.props.shortY);  
-        this.setState({pricesX, pricesY});  
-    }  
-    ...
-
-	render() {
-		...
-	}
-}
-```
-
-Den kompletten Code findet man hier: http://bit.ly/companyCorrelation.
+Den Code findet man hier: http://bit.ly/companyCorrelation.
 
 ## Fazit
 
@@ -562,7 +419,9 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkyOTMzNzMyLDgzMjczODIyOSwyMzI3Mz
-Q2MjksLTIwOTg1MDA2MjMsMTQxMzkxNzU2NCwxMzcwNDc4MzUw
-LC0xNzUzMDA0OTc1XX0=
+eyJoaXN0b3J5IjpbMTE5NTk2MTg5OCwxNzgxMzUxOTkxLDQxNz
+A5MjMwOCw2ODMxNzYxMjIsOTcxNDY2NTcyLDE4Mjk2Mzc1MTEs
+MTEyMTg2MjQxOSwzNzQ4NTE3NzAsLTYwNDQ3ODEwNyw0OTI5Mz
+M3MzIsODMyNzM4MjI5LDIzMjczNDYyOSwtMjA5ODUwMDYyMywx
+NDEzOTE3NTY0LDEzNzA0NzgzNTAsLTE3NTMwMDQ5NzVdfQ==
 -->
