@@ -387,12 +387,9 @@ Dazu hat `company-correlation` die zwei Attribute `short-x` und `short-y`.
 
 *Listing 9 - Die Web-Seite von "StockPrice"*
 ```JavaScript
-<head>
 <script src="./company/build/selectCompanyElement.js"></script>  
 <script src="./stockHistory/build/companyCorrelationElement.js"></script>
-</head>
 
-<body>
 <select-company id="selectCompany1"></select-company>
 <select-company id="selectCompany2"></select-company>
 <company-correlation id="companyCorrelation"></company-correlation>
@@ -409,13 +406,12 @@ document.getElementById("selectCompany2").onChangeCompany =
 			.setAttribute("short-x", company.short);
 	}
 </script>
-</body>
 ```
 
 Im Gegensatz zu `select-company` besitzt `company-correlation` Attribute, die sich auch mehrfach ändern können. Dafür müssen wir im Custom Element die Lifecycle-Methode `attributeChangedCallback()` implementieren:
 
 *Listing 10 - Custom Element `CompanyCorrelation.tsx`*
-```
+```JavaScript
 class CompanyCorrelationElement extends HTMLElement {  
   
     static get observedAttributes() {  
@@ -456,24 +452,9 @@ Die Kursdaten werden dann im State der React-Component abgelegt:
 
 *Listing 11 - React Component `CompanyCorrelation.tsx` (Auszug)*
 ```JavaScript
-export interface EndOfDayPrice {  
-    date: string;  
-    price: number;  
-}
-
-interface Props {  
-    shortX: string;  
-    shortY: string;  
-    basedir: string;  
-}  
-  
-interface State {  
-    pricesX: EndOfDayPrice[];  
-    pricesY: EndOfDayPrice[];  
-}
 
 export class CompanyCorrelation extends
-	React.Component<Props, State> {  
+	React.Component {  
   
     readonly state: State = {pricesX: [], pricesY: []}
 
@@ -513,8 +494,8 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3MDI3NTQxNSwzNzQ4NTE3NzAsLTYwND
-Q3ODEwNyw0OTI5MzM3MzIsODMyNzM4MjI5LDIzMjczNDYyOSwt
-MjA5ODUwMDYyMywxNDEzOTE3NTY0LDEzNzA0NzgzNTAsLTE3NT
-MwMDQ5NzVdfQ==
+eyJoaXN0b3J5IjpbLTIwNDc5Mzc1NTUsMzc0ODUxNzcwLC02MD
+Q0NzgxMDcsNDkyOTMzNzMyLDgzMjczODIyOSwyMzI3MzQ2Mjks
+LTIwOTg1MDA2MjMsMTQxMzkxNzU2NCwxMzcwNDc4MzUwLC0xNz
+UzMDA0OTc1XX0=
 -->
