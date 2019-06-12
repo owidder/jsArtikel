@@ -296,12 +296,12 @@ customElements.define("select-company", SelectCompanyElement);
 	```
 * Gemäß dem Prinzip, dass alle Funktionalität in der React-Component liegt, soll auch der Aufruf des Service "companies" innerhalb der React-Component stattfinden. Darum geben wir der React-Component über die Property `basedir` die Adresse des Proxies mit, da von dort der Code des Custom Elements ausgeliefert wurde. Denn über diese Adresse kann die React-Component dann auch den Service aurufen. 
 	Diese Adresse holen wir uns über: 
-	```
+	```JavaScr
 	const scriptPath = 
 		document.currentScript.getAttribute("src")
 	```
 	und schnibbeln dann einfach das letzte Pfad-Element (den Namen des JavaScript-Files) weg:
-	```
+	```JavaScript
 	const parts = scriptPath.split("/");  
 	const basedir = 
 		parts.slice(0, parts.length-1).join("/");
@@ -465,7 +465,7 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0OTA0NDY3MiwxMTIxODYyNDE5LDM3ND
+eyJoaXN0b3J5IjpbLTYxOTc2MzA5MSwxMTIxODYyNDE5LDM3ND
 g1MTc3MCwtNjA0NDc4MTA3LDQ5MjkzMzczMiw4MzI3MzgyMjks
 MjMyNzM0NjI5LC0yMDk4NTAwNjIzLDE0MTM5MTc1NjQsMTM3MD
 Q3ODM1MCwtMTc1MzAwNDk3NV19
