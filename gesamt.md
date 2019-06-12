@@ -283,7 +283,7 @@ customElements.define("select-company", SelectCompanyElement);
 ```
 * `SelectCompany` ist die React-Component, in der sich die eigentliche Funktionalität des Micro-Frontends befindet
 * `Company` ist ein einfaches Interface, das die Daten beschreibt, wie sie vom Service "companies" kommen:
-	```
+	```JavaScript
 	export interface Company {  
 	    short: string;  
 	    full: string;  
@@ -419,9 +419,9 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4MTM1MTk5MSw0MTcwOTIzMDgsNjgzMT
-c2MTIyLDk3MTQ2NjU3MiwxODI5NjM3NTExLDExMjE4NjI0MTks
-Mzc0ODUxNzcwLC02MDQ0NzgxMDcsNDkyOTMzNzMyLDgzMjczOD
-IyOSwyMzI3MzQ2MjksLTIwOTg1MDA2MjMsMTQxMzkxNzU2NCwx
-MzcwNDc4MzUwLC0xNzUzMDA0OTc1XX0=
+eyJoaXN0b3J5IjpbMTE5NTk2MTg5OCwxNzgxMzUxOTkxLDQxNz
+A5MjMwOCw2ODMxNzYxMjIsOTcxNDY2NTcyLDE4Mjk2Mzc1MTEs
+MTEyMTg2MjQxOSwzNzQ4NTE3NzAsLTYwNDQ3ODEwNyw0OTI5Mz
+M3MzIsODMyNzM4MjI5LDIzMjczNDYyOSwtMjA5ODUwMDYyMywx
+NDEzOTE3NTY0LDEzNzA0NzgzNTAsLTE3NTMwMDQ5NzVdfQ==
 -->
