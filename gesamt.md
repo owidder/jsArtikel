@@ -306,15 +306,7 @@ customElements.define("select-company", SelectCompanyElement);
 	const basedir = 
 		parts.slice(0, parts.length-1).join("/");
 	```
-* In der `connectedCallback`-Lifecycle-Methode rendern wir die React-Component:
-	```JavaScript
-    connectedCallback() {  
-        ReactDOM.render(<SelectCompany 
-	        basedir={basedir} 
-	        onChange={(company: Company) => 
-		        {this.onChangeCompany(company)}}/>, this);  
-    }    
-	```	
+* In der `connectedCallback`-Lifecycle-Methode rendern wir die React-Component.
 	Als `onChange`-Property übergeben wir eine Lambda-Function, die wiederum die Callback-Function aufruft, die dem Custom Element über die `onChangeCompany`-Property übergeben wurde.
 
 ## Die React Component "SelectCompany"
@@ -440,8 +432,9 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTcxNDY2NTcyLDE4Mjk2Mzc1MTEsMTEyMT
-g2MjQxOSwzNzQ4NTE3NzAsLTYwNDQ3ODEwNyw0OTI5MzM3MzIs
-ODMyNzM4MjI5LDIzMjczNDYyOSwtMjA5ODUwMDYyMywxNDEzOT
-E3NTY0LDEzNzA0NzgzNTAsLTE3NTMwMDQ5NzVdfQ==
+eyJoaXN0b3J5IjpbLTE1NzM1NjMxMDYsOTcxNDY2NTcyLDE4Mj
+k2Mzc1MTEsMTEyMTg2MjQxOSwzNzQ4NTE3NzAsLTYwNDQ3ODEw
+Nyw0OTI5MzM3MzIsODMyNzM4MjI5LDIzMjczNDYyOSwtMjA5OD
+UwMDYyMywxNDEzOTE3NTY0LDEzNzA0NzgzNTAsLTE3NTMwMDQ5
+NzVdfQ==
 -->
