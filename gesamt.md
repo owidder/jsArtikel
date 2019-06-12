@@ -131,13 +131,8 @@ React ist übrigens nicht das einzige Framework, das Probleme im Umgang mit Web-
 
 Die ES-Module-Spezifikation definiert ein API, die es erlaubt, JavaScript Dokumente in andere Java-Skript Dokumente einzubinden. Ursprünglich wurde über die HTML-Import-Spezifikation versucht, dies zu spezifizieren. Diese Spezifikation wurde aber von den Entwicklungen im JavaScript Umfeld eingeholt. Statt eigene Konzepte zu definieren, wie es die HTML-Import-Spezifikation versuchte, bedienen sich ES Modules  bekannten JavaScript Konzepten. 
 
-In Listing 2 und Listing 3 sehen Sie ein Beispiel für die Verwendung von ES Modules. Für das Ausführen dieses Beispiels genügt es nicht, die Datei *import.html* direkt in einem Browser zu öffnen. Man benötigt einen einfachen lokalen Webserver, wie z.B. das *SimpleHTTPServer*-Package von Python:
+In Listing 2 und Listing 3 sehen Sie ein Beispiel für die Verwendung von ES Modules. Für das Ausführen dieses Beispiels genügt es nicht, die Datei *import.html* direkt in einem Browser zu öffnen. Man benötigt einen einfachen lokalen Webserver, wie z.B. das *SimpleHTTPServer*-Package von Python.
 
-```
-python -m SimpleHTTPServer 8000
-```
-
-Die Seite können Sie dann über die URL http://localhost:8000/import.html laden und der Text "hello again" erscheint dann wie erwartet im Browser Fenster.
 
 *Listing 2 - say-hello.js*
 ```JavaScript
@@ -153,12 +148,9 @@ customElements.define('say-hello', SayHello);
 ```
 *Listing 3 - import.html*
 ```HTML
-<html>
-    <head>
         <script type="module">
             import {SayHello} from '/say-hello.js';
         </script>
-    </head>
     <body>
         <say-hello></say-hello>
     </body>
@@ -557,7 +549,7 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTQ0NjI4OTMsNDkyOTMzNzMyLDgzMj
-czODIyOSwyMzI3MzQ2MjksLTIwOTg1MDA2MjMsMTQxMzkxNzU2
-NCwxMzcwNDc4MzUwLC0xNzUzMDA0OTc1XX0=
+eyJoaXN0b3J5IjpbLTk0MTE5OTIwOSw0OTI5MzM3MzIsODMyNz
+M4MjI5LDIzMjczNDYyOSwtMjA5ODUwMDYyMywxNDEzOTE3NTY0
+LDEzNzA0NzgzNTAsLTE3NTMwMDQ5NzVdfQ==
 -->
