@@ -456,7 +456,6 @@ Die Kursdaten werden dann im State der React-Component abgelegt:
 export class CompanyCorrelation extends
 	React.Component {  
   
-    readonly state: State = {pricesX: [], pricesY: []}
 
 	async loadData(symbol: string): Promise<EndOfDayPrice[]> {  
 	    const response = await 
@@ -470,10 +469,6 @@ export class CompanyCorrelation extends
         this.setState({pricesX, pricesY});  
     }  
     ...
-
-	render() {
-		...
-	}
 }
 ```
 
@@ -494,8 +489,8 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDc5Mzc1NTUsMzc0ODUxNzcwLC02MD
-Q0NzgxMDcsNDkyOTMzNzMyLDgzMjczODIyOSwyMzI3MzQ2Mjks
-LTIwOTg1MDA2MjMsMTQxMzkxNzU2NCwxMzcwNDc4MzUwLC0xNz
-UzMDA0OTc1XX0=
+eyJoaXN0b3J5IjpbNTYyNDA1MjIyLDM3NDg1MTc3MCwtNjA0ND
+c4MTA3LDQ5MjkzMzczMiw4MzI3MzgyMjksMjMyNzM0NjI5LC0y
+MDk4NTAwNjIzLDE0MTM5MTc1NjQsMTM3MDQ3ODM1MCwtMTc1Mz
+AwNDk3NV19
 -->
