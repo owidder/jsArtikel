@@ -296,7 +296,7 @@ customElements.define("select-company", SelectCompanyElement);
 	```
 * Gemäß dem Prinzip, dass alle Funktionalität in der React-Component liegt, soll auch der Aufruf des Service "companies" innerhalb der React-Component stattfinden. Darum geben wir der React-Component über die Property `basedir` die Adresse des Proxies mit, da von dort der Code des Custom Elements ausgeliefert wurde. Denn über diese Adresse kann die React-Component dann auch den Service aurufen. 
 	Diese Adresse holen wir uns über: 
-	```JavaScr
+	```JavaScript
 	const scriptPath = 
 		document.currentScript.getAttribute("src")
 	```
@@ -359,7 +359,7 @@ export class SelectCompany extends React.Component {
 Mit folgender Webpack-Konfiguration lassen sich nun Custom Element und React-Component in ein JavaScript-File mit Namen `selectCompanyElement.js` packen, so dass es von der integrierenden Anwendung (hier "StockPrice") verwendet werden kann:
 
 *Listing 9 - `webpack.config.js`*
-```
+```JavaScript
 module.exports = {  
     mode: process.env.NODE_ENV,  
     entry: {  
@@ -465,7 +465,7 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxOTc2MzA5MSwxMTIxODYyNDE5LDM3ND
+eyJoaXN0b3J5IjpbMTgyOTYzNzUxMSwxMTIxODYyNDE5LDM3ND
 g1MTc3MCwtNjA0NDc4MTA3LDQ5MjkzMzczMiw4MzI3MzgyMjks
 MjMyNzM0NjI5LC0yMDk4NTAwNjIzLDE0MTM5MTc1NjQsMTM3MD
 Q3ODM1MCwtMTc1MzAwNDk3NV19
