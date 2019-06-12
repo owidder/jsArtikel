@@ -213,8 +213,6 @@ Jedes Self-Contained-System liefert sein Micro-Frontend (JavaScript-File mit dem
 So hostet z.B. das System "Company" das JavaScript-File `selectComponentElement.js`, das den Code für das Custom Element `select-company` enthält.
 Jedes Custom Element greift wiederum nur auf Services des Self-Contained-Systems zu, von dem es ausgeliefert wurde.
 
-Darüber hinaus existiert das System "StockPrice", das allerdings lediglich die Web-Seite ausliefert, die die Micro-Frontends von "Company" und "StockHistory" einbindet.
-
 *Bild 4 - Systeme und Micro-Frontends von der Anwendung "StockPrice"*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190611-01/oliver/StockPrice.png"/>
 
@@ -546,7 +544,7 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM3NzU3NTIyLDQ5MjkzMzczMiw4MzI3Mz
-gyMjksMjMyNzM0NjI5LC0yMDk4NTAwNjIzLDE0MTM5MTc1NjQs
-MTM3MDQ3ODM1MCwtMTc1MzAwNDk3NV19
+eyJoaXN0b3J5IjpbLTYwNDQ3ODEwNyw0OTI5MzM3MzIsODMyNz
+M4MjI5LDIzMjczNDYyOSwtMjA5ODUwMDYyMywxNDEzOTE3NTY0
+LDEzNzA0NzgzNTAsLTE3NTMwMDQ5NzVdfQ==
 -->
