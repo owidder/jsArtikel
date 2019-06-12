@@ -69,8 +69,6 @@ Wenn ein Browser zumindest die ersten beiden APIs gemäß der Spezifikationen im
 
 *Listing 1 - hello.html*
 ```HTML
-<html>
-<head>
     <script>
     class SayHello extends HTMLElement {
         constructor() {
@@ -82,12 +80,9 @@ Wenn ein Browser zumindest die ersten beiden APIs gemäß der Spezifikationen im
     }
     customElements.define('say-hello', SayHello);
     </script>
-</head>
-<body>
+	...
     <say-hello></say-hello>
      <p>I'm not red</p>
-</body>
-</html>
 ```
 
 Laden Sie diese Seite in einem Browser, der die nötigen APIs unterstützt, wird eine Seite mit dem Text "hello again" angezeigt (http://bit.ly/hello-example). 
@@ -562,7 +557,7 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkyOTMzNzMyLDgzMjczODIyOSwyMzI3Mz
-Q2MjksLTIwOTg1MDA2MjMsMTQxMzkxNzU2NCwxMzcwNDc4MzUw
-LC0xNzUzMDA0OTc1XX0=
+eyJoaXN0b3J5IjpbLTEzNDI1MTU2MzksNDkyOTMzNzMyLDgzMj
+czODIyOSwyMzI3MzQ2MjksLTIwOTg1MDA2MjMsMTQxMzkxNzU2
+NCwxMzcwNDc4MzUwLC0xNzUzMDA0OTc1XX0=
 -->
