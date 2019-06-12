@@ -385,12 +385,7 @@ class CompanyCorrelationElement extends HTMLElement {
         return ["short-x", "short-y"];  
     }  
   
-    drawReactComponent() {  
-        ReactDOM.render(<CompanyCorrelation
-	        basedir={basedir}
-		    shortX={this.getAttribute("short-x")}
-		    shortY={this.getAttribute("short-y")}/>, this);  
-    }  
+    drawReactComponent() {...}  
   
     attributeChangedCallback() {  
         this.drawReactComponent();  
@@ -400,9 +395,6 @@ class CompanyCorrelationElement extends HTMLElement {
         this.drawReactComponent();  
     }  
 }  
-  
-customElements.define("company-correlation", 
-	CompanyCorrelationElement);
 ```
 
 * Über `static get observedAttributes()` teilen wir der Custom-Element-API mit, für welche Attribute wir uns interessieren und über Änderungen informiert werden wollen. Mit jeder Änderung eines Attributes wird dann `attributeChangedCallback()` aufgerufen.
@@ -432,9 +424,9 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzM1NjMxMDYsOTcxNDY2NTcyLDE4Mj
-k2Mzc1MTEsMTEyMTg2MjQxOSwzNzQ4NTE3NzAsLTYwNDQ3ODEw
-Nyw0OTI5MzM3MzIsODMyNzM4MjI5LDIzMjczNDYyOSwtMjA5OD
-UwMDYyMywxNDEzOTE3NTY0LDEzNzA0NzgzNTAsLTE3NTMwMDQ5
-NzVdfQ==
+eyJoaXN0b3J5IjpbNjgzMTc2MTIyLDk3MTQ2NjU3MiwxODI5Nj
+M3NTExLDExMjE4NjI0MTksMzc0ODUxNzcwLC02MDQ0NzgxMDcs
+NDkyOTMzNzMyLDgzMjczODIyOSwyMzI3MzQ2MjksLTIwOTg1MD
+A2MjMsMTQxMzkxNzU2NCwxMzcwNDc4MzUwLC0xNzUzMDA0OTc1
+XX0=
 -->
