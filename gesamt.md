@@ -327,14 +327,8 @@ import {AutoComplete} from "antd";
   
 export class SelectCompany extends React.Component {  
   
-    handleSearch(value: string) {  
-	    ...
-    }  
-  
-    handleSelect(full: string) {  
-	    ...
-    }  
-  
+	...
+	
     async componentDidMount() {  
         const companies = await fetch(
 		        `${this.props.basedir}/../../service/companies`
@@ -346,8 +340,8 @@ export class SelectCompany extends React.Component {
         return <div className="input-field">  
             <AutoComplete  
 	            dataSource={this.state.data} 
-	            onSearch={(text) => this.handleSearch(text)} 
-	            onSelect={(value: string) => this.handleSelect(value)}
+	            onSearch={...} 
+	            onSelect={...}
 	            value={this.state.value}
 	            placeholder="Enter company"/>  
         </div>  
@@ -519,7 +513,7 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMTI3Nzg5MiwzNzQ4NTE3NzAsLTYwND
+eyJoaXN0b3J5IjpbLTk3MDI3NTQxNSwzNzQ4NTE3NzAsLTYwND
 Q3ODEwNyw0OTI5MzM3MzIsODMyNzM4MjI5LDIzMjczNDYyOSwt
 MjA5ODUwMDYyMywxNDEzOTE3NTY0LDEzNzA0NzgzNTAsLTE3NT
 MwMDQ5NzVdfQ==
