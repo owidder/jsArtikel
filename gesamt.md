@@ -448,31 +448,7 @@ Das Custom Element `company-correlation` gibt die Attribute `short-x` und `short
 *Bild 7 - Das System "StockPrice" mit Micro-Frontend*
 <img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190611-01/oliver/companyCorrelation.png"/>
 
-Die Kursdaten werden dann im State der React-Component abgelegt:
-
-*Listing 11 - React Component `CompanyCorrelation.tsx` (Auszug)*
-```JavaScript
-
-export class CompanyCorrelation extends
-	React.Component {  
-  
-
-	async loadData(symbol: string): Promise<EndOfDayPrice[]> {  
-	    const response = await 
-		    fetch(`${this.props.basedir}/../../service/${symbol}`);  
-	    return await response.json();  
-	}  
-  
-	async componentDidUpdate() {  
-        const pricesX = await this.loadData(this.props.shortX);  
-        const pricesY = await this.loadData(this.props.shortY);  
-        this.setState({pricesX, pricesY});  
-    }  
-    ...
-}
-```
-
-Den kompletten Code findet man hier: http://bit.ly/companyCorrelation.
+Den Code findet man hier: http://bit.ly/companyCorrelation.
 
 ## Fazit
 
@@ -489,8 +465,8 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTYyNDA1MjIyLDM3NDg1MTc3MCwtNjA0ND
-c4MTA3LDQ5MjkzMzczMiw4MzI3MzgyMjksMjMyNzM0NjI5LC0y
-MDk4NTAwNjIzLDE0MTM5MTc1NjQsMTM3MDQ3ODM1MCwtMTc1Mz
-AwNDk3NV19
+eyJoaXN0b3J5IjpbMTEyMTg2MjQxOSwzNzQ4NTE3NzAsLTYwND
+Q3ODEwNyw0OTI5MzM3MzIsODMyNzM4MjI5LDIzMjczNDYyOSwt
+MjA5ODUwMDYyMywxNDEzOTE3NTY0LDEzNzA0NzgzNTAsLTE3NT
+MwMDQ5NzVdfQ==
 -->
