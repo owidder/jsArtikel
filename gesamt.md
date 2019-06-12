@@ -325,36 +325,14 @@ Die React Component `SelectCompany` enthält die eigentliche Funktionalität des
 ```JavaScript
 import {AutoComplete} from "antd";  
   
-export interface Company {  
-    short: string;  
-    full: string;  
-}  
-  
-interface Props {  
-    initialShort?: string;  
-    onChange: (company: Company)  => void;  
-    basedir: string;  
-}  
-  
-interface State {  
-    companies: Company[];  
-    data: string[];  
-    value?: string;  
-}  
-  
-export class SelectCompany extends React.Component<Props, State> {  
-  
-    readonly state: State = {data: [], companies: []};  
+export class SelectCompany extends React.Component {  
   
     handleSearch(value: string) {  
 	    ...
     }  
   
     handleSelect(full: string) {  
-        const selectedCompany = this.state.companies.find(
-	        s => (s.full == full));  
-        this.props.onChange(selectedCompany);  
-        this.setState({value: full})  
+	    ...
     }  
   
     async componentDidMount() {  
@@ -541,7 +519,8 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc0ODUxNzcwLC02MDQ0NzgxMDcsNDkyOT
-MzNzMyLDgzMjczODIyOSwyMzI3MzQ2MjksLTIwOTg1MDA2MjMs
-MTQxMzkxNzU2NCwxMzcwNDc4MzUwLC0xNzUzMDA0OTc1XX0=
+eyJoaXN0b3J5IjpbMTExMTI3Nzg5MiwzNzQ4NTE3NzAsLTYwND
+Q3ODEwNyw0OTI5MzM3MzIsODMyNzM4MjI5LDIzMjczNDYyOSwt
+MjA5ODUwMDYyMywxNDEzOTE3NTY0LDEzNzA0NzgzNTAsLTE3NT
+MwMDQ5NzVdfQ==
 -->
