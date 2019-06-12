@@ -84,9 +84,7 @@ Wenn ein Browser zumindest die ersten beiden APIs gemäß der Spezifikationen im
 <say-hello></say-hello>
 <p>I'm not red</p>
 ```
-
-Laden Sie diese Seite in einem Browser, der die nötigen APIs unterstützt, wird eine Seite mit dem Text "hello again" angezeigt (http://bit.ly/hello-example). 
-Die Erklärungen zu diesem Beispiel finden Sie in den folgenden Abschnitten über die  Bestandteile der Web-Components Spezifikation.
+Das Ergebnis können Sie hier sehen: http://bit.ly/hello-example.
 
 # Die APIs
 
@@ -421,9 +419,9 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE3MDkyMzA4LDY4MzE3NjEyMiw5NzE0Nj
-Y1NzIsMTgyOTYzNzUxMSwxMTIxODYyNDE5LDM3NDg1MTc3MCwt
-NjA0NDc4MTA3LDQ5MjkzMzczMiw4MzI3MzgyMjksMjMyNzM0Nj
-I5LC0yMDk4NTAwNjIzLDE0MTM5MTc1NjQsMTM3MDQ3ODM1MCwt
-MTc1MzAwNDk3NV19
+eyJoaXN0b3J5IjpbMTc4MTM1MTk5MSw0MTcwOTIzMDgsNjgzMT
+c2MTIyLDk3MTQ2NjU3MiwxODI5NjM3NTExLDExMjE4NjI0MTks
+Mzc0ODUxNzcwLC02MDQ0NzgxMDcsNDkyOTMzNzMyLDgzMjczOD
+IyOSwyMzI3MzQ2MjksLTIwOTg1MDA2MjMsMTQxMzkxNzU2NCwx
+MzcwNDc4MzUwLC0xNzUzMDA0OTc1XX0=
 -->
