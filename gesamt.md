@@ -148,13 +148,10 @@ customElements.define('say-hello', SayHello);
 ```
 *Listing 3 - import.html*
 ```HTML
-        <script type="module">
-            import {SayHello} from '/say-hello.js';
-        </script>
-    <body>
-        <say-hello></say-hello>
-    </body>
-</html>
+<script type="module">
+    import {SayHello} from '/say-hello.js';
+</script>
+<say-hello></say-hello>
 ```
 
 Wahlweise können Sie das Beispiel auch hier betrachten: [http://bit.ly/say-hello-example](http://bit.ly/say-hello-example)
@@ -549,7 +546,7 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0MTE5OTIwOSw0OTI5MzM3MzIsODMyNz
-M4MjI5LDIzMjczNDYyOSwtMjA5ODUwMDYyMywxNDEzOTE3NTY0
-LDEzNzA0NzgzNTAsLTE3NTMwMDQ5NzVdfQ==
+eyJoaXN0b3J5IjpbMjM3NzU3NTIyLDQ5MjkzMzczMiw4MzI3Mz
+gyMjksMjMyNzM0NjI5LC0yMDk4NTAwNjIzLDE0MTM5MTc1NjQs
+MTM3MDQ3ODM1MCwtMTc1MzAwNDk3NV19
 -->
