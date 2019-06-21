@@ -393,17 +393,7 @@ class CompanyCorrelationElement extends HTMLElement {
 ```
 
 * Über `static get observedAttributes()` teilen wir der Custom-Element-API mit, für welche Attribute wir uns interessieren und über Änderungen informiert werden wollen. Mit jeder Änderung eines Attributes wird dann `attributeChangedCallback()` aufgerufen.
-* Im Sinne unseres Small-Wrapper-Principles tun wir in `attributeChangedCallback()` nichts weiter, als die React-Component mit den neuen Properties erneut zu rendern.
-* Sowohl 
-
-## Die React-Component "CompanyCorrelation"
-
-Das Custom Element `company-correlation` gibt die Attribute `short-x` und `short-y` an die React Component `CompanyCorrelation` als Properties `shortX` bzw. `shortY` weiter. Diese lädt bei jeder Änderung ihrer Properties (React-Lifecycle-Methode `componentDidUpdate()`) die historischen Kursdaten der jeweilige Company über einen Service-Call vom System "StockHistory":
-
-*Bild 7 - Das System "StockPrice" mit Micro-Frontend*
-<img src="https://cdn.jsdelivr.net/gh/owidder/jsArtikel@all20190611-01/oliver/companyCorrelation.png"/>
-
-Den Code findet man hier: http://bit.ly/companyCorrelation.
+* Im Sinne unseres Small-Wrapper-Principles tun wir in `attributeChangedCallback()` nichts weiter, als die React-Component mit den neuen Properties erneut zu rendern. Den Code der React-Component findet man hier: http://bit.ly/companyCorrelation
 
 ## Fazit
 
@@ -420,10 +410,10 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzQ3MjMyODAsMTE5NTk2MTg5OCwxNz
-gxMzUxOTkxLDQxNzA5MjMwOCw2ODMxNzYxMjIsOTcxNDY2NTcy
-LDE4Mjk2Mzc1MTEsMTEyMTg2MjQxOSwzNzQ4NTE3NzAsLTYwND
-Q3ODEwNyw0OTI5MzM3MzIsODMyNzM4MjI5LDIzMjczNDYyOSwt
-MjA5ODUwMDYyMywxNDEzOTE3NTY0LDEzNzA0NzgzNTAsLTE3NT
-MwMDQ5NzVdfQ==
+eyJoaXN0b3J5IjpbLTQzMzA1NDU4NCwxMTk1OTYxODk4LDE3OD
+EzNTE5OTEsNDE3MDkyMzA4LDY4MzE3NjEyMiw5NzE0NjY1NzIs
+MTgyOTYzNzUxMSwxMTIxODYyNDE5LDM3NDg1MTc3MCwtNjA0ND
+c4MTA3LDQ5MjkzMzczMiw4MzI3MzgyMjksMjMyNzM0NjI5LC0y
+MDk4NTAwNjIzLDE0MTM5MTc1NjQsMTM3MDQ3ODM1MCwtMTc1Mz
+AwNDk3NV19
 -->
