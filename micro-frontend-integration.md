@@ -394,6 +394,7 @@ class CompanyCorrelationElement extends HTMLElement {
 
 * Über `static get observedAttributes()` teilen wir der Custom-Element-API mit, für welche Attribute wir uns interessieren und über Änderungen informiert werden wollen. Mit jeder Änderung eines Attributes wird dann `attributeChangedCallback()` aufgerufen.
 * Im Sinne unseres Small-Wrapper-Principles tun wir in `attributeChangedCallback()` nichts weiter, als die React-Component mit den neuen Properties erneut zu rendern.
+* Sowohl 
 
 ## Die React-Component "CompanyCorrelation"
 
@@ -419,9 +420,10 @@ Vorteile:
 * Es ist unkompliziert auch komplexe fachliche Komponenten in verschiedenen Self-Contained-Systems wiederzuverwenden. 
 * Einfache Schnittstellen: Das nutzende System 'unterhält' sich mit dem Micro-Frontend in den meisten Fällen nur über die Properties des Custom Elements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NTk2MTg5OCwxNzgxMzUxOTkxLDQxNz
-A5MjMwOCw2ODMxNzYxMjIsOTcxNDY2NTcyLDE4Mjk2Mzc1MTEs
-MTEyMTg2MjQxOSwzNzQ4NTE3NzAsLTYwNDQ3ODEwNyw0OTI5Mz
-M3MzIsODMyNzM4MjI5LDIzMjczNDYyOSwtMjA5ODUwMDYyMywx
-NDEzOTE3NTY0LDEzNzA0NzgzNTAsLTE3NTMwMDQ5NzVdfQ==
+eyJoaXN0b3J5IjpbLTE0MzQ3MjMyODAsMTE5NTk2MTg5OCwxNz
+gxMzUxOTkxLDQxNzA5MjMwOCw2ODMxNzYxMjIsOTcxNDY2NTcy
+LDE4Mjk2Mzc1MTEsMTEyMTg2MjQxOSwzNzQ4NTE3NzAsLTYwND
+Q3ODEwNyw0OTI5MzM3MzIsODMyNzM4MjI5LDIzMjczNDYyOSwt
+MjA5ODUwMDYyMywxNDEzOTE3NTY0LDEzNzA0NzgzNTAsLTE3NT
+MwMDQ5NzVdfQ==
 -->
